@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "state": "incomplete_recovery_required",
+  "design_checklist_id": "DS-14",
+  "java_workstream": "paused_at_versioned_design_research_checkpoint",
+  "next_sdk_priority": ".NET",
+  "stable_boundary": "explicit_remaining_gaps_not_full_source_verified_java_catalog",
+  "sdk_source_vendored": false,
+  "source_access": "../source-access.json",
+  "design": "../../../suicide-squad-design.md",
+  "sdk_repository": "Azure/azure-sdk-for-java",
+  "sdk_commit": "42702a3a1421498ee457ff9cbe56713d0877d39f",
+  "original_research_runs": {
+    "expected_domain_reports": 4,
+    "persisted_completed_domain_reports": 0,
+    "availability": "unavailable",
+    "reports_pending_arrival": false
+  },
+  "surviving_input_buckets": [
+    {
+      "source_group": "source/changelog",
+      "kind": "public_surface_snapshots_and_historical_fetch_helper",
+      "completion": "inputs_only"
+    },
+    {
+      "source_group": "source/client",
+      "kind": "client_configuration_observability_and_encryption_discovery_inputs",
+      "completion": "inputs_only"
+    },
+    {
+      "source_group": "source/contracts",
+      "kind": "failure_consistency_transport_and_status_contract_inputs",
+      "completion": "inputs_only"
+    },
+    {
+      "source_group": "source/data",
+      "kind": "data_query_write_and_background_workflow_inputs",
+      "completion": "inputs_only"
+    }
+  ],
+  "required_outputs": {
+    "changelog_semantic_ledger": "not_persisted",
+    "current_api_configuration_reconciliation": "incomplete",
+    "whole_sdk_domain_completeness_matrix": "not_persisted",
+    "java_specific_atomic_contract_verification": "incomplete",
+    "test_and_fixture_mapping": "not_established"
+  },
+  "measurements": {
+    "feature_inventory_completeness": null,
+    "execution_verified_invariants": null,
+    "line_coverage": null,
+    "branch_coverage": null,
+    "mutation_coverage": null,
+    "status_decision_coverage": null,
+    "scenario_coverage": null
+  },
+  "later_parent_authored_recovery": {
+    "state": "persisted_as_separate_original_intake_discovery_receipts",
+    "imported": true,
+    "path": "../recovery/discovery-checkpoint/README.md",
+    "provenance": "../recovery/discovery-checkpoint/package-manifest.json",
+    "original_handoff_files": 4,
+    "original_handoff_bytes": 1313021,
+    "core_release_headings": 145,
+    "core_top_level_bullets": 721,
+    "lexical_family_hinted_bullets": 705,
+    "semantically_unverified_bullets": 721,
+    "exported_package_java_files": 183,
+    "resolved_api_or_contract_closure": false,
+    "original_intake_mismatching_cached_copies": 2,
+    "exporter_executed_during_promotion": false,
+    "is_recovered_original_agent_report": false
+  },
+  "authorization": {
+    "project_phase": "design_only",
+    "design_approved": false,
+    "sdk_implementation": false,
+    "sdk_test_execution": false,
+    "ci_or_permission_changes": false,
+    "autonomous_merging": false,
+    "deployments_or_releases": false
+  },
+  "paused_java_backlog": "../../../suicide-squad-design.md#194-stable-checkpoint-and-net-first-transition",
+  "original_recovery_guide": "../recovery/README.md",
+  "resume_condition": "explicit_java_reactivation_not_requested_by_this_checkpoint"
+}

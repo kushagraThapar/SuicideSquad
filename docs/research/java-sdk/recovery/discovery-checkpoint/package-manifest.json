@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "kind": "bounded_parent_authored_discovery_checkpoint",
+  "sdk": {
+    "repository": "Azure/azure-sdk-for-java",
+    "commit": "42702a3a1421498ee457ff9cbe56713d0877d39f"
+  },
+  "prior_import": {
+    "commit": "a10d3042a61540b907edbe17b710c6294b997a7f",
+    "purpose": "Frozen initial import; provenance and validation remain historical receipts for that revision",
+    "preserved_files": [
+      {
+        "path": "docs/research/java-sdk/import-manifest.json",
+        "sha256": "0be532910a9d84472985bc418d599c36101414768785cd48e04a230bcdf3102e"
+      },
+      {
+        "path": "docs/research/java-sdk/import-validation.json",
+        "sha256": "a9e5306b650d7f2be12960fc483dfa4755e7c5f90d7efcb85ffe741b8995f776"
+      }
+    ],
+    "snapshot_and_old_guide_helper": "Available at this historical commit only; SDK snapshots and the archive downloader are removed from the current tree, and the outer guide now explains the corrected source-link-only boundary"
+  },
+  "package": {
+    "origin": "suicide-squad-inventory/recovery",
+    "authorship": "New parent-authored recovery from original-intake inputs, not reports from the unavailable agents",
+    "file_count": 4,
+    "bytes": 1313021,
+    "files": [
+      {
+        "path": "README.md",
+        "bytes": 18937,
+        "sha256": "01778dd74cf96b5857804a553a61011841a5a9c840de5013d658565097e06266",
+        "transformation": "none; byte-identical handoff"
+      },
+      {
+        "path": "changelog-discovery-ledger.json",
+        "bytes": 689427,
+        "sha256": "c7a777e0b8254c6a1aad659a86fc0d7d8f41c74d3744272934d31dc1365419f8",
+        "transformation": "none; byte-identical handoff"
+      },
+      {
+        "path": "recover_inventory.py",
+        "bytes": 16585,
+        "sha256": "f1b85a35003746abad992a0ba2c1d31385e522b0eebfc53b0b27690e2e04ccd9",
+        "transformation": "none; byte-identical handoff"
+      },
+      {
+        "path": "source-discovery-inventory.json",
+        "bytes": 588072,
+        "sha256": "b00d6e26213d5052633e1e258f6c3f75ad387060ead217116cb6c29383a4122a",
+        "transformation": "none; byte-identical handoff"
+      }
+    ]
+  },
+  "checkpoint": {
+    "design_version": "0.2.3",
+    "selected_boundary": "Versioned design/research checkpoint with explicit remaining gaps; not a fully source-verified Java catalog",
+    "java_state": "paused",
+    "next_sdk_priority": ".NET",
+    "project_phase": "design_only",
+    "ds_14": "incomplete",
+    "sdk_source_vendored": false,
+    "source_access": "../../source-access.json",
+    "files": [
+      {
+        "path": "docs/README.md",
+        "bytes": 2784,
+        "sha256": "1075ad39d4e62739b27de74e9ab99317d10dbc87b6e93155e8b1abfc3e16fec6"
+      },
+      {
+        "path": "docs/suicide-squad-design.md",
+        "bytes": 138333,
+        "sha256": "6fafb38eec4c84164157f8fdfe441717d4a8e216738699b1d44a359f40f7597f"
+      },
+      {
+        "path": "docs/research/java-sdk/README.md",
+        "bytes": 8684,
+        "sha256": "be62ea35b067c3137c5f43efb26b02982662d4f623e95a682cb40f0017702b2a"
+      },
+      {
+        "path": "docs/research/java-sdk/reports/README.md",
+        "bytes": 3138,
+        "sha256": "5b509f401c25ee7b13c8d98af48d452ad253e3e554e0a799477a3482d7bafe91"
+      },
+      {
+        "path": "docs/research/java-sdk/reports/status.json",
+        "bytes": 3217,
+        "sha256": "87829df9cb5b1580aaff7e07f1ae5ece53cb940dd2a5b8f810194fb008d78167"
+      },
+      {
+        "path": "docs/research/java-sdk/recovery/README.md",
+        "bytes": 4521,
+        "sha256": "89d8e5abd3103cc9facbc7869f2fc8fe55cd43fa84b2b193cae6ef8c53cbe4ea"
+      },
+      {
+        "path": "docs/research/java-sdk/source-access.json",
+        "bytes": 2719,
+        "sha256": "499b59ef83d692581e440db3db8200e24fe1345130ab7c06cac6587924c96391"
+      },
+      {
+        "path": "docs/research/java-sdk/UPSTREAM-LICENSE.txt",
+        "bytes": 1075,
+        "sha256": "18cc155157d07d5ac0b227e5f58ae9f815ccd817487fd10c6e4f4f0ec4411ce1"
+      }
+    ]
+  },
+  "receipt_semantics": {
+    "intake": "Original cache copies before canonical deduplication, source replacement and public fixture-key redaction",
+    "cache_paths": "Historical source-relative identifiers; resolve through the frozen import manifest, not by opening canonical duplicates",
+    "exporter": "Preserved as data; not executed; its documented invocation requires the original input layout",
+    "regeneration": "Must not overwrite original-intake receipts after canonical source replacements",
+    "current_layout": "SDK source is accessed in the target repository through pinned references; historical snapshot-replacement statements do not describe current local files",
+    "outer_context": "../README.md",
+    "source_local_observations": "Parent-authored bounded observations and unresolved contract leads, not independently re-investigated or execution-verified here"
+  },
+  "discovery_summary": {
+    "core_release_headings": 145,
+    "core_top_level_bullets": 721,
+    "lexical_family_hinted_bullets": 705,
+    "unhinted_bullets": 16,
+    "semantically_unverified_bullets": 721,
+    "exported_package_java_files": 183,
+    "original_cache_matching_copies": 903,
+    "original_cache_mismatching_copies": 2,
+    "api_contract_or_test_closure": false
+  },
+  "publication_changes": "Four handoff files remain byte-identical in a separate nested directory. Canonical indexes/design/status and the outer recovery context now specify source-link-only access; 685 archived snapshot paths and the obsolete downloader are removed, the upstream MIT license remains as attribution, and the original commit is not rewritten."
+}

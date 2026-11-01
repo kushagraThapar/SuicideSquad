@@ -1,0 +1,1860 @@
+{
+  "commit": "42702a3a1421498ee457ff9cbe56713d0877d39f",
+  "files": [
+    {
+      "path": "sdk/cosmos/azure-cosmos/README.md",
+      "bytes": 17193,
+      "expectedBlobSha": "c11a4037373ac6ab589bb33fbfba289d6c3f254d",
+      "actualBlobSha": "c11a4037373ac6ab589bb33fbfba289d6c3f254d",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/docs/Metrics.md",
+      "bytes": 27412,
+      "expectedBlobSha": "6c19b5efb42f5906b5f623e9443b21d68103ad60",
+      "actualBlobSha": "6c19b5efb42f5906b5f623e9443b21d68103ad60",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/pom.xml",
+      "bytes": 8530,
+      "expectedBlobSha": "6981bd0fcb3881f45c0a9916d1d052b256706609",
+      "actualBlobSha": "6981bd0fcb3881f45c0a9916d1d052b256706609",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/AvailabilityStrategy.java",
+      "bytes": 250,
+      "expectedBlobSha": "2111d17b30a11963342abf47aa93d57728e6a99b",
+      "actualBlobSha": "2111d17b30a11963342abf47aa93d57728e6a99b",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/CosmosAsyncClient.java",
+      "bytes": 44809,
+      "expectedBlobSha": "9d0b08d1d4f173ba6f3b71127ce77794eef66493",
+      "actualBlobSha": "9d0b08d1d4f173ba6f3b71127ce77794eef66493",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/CosmosAsyncClientEncryptionKey.java",
+      "bytes": 5163,
+      "expectedBlobSha": "77c816c82be8d97ef7ed41cb7d294518f491f8e0",
+      "actualBlobSha": "77c816c82be8d97ef7ed41cb7d294518f491f8e0",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/CosmosBridgeInternal.java",
+      "bytes": 5343,
+      "expectedBlobSha": "35d8fd6aece474a222c8859ae86a7553d8a8842c",
+      "actualBlobSha": "35d8fd6aece474a222c8859ae86a7553d8a8842c",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/CosmosClient.java",
+      "bytes": 16572,
+      "expectedBlobSha": "d56dcf134cb53436af3784e34ee42221a0e0a68c",
+      "actualBlobSha": "d56dcf134cb53436af3784e34ee42221a0e0a68c",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/CosmosClientBuilder.java",
+      "bytes": 65955,
+      "expectedBlobSha": "9af00bbb8bac32635fdb23f3c8e87b9cac42bb65",
+      "actualBlobSha": "9af00bbb8bac32635fdb23f3c8e87b9cac42bb65",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/CosmosClientEncryptionKey.java",
+      "bytes": 1370,
+      "expectedBlobSha": "cb7bde32bce51c07bdcaff304e568649174e83e7",
+      "actualBlobSha": "cb7bde32bce51c07bdcaff304e568649174e83e7",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/CosmosContainerProactiveInitConfig.java",
+      "bytes": 6021,
+      "expectedBlobSha": "04cb2bbe06042cd7fd2c8e3b72a4bf09092e6cf4",
+      "actualBlobSha": "04cb2bbe06042cd7fd2c8e3b72a4bf09092e6cf4",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/CosmosContainerProactiveInitConfigBuilder.java",
+      "bytes": 6212,
+      "expectedBlobSha": "fc644a47f3cb8e5c55263e03e3304194ed1435ec",
+      "actualBlobSha": "fc644a47f3cb8e5c55263e03e3304194ed1435ec",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/CosmosDiagnostics.java",
+      "bytes": 20901,
+      "expectedBlobSha": "e2c77504b6199ee5ec65e77df78322bf4e17463a",
+      "actualBlobSha": "e2c77504b6199ee5ec65e77df78322bf4e17463a",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/CosmosDiagnosticsContext.java",
+      "bytes": 48498,
+      "expectedBlobSha": "2d0ac4e0d0ea3fec81422886ce826ac44ad2e014",
+      "actualBlobSha": "2d0ac4e0d0ea3fec81422886ce826ac44ad2e014",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/CosmosDiagnosticsHandler.java",
+      "bytes": 1554,
+      "expectedBlobSha": "f8482c77a5043a8a4abfad913e901b3093adfcc2",
+      "actualBlobSha": "f8482c77a5043a8a4abfad913e901b3093adfcc2",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/CosmosDiagnosticsLogger.java",
+      "bytes": 3837,
+      "expectedBlobSha": "b2ed33c83404acf384b483afabfbbc7c005d583b",
+      "actualBlobSha": "b2ed33c83404acf384b483afabfbbc7c005d583b",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/CosmosDiagnosticsRequestEvent.java",
+      "bytes": 2024,
+      "expectedBlobSha": "9fbcba693b22a241c3803f85d7f1c2860562446e",
+      "actualBlobSha": "9fbcba693b22a241c3803f85d7f1c2860562446e",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/CosmosDiagnosticsRequestInfo.java",
+      "bytes": 4647,
+      "expectedBlobSha": "6283ea4eb61d2985c73de9cc69db0def14ed5b9c",
+      "actualBlobSha": "6283ea4eb61d2985c73de9cc69db0def14ed5b9c",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/CosmosDiagnosticsThresholds.java",
+      "bytes": 13600,
+      "expectedBlobSha": "62b5a514684eb6ce979a21d86be070530028a2cb",
+      "actualBlobSha": "62b5a514684eb6ce979a21d86be070530028a2cb",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/CosmosEndToEndOperationLatencyPolicyConfig.java",
+      "bytes": 2650,
+      "expectedBlobSha": "206d5d66e2c474d4e2f41f2875c2448c313e3bbd",
+      "actualBlobSha": "206d5d66e2c474d4e2f41f2875c2448c313e3bbd",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/CosmosEndToEndOperationLatencyPolicyConfigBuilder.java",
+      "bytes": 2431,
+      "expectedBlobSha": "9c60167851b839213b02c4c5721aaaa4f86c2fcb",
+      "actualBlobSha": "9c60167851b839213b02c4c5721aaaa4f86c2fcb",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/CosmosExcludedRegions.java",
+      "bytes": 2082,
+      "expectedBlobSha": "cfc2d91df00b1cc415bb4b7e1174d9790c946bad",
+      "actualBlobSha": "cfc2d91df00b1cc415bb4b7e1174d9790c946bad",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/CosmosItemSerializer.java",
+      "bytes": 7149,
+      "expectedBlobSha": "1a6a96511a775383972d083dca065acbbc501f41",
+      "actualBlobSha": "1a6a96511a775383972d083dca065acbbc501f41",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/CosmosOperationPolicy.java",
+      "bytes": 586,
+      "expectedBlobSha": "170bab6d2752edc37818cc8b8a28432b0339b5af",
+      "actualBlobSha": "170bab6d2752edc37818cc8b8a28432b0339b5af",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/CosmosRegionSwitchHint.java",
+      "bytes": 1013,
+      "expectedBlobSha": "a7a7b2fc2ad28c95b1cec85f80de46b26b02b90f",
+      "actualBlobSha": "a7a7b2fc2ad28c95b1cec85f80de46b26b02b90f",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/CosmosRequestContext.java",
+      "bytes": 7634,
+      "expectedBlobSha": "354e13027aefe4102d1bcada3d0ca30061541a18",
+      "actualBlobSha": "354e13027aefe4102d1bcada3d0ca30061541a18",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/DirectConnectionConfig.java",
+      "bytes": 16598,
+      "expectedBlobSha": "c42d03c9efc5663287e1e1bddd4bfb2e4eb69739",
+      "actualBlobSha": "c42d03c9efc5663287e1e1bddd4bfb2e4eb69739",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/GatewayConnectionConfig.java",
+      "bytes": 6066,
+      "expectedBlobSha": "ff6ca11dae5cc7aa491652f887fbed42021e4a63",
+      "actualBlobSha": "ff6ca11dae5cc7aa491652f887fbed42021e4a63",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/Http2ConnectionConfig.java",
+      "bytes": 6605,
+      "expectedBlobSha": "fdd2f363c5153bd7bc95770da98d756f49a36fda",
+      "actualBlobSha": "fdd2f363c5153bd7bc95770da98d756f49a36fda",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/ReadConsistencyStrategy.java",
+      "bytes": 5383,
+      "expectedBlobSha": "bec1fd2a5c923acbd47bc236ed50e4322a9a2665",
+      "actualBlobSha": "bec1fd2a5c923acbd47bc236ed50e4322a9a2665",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/ThresholdBasedAvailabilityStrategy.java",
+      "bytes": 2365,
+      "expectedBlobSha": "3bb3fc0230ac66981d675b46867034380cc780aa",
+      "actualBlobSha": "3bb3fc0230ac66981d675b46867034380cc780aa",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/AadTokenAuthorizationHelper.java",
+      "bytes": 2951,
+      "expectedBlobSha": "14cc778593ee0a0e21bd9aa55cb122716a93ee35",
+      "actualBlobSha": "14cc778593ee0a0e21bd9aa55cb122716a93ee35",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/AsyncDocumentClient.java",
+      "bytes": 79211,
+      "expectedBlobSha": "25c438f9249ded57112f426c183a2b6b32df138b",
+      "actualBlobSha": "25c438f9249ded57112f426c183a2b6b32df138b",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/AuthorizationTokenProvider.java",
+      "bytes": 856,
+      "expectedBlobSha": "e7e18fa4201626e44b59701016bd947fa29ad351",
+      "actualBlobSha": "e7e18fa4201626e44b59701016bd947fa29ad351",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/AuthorizationTokenType.java",
+      "bytes": 387,
+      "expectedBlobSha": "603496dcb09fd7ef2c220bbea008329d3b302d7c",
+      "actualBlobSha": "603496dcb09fd7ef2c220bbea008329d3b302d7c",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/BaseAuthorizationTokenProvider.java",
+      "bytes": 9995,
+      "expectedBlobSha": "f36602f3164dd866b4d53fa96cafe43520817c72",
+      "actualBlobSha": "f36602f3164dd866b4d53fa96cafe43520817c72",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/Configs.java",
+      "bytes": 91745,
+      "expectedBlobSha": "b152a8f6e3b027b31c50575b3739209e39d6e7a6",
+      "actualBlobSha": "b152a8f6e3b027b31c50575b3739209e39d6e7a6",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/ConnectionPolicy.java",
+      "bytes": 27782,
+      "expectedBlobSha": "b93171e3bdcd62f38087b325f95842208cd61446",
+      "actualBlobSha": "b93171e3bdcd62f38087b325f95842208cd61446",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/Constants.java",
+      "bytes": 16714,
+      "expectedBlobSha": "817cbd467135d82b0ebbde97e7b00431ede35cc5",
+      "actualBlobSha": "817cbd467135d82b0ebbde97e7b00431ede35cc5",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/CosmosQueryRequestOptionsImpl.java",
+      "bytes": 15071,
+      "expectedBlobSha": "ef1542701f5c17e2c42e0e8cafe95d5715aa35c2",
+      "actualBlobSha": "ef1542701f5c17e2c42e0e8cafe95d5715aa35c2",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/DiagnosticsProvider.java",
+      "bytes": 85917,
+      "expectedBlobSha": "95a2d0f7fb336e21b2ae249c3c77a20ad699b5fb",
+      "actualBlobSha": "95a2d0f7fb336e21b2ae249c3c77a20ad699b5fb",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/DiagnosticsProviderJvmFatalErrorMapper.java",
+      "bytes": 2402,
+      "expectedBlobSha": "cd33e9f6c01b478cbb1355d8cc860e555c148c9d",
+      "actualBlobSha": "cd33e9f6c01b478cbb1355d8cc860e555c148c9d",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/EndpointProbeClient.java",
+      "bytes": 12154,
+      "expectedBlobSha": "6b570ada701715871b1c40721a88b499b5a9f024",
+      "actualBlobSha": "6b570ada701715871b1c40721a88b499b5a9f024",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/HttpConstants.java",
+      "bytes": 29991,
+      "expectedBlobSha": "5ab2bbc61fb8c922172363837163560eeb15400e",
+      "actualBlobSha": "5ab2bbc61fb8c922172363837163560eeb15400e",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/IAuthorizationTokenProvider.java",
+      "bytes": 930,
+      "expectedBlobSha": "4d8e2891e72be28e8569d773ab6bde40b27d3416",
+      "actualBlobSha": "4d8e2891e72be28e8569d773ab6bde40b27d3416",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/ResourceTokenAuthorizationHelper.java",
+      "bytes": 9135,
+      "expectedBlobSha": "20128a174e32a7ffc9376c808a4de08af855be00",
+      "actualBlobSha": "20128a174e32a7ffc9376c808a4de08af855be00",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/RxDocumentClientImpl.java",
+      "bytes": 479496,
+      "expectedBlobSha": "e1e42c1ad93ddfe175207ded4fe5ef1c2147ca68",
+      "actualBlobSha": "e1e42c1ad93ddfe175207ded4fe5ef1c2147ca68",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/RxGatewayStoreModel.java",
+      "bytes": 70078,
+      "expectedBlobSha": "a25ba5c25d8b43f4edba7e9dec3006c1a839596d",
+      "actualBlobSha": "82bc1d4fc10d9cd0450b9a9bb35f8cab799f690a",
+      "verified": false
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/ThinClientConnectivityConfig.java",
+      "bytes": 4969,
+      "expectedBlobSha": "836e8c6dd19e31f09fdaa71c0d698173e90fb40b",
+      "actualBlobSha": "836e8c6dd19e31f09fdaa71c0d698173e90fb40b",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/ThinClientStoreModel.java",
+      "bytes": 16031,
+      "expectedBlobSha": "05195d37ee05ea65c54f07704a07adb96c6af456",
+      "actualBlobSha": "05195d37ee05ea65c54f07704a07adb96c6af456",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/UserAgentContainer.java",
+      "bytes": 4034,
+      "expectedBlobSha": "ddffd20ae2e6735094b7a9fc5beab166e540be6a",
+      "actualBlobSha": "ddffd20ae2e6735094b7a9fc5beab166e540be6a",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/clienttelemetry/AttributeNamingScheme.java",
+      "bytes": 1682,
+      "expectedBlobSha": "08900c589ade93e6d56cec6979b6bdb9d9011077",
+      "actualBlobSha": "08900c589ade93e6d56cec6979b6bdb9d9011077",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/clienttelemetry/ClientTelemetry.java",
+      "bytes": 11897,
+      "expectedBlobSha": "0c96b112c650565b1301aad6fbbf36b0c110e85a",
+      "actualBlobSha": "0c96b112c650565b1301aad6fbbf36b0c110e85a",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/clienttelemetry/ClientTelemetryInfo.java",
+      "bytes": 3480,
+      "expectedBlobSha": "68e3c970995af32a2a44395d2dee328b693f73a8",
+      "actualBlobSha": "68e3c970995af32a2a44395d2dee328b693f73a8",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/clienttelemetry/ClientTelemetryMetrics.java",
+      "bytes": 78601,
+      "expectedBlobSha": "29cf4ef1c5903611f52e67096f98cfa69a68122b",
+      "actualBlobSha": "29cf4ef1c5903611f52e67096f98cfa69a68122b",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/clienttelemetry/CosmosMeterOptions.java",
+      "bytes": 1780,
+      "expectedBlobSha": "f0e8995e07ea5c9bc25298ff853cb02be189a27a",
+      "actualBlobSha": "f0e8995e07ea5c9bc25298ff853cb02be189a27a",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/clienttelemetry/MetricCategory.java",
+      "bytes": 2059,
+      "expectedBlobSha": "b6d916315bb104039053ea33ae49766c819e3558",
+      "actualBlobSha": "b6d916315bb104039053ea33ae49766c819e3558",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/clienttelemetry/TagName.java",
+      "bytes": 2522,
+      "expectedBlobSha": "2de5821cb5df2058942118cfaa2217417eb533f8",
+      "actualBlobSha": "2de5821cb5df2058942118cfaa2217417eb533f8",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/AddressResolver.java",
+      "bytes": 38897,
+      "expectedBlobSha": "54d88d6ad670e11c4a852bafe242c81946595abe",
+      "actualBlobSha": "54d88d6ad670e11c4a852bafe242c81946595abe",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/GatewayAddressCache.java",
+      "bytes": 67867,
+      "expectedBlobSha": "d1cdc9c1d745f0af6dcd3f5d712ad21bae307f04",
+      "actualBlobSha": "d1cdc9c1d745f0af6dcd3f5d712ad21bae307f04",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/HttpClientUtils.java",
+      "bytes": 2491,
+      "expectedBlobSha": "4529bd5c0d41f505d36ce8365d0fb022c190b063",
+      "actualBlobSha": "4529bd5c0d41f505d36ce8365d0fb022c190b063",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/HttpTransportClient.java",
+      "bytes": 60898,
+      "expectedBlobSha": "67b52b2d06f7e74fa75916c6c0eecc315ead7fd4",
+      "actualBlobSha": "67b52b2d06f7e74fa75916c6c0eecc315ead7fd4",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/RntbdTransportClient.java",
+      "bytes": 55778,
+      "expectedBlobSha": "fda814a82c3bc8e674972986bb8396e66dd5560d",
+      "actualBlobSha": "fda814a82c3bc8e674972986bb8396e66dd5560d",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/SharedTransportClient.java",
+      "bytes": 6475,
+      "expectedBlobSha": "d97b961238a8c021827d74ddb2997e9f0e0b22b5",
+      "actualBlobSha": "d97b961238a8c021827d74ddb2997e9f0e0b22b5",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/StoreClientFactory.java",
+      "bytes": 4363,
+      "expectedBlobSha": "16f5124a189543587b592de7acb0529aa784bd12",
+      "actualBlobSha": "16f5124a189543587b592de7acb0529aa784bd12",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/TransportClient.java",
+      "bytes": 5088,
+      "expectedBlobSha": "4c99cbed55d2355f10fa106d8330728840a1fa70",
+      "actualBlobSha": "4c99cbed55d2355f10fa106d8330728840a1fa70",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/AsyncRntbdRequestRecord.java",
+      "bytes": 761,
+      "expectedBlobSha": "2a937a527670d325c9868b841aee3d418611211f",
+      "actualBlobSha": "2a937a527670d325c9868b841aee3d418611211f",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/ChannelPromiseWithExpiryTime.java",
+      "bytes": 5593,
+      "expectedBlobSha": "48915e4d466fd4e9e06c7727e66e85a91b2e2096",
+      "actualBlobSha": "48915e4d466fd4e9e06c7727e66e85a91b2e2096",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/ClosedClientTransportException.java",
+      "bytes": 432,
+      "expectedBlobSha": "eb60e4b539ffa582ccb099f00551b0c786b5d944",
+      "actualBlobSha": "eb60e4b539ffa582ccb099f00551b0c786b5d944",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/FailFastRntbdRequestRecord.java",
+      "bytes": 2730,
+      "expectedBlobSha": "0210ec8955a62efede7e8ddc0d5a3f88ddd3f44d",
+      "actualBlobSha": "0210ec8955a62efede7e8ddc0d5a3f88ddd3f44d",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/IRequestRecord.java",
+      "bytes": 323,
+      "expectedBlobSha": "da5b8f317692568d51047b3df8e871df09a7e592",
+      "actualBlobSha": "da5b8f317692568d51047b3df8e871df09a7e592",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/OpenChannelPromise.java",
+      "bytes": 584,
+      "expectedBlobSha": "caef1687d6349da19d2218f77c41e0ba7cbdccdf",
+      "actualBlobSha": "caef1687d6349da19d2218f77c41e0ba7cbdccdf",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/OpenConnectionRntbdRequestRecord.java",
+      "bytes": 1119,
+      "expectedBlobSha": "a4a51a838fc784066e16ad7d6975f199501293e0",
+      "actualBlobSha": "a4a51a838fc784066e16ad7d6975f199501293e0",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/OpenConnectionTask.java",
+      "bytes": 4481,
+      "expectedBlobSha": "59210c418f377aee57a2add56a81c8bf206944c0",
+      "actualBlobSha": "59210c418f377aee57a2add56a81c8bf206944c0",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/ProactiveOpenConnectionsProcessor.java",
+      "bytes": 21319,
+      "expectedBlobSha": "7e26ad1e3828d4dc3cbcfd8b8367a3b71c7d428f",
+      "actualBlobSha": "7e26ad1e3828d4dc3cbcfd8b8367a3b71c7d428f",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdChannelAcquisitionEvent.java",
+      "bytes": 2499,
+      "expectedBlobSha": "4a5e9e55cbbf0ecc5611d23f01f3f213f9bb1aa2",
+      "actualBlobSha": "4a5e9e55cbbf0ecc5611d23f01f3f213f9bb1aa2",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdChannelAcquisitionEventType.java",
+      "bytes": 615,
+      "expectedBlobSha": "d67a5dad3ad04eb299bd8279df9627e52a7ea11f",
+      "actualBlobSha": "d67a5dad3ad04eb299bd8279df9627e52a7ea11f",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdChannelAcquisitionTimeline.java",
+      "bytes": 2307,
+      "expectedBlobSha": "f1b4a58b141e7398a9d11b15bf472528e97cecab",
+      "actualBlobSha": "f1b4a58b141e7398a9d11b15bf472528e97cecab",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdChannelState.java",
+      "bytes": 2414,
+      "expectedBlobSha": "34aa51d710a7e8d7bf088f75929bbf700fe05cb6",
+      "actualBlobSha": "34aa51d710a7e8d7bf088f75929bbf700fe05cb6",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdChannelStatistics.java",
+      "bytes": 4160,
+      "expectedBlobSha": "38f86e7a31cabc6cf7384837dd707843c9fb33c2",
+      "actualBlobSha": "38f86e7a31cabc6cf7384837dd707843c9fb33c2",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdClientChannelHandler.java",
+      "bytes": 6127,
+      "expectedBlobSha": "cd85424105f694929a7dfe0c08ac52e063d9c6cd",
+      "actualBlobSha": "cd85424105f694929a7dfe0c08ac52e063d9c6cd",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdClientChannelHealthChecker.java",
+      "bytes": 29964,
+      "expectedBlobSha": "e628fa64894bd4b60a4ce46842d838b1ae42cdb9",
+      "actualBlobSha": "e628fa64894bd4b60a4ce46842d838b1ae42cdb9",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdClientChannelPool.java",
+      "bytes": 75828,
+      "expectedBlobSha": "a8b108f01675c7fe2b30130b9d764485a631f18d",
+      "actualBlobSha": "a8b108f01675c7fe2b30130b9d764485a631f18d",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdConnectionEvent.java",
+      "bytes": 233,
+      "expectedBlobSha": "28e52ebe8dfd00983e8c790509ceae81d8d72851",
+      "actualBlobSha": "28e52ebe8dfd00983e8c790509ceae81d8d72851",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdConnectionStateListener.java",
+      "bytes": 9091,
+      "expectedBlobSha": "c3a08a57bd9720dfbd56a196167bdd4609d09064",
+      "actualBlobSha": "c3a08a57bd9720dfbd56a196167bdd4609d09064",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdConnectionStateListenerMetrics.java",
+      "bytes": 1176,
+      "expectedBlobSha": "c4f02f60a686b389e3f8c7dade0dd6900e55dbc6",
+      "actualBlobSha": "c4f02f60a686b389e3f8c7dade0dd6900e55dbc6",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdConstants.java",
+      "bytes": 42470,
+      "expectedBlobSha": "bff9b3d91459ee2c7f5bcca9304504a62bfb4e4c",
+      "actualBlobSha": "bff9b3d91459ee2c7f5bcca9304504a62bfb4e4c",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdContext.java",
+      "bytes": 8131,
+      "expectedBlobSha": "5c35aceac1d98694100b11d95391d31c9eab9c8d",
+      "actualBlobSha": "5c35aceac1d98694100b11d95391d31c9eab9c8d",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdContextDecoder.java",
+      "bytes": 3139,
+      "expectedBlobSha": "353f34461aa1e70cb924b4ee6fd8a78f15ed867b",
+      "actualBlobSha": "353f34461aa1e70cb924b4ee6fd8a78f15ed867b",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdContextException.java",
+      "bytes": 1186,
+      "expectedBlobSha": "a6b5163cba4fff018fada1b41ceb2e9a632a48b8",
+      "actualBlobSha": "a6b5163cba4fff018fada1b41ceb2e9a632a48b8",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdContextNegotiator.java",
+      "bytes": 3981,
+      "expectedBlobSha": "26b4fa1ba4f728e8019dcaea6a89babdcd95c8ad",
+      "actualBlobSha": "26b4fa1ba4f728e8019dcaea6a89babdcd95c8ad",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdContextRequest.java",
+      "bytes": 5029,
+      "expectedBlobSha": "641eb8f4aba6d5cf76522d6022b48d6e84309449",
+      "actualBlobSha": "641eb8f4aba6d5cf76522d6022b48d6e84309449",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdContextRequestDecoder.java",
+      "bytes": 4258,
+      "expectedBlobSha": "ceec8d90ad460e0080263f14b0bf1a36a54f9f0d",
+      "actualBlobSha": "ceec8d90ad460e0080263f14b0bf1a36a54f9f0d",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdContextRequestEncoder.java",
+      "bytes": 2146,
+      "expectedBlobSha": "c1bbfb5f15a33a21a1b2ae4441a2d2ceaa3940f1",
+      "actualBlobSha": "c1bbfb5f15a33a21a1b2ae4441a2d2ceaa3940f1",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdDurableEndpointMetrics.java",
+      "bytes": 2502,
+      "expectedBlobSha": "b591abf6b3af2bd329d7891d1c4ce87fa5d48416",
+      "actualBlobSha": "b591abf6b3af2bd329d7891d1c4ce87fa5d48416",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdEndpoint.java",
+      "bytes": 9858,
+      "expectedBlobSha": "442d5a63f5838dc8eb1aa219ff8a8967a024be51",
+      "actualBlobSha": "442d5a63f5838dc8eb1aa219ff8a8967a024be51",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdEndpointStatistics.java",
+      "bytes": 6097,
+      "expectedBlobSha": "f35ada007d84403d83abf42ca5244ffa46f1d35b",
+      "actualBlobSha": "f35ada007d84403d83abf42ca5244ffa46f1d35b",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdFramer.java",
+      "bytes": 2272,
+      "expectedBlobSha": "cb575665f3f732ad7fd7fc603113b0a573a3c9fd",
+      "actualBlobSha": "cb575665f3f732ad7fd7fc603113b0a573a3c9fd",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdHealthCheckRequest.java",
+      "bytes": 383,
+      "expectedBlobSha": "1e8256a58dafc6486e2b9e4d994cef6147b03b7d",
+      "actualBlobSha": "1e8256a58dafc6486e2b9e4d994cef6147b03b7d",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdLoop.java",
+      "bytes": 985,
+      "expectedBlobSha": "d2182d626893569d373661992a49379b30bc6421",
+      "actualBlobSha": "d2182d626893569d373661992a49379b30bc6421",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdLoopEpoll.java",
+      "bytes": 906,
+      "expectedBlobSha": "711cfa9471c609de1db73b97a1f127bd3a0e217a",
+      "actualBlobSha": "711cfa9471c609de1db73b97a1f127bd3a0e217a",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdLoopNIO.java",
+      "bytes": 897,
+      "expectedBlobSha": "72c24016c44e131c4d64fbee37c71a890fd5bacb",
+      "actualBlobSha": "72c24016c44e131c4d64fbee37c71a890fd5bacb",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdLoopNativeDetector.java",
+      "bytes": 1264,
+      "expectedBlobSha": "d3697c26098837cfab2065957ba1223209f73de2",
+      "actualBlobSha": "d3697c26098837cfab2065957ba1223209f73de2",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdMetrics.java",
+      "bytes": 8881,
+      "expectedBlobSha": "32355df37aa8452fc6e2388bbec5ec2fc5525570",
+      "actualBlobSha": "32355df37aa8452fc6e2388bbec5ec2fc5525570",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdMetricsCompletionRecorder.java",
+      "bytes": 633,
+      "expectedBlobSha": "48fd14ec107e495705fb69423d027a656c523e3f",
+      "actualBlobSha": "48fd14ec107e495705fb69423d027a656c523e3f",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdMetricsDelegatingCompletionRecorder.java",
+      "bytes": 772,
+      "expectedBlobSha": "c14397ae4b7ed0d76dcf48cdb8bfcc7a104ac61a",
+      "actualBlobSha": "c14397ae4b7ed0d76dcf48cdb8bfcc7a104ac61a",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdObjectMapper.java",
+      "bytes": 5866,
+      "expectedBlobSha": "04418f197ac1143ac797e355a668e2403ea0e2df",
+      "actualBlobSha": "04418f197ac1143ac797e355a668e2403ea0e2df",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdOpenConnectionsHandler.java",
+      "bytes": 4494,
+      "expectedBlobSha": "c4c784f93ecb791053ebdddd5d153bd2bf8a4856",
+      "actualBlobSha": "c4c784f93ecb791053ebdddd5d153bd2bf8a4856",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdPollChannelEvent.java",
+      "bytes": 2470,
+      "expectedBlobSha": "b9499b0dfdbd11184728e927f9cd38862705a0c4",
+      "actualBlobSha": "b9499b0dfdbd11184728e927f9cd38862705a0c4",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdReporter.java",
+      "bytes": 2406,
+      "expectedBlobSha": "8e75a3f3fa13eee5ff1e7c98439b094ca0626784",
+      "actualBlobSha": "8e75a3f3fa13eee5ff1e7c98439b094ca0626784",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdRequest.java",
+      "bytes": 4909,
+      "expectedBlobSha": "67f24745f1ff2cf4a9912b826e48981e51dd518f",
+      "actualBlobSha": "67f24745f1ff2cf4a9912b826e48981e51dd518f",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdRequestArgs.java",
+      "bytes": 4745,
+      "expectedBlobSha": "6febe5bc08ca56db312bafc41b2ac6db42884761",
+      "actualBlobSha": "6febe5bc08ca56db312bafc41b2ac6db42884761",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdRequestDecoder.java",
+      "bytes": 4101,
+      "expectedBlobSha": "972ca9193d8cef8ce24cbb59985491aeacd25c25",
+      "actualBlobSha": "972ca9193d8cef8ce24cbb59985491aeacd25c25",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdRequestEncoder.java",
+      "bytes": 2194,
+      "expectedBlobSha": "1ef7edf1f7b982717e7515999ba6c31b07925c3d",
+      "actualBlobSha": "1ef7edf1f7b982717e7515999ba6c31b07925c3d",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdRequestFrame.java",
+      "bytes": 8313,
+      "expectedBlobSha": "294b7399d6f55f2440faf439b74ad1c6431d3517",
+      "actualBlobSha": "294b7399d6f55f2440faf439b74ad1c6431d3517",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdRequestFramer.java",
+      "bytes": 475,
+      "expectedBlobSha": "a31b01908566cc6aa719021eb89be925b9f803c3",
+      "actualBlobSha": "a31b01908566cc6aa719021eb89be925b9f803c3",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdRequestHeaders.java",
+      "bytes": 61132,
+      "expectedBlobSha": "81bd3dafb28a3f2f766230fffcbc5fabfdcc00e2",
+      "actualBlobSha": "81bd3dafb28a3f2f766230fffcbc5fabfdcc00e2",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdRequestManager.java",
+      "bytes": 52563,
+      "expectedBlobSha": "31bdb8081cd0e5690f6930d2406e9636a61465b9",
+      "actualBlobSha": "31bdb8081cd0e5690f6930d2406e9636a61465b9",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdRequestRecord.java",
+      "bytes": 15457,
+      "expectedBlobSha": "d5b9568b0b4888b132c697f18e23e3c2251816e1",
+      "actualBlobSha": "d5b9568b0b4888b132c697f18e23e3c2251816e1",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdRequestTimer.java",
+      "bytes": 1651,
+      "expectedBlobSha": "b8b4b6bd19129299471b0e5bbf66012d2429e9e8",
+      "actualBlobSha": "b8b4b6bd19129299471b0e5bbf66012d2429e9e8",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdResponse.java",
+      "bytes": 12409,
+      "expectedBlobSha": "1fb8b43d3fe864c2b86bfe622f7ca699fbd0c646",
+      "actualBlobSha": "1fb8b43d3fe864c2b86bfe622f7ca699fbd0c646",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdResponseDecoder.java",
+      "bytes": 3463,
+      "expectedBlobSha": "a946dfe8bce2fbc3a4440e4bc39638802ec1b34c",
+      "actualBlobSha": "a946dfe8bce2fbc3a4440e4bc39638802ec1b34c",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdResponseHeaders.java",
+      "bytes": 26754,
+      "expectedBlobSha": "7b1539e6f0afe80206d80652808bb4e82a6d2d36",
+      "actualBlobSha": "7b1539e6f0afe80206d80652808bb4e82a6d2d36",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdResponseStatus.java",
+      "bytes": 2820,
+      "expectedBlobSha": "7cfc2e87cef384506824b413b9c3b686c50d3c0b",
+      "actualBlobSha": "7cfc2e87cef384506824b413b9c3b686c50d3c0b",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdServiceEndpoint.java",
+      "bytes": 35074,
+      "expectedBlobSha": "da8353285529358ed03cd29334d321dfb8a77874",
+      "actualBlobSha": "da8353285529358ed03cd29334d321dfb8a77874",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdThreadFactory.java",
+      "bytes": 1348,
+      "expectedBlobSha": "5a0c7364dbab26e95215ba2d145fb5ccb9717021",
+      "actualBlobSha": "5a0c7364dbab26e95215ba2d145fb5ccb9717021",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdToken.java",
+      "bytes": 6226,
+      "expectedBlobSha": "72306c0603480ef817edfedb25824e98f27ccf53",
+      "actualBlobSha": "72306c0603480ef817edfedb25824e98f27ccf53",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdTokenStream.java",
+      "bytes": 5283,
+      "expectedBlobSha": "74977627bc4614b7f4efb15d92dc973fd29aa968",
+      "actualBlobSha": "74977627bc4614b7f4efb15d92dc973fd29aa968",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdTokenType.java",
+      "bytes": 25271,
+      "expectedBlobSha": "bd91cfe83b44a1d50ae6a61dbc3460022f48b192",
+      "actualBlobSha": "bd91cfe83b44a1d50ae6a61dbc3460022f48b192",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdUUID.java",
+      "bytes": 3334,
+      "expectedBlobSha": "ce5794967cb26c7a951a560bf3fade69c11e8087",
+      "actualBlobSha": "ce5794967cb26c7a951a560bf3fade69c11e8087",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdUtils.java",
+      "bytes": 1817,
+      "expectedBlobSha": "96017703c6da823f8cccf9a3c57dfc2f668861af",
+      "actualBlobSha": "96017703c6da823f8cccf9a3c57dfc2f668861af",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/http/BufferedHttpResponse.java",
+      "bytes": 2104,
+      "expectedBlobSha": "73d8f1855e984dd8f208568ad1558067bd66ae56",
+      "actualBlobSha": "73d8f1855e984dd8f208568ad1558067bd66ae56",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/http/Http2ParentChannelExceptionHandler.java",
+      "bytes": 4573,
+      "expectedBlobSha": "d9dfc3e7de3b09b406a7b27e34206e0782df3d1a",
+      "actualBlobSha": "d9dfc3e7de3b09b406a7b27e34206e0782df3d1a",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/http/Http2PingCloseRewrapHandler.java",
+      "bytes": 3064,
+      "expectedBlobSha": "7e6b0dd511c4de205f48e4d7f4390d363d336143",
+      "actualBlobSha": "7e6b0dd511c4de205f48e4d7f4390d363d336143",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/http/Http2PingHandler.java",
+      "bytes": 14826,
+      "expectedBlobSha": "a20ed23b771548ec296b4191317f85ece74e11da",
+      "actualBlobSha": "a20ed23b771548ec296b4191317f85ece74e11da",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/http/Http2PingTimeoutChannelClosedException.java",
+      "bytes": 1872,
+      "expectedBlobSha": "fc28a056f3dcb069f94b98a18692900ea4186139",
+      "actualBlobSha": "fc28a056f3dcb069f94b98a18692900ea4186139",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/http/Http2ResponseHeaderCleanerHandler.java",
+      "bytes": 2337,
+      "expectedBlobSha": "d13192c7caedd4d25133bae0a687c9870b36dac0",
+      "actualBlobSha": "d13192c7caedd4d25133bae0a687c9870b36dac0",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/http/HttpClient.java",
+      "bytes": 3798,
+      "expectedBlobSha": "4f1830908623f5cbd5ecba847d7688d1170f8c30",
+      "actualBlobSha": "4f1830908623f5cbd5ecba847d7688d1170f8c30",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/http/HttpClientConfig.java",
+      "bytes": 6865,
+      "expectedBlobSha": "916f102db3683ec877d3ebc6ce4aa11230f7c661",
+      "actualBlobSha": "916f102db3683ec877d3ebc6ce4aa11230f7c661",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/http/HttpHeader.java",
+      "bytes": 1602,
+      "expectedBlobSha": "a4fbdeafc0f190acfc0746fdd792171029b70bae",
+      "actualBlobSha": "a4fbdeafc0f190acfc0746fdd792171029b70bae",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/http/HttpHeaders.java",
+      "bytes": 6167,
+      "expectedBlobSha": "40bdafb5a8075cc977a86f1d2a9caddf785036b8",
+      "actualBlobSha": "40bdafb5a8075cc977a86f1d2a9caddf785036b8",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/http/HttpRequest.java",
+      "bytes": 7237,
+      "expectedBlobSha": "2e0f214d1e910b864bb94588e0a403d67e5f5194",
+      "actualBlobSha": "2e0f214d1e910b864bb94588e0a403d67e5f5194",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/http/HttpResponse.java",
+      "bytes": 3245,
+      "expectedBlobSha": "29d871d8663f53ad978a8a45fa6ad11e4a040ca9",
+      "actualBlobSha": "29d871d8663f53ad978a8a45fa6ad11e4a040ca9",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/http/HttpTimeoutPolicy.java",
+      "bytes": 2161,
+      "expectedBlobSha": "13a9b65157eb70ed18d7b87f34ffe04dcb63649c",
+      "actualBlobSha": "13a9b65157eb70ed18d7b87f34ffe04dcb63649c",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/http/HttpTimeoutPolicyControlPlaneHotPath.java",
+      "bytes": 897,
+      "expectedBlobSha": "3c733872338b69874dd8b32f4dde9331eb389f89",
+      "actualBlobSha": "3c733872338b69874dd8b32f4dde9331eb389f89",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/http/HttpTimeoutPolicyControlPlaneRead.java",
+      "bytes": 849,
+      "expectedBlobSha": "587717af930016f62f4a07de191061a21400ed5c",
+      "actualBlobSha": "587717af930016f62f4a07de191061a21400ed5c",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/http/HttpTimeoutPolicyDefault.java",
+      "bytes": 1018,
+      "expectedBlobSha": "94900bb5ce3116a965321cdf7c54762622c5c748",
+      "actualBlobSha": "94900bb5ce3116a965321cdf7c54762622c5c748",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/http/HttpTimeoutPolicyForGatewayV2.java",
+      "bytes": 2074,
+      "expectedBlobSha": "976562ce9e8dac137a2d5bc990642306241a1a55",
+      "actualBlobSha": "976562ce9e8dac137a2d5bc990642306241a1a55",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/http/HttpTransportSerializer.java",
+      "bytes": 583,
+      "expectedBlobSha": "58a2dc95cf8dc353594383e52a5c50cde87e809e",
+      "actualBlobSha": "58a2dc95cf8dc353594383e52a5c50cde87e809e",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/http/ReactorNettyClient.java",
+      "bytes": 36391,
+      "expectedBlobSha": "ed2252a49828cdb888767e74dc7d5868064fdf00",
+      "actualBlobSha": "ed2252a49828cdb888767e74dc7d5868064fdf00",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/http/ReactorNettyRequestRecord.java",
+      "bytes": 8278,
+      "expectedBlobSha": "021e15b01038ef443d7da337b3682d3bf6909373",
+      "actualBlobSha": "021e15b01038ef443d7da337b3682d3bf6909373",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/http/ResponseTimeoutAndDelays.java",
+      "bytes": 1190,
+      "expectedBlobSha": "a81e34ac048a0ae974a4de885bd33dd07fa3c803",
+      "actualBlobSha": "a81e34ac048a0ae974a4de885bd33dd07fa3c803",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/http/SharedGatewayHttpClient.java",
+      "bytes": 2885,
+      "expectedBlobSha": "4e0729a51ac48c9974ae4bc6743bc736abca92b0",
+      "actualBlobSha": "4e0729a51ac48c9974ae4bc6743bc736abca92b0",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/perPartitionAutomaticFailover/EndToEndTimeoutErrorTracker.java",
+      "bytes": 671,
+      "expectedBlobSha": "b0648099497ba57e3cc9100a0928a73a06237cb4",
+      "actualBlobSha": "b0648099497ba57e3cc9100a0928a73a06237cb4",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/perPartitionAutomaticFailover/GlobalPartitionEndpointManagerForPerPartitionAutomaticFailover.java",
+      "bytes": 17224,
+      "expectedBlobSha": "5a92ac4d8ad45e63fcae21f4b97acc904d1986d1",
+      "actualBlobSha": "5a92ac4d8ad45e63fcae21f4b97acc904d1986d1",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/perPartitionAutomaticFailover/PartitionLevelAutomaticFailoverInfo.java",
+      "bytes": 2951,
+      "expectedBlobSha": "c661de6e9a7602855f50be1f5056b968d07c03ab",
+      "actualBlobSha": "c661de6e9a7602855f50be1f5056b968d07c03ab",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/perPartitionAutomaticFailover/PerPartitionAutomaticFailoverDiagnostics.java",
+      "bytes": 1734,
+      "expectedBlobSha": "e51ccc2cb18bea2e959ce83a08c3819c4a098ba5",
+      "actualBlobSha": "e51ccc2cb18bea2e959ce83a08c3819c4a098ba5",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/perPartitionAutomaticFailover/PerPartitionAutomaticFailoverInfoHolder.java",
+      "bytes": 3200,
+      "expectedBlobSha": "84bae0df55534d185854f0de5b45695d4c644539",
+      "actualBlobSha": "84bae0df55534d185854f0de5b45695d4c644539",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/perPartitionCircuitBreaker/ConsecutiveExceptionBasedCircuitBreaker.java",
+      "bytes": 13323,
+      "expectedBlobSha": "d43a7a1218892c8b177cc4626591fc38b29bfeaa",
+      "actualBlobSha": "d43a7a1218892c8b177cc4626591fc38b29bfeaa",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/perPartitionCircuitBreaker/GlobalPartitionEndpointManagerForPerPartitionCircuitBreaker.java",
+      "bytes": 45613,
+      "expectedBlobSha": "65a1293964a23856726f77df64c6f2c37a85ed97",
+      "actualBlobSha": "65a1293964a23856726f77df64c6f2c37a85ed97",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/perPartitionCircuitBreaker/LocationHealthStatus.java",
+      "bytes": 644,
+      "expectedBlobSha": "e45d85979ad79c1b31b79b4977a13afd00be717f",
+      "actualBlobSha": "e45d85979ad79c1b31b79b4977a13afd00be717f",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/perPartitionCircuitBreaker/LocationSpecificHealthContext.java",
+      "bytes": 10042,
+      "expectedBlobSha": "46a196a57937f354830cd1a9b59d983ae10f973c",
+      "actualBlobSha": "46a196a57937f354830cd1a9b59d983ae10f973c",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/perPartitionCircuitBreaker/LocationSpecificHealthContextTransitionHandler.java",
+      "bytes": 12501,
+      "expectedBlobSha": "c75c34684d843754ddc889931d4d89bdd8593a7a",
+      "actualBlobSha": "c75c34684d843754ddc889931d4d89bdd8593a7a",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/perPartitionCircuitBreaker/PartitionLevelCircuitBreakerConfig.java",
+      "bytes": 3633,
+      "expectedBlobSha": "01133720130174367a4097be629cc8f75a7bcb52",
+      "actualBlobSha": "01133720130174367a4097be629cc8f75a7bcb52",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/perPartitionCircuitBreaker/PerPartitionCircuitBreakerInfoHolder.java",
+      "bytes": 3745,
+      "expectedBlobSha": "b5df443271d4d3977945d1f3bb0b4e2eeb969ce8",
+      "actualBlobSha": "b5df443271d4d3977945d1f3bb0b4e2eeb969ce8",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/models/ClientEncryptionIncludedPath.java",
+      "bytes": 2987,
+      "expectedBlobSha": "2170cce8b978978d7f2c92fb94903de1b3381a96",
+      "actualBlobSha": "2170cce8b978978d7f2c92fb94903de1b3381a96",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/models/ClientEncryptionPolicy.java",
+      "bytes": 8342,
+      "expectedBlobSha": "5ea5efe4ac4e07297a26438ada18da73ada13b0b",
+      "actualBlobSha": "5ea5efe4ac4e07297a26438ada18da73ada13b0b",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/models/CosmosAuthorizationTokenResolver.java",
+      "bytes": 1361,
+      "expectedBlobSha": "5108a903cc3d7b7644f245d6a87d3c234704496e",
+      "actualBlobSha": "5108a903cc3d7b7644f245d6a87d3c234704496e",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/models/CosmosClientEncryptionKeyProperties.java",
+      "bytes": 6272,
+      "expectedBlobSha": "c4f9ec74daa5dbc1f8e08e689187e9c1dda0d380",
+      "actualBlobSha": "c4f9ec74daa5dbc1f8e08e689187e9c1dda0d380",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/models/CosmosClientEncryptionKeyResponse.java",
+      "bytes": 1252,
+      "expectedBlobSha": "81f6b2bcf60b6a243b9d17ca3d566ca5a9a53d03",
+      "actualBlobSha": "81f6b2bcf60b6a243b9d17ca3d566ca5a9a53d03",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/models/CosmosClientTelemetryConfig.java",
+      "bytes": 30204,
+      "expectedBlobSha": "47e4ebbb8ba37f8d611e7d464c20614ae777687d",
+      "actualBlobSha": "47e4ebbb8ba37f8d611e7d464c20614ae777687d",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/models/CosmosContainerIdentity.java",
+      "bytes": 2949,
+      "expectedBlobSha": "236c7cbd75609d184432c7f7dc1d0e020832b54d",
+      "actualBlobSha": "236c7cbd75609d184432c7f7dc1d0e020832b54d",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/models/CosmosContainerProperties.java",
+      "bytes": 18332,
+      "expectedBlobSha": "eb09a5331eb8cf68e1d91936deef317c0af85d51",
+      "actualBlobSha": "eb09a5331eb8cf68e1d91936deef317c0af85d51",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/models/CosmosItemRequestOptions.java",
+      "bytes": 34822,
+      "expectedBlobSha": "c63807e93fa840c7aab0a5fd27ab55ff1268df80",
+      "actualBlobSha": "c63807e93fa840c7aab0a5fd27ab55ff1268df80",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/models/CosmosMetricTagName.java",
+      "bytes": 10609,
+      "expectedBlobSha": "c24c6f01168928bce9e1eeb82a71b1a360ee7d7a",
+      "actualBlobSha": "c24c6f01168928bce9e1eeb82a71b1a360ee7d7a",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/models/CosmosMicrometerMetricsOptions.java",
+      "bytes": 17865,
+      "expectedBlobSha": "44e8d8daf7f35504ceba1373345d19d9259600ef",
+      "actualBlobSha": "44e8d8daf7f35504ceba1373345d19d9259600ef",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/models/CosmosPermissionProperties.java",
+      "bytes": 11715,
+      "expectedBlobSha": "1c15c434c90e8075f080d822c78efd87771bbf7a",
+      "actualBlobSha": "1c15c434c90e8075f080d822c78efd87771bbf7a",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/models/CosmosQueryRequestOptions.java",
+      "bytes": 33954,
+      "expectedBlobSha": "a2decf0492095b1847e10a6ff7d85bbcf9179d12",
+      "actualBlobSha": "a2decf0492095b1847e10a6ff7d85bbcf9179d12",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/models/CosmosRequestOptions.java",
+      "bytes": 14603,
+      "expectedBlobSha": "7b8674b2b528811b248e264d0a147dbce53da3b3",
+      "actualBlobSha": "7b8674b2b528811b248e264d0a147dbce53da3b3",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/models/EncryptionKeyWrapMetadata.java",
+      "bytes": 5213,
+      "expectedBlobSha": "909333847df5a352a3bd65511b04d5a7bb31d2aa",
+      "actualBlobSha": "909333847df5a352a3bd65511b04d5a7bb31d2aa",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/models/PermissionMode.java",
+      "bytes": 903,
+      "expectedBlobSha": "ca187f21c1eef512b7245739ac1eb65e0bf03548",
+      "actualBlobSha": "ca187f21c1eef512b7245739ac1eb65e0bf03548",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/util/CosmosPagedFlux.java",
+      "bytes": 5482,
+      "expectedBlobSha": "f301e1c5c7c4c40e780faef6bf33d512047cafe5",
+      "actualBlobSha": "f301e1c5c7c4c40e780faef6bf33d512047cafe5",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/util/CosmosPagedIterable.java",
+      "bytes": 3425,
+      "expectedBlobSha": "8a9feae69c4121497072b91f3fbc3140865455fe",
+      "actualBlobSha": "8a9feae69c4121497072b91f3fbc3140865455fe",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos/src/main/java/module-info.java",
+      "bytes": 5963,
+      "expectedBlobSha": "1b1ac64ec04f32de647ef1aa7cb829d8e77a4aea",
+      "actualBlobSha": "1b1ac64ec04f32de647ef1aa7cb829d8e77a4aea",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/pom.xml",
+      "bytes": 54370,
+      "expectedBlobSha": "1e6b49b48bc33deedb0c75566e99aad8edaf901b",
+      "actualBlobSha": "1e6b49b48bc33deedb0c75566e99aad8edaf901b",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/AzureKeyCredentialTest.java",
+      "bytes": 17973,
+      "expectedBlobSha": "ccbed6ab61ea9786add9144f3f81e3f30819a50e",
+      "actualBlobSha": "ccbed6ab61ea9786add9144f3f81e3f30819a50e",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/ClientBuilderConnectionPolicyTests.java",
+      "bytes": 1503,
+      "expectedBlobSha": "5166a179abfcbe723791b105275ea910cb90b3f1",
+      "actualBlobSha": "5166a179abfcbe723791b105275ea910cb90b3f1",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/ClientMetricsTest.java",
+      "bytes": 98345,
+      "expectedBlobSha": "342d50986b50e5bbc18d564f78563860f2c5a06d",
+      "actualBlobSha": "342d50986b50e5bbc18d564f78563860f2c5a06d",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/ClosedClientTests.java",
+      "bytes": 8036,
+      "expectedBlobSha": "ade9497e76b1c3d8589ee45e405538534965c439",
+      "actualBlobSha": "ade9497e76b1c3d8589ee45e405538534965c439",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/CosmosClientBuilderTest.java",
+      "bytes": 20100,
+      "expectedBlobSha": "79121376b871856b064bb28fd2b74107a3cd615d",
+      "actualBlobSha": "79121376b871856b064bb28fd2b74107a3cd615d",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/CosmosConsistencyOverrideValidationTest.java",
+      "bytes": 26356,
+      "expectedBlobSha": "c8c84fc412ed8ac2548bf893ca826dd7ededda6a",
+      "actualBlobSha": "c8c84fc412ed8ac2548bf893ca826dd7ededda6a",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/CosmosDiagnosticsE2ETest.java",
+      "bytes": 28957,
+      "expectedBlobSha": "a27c978b3be3fa6df58bbe54a4f796a645c64065",
+      "actualBlobSha": "a27c978b3be3fa6df58bbe54a4f796a645c64065",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/CosmosDiagnosticsTest.java",
+      "bytes": 110387,
+      "expectedBlobSha": "6c77e93a48362d5d617a8f7e2e59b65aa4e5c9f2",
+      "actualBlobSha": "6c77e93a48362d5d617a8f7e2e59b65aa4e5c9f2",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/GatewayEndpointMetricsTest.java",
+      "bytes": 41625,
+      "expectedBlobSha": "e41847d0626f32c1edb17e1dea175205f643d97b",
+      "actualBlobSha": "e41847d0626f32c1edb17e1dea175205f643d97b",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/Http2ConnectionConfigTests.java",
+      "bytes": 4897,
+      "expectedBlobSha": "28f3fd9817e7e693245528056f790c19892f01da",
+      "actualBlobSha": "28f3fd9817e7e693245528056f790c19892f01da",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/MultipleCosmosClientsWithTransportClientSharingTest.java",
+      "bytes": 13888,
+      "expectedBlobSha": "34592482b40ba2646dce65cb7841e27c65f9af49",
+      "actualBlobSha": "34592482b40ba2646dce65cb7841e27c65f9af49",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/ProactiveConnectionManagementTest.java",
+      "bytes": 55346,
+      "expectedBlobSha": "2c5461260c069afb265a3133efd4211674e7a35c",
+      "actualBlobSha": "2c5461260c069afb265a3133efd4211674e7a35c",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/WorkloadIdHeaderTests.java",
+      "bytes": 25888,
+      "expectedBlobSha": "61ea4bdafa5a6c71e4c55d3e949172a45ee766ca",
+      "actualBlobSha": "61ea4bdafa5a6c71e4c55d3e949172a45ee766ca",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/faultinjection/FaultInjectionUnitTest.java",
+      "bytes": 12334,
+      "expectedBlobSha": "2d872b24ecc954cfb800d68273b248ad40ce529f",
+      "actualBlobSha": "2d872b24ecc954cfb800d68273b248ad40ce529f",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/faultinjection/Http2ConnectTimeoutBifurcationTests.java",
+      "bytes": 29770,
+      "expectedBlobSha": "88665e2b5d6b33f7789ad86ec2c08dcc74d07b19",
+      "actualBlobSha": "88665e2b5d6b33f7789ad86ec2c08dcc74d07b19",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/faultinjection/Http2ConnectionLifecycleTests.java",
+      "bytes": 41157,
+      "expectedBlobSha": "9c849a8ce044d7566398e79890095bbf63169700",
+      "actualBlobSha": "9c849a8ce044d7566398e79890095bbf63169700",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/faultinjection/Http2PingKeepaliveTest.java",
+      "bytes": 22591,
+      "expectedBlobSha": "99a5f25a793decdaa933831db118c1fbda7540a1",
+      "actualBlobSha": "99a5f25a793decdaa933831db118c1fbda7540a1",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/implementation/ClientConfigDiagnosticsTest.java",
+      "bytes": 24080,
+      "expectedBlobSha": "901d8a54957fef7aeb2cc35cec16272b5cee2ead",
+      "actualBlobSha": "901d8a54957fef7aeb2cc35cec16272b5cee2ead",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/implementation/ClientRetryPolicyHttp2PingCloseTest.java",
+      "bytes": 8738,
+      "expectedBlobSha": "acc4a2e834dcdfdcfbf6fdfd20edf8d0f301a319",
+      "actualBlobSha": "acc4a2e834dcdfdcfbf6fdfd20edf8d0f301a319",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/implementation/ConfigsTests.java",
+      "bytes": 20599,
+      "expectedBlobSha": "ea7ba842d37fe142fbba8e6b97165eaa16c49f31",
+      "actualBlobSha": "ea7ba842d37fe142fbba8e6b97165eaa16c49f31",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/implementation/DiagnosticsProviderJvmFatalErrorMapperTest.java",
+      "bytes": 1477,
+      "expectedBlobSha": "a88cce8793b118666a7a04d39361096046d1f893",
+      "actualBlobSha": "a88cce8793b118666a7a04d39361096046d1f893",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/implementation/EndpointProbeClientTests.java",
+      "bytes": 25372,
+      "expectedBlobSha": "f9215ce8d2a26a57471b171a7fee9d81b5d34b60",
+      "actualBlobSha": "f9215ce8d2a26a57471b171a7fee9d81b5d34b60",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/implementation/ThinClientProbeWiringTests.java",
+      "bytes": 41240,
+      "expectedBlobSha": "d60e24f3d24ed0b2438a4b01ef745f9a73b546f1",
+      "actualBlobSha": "d60e24f3d24ed0b2438a4b01ef745f9a73b546f1",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/implementation/ThinClientRoutingGateTests.java",
+      "bytes": 10425,
+      "expectedBlobSha": "9abf6052b2bf4eb48c6ce49a594b410b283d0fa5",
+      "actualBlobSha": "9abf6052b2bf4eb48c6ce49a594b410b283d0fa5",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/implementation/ThinClientStoreModelTest.java",
+      "bytes": 13238,
+      "expectedBlobSha": "f657036d81f5527d4ecb1f41f0acdbd9e8b66b57",
+      "actualBlobSha": "f657036d81f5527d4ecb1f41f0acdbd9e8b66b57",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/implementation/directconnectivity/RntbdTransportClientTest.java",
+      "bytes": 55553,
+      "expectedBlobSha": "37502af46ecfebe63eaa759ca9ffef715b1cf6a0",
+      "actualBlobSha": "37502af46ecfebe63eaa759ca9ffef715b1cf6a0",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/implementation/directconnectivity/SharedTransportClientTest.java",
+      "bytes": 5529,
+      "expectedBlobSha": "322a864b68fdca69b3300be69094d193d5b13819",
+      "actualBlobSha": "322a864b68fdca69b3300be69094d193d5b13819",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdClientChannelHealthCheckerTests.java",
+      "bytes": 30844,
+      "expectedBlobSha": "f4795bc8b93287643e3e6f85391f417e67d16b91",
+      "actualBlobSha": "f4795bc8b93287643e3e6f85391f417e67d16b91",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdEndpointTests.java",
+      "bytes": 1724,
+      "expectedBlobSha": "ca93c20c3f111c639a1d5c1a42772c31b24948d4",
+      "actualBlobSha": "ca93c20c3f111c639a1d5c1a42772c31b24948d4",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdReadConsistencyStrategyHeaderTests.java",
+      "bytes": 24791,
+      "expectedBlobSha": "330c41a133b2a05945ff1cd1ac16abfd501e34ee",
+      "actualBlobSha": "330c41a133b2a05945ff1cd1ac16abfd501e34ee",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdRequestManagerTests.java",
+      "bytes": 11717,
+      "expectedBlobSha": "80be36a0853d3ef22fc6f5b8c31f9b4618ea5b07",
+      "actualBlobSha": "80be36a0853d3ef22fc6f5b8c31f9b4618ea5b07",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdTokenStreamTests.java",
+      "bytes": 4276,
+      "expectedBlobSha": "397764e209e00c504ad576c2069745288c0995b6",
+      "actualBlobSha": "397764e209e00c504ad576c2069745288c0995b6",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdTokenTests.java",
+      "bytes": 3114,
+      "expectedBlobSha": "f417bec3061be92c93c3f66c770a1a39efd5a5c6",
+      "actualBlobSha": "f417bec3061be92c93c3f66c770a1a39efd5a5c6",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdTokenTypeTests.java",
+      "bytes": 3205,
+      "expectedBlobSha": "af3c4f83afaec66233e63c0a80140d150cde340f",
+      "actualBlobSha": "af3c4f83afaec66233e63c0a80140d150cde340f",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/implementation/directconnectivity/rntbd/RntbdWorkloadIdTests.java",
+      "bytes": 8285,
+      "expectedBlobSha": "839819f75bfbd6546ff267efb1365aa1853df1ed",
+      "actualBlobSha": "839819f75bfbd6546ff267efb1365aa1853df1ed",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/implementation/http/Http2ParentChannelExceptionHandlerTest.java",
+      "bytes": 9104,
+      "expectedBlobSha": "5de07306e74a5e6a3553a3df65559ff433311e13",
+      "actualBlobSha": "5de07306e74a5e6a3553a3df65559ff433311e13",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/implementation/http/Http2PingCloseRewrapInstallTest.java",
+      "bytes": 10808,
+      "expectedBlobSha": "a09bc5db0a22b6a77790bd9f2f652e815b36b4e0",
+      "actualBlobSha": "a09bc5db0a22b6a77790bd9f2f652e815b36b4e0",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/implementation/http/Http2PingHandlerTest.java",
+      "bytes": 14134,
+      "expectedBlobSha": "004cde861d870117b910fb06b564fcd1ee713d0e",
+      "actualBlobSha": "004cde861d870117b910fb06b564fcd1ee713d0e",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/implementation/http/ReactorNettyHttpClientTest.java",
+      "bytes": 6292,
+      "expectedBlobSha": "da8804db17d280ec90299931a61bb8fc6656d53c",
+      "actualBlobSha": "da8804db17d280ec90299931a61bb8fc6656d53c",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/implementation/http/SharedGatewayHttpClientTest.java",
+      "bytes": 4452,
+      "expectedBlobSha": "787b2e86ccbf13dcb9732e7d7d9d57f559494857",
+      "actualBlobSha": "787b2e86ccbf13dcb9732e7d7d9d57f559494857",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/implementation/perPartitionCircuitBreaker/PerPartitionCircuitBreakerInfoHolderTest.java",
+      "bytes": 13329,
+      "expectedBlobSha": "87b7193d9ed4595cc3ab03f3cbddafc258ef9c96",
+      "actualBlobSha": "87b7193d9ed4595cc3ab03f3cbddafc258ef9c96",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/rx/AadAuthorizationTests.java",
+      "bytes": 22066,
+      "expectedBlobSha": "7eaee2b01210e93241cdcfd723e355d5d9a98d71",
+      "actualBlobSha": "7eaee2b01210e93241cdcfd723e355d5d9a98d71",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/rx/CosmosAuthorizationTokenResolverTest.java",
+      "bytes": 25197,
+      "expectedBlobSha": "c557ad1e71f9d55a4d577dd83aee98e818395d5a",
+      "actualBlobSha": "c557ad1e71f9d55a4d577dd83aee98e818395d5a",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/rx/GatewayReadConsistencyStrategySpyWireTest.java",
+      "bytes": 42462,
+      "expectedBlobSha": "58e198d4b5b5ce19cdf0fe8dfebd91e00bfbe0c4",
+      "actualBlobSha": "58e198d4b5b5ce19cdf0fe8dfebd91e00bfbe0c4",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/java/com/azure/cosmos/rx/ThinClientResourceTokenE2ETest.java",
+      "bytes": 6023,
+      "expectedBlobSha": "b167eb7bdbcd6940a56821a89b0ea74dfa37506a",
+      "actualBlobSha": "b167eb7bdbcd6940a56821a89b0ea74dfa37506a",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-tests/src/test/resources/unit-testng.xml",
+      "bytes": 1584,
+      "expectedBlobSha": "d92efb8abd4a1cf39d56c76eea4f163cf3c65970",
+      "actualBlobSha": "d92efb8abd4a1cf39d56c76eea4f163cf3c65970",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/README.md",
+      "bytes": 13498,
+      "expectedBlobSha": "bed13c6983fd8992d4c18e4940a234ae39cab937",
+      "actualBlobSha": "bed13c6983fd8992d4c18e4940a234ae39cab937",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/pom.xml",
+      "bytes": 7885,
+      "expectedBlobSha": "9a01a59ed5729544c3f4d344515660a8db277ac3",
+      "actualBlobSha": "9a01a59ed5729544c3f4d344515660a8db277ac3",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/main/java/com/azure/cosmos/test/faultinjection/CosmosFaultInjectionHelper.java",
+      "bytes": 1181,
+      "expectedBlobSha": "1a222aeb6ea833bd14fea4b5f222293097fde405",
+      "actualBlobSha": "1a222aeb6ea833bd14fea4b5f222293097fde405",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/main/java/com/azure/cosmos/test/faultinjection/FaultInjectionCondition.java",
+      "bytes": 3305,
+      "expectedBlobSha": "ea5da4e64490f39bd91dc2835eed7329a35c4941",
+      "actualBlobSha": "ea5da4e64490f39bd91dc2835eed7329a35c4941",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/main/java/com/azure/cosmos/test/faultinjection/FaultInjectionConditionBuilder.java",
+      "bytes": 3113,
+      "expectedBlobSha": "6e9741e1718378c1e3b03300d40ef17738118de5",
+      "actualBlobSha": "6e9741e1718378c1e3b03300d40ef17738118de5",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/main/java/com/azure/cosmos/test/faultinjection/FaultInjectionConnectionErrorResult.java",
+      "bytes": 1591,
+      "expectedBlobSha": "f7ec511a2257ac8307de7ddbf22580b3b7d43287",
+      "actualBlobSha": "f7ec511a2257ac8307de7ddbf22580b3b7d43287",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/main/java/com/azure/cosmos/test/faultinjection/FaultInjectionConnectionErrorResultBuilder.java",
+      "bytes": 2426,
+      "expectedBlobSha": "ea202d6238617baee3b7ac6e52362be6ee759a8a",
+      "actualBlobSha": "ea202d6238617baee3b7ac6e52362be6ee759a8a",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/main/java/com/azure/cosmos/test/faultinjection/FaultInjectionConnectionErrorType.java",
+      "bytes": 411,
+      "expectedBlobSha": "e1e9c2ba670a767d43fd160f6ea86a4cad68e8dc",
+      "actualBlobSha": "e1e9c2ba670a767d43fd160f6ea86a4cad68e8dc",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/main/java/com/azure/cosmos/test/faultinjection/FaultInjectionConnectionType.java",
+      "bytes": 355,
+      "expectedBlobSha": "61ac4d66b28c820efb1e367ba9f5c72c1963d6ff",
+      "actualBlobSha": "61ac4d66b28c820efb1e367ba9f5c72c1963d6ff",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/main/java/com/azure/cosmos/test/faultinjection/FaultInjectionEndpointBuilder.java",
+      "bytes": 2104,
+      "expectedBlobSha": "49758df311b7a60023a53c88860a08787db635b2",
+      "actualBlobSha": "49758df311b7a60023a53c88860a08787db635b2",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/main/java/com/azure/cosmos/test/faultinjection/FaultInjectionEndpoints.java",
+      "bytes": 1566,
+      "expectedBlobSha": "95410c09e9bd754143c49bd78382f4bb19bb87d9",
+      "actualBlobSha": "95410c09e9bd754143c49bd78382f4bb19bb87d9",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/main/java/com/azure/cosmos/test/faultinjection/FaultInjectionOperationType.java",
+      "bytes": 1260,
+      "expectedBlobSha": "5b36726e3a9a87f07325f43a60e92ebba3216202",
+      "actualBlobSha": "5b36726e3a9a87f07325f43a60e92ebba3216202",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/main/java/com/azure/cosmos/test/faultinjection/FaultInjectionResultBuilders.java",
+      "bytes": 1197,
+      "expectedBlobSha": "fada1dc8f1a91982735be73a7fd1c53c66a756c0",
+      "actualBlobSha": "fada1dc8f1a91982735be73a7fd1c53c66a756c0",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/main/java/com/azure/cosmos/test/faultinjection/FaultInjectionRule.java",
+      "bytes": 5570,
+      "expectedBlobSha": "813be39c62ddd20063e7bbd5ab6ce7865eb5e275",
+      "actualBlobSha": "813be39c62ddd20063e7bbd5ab6ce7865eb5e275",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/main/java/com/azure/cosmos/test/faultinjection/FaultInjectionRuleBuilder.java",
+      "bytes": 8313,
+      "expectedBlobSha": "daccf0ce7380ec2bc2fd6034169e50b37ba9bc62",
+      "actualBlobSha": "daccf0ce7380ec2bc2fd6034169e50b37ba9bc62",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/main/java/com/azure/cosmos/test/faultinjection/FaultInjectionServerErrorResult.java",
+      "bytes": 2709,
+      "expectedBlobSha": "42a189ffdc6b5094eb8b2f91b35be169aa652b41",
+      "actualBlobSha": "42a189ffdc6b5094eb8b2f91b35be169aa652b41",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/main/java/com/azure/cosmos/test/faultinjection/FaultInjectionServerErrorResultBuilder.java",
+      "bytes": 4799,
+      "expectedBlobSha": "4ff563a4bdaf139f331945911e7c34db7e8ec14f",
+      "actualBlobSha": "4ff563a4bdaf139f331945911e7c34db7e8ec14f",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/main/java/com/azure/cosmos/test/faultinjection/FaultInjectionServerErrorType.java",
+      "bytes": 2825,
+      "expectedBlobSha": "6ee8f50671b31b3e113afdc1b36e084428da0fd9",
+      "actualBlobSha": "6ee8f50671b31b3e113afdc1b36e084428da0fd9",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/main/java/com/azure/cosmos/test/faultinjection/IFaultInjectionResult.java",
+      "bytes": 236,
+      "expectedBlobSha": "b40d0f79aa4ee916c93192974b4386894dea7eab",
+      "actualBlobSha": "b40d0f79aa4ee916c93192974b4386894dea7eab",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/main/java/com/azure/cosmos/test/implementation/ImplementationBridgeHelpers.java",
+      "bytes": 3829,
+      "expectedBlobSha": "7507229774e9d3e8fea227fbb7a05197edde3320",
+      "actualBlobSha": "7507229774e9d3e8fea227fbb7a05197edde3320",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/main/java/com/azure/cosmos/test/implementation/faultinjection/FaultInjectionConditionInternal.java",
+      "bytes": 13395,
+      "expectedBlobSha": "fb9abeff3257c77f86cd28551b26a866342a748b",
+      "actualBlobSha": "fb9abeff3257c77f86cd28551b26a866342a748b",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/main/java/com/azure/cosmos/test/implementation/faultinjection/FaultInjectionConnectionErrorRule.java",
+      "bytes": 3398,
+      "expectedBlobSha": "89157748c29f17dd3d821c0bab6af7047d821bf3",
+      "actualBlobSha": "89157748c29f17dd3d821c0bab6af7047d821bf3",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/main/java/com/azure/cosmos/test/implementation/faultinjection/FaultInjectionRuleProcessor.java",
+      "bytes": 25713,
+      "expectedBlobSha": "7652c0950fb5f52cdfc3f5e712b875d42ceffd39",
+      "actualBlobSha": "7652c0950fb5f52cdfc3f5e712b875d42ceffd39",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/main/java/com/azure/cosmos/test/implementation/faultinjection/FaultInjectionRuleStore.java",
+      "bytes": 6307,
+      "expectedBlobSha": "3d5b522868a2ba8839725615e619e35cb4ef4d4c",
+      "actualBlobSha": "3d5b522868a2ba8839725615e619e35cb4ef4d4c",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/main/java/com/azure/cosmos/test/implementation/faultinjection/FaultInjectionServerErrorResultInternal.java",
+      "bytes": 13813,
+      "expectedBlobSha": "e8d40ff59191ab4aa229c3eb7c9e97752b90b868",
+      "actualBlobSha": "e8d40ff59191ab4aa229c3eb7c9e97752b90b868",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/main/java/com/azure/cosmos/test/implementation/faultinjection/FaultInjectionServerErrorRule.java",
+      "bytes": 7370,
+      "expectedBlobSha": "bf5afcb954165294a475512e676d3a7383270391",
+      "actualBlobSha": "bf5afcb954165294a475512e676d3a7383270391",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/main/java/com/azure/cosmos/test/implementation/faultinjection/FaultInjectorProvider.java",
+      "bytes": 2608,
+      "expectedBlobSha": "c0ba1cc303391da1f7bc96f3307236765733590c",
+      "actualBlobSha": "c0ba1cc303391da1f7bc96f3307236765733590c",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/main/java/com/azure/cosmos/test/implementation/faultinjection/IFaultInjectionRuleInternal.java",
+      "bytes": 699,
+      "expectedBlobSha": "5ac15a66a1ebe82dd70df4889672ce2840cb684b",
+      "actualBlobSha": "5ac15a66a1ebe82dd70df4889672ce2840cb684b",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/main/java/com/azure/cosmos/test/implementation/faultinjection/RntbdConnectionErrorInjector.java",
+      "bytes": 6507,
+      "expectedBlobSha": "28f3ad1b2bc8ef288cf75aa753ec562ed1a71370",
+      "actualBlobSha": "28f3ad1b2bc8ef288cf75aa753ec562ed1a71370",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/main/java/com/azure/cosmos/test/implementation/faultinjection/ServerErrorInjector.java",
+      "bytes": 4920,
+      "expectedBlobSha": "962115467e0614b8802dcf608a3f3126ffb93058",
+      "actualBlobSha": "962115467e0614b8802dcf608a3f3126ffb93058",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/main/java/com/azure/cosmos/test/implementation/interceptor/CosmosInterceptorHelper.java",
+      "bytes": 1025,
+      "expectedBlobSha": "2a058ab1bf1648f0a316cc5f65e41f1509ea99c1",
+      "actualBlobSha": "2a058ab1bf1648f0a316cc5f65e41f1509ea99c1",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/main/java/com/azure/cosmos/test/implementation/interceptor/CosmosTransportClientInterceptor.java",
+      "bytes": 1206,
+      "expectedBlobSha": "ca38c0ca20483483aa0cab72d3a854028a2922cb",
+      "actualBlobSha": "ca38c0ca20483483aa0cab72d3a854028a2922cb",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/main/java/module-info.java",
+      "bytes": 224,
+      "expectedBlobSha": "ccaaf699f81e9b782e6ed9c80a42871d0a6eb1ce",
+      "actualBlobSha": "ccaaf699f81e9b782e6ed9c80a42871d0a6eb1ce",
+      "verified": true
+    },
+    {
+      "path": "sdk/cosmos/azure-cosmos-test/src/samples/java/com/azure/cosmos/test/ReadmeSamples.java",
+      "bytes": 12731,
+      "expectedBlobSha": "9496fdef8f86bfc737c10f4cccc504544c8736c5",
+      "actualBlobSha": "9496fdef8f86bfc737c10f4cccc504544c8736c5",
+      "verified": true
+    }
+  ]
+}
