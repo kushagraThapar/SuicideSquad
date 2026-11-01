@@ -5,13 +5,14 @@
 
 | Field | Value |
 |---|---|
-| Document version | 0.1.2 |
+| Document version | 0.1.3 |
 | Recorded | 2026-11-01 UTC |
 | D-01 baseline policy | User-selected: default `main`, all repository SDK source, existing SDK CI-derived matrices, Gateway and Direct |
 | D-02 assurance/workflow policy | User-approved: behavioral preservation, complete applicable new/changed evidence, every-PR testing coverage and design/spec before feature/bug implementation |
+| D-03 CI-gate/limit approach | User-approved approach: existing CI gates/configured limits as the initial baseline, strengthen demonstrated gaps, comparable evidence/rationale for new numerical tolerances; effective values/run evidence unreconciled |
 | Historical main-derived intake pin | `Azure/azure-cosmos-dotnet-v3@52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8`; not a forever-fixed project baseline |
 | Status | INITIAL GAP DRAFT; ALL ATOMIC CANDIDATES PROPOSED / UNVERIFIED |
-| Boundary | Design-only D-02/spec-first documentation update; historical reconnaissance retained; Java paused; separate SDK/CI audit not duplicated or claimed complete |
+| Boundary | Design-only D-03 approach update; historical reconnaissance retained; Java paused; separate audit reported complete, report/findings not incorporated; no duplicate SDK investigation |
 
 ## 1. Reading this matrix
 
@@ -50,6 +51,19 @@ and a plan mapping meaningful existing/new assertions to established SDK CI.
 This is not a retrospective PR summary, new storage/schema mandate, substitute
 for tests or authority to change contracts. Metrics support the behavioral
 goal, not maximizing percentages/test counts; retain all nine dimensions.
+
+The [approved D-03 approach](design-handoff.md#103-user-approved-d-03-approach)
+starts with existing SDK CI gates and configured limits, strengthened where
+the audit demonstrates missing behavioral protection. New numerical tolerances
+require comparable evidence and an explicit rationale, not arbitrary
+coverage-percentage targets. Applicable existing checks and spec-required test
+evidence must pass; missing, skipped or inconclusive required evidence is not
+success. Added regression checks become permanent protection, not checks to
+weaken for green CI. Bound runs, retries and agent repair, preserve first
+failures and per-attempt evidence, and treat exhaustion as blocked/inconclusive,
+not passing. Effective gates/values, benchmark/resource tolerances and actual
+run evidence remain unreconciled; additional budgets/operations remain D-10.
+Legitimate contract/test changes remain protected under D-12.
 
 All witnesses below remain historical E-01 through E-28 intake evidence.
 Future assessments resolve default main and record exact main/base/candidate/
@@ -169,19 +183,21 @@ The states `proposed`, `contract-verified`, `test-mapped`,
 | Spec-first change plan | Before agent implementation, record intended behavior/bug reproduction and correction, affected/interacting invariants, preservation/intended changes, failure/edge scenarios and meaningful existing/new assertions mapped to established CI; no new storage or approval mechanism selected |
 | Status and write safety | Use operation/resource, HTTP+substatus, origin, mode, transmission/possible commit, consistency/session, options/topology/capability and remaining budgets; unknown required cells block eligibility |
 | Scenarios and data | Retain all 28 critical seeds and twelve general database families from the handoff; specify constrained pairwise/critical sequences, concurrency schedules, data/representation extremes and reproducible minimization |
-| Test/fixture fidelity | Every PR needs applicable testing evidence; sufficient existing tests can prove obligations without artificial new-test quotas or a documentation-only/no-test waiver. Map CI assertions/scenarios to affected and interacting obligations, improve gaps there and distinguish fixture fidelity/negative controls/controlled clocks |
-| Measurement and ratchets | Apply approved D-02 to comparable old obligations and complete new/changed evidence; equality for unaffected/saturated dimensions is not an increase; report full candidate counts/debt without offsets. All nine dimensions remain diagnostic/supporting evidence; thresholds/tolerances/tooling stay D-03/D-09 |
-| Historical regressions | Use public provenance and sanitized reproductions; require a real assertion failure on the affected revision and pass on the fixed candidate plus neighbors/variants; no benchmark admitted here |
+| Test/fixture fidelity | Every PR needs applicable testing evidence; sufficient existing tests can prove obligations without artificial new-test quotas or a documentation-only/no-test waiver. Applicable existing checks and spec-required evidence must pass; required missing/skipped/inconclusive evidence is not success. Map assertions/scenarios and improve gaps in existing CI; retain fixture fidelity/negative controls/controlled clocks |
+| Measurement and ratchets | Apply D-02 to comparable old obligations and complete new/changed evidence; equality for unaffected/saturated dimensions is not an increase; report full candidate counts/debt without offsets and retain all nine diagnostic dimensions. D-03 approach reuses existing CI gates/limits, strengthens demonstrated gaps and requires comparable evidence/rationale for new numerical tolerances; effective gates/values/run evidence unreconciled, tooling still D-09 |
+| Historical regressions | Use public provenance and sanitized reproductions; require a real assertion failure on the affected revision and pass on the fixed candidate plus neighbors/variants; retain added regression checks as permanent protection, not weakened for green CI; no benchmark admitted here |
 | Independent review and governance | PR Review Router-led semantic judgment, risk/quorum/independence and bounded Java/.NET/Python/Go/Rust comparison, JS/TS/consumers when relevant; existing human approval rules remain; D-06/D-07/D-08 open |
 | Candidate-bound trusted evidence | Protect policy/oracles/selection; bind exact main/base/head/actual merge candidate, CI/artifacts/configuration/cohorts, discovered/executed cases, raw outcomes and reviewer receipts for each frozen assessment; missing/stale/malformed evidence fails closed |
-| Privacy, ownership and budgets | Design secretless untrusted execution versus separately authorized live work, bounded retries/cost, shared-account namespace/fault/capacity ownership, cleanup/outage/stop/recovery and retention; D-10 open |
+| Privacy, ownership and budgets | Bound runs/retries/agent repair with visible first failures and per-attempt evidence; exhaustion is blocked/inconclusive, not passing. Additional agent/cost budgets, secretless untrusted execution versus separately authorized live work, shared-account namespace/fault/capacity ownership, cleanup/outage/stop/recovery and retention remain D-10 |
 | Qualification and contract changes | Resolve D-11 samples/strata/uncertainty and D-12 protected changes/exceptions; any-domain shadow experiments can produce useful BLOCKED findings but never create all-domain merge authority |
 
-D-01 and D-02 are selected; effective matrix, artifact and assertion/scenario
+D-01/D-02 and the D-03 approach are selected; effective matrix/gate/value/
+artifact, benchmark/resource tolerance, run and assertion/scenario
 reconciliation remain incomplete.
-[D-03 through D-12](design-handoff.md#10-decision-queue-carried-forward)
-remain open (ten decisions). Approved policy is not an implemented gate or
-proof that current CI suffices. No row may compensate for another domain's
+[D-04 through D-12](design-handoff.md#10-decision-queue-carried-forward)
+remain open (nine decisions); D-04 is being discussed, not selected.
+Approved policy is not an implemented gate or proof that current CI suffices.
+No row may compensate for another domain's
 critical gap, and no new obligation disappears because it reduces a ratio.
 
 Keep timeout/cancellation write ambiguity, non-snapshot pagination, bulk
@@ -192,14 +208,19 @@ would apply only to actually controlled clocks/timers/schedulers.
 
 Ordered continuation is effective existing-CI/artifact/applicability
 reconciliation under D-01, source-backed atomic/oracle closure and CI assertion/
-scenario mapping, then measurement/review/operations decisions and independent
+scenario mapping, then factual gate/value reconciliation under D-03,
+remaining review/operations decisions and independent
 design review. For later authorized changes, a design/spec and test plan must
 precede agent implementation and applicable proof. The separate read-only SDK/
-CI reconciliation audit is owned by another workstream; no report is
-incorporated or completion claimed here. Keep the nine-dimensional assurance
-goals and independent Router-led review; green current CI alone is not proof of sufficient coverage
-or merge authority. This bounded documentation update stops at publication;
-it starts no new SDK/CI investigation and grants no SDK source/test/pipeline
+CI reconciliation audit is reported complete by the coordinator; its authored
+report/findings are not incorporated or reconciled here, and its investigation
+is not duplicated. Reported audit completion is not verified whole-SDK
+assurance. Keep the nine-dimensional assurance goals and independent Router-led
+review; green current CI alone is not proof of sufficient coverage or merge
+authority. This bounded D-03 documentation update stops at publication;
+it does not import the separate report or select tooling, schemas, reviewers,
+human sign-off or merge authority. It starts no new SDK/CI investigation and
+grants no SDK source/test/pipeline
 edits or execution, CI triggers, live accounts, agents/reviews, source vendoring,
 governance changes, merges, deployments or releases. The .NET design and both
 project PRs remain unapproved for merge.
@@ -209,6 +230,7 @@ project PRs remain unapproved for merge.
 | 0.1.0 | 2026-11-01 | Whole-SDK navigation/gap draft with independently pinned .NET witnesses, six additional lanes and eight explicitly unverified atomic candidates |
 | 0.1.1 | 2026-11-01 | Record selected D-01 main/all-repository/CI-native/Gateway-and-Direct policy and separate ongoing migration; preserve historical witnesses/candidates and incomplete effective CI/artifact/assertion gaps; D-02 through D-12 remain open |
 | 0.1.2 | 2026-11-01 | Record approved D-02 behavioral assurance, every-PR applicable testing and specs before implementation; preserve all dimensions, D-01 and historical candidates/evidence; D-03 through D-12 remain open; separate audit not duplicated |
+| 0.1.3 | 2026-11-01 | Record approved D-03 existing-CI gate/limit approach without numerical value approval; required passing evidence, permanent regression protection and bounded visible attempts; D-04 through D-12 open (nine); preserve D-01/D-02/history; audit reported complete, not imported |
 
 [auth-cache]: https://github.com/Azure/azure-cosmos-dotnet-v3/blob/52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8/Microsoft.Azure.Cosmos/src/Authorization/TokenCredentialCache.cs
 [database-api]: https://github.com/Azure/azure-cosmos-dotnet-v3/blob/52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8/Microsoft.Azure.Cosmos/src/Resource/Database/Database.cs

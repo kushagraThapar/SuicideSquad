@@ -6,16 +6,17 @@
 
 | Field | Value |
 |---|---|
-| Document version | 0.2.2 |
+| Document version | 0.2.3 |
 | Recorded | 2026-11-01 UTC; original transfer 2026-10-31 |
 | Status | .NET DESIGN-ONLY DISCOVERY ACTIVE; JAVA PAUSED AT ACCEPTED DESIGN/RESEARCH CHECKPOINT |
 | Canonical project home | [kushagraThapar/SuicideSquad](https://github.com/kushagraThapar/SuicideSquad) |
 | SDK research target | [Azure/azure-cosmos-dotnet-v3](https://github.com/Azure/azure-cosmos-dotnet-v3) |
 | D-01 source and verification policy | User-selected: default `main`, all SDK source across the repository, existing SDK CI-derived baselines, Gateway and Direct; [decision receipt](#101-user-selected-d-01-baseline-policy) |
 | D-02 behavioral assurance and spec-first policy | User-approved: preserve comparable existing obligations, prove new/changed behavior, applicable testing evidence for every PR and design/spec before feature/bug implementation; [decision receipt](#102-user-approved-d-02-and-spec-first-requirement) |
+| D-03 CI-gate and limit approach | User-approved approach: start with existing SDK CI gates/configured limits, strengthen demonstrated behavioral gaps and require comparable evidence/rationale for new numerical tolerances; values remain unreconciled; [decision receipt](#103-user-approved-d-03-approach) |
 | Historical .NET intake pin | [`52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8`](https://github.com/Azure/azure-cosmos-dotnet-v3/tree/52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8); initial main-based discovery, not a forever-fixed project baseline or semantic closure |
 | Accepted Java checkpoint | [Design v0.2.3 at 5d92106027629ec6c5022a7cd5ef2085014d6973](https://github.com/kushagraThapar/SuicideSquad/blob/5d92106027629ec6c5022a7cd5ef2085014d6973/docs/suicide-squad-design.md) |
-| Current .NET records | [Design/baseline v0.1.2](design-baseline.md) and [whole-SDK domain-gap matrix v0.1.2](domain-gap-matrix.md) |
+| Current .NET records | [Design/baseline v0.1.3](design-baseline.md) and [whole-SDK domain-gap matrix v0.1.3](domain-gap-matrix.md) |
 | Implementation / SDK execution authorization | None |
 | Release execution, automation and production rollout | Deferred to a separate project |
 
@@ -40,12 +41,13 @@ The initial context transfer is persistent at commit
 `d9d02138e7fa72b32bfcc72dd63028d208004297`, and the first source-pinned
 baseline/inventory/gap draft at
 `2c67e23092a1f1cbcd719a71c6db51114926a31c`; D-01 was recorded at
-`fecb6db64817175ef5752ce28b6f8c675196b348`. This bounded follow-up records
-the user's approved D-02 behavior-preservation policy and spec-first
-requirement, not another SDK investigation campaign. Observable acceptance
-is consistent policy, workflow and progress wording in these three documents,
-unchanged D-01 and historical evidence, explicit remaining CI/artifact/assertion
-gaps, and D-03 through D-12 still open.
+`fecb6db64817175ef5752ce28b6f8c675196b348`, and D-02/spec-first at
+`a4af4bcee8b4f931b1e127599ca6fdc719aa2dee`. This bounded follow-up records
+the user's approved D-03 approach, not numerical value approval, audit import
+or another SDK investigation campaign. Observable acceptance is consistent
+policy and progress wording in these three documents, unchanged D-01/D-02
+and historical evidence, explicit remaining CI/gate/value/artifact/assertion
+gaps, and D-04 through D-12 still open (nine decisions).
 
 Only the .NET documentation lane is changed: this handoff and its linked
 baseline and matrix. The existing .NET checkout remains a read-only input,
@@ -79,7 +81,13 @@ changes the goal, not maximizing percentages or test counts. Every PR needs
 applicable testing coverage/evidence. AI coding agents must produce a
 change-proportionate design document/specification before implementing any
 feature or bug fix; it is not a retrospective PR summary. The selected policies
-do not establish implemented gates or approve the ten remaining decisions.
+do not establish implemented gates or approve the nine remaining decisions.
+
+D-03 selects existing SDK CI gates and configured limits as the initial
+baseline, to be strengthened where the audit demonstrates missing behavioral
+protection. It approves an approach, not the effective gates, configured
+values, benchmark/resource tolerances or run evidence. Those facts still need
+reconciliation; no arbitrary coverage-percentage target is selected.
 
 **Status discipline:** confirmed direction, proposed controls, inherited Java
 observations and pinned .NET source observations are different categories.
@@ -149,7 +157,7 @@ Activation approves neither design nor either PR and grants no merge authority.
 |---|---|---|
 | Product scope | Whole-SDK feature/behavior scope; D-01 includes all SDK source across the repository, not just core | Actual APIs, internal workflows, CI wiring, lifecycle and applicable build/artifact combinations without silently excluding source |
 | Evidence model | Atomic contracts, independent oracles, bidirectional traceability and distinct verification states | .NET symbols, assertions, runners, candidate artifacts and exact execution receipts |
-| Quality policy | Approved D-02 behavioral nonregression for comparable obligations plus complete applicable evidence for new/changed behavior; metrics support that goal | Honest full-candidate comparisons and debt, assertion sufficiency, tool limits and D-03 thresholds/tolerances |
+| Quality policy | Approved D-02 behavioral nonregression for comparable obligations plus complete applicable evidence for new/changed behavior; metrics support that goal; D-03 starts with existing CI gates/configured limits, strengthened for demonstrated gaps | Honest full-candidate comparisons/debt, assertion sufficiency, tool limits, effective gate/value reconciliation and comparable evidence/rationale for new numerical tolerances |
 | Change workflow | Agent-authored design/spec and test plan before any feature/bug implementation; every PR needs applicable testing evidence | Concrete affected/interacting obligations and meaningful existing/new assertions mapped to the established SDK CI; storage/schema remains D-04 |
 | Status and consistency | Full decision key, write ambiguity, session/topology distinctions | Actual producers/handlers, defaults, overrides, safe replay and final error mapping |
 | Scenarios | Constrained interactions, critical sequences and database non-guarantees | Effective runtime/platform/account/service-capability cells derived from the existing SDK CI, with both Gateway and Direct |
@@ -397,10 +405,16 @@ Sampling is not a full-SDK score, and the repair agent cannot approve its own
 equivalence exclusions. D-02 does not select this proposed mutation formula,
 .NET tooling, numeric thresholds, tolerances or review quorum.
 
-Numerical thresholds, ratchets, performance tolerances and resource/iteration
-budgets remain D-03/D-10. No universal 99%/95% threshold or Java retry/time
-default is adopted. Approved exclusions need exact scope, evidence, owner and
-expiry; an unreachable fault path is a fixture gap, not an automatic exclusion.
+Under the approved [D-03 approach](#103-user-approved-d-03-approach), reuse
+existing SDK CI gates and configured limits as the initial baseline, and
+strengthen them where the audit demonstrates missing behavioral protection.
+Any new numerical tolerance needs comparable evidence and an explicit
+rationale; no arbitrary coverage-percentage target or Java retry/time default
+is adopted. Effective gates, configured values, benchmark/resource tolerances
+and run evidence still need reconciliation, not assumed approval.
+Additional agent/cost budgets and operational details remain D-10 work.
+Approved exclusions need exact scope, evidence, owner and expiry; an
+unreachable fault path is a fixture gap, not an automatic exclusion.
 
 ## 6. Test, execution and evidence requirements to specialize
 
@@ -423,6 +437,11 @@ before changing implementation. Map preservation, intended changes and
 interacting-feature risks to meaningful existing/new assertions in the
 established SDK CI. Every PR needs applicable testing evidence; merely adding
 tests, citing a percentage or writing a spec does not prove correctness.
+
+Applicable existing checks and spec-required test evidence must pass.
+Missing, skipped or inconclusive required evidence cannot count as success.
+Added regression checks become permanent behavioral protection, not checks
+to weaken for green CI; legitimate changes still need protected D-12 handling.
 
 The later design must specify:
 
@@ -454,7 +473,10 @@ The later design must specify:
 - First outcomes and every bounded retry, product versus infrastructure
   classification, visible quarantine debt and independently governed policy.
   A retry pass is not a clean pass; losing sole reliable evidence removes the
-  affected autonomy, not the obligation.
+  affected autonomy, not the obligation. Runs, retries and agent repair must
+  have finite bounds; first failures remain visible and exhaustion is
+  blocked/inconclusive, never passing. D-03 does not invent their values;
+  additional agent/cost budgets and operational details remain D-10.
 - Comparable uninstrumented performance artifacts, controlled warmup/workload,
   repeated samples, uncertainty and service variability. No noisy single run
   or agent estimate is a performance gate.
@@ -629,15 +651,16 @@ by relabeling it. A counterpart may be absent or intentionally different.
 
 The D-IDs intentionally retain correspondence to Java design section 16.2.
 Recommendations remain recommendations. The repository destination, whole-SDK
-breadth and .NET-first-after-checkpoint direction are settled. **D-01 and D-02
-are selected; D-03 through D-12 remain open (ten decisions).**
-Factual CI/artifact/assertion reconciliation is not an unanswered policy choice.
+breadth and .NET-first-after-checkpoint direction are settled. **D-01/D-02
+and the D-03 approach are selected; D-04 through D-12 remain open (nine
+decisions).** D-04 is being discussed, not selected. Factual CI/gate/value/
+artifact/assertion reconciliation is not an unanswered approach choice.
 
 | ID | .NET-scoped decision and remaining work |
 |---|---|
 | D-01 | SELECTED: default `main`; all SDK source across the repository; existing SDK CI-derived build/runtime/platform/account/service-capability baselines; Gateway and Direct; strengthen established pipelines/tests. Effective matrix, artifacts and assertion/scenario mapping remain unverified; see the receipt below |
 | D-02 | APPROVED: preserve assurance for comparable existing obligations; complete applicable evidence for new/changed behavior; equality for unaffected/saturated dimensions is allowed but not an increase; report full-candidate counts/debt; no critical-regression offsets or unproven affected behavior. Every PR needs applicable testing evidence; agent-authored design/spec precedes feature/bug implementation; receipt below |
-| D-03 | Threshold-setting procedure, staged ratchets, numerical performance tolerances and authorized assessment/CI/agent budgets |
+| D-03 | APPROVED APPROACH: existing SDK CI gates/configured limits are the initial baseline; strengthen demonstrated behavioral gaps; new numerical tolerances require comparable evidence/rationale, not arbitrary coverage targets. Required evidence must pass, regression checks remain protection, runs/retries/repair are bounded with visible first failures and blocked/inconclusive exhaustion. Effective gates/values/benchmark/resource tolerances/run evidence still need reconciliation; additional agent/cost budgets and operations remain D-10; receipt below |
 | D-04 | Runtime catalog/evidence layout, schemas and eventual SDK-side bindings; project records and pinned upstream references belong here, SDK source does not. This handoff path is chosen, not the catalog implementation |
 | D-05 | Source/changelog/API/internal-workflow closure, atomic oracle authority, disputed contracts and explicit lifecycle exclusions |
 | D-06 | Org/repository unattended-merge governance, protected-policy owners and compatibility with current human approval rules |
@@ -652,8 +675,8 @@ Factual CI/artifact/assertion reconciliation is not an unanswered policy choice.
 
 The user selected this initial policy, relayed by the coordinator on
 2026-11-01 UTC. It supersedes the earlier open D-01 wording, not historical
-source observations. The subsequent D-02 selection is recorded below;
-D-03 through D-12 remain open.
+source observations. The subsequent D-02 selection and D-03 approach are
+recorded below; D-04 through D-12 remain open.
 
 | Axis | Selected initial policy |
 |---|---|
@@ -722,21 +745,51 @@ The full quality vector and honest comparisons remain diagnostic/supporting
 evidence for the behavioral goal; no dimension is dropped for convenience.
 This decision selects no storage/schema, numerical thresholds/tolerances,
 tooling, independent-review quorum, approval identity or new human sign-off
-requirement. D-03 through D-12 and existing review/permission boundaries remain.
+requirement. The later D-03 approach is recorded below; D-04 through D-12
+remain open and existing review/permission boundaries remain unchanged.
 Approval of this policy is not approval of the overall design or either PR,
 nor authorization for SDK implementation, execution or governance changes.
 
 Policy design and baseline-dependent measurements must remain separate.
 Designing an assessment does not invent its results; authorizing a bounded
-measurement does not authorize implementation or unattended merges. Thresholds
-and graduation samples require approval before their corresponding gates run.
+measurement does not authorize implementation or unattended merges. New
+numerical tolerances and graduation samples require the applicable evidence,
+rationale and approval before their corresponding gates run.
+
+### 10.3 User-approved D-03 approach
+
+The user approved the immediately preceding approach, relayed by the
+coordinator on 2026-11-01 UTC: "sounds good, yearh the approach looks good,
+let's proceed to D4." This selects the D-03 approach only. D-04 is being
+discussed, not selected; D-04 through D-12 remain open (nine decisions).
+
+| Aspect | Approved approach |
+|---|---|
+| Initial gates and limits | Reuse the SDK's existing CI gates and configured limits as the initial baseline, not a parallel gate system |
+| Behavioral gaps | Strengthen existing CI/tests where the audit demonstrates missing behavioral protection; no arbitrary coverage-percentage targets |
+| New numerical tolerances | Require comparable evidence and an explicit rationale; do not invent values or treat this approach approval as value approval |
+| Required evidence | Applicable existing checks and spec-required test evidence must pass; missing, skipped or inconclusive required evidence cannot count as success |
+| Regression protection | Added regression checks become permanent protection, not checks to weaken for green CI; legitimate changes remain subject to protected D-12 handling |
+| Finite attempts and visible failure | Bound runs, retries and agent repair; preserve first failures and per-attempt evidence; exhaustion is blocked/inconclusive rather than passing |
+
+Policy selection is separate from factual/value approval. Effective CI gates,
+configured values, benchmark/resource tolerances and actual run evidence still
+need reconciliation; none was evaluated or approved by this documentation
+update. Historical observed settings remain evidence at their recorded pin.
+Additional agent/cost budgets and operational details remain D-10 work.
+
+D-01/D-02, the full quality vector, behavior-first/spec-first requirements and
+independent review remain intact. This decision selects no tooling, schemas,
+reviewers/quorum, new human sign-off or merge authority. It is not approval of
+the overall design or either PR, implemented enforcement, SDK execution or
+whole-SDK assurance. The separately reported audit is not imported here.
 
 ## 11. Ordered design-only continuation
 
 1. **Checkpoint and activation receipt: recorded.** Section 2 identifies the
    corrected Java checkpoint, preserved gaps and explicit design-only signal.
    Java remains paused; publication is not design approval.
-2. **Historical intake and selected D-01/D-02 policies: recorded.** The
+2. **Historical intake, D-01/D-02 policies and D-03 approach: recorded.** The
    [baseline](design-baseline.md) preserves the initial main-derived pin and
    distinguishes source declarations, package/preprocessor surfaces, structural counts,
    selected assertions and CI configuration from unmeasured behavior.
@@ -744,9 +797,11 @@ and graduation samples require approval before their corresponding gates run.
    must evaluate the effective existing CI matrix and artifact identities,
    including Gateway/Direct and all repository SDK source. D-02 selects
    behavioral assurance and specs before implementation, not numeric targets.
-   The separate authorized SDK/CI reconciliation audit belongs to another
-   workstream and is not claimed complete; this update does not duplicate it
-   or authorize SDK execution.
+   D-03 selects the CI-native gate/limit approach, not effective values or run
+   approval. The coordinator reports the separate read-only SDK/CI audit
+   complete; its report/findings are not incorporated or reconciled here.
+   Reported audit completion is not verified whole-SDK assurance; this update
+   does not duplicate/import it or authorize SDK execution.
 3. **First gap draft: recorded; closure remains open.** The
    [whole-SDK matrix](domain-gap-matrix.md) retains all 31 shared navigation
    lanes, adds .NET-specific lanes and marks every atomic candidate proposed.
@@ -759,8 +814,10 @@ and graduation samples require approval before their corresponding gates run.
    scenarios and the CI assertion plan. Then implement and obtain applicable
    proof; a retrospective summary cannot replace the spec. Resolve conflicts
    against .NET public/service evidence without self-authorizing contract changes.
-5. **Resolve measurement and review design.** Apply approved D-02 and resolve
-   D-03, catalog and receipt schemas, actual tool/fixture feasibility, benchmark admission,
+5. **Reconcile gates/values and resolve remaining design.** Apply approved
+   D-02 and the D-03 approach; reconcile actual gates, configured values,
+   tolerances and run evidence without inventing approvals. Resolve catalog
+   and receipt schemas, actual tool/fixture feasibility, benchmark admission,
    bounded cross-SDK review, protected governance and operations. Source
    discovery and independent policy discussions may progress concurrently;
    this ordered list does not make them artificial implementation dependencies.
@@ -781,20 +838,21 @@ requires every impacted obligation and global safeguard.
 
 | Item | State |
 |---|---|
-| Context transfer | v0.1.0 persistent; v0.2.0 checkpoint/activation; v0.2.1 D-01; v0.2.2 approved D-02 and spec-first requirement |
+| Context transfer | v0.1.0 persistent; v0.2.0 checkpoint/activation; v0.2.1 D-01; v0.2.2 D-02/spec-first; v0.2.3 approved D-03 approach |
 | Final Java checkpoint | v0.2.3 accepted at `5d921060...`; Java paused with explicit incomplete closure |
 | .NET-specific investigation | Activated design-only; initial source-pinned baseline/inventory/gap draft recorded |
 | D-01 baseline policy | Selected: default main, all repository SDK source, both connectivity modes, existing CI-derived matrices and pipeline/test improvements |
 | D-02 behavioral assurance/spec-first policy | Approved: preserve comparable existing obligations, prove new/changed behavior, applicable testing evidence for every PR and agent-written specs before feature/bug implementation |
+| D-03 CI-gate/limit approach | Approved approach: reuse existing CI gates/configured limits, strengthen demonstrated gaps, evidence/rationale for new tolerances, required passing evidence, permanent regression protection and bounded attempts; effective gates/values/run evidence unreconciled |
 | .NET source/API/configuration/test/CI reconnaissance | E-01 through E-28 remain historical intake evidence; effective current CI/artifact reconciliation incomplete; no new SDK audit or execution |
 | .NET atomic contracts and CI assertion/scenario mapping | Proposed/incomplete; selected baseline policy is not contract verification, CI sufficiency or capability qualification |
-| Separate SDK/CI reconciliation audit | Assigned to another SDK workstream; not duplicated or claimed complete here; report not incorporated by this update |
-| D-03 through D-12 | Ten open decisions; thresholds/tolerances, schemas, tooling, governance, quorum and qualification remain unselected |
+| Separate SDK/CI reconciliation audit | Reported complete by the coordinator; authored report/findings not incorporated or reconciled here; not duplicated and not verified whole-SDK assurance |
+| D-04 through D-12 | Nine open decisions; D-04 discussed, not selected; schemas, tooling, governance, quorum, additional budgets/operations and qualification remain open |
 | .NET coverage, mutation, benchmark and performance results | Unmeasured / not run by this contribution |
 | .NET design approval / implementation authorization | Not granted |
 | Autonomous merging / releases | Not authorized; releases remain separate |
 
-**Stop after publishing this bounded D-02/spec-first update and report its paths,
+**Stop after publishing this bounded D-03 approach update and report its paths,
 versions and immutable reference to the coordinator.** Do not expand it into exhaustive
 closure, SDK execution or implementation without the appropriate next scope
 and authorization. On resumption, re-read this gate and current repository
@@ -829,8 +887,8 @@ The project worktree began clean at
 `117aeefc095e1fa08136bc1da66c6dfa50c64a90`. Applicable root instructions,
 contribution requirements and autonomous-development guidance were inspected.
 The initial one-document contribution is at `d9d02138...`, and the initial
-three-document discovery at `2c67e23...`. D-01 was published at `fecb6db...`.
-This D-02/spec-first revision changes
+three-document discovery at `2c67e23...`. D-01 was published at `fecb6db...`,
+and D-02/spec-first at `a4af4bc...`. This D-03 approach revision changes
 only `docs/dotnet/design-handoff.md`, `docs/dotnet/design-baseline.md` and
 `docs/dotnet/domain-gap-matrix.md`; no root pointer or Java import is edited.
 Documentation verification and the publication commit/PR receipt belong in
@@ -839,7 +897,9 @@ test report. The available tool catalog did not expose an `ado` server; no live
 Azure DevOps pipeline or approval state was queried. The original source
 inspection read pinned Git objects, not vendored payloads or the SDK's different
 detached working revision. This follow-up preserves that evidence without new
-SDK investigation, execution or an exhaustive CI audit.
+SDK investigation, execution or an exhaustive CI audit. The separate audit's
+completion is reported context, not an import of its report/findings or a
+claim of verified whole-SDK assurance.
 
 | Version | Date | Change |
 |---|---|---|
@@ -847,3 +907,4 @@ SDK investigation, execution or an exhaustive CI audit.
 | 0.2.0 | 2026-11-01 | Record the accepted corrected Java v0.2.3 checkpoint, preserved recovery receipts and .NET design-only activation; select the independent .NET source pin; link the initial baseline and whole-SDK gap draft without closing the twelve decisions or authorizing execution/merges |
 | 0.2.1 | 2026-11-01 | Record the user-selected D-01 default-main, all-repository SDK source and CI-native baseline policy with Gateway/Direct; preserve historical intake evidence and incomplete factual reconciliation; D-02 through D-12 remain open; no SDK audit, execution or changes |
 | 0.2.2 | 2026-11-01 | Record user-approved D-02 behavioral assurance, every-PR testing evidence and change-proportionate specs before feature/bug implementation; preserve D-01/history and all quality dimensions; D-03 through D-12 remain open; separate audit not duplicated or claimed complete |
+| 0.2.3 | 2026-11-01 | Record approved D-03 CI-gate/limit approach without inventing or approving values; preserve D-01/D-02, spec-first and evidence history; D-04 through D-12 remain open (nine); separate audit reported complete but report/findings not incorporated; no SDK investigation or execution |

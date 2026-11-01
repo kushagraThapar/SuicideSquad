@@ -6,12 +6,13 @@
 
 | Field | Value |
 |---|---|
-| Document version | 0.1.2 |
+| Document version | 0.1.3 |
 | Recorded | 2026-11-01 UTC |
 | Status | INITIAL DESIGN/DISCOVERY DRAFT; NOT APPROVED; NO SDK EXECUTION |
 | Research repository | [Azure/azure-cosmos-dotnet-v3][sdk-tree] |
 | D-01 baseline policy | User-selected: default `main`, all repository SDK source, existing SDK CI-derived matrices, Gateway and Direct |
 | D-02 assurance/workflow policy | User-approved: preserve comparable obligations, prove new/changed behavior, applicable testing evidence for every PR and design/spec before feature/bug implementation |
+| D-03 CI-gate/limit approach | User-approved approach: reuse existing CI gates/configured limits, strengthen demonstrated behavioral gaps and require comparable evidence/rationale for new numerical tolerances; effective values/run evidence unreconciled |
 | Historical main-derived intake pin | `52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8`; pin each future assessment independently |
 | Historical intake tree object | `2c89abbd9680af78d5072b523df277d8c46b755d` |
 | Accepted Java checkpoint | [v0.2.3 at 5d92106027629ec6c5022a7cd5ef2085014d6973][java-checkpoint]; Java paused |
@@ -22,9 +23,9 @@ confirmed Java's design/research handoff gate. It establishes a reproducible
 source identity, selected source/API/configuration observations, literal
 inventory receipts and a whole-SDK gap draft. It is not a complete feature,
 public API, status-decision, invariant, assertion or supported-platform catalog.
-Subsequent revisions record user-selected D-01 and approved D-02/spec-first
-policy without refreshing the intake evidence or starting another SDK/CI
-investigation.
+Subsequent revisions record user-selected D-01, approved D-02/spec-first and
+the approved D-03 approach without refreshing intake evidence, importing the
+separate audit or starting another SDK/CI investigation.
 
 ## 1. Scope and observable acceptance
 
@@ -32,9 +33,9 @@ The accepted output is project-authored documentation in `docs/dotnet/`:
 an updated handoff, this baseline and the linked matrix. Acceptance means
 the pin is independently established, observations have immutable references,
 all shared feature lanes remain in scope, .NET-specific lanes are explicit,
-selected D-01/D-02 policies are distinguished from incomplete factual
-reconciliation, D-03 through D-12 remain open (ten decisions), and missing
-evidence is visible.
+selected D-01/D-02 policies and the D-03 approach are distinguished from
+incomplete factual/value reconciliation, D-04 through D-12 remain open (nine
+decisions), and missing evidence is visible. D-04 is being discussed, not selected.
 
 The whole SDK is in scope from the start, not a retry/deadline pilot. This
 bounded pass samples implementation and assertion text across discovery
@@ -71,6 +72,15 @@ to meaningful existing/new assertions in the established SDK CI. It is not a
 retrospective summary, a substitute for test evidence or contract-change
 authority. Storage/schema, thresholds, tolerances, tooling and quorum remain
 unselected; the full quality vector remains diagnostic/supporting evidence.
+
+The [approved D-03 approach](design-handoff.md#103-user-approved-d-03-approach)
+reuses existing SDK CI gates and configured limits as the initial baseline
+and strengthens them where the audit demonstrates missing behavioral protection.
+New numerical tolerances require comparable evidence and an explicit rationale,
+not arbitrary coverage-percentage targets. This selects the approach, not
+effective gates, configured values, benchmark/resource tolerances or run
+evidence; those remain unreconciled. Additional agent/cost budgets and
+operational details remain D-10 work.
 
 Source is accessed in the target SDK repository at the pin, not copied into
 SuicideSquad. No SDK code, reproducer, exporter, build, test, coverage,
@@ -259,6 +269,14 @@ behavioral and cross-feature evidence linked to the pre-implementation spec
 and test plan. Coverage metrics diagnose gaps; green percentages or test counts
 alone do not prove correctness.
 
+D-03 requires applicable existing checks and spec-required test evidence to
+pass; missing, skipped or inconclusive required evidence cannot count as
+success. Added regression checks are permanent protection, not checks to
+weaken for green CI. Runs, retries and agent repair must be bounded, with first
+failures and per-attempt evidence visible; exhaustion is blocked/inconclusive,
+not passing. No new limit/tolerance value is selected here, and legitimate
+changes still need protected D-12 handling.
+
 | Arrangement | Actual pinned evidence | Remaining gap |
 |---|---|---|
 | Main PR entry | YAML includes `main` / `releases/*`, excludes Markdown/docs/contracts paths, and references core, preview/internal, samples/package, thin-client, fault and AAD templates. [E-19](#e-19) | Live pipeline registration, branch rules, required contexts and path-filter effects; no assumed review/merge authority |
@@ -272,9 +290,11 @@ alone do not prove correctness.
 | Performance and fuzz | Core template declares a GateBenchmark/BaselineValidation invocation; fuzz project has SharpFuzz and seed/config inputs. [E-20](#e-20), [E-24](#e-24) | No performance or fuzz result. No fuzz invocation literal was found in the main PR entry/templates searched; this is not a complete CI-registration audit |
 | API checks and negative control | Reflection baseline selection and an assertion that deliberately different JSON fails were read. Builder tests assert strategy round-tripping. [E-02](#e-02), [E-25](#e-25) | Assertion-text witnesses only; independent oracle approval, production-case mapping, mutation challenge and execution remain absent from this project |
 
-The historical inspection did not select policy. The user has since approved
-D-02 behavioral nonregression/spec-first requirements, not numeric thresholds,
-mutation tools, performance tolerances, quorum or autonomy sample sizes.
+The historical inspection did not select policy. The user has since selected
+D-01, approved D-02 behavioral nonregression/spec-first and the D-03 approach,
+not evaluated/approved effective gates, configured values, benchmark/resource
+tolerances or run evidence. Mutation tools, quorum, autonomy sample sizes and
+additional agent/cost/operational budgets remain unselected.
 The selected coverage command does not establish an enforced threshold
 elsewhere. GitHub Actions,
 remaining templates, all exclusions, actual service capabilities, native
@@ -283,8 +303,8 @@ dependencies and live governance were not exhaustively audited.
 ## 8. Pinned evidence index
 
 E-01 through E-28 remain historical intake evidence from main, unchanged by
-the D-01/D-02 policy decisions. Every upstream link below uses the same immutable
-intake commit. `S` is selected source/configuration text observed,
+the D-01/D-02 policies or D-03 approach. Every upstream link below uses the
+same immutable intake commit. `S` is selected source/configuration text observed,
 `A` is actual assertion text observed,
 `H` is historical prose and `P` is path/fixture identity only. None promotes an
 invariant past `proposed` without independent contract/oracle work.
@@ -323,24 +343,29 @@ invariant past `proposed` without independent contract/oracle work.
 ## 9. Remaining design work and stop boundary
 
 The full [D-01 through D-12 queue](design-handoff.md#10-decision-queue-carried-forward)
-is retained. D-01 and D-02 are selected; effective CI
-matrix/artifact evaluation and assertion/scenario reconciliation are still
-incomplete facts to establish. D-03 through D-12 remain open (ten decisions).
-D-04 has documentation paths, not an approved runtime catalog/schema.
+is retained. D-01/D-02 and the D-03 approach are selected; effective CI
+matrix/gate/value/artifact evaluation, benchmark/resource tolerances, run
+evidence and assertion/scenario reconciliation are still incomplete facts
+to establish. D-04 through D-12 remain open (nine decisions).
+D-04 is being discussed, not selected; documentation paths do not select a
+runtime catalog/schema.
 
-The next bounded design slices should enumerate/evaluate the existing SDK CI's
+Any later authorized reconciliation must establish the existing SDK CI's
 build/runtime/platform/account/service-capability cells for all repository SDK
 source and Gateway/Direct, bind artifacts, and map actual assertions/scenarios.
 Do not invent a separate matrix; identify gaps to improve in those pipelines
-and tests while retaining every whole-SDK obligation. The coordinator assigned
-a read-only SDK/CI reconciliation audit to a separate SDK workstream; this
-update does not duplicate it, incorporate its report or claim completion.
+and tests while retaining every whole-SDK obligation. The coordinator reports
+the separate read-only SDK/CI reconciliation audit complete; its authored
+report/findings are not incorporated or reconciled here. This update does
+not duplicate or import it; reported completion is not verified whole-SDK
+assurance.
 Reconcile history/API/internal obligations in both
 directions, independently validate atomic contracts/oracles, and map actual
 assertions and fixtures. Apply approved D-02 to honest comparable/full-candidate
-evidence and spec-before-implementation order. Then resolve numeric thresholds/
-tolerances, .NET tooling feasibility, independent Router governance and candidate
-receipts, cross-SDK breadth, privacy/cost/cleanup and benchmark/shadow
+evidence and spec-before-implementation order, and D-03 to existing gates/limits,
+demonstrated gaps and evidence/rationale for new tolerances, without inventing
+value approval. Resolve .NET tooling feasibility, independent Router governance
+and candidate receipts, cross-SDK breadth, privacy/cost/cleanup and benchmark/shadow
 qualification. No such plan authorizes an execution campaign.
 
 The [matrix](domain-gap-matrix.md) preserves all shared feature lanes and the
@@ -352,9 +377,9 @@ are in [handoff section 12](design-handoff.md#12-canonical-concept-references-an
 chapters 04, 05, 06, 07, 11, 12, 16 and 17 at `bcfbc786...`; .NET examples
 and generic retry summaries do not replace current SDK/service evidence.
 
-Stop after publishing this bounded documentation update; no new SDK/CI audit
-or investigation campaign is included. Do not claim exhaustive semantic
-closure, measured coverage, an admitted historical benchmark, design approval,
+Stop after publishing this bounded D-03 documentation update; no audit import,
+new SDK/CI audit or investigation campaign is included. Do not claim exhaustive
+semantic closure, measured coverage, an admitted historical benchmark, design approval,
 implemented controls, SDK readiness or autonomous merge eligibility.
 PR publication and the Java handoff gate authorize neither PR's merge.
 
@@ -363,6 +388,7 @@ PR publication and the Java handoff gate authorize neither PR's merge.
 | 0.1.0 | 2026-11-01 | Initial independently pinned .NET source/API/configuration/history/test/coverage/CI discovery and provenance draft; no SDK execution or closure claim |
 | 0.1.1 | 2026-11-01 | Record user-selected D-01 main/whole-repository/CI-native/Gateway-and-Direct policy; preserve intake pin and E-01 through E-28 as history, ongoing Direct migration context and incomplete effective CI/artifact/assertion reconciliation; no new SDK investigation or execution |
 | 0.1.2 | 2026-11-01 | Record approved D-02 behavioral preservation, every-PR testing evidence and pre-implementation specs; retain all quality dimensions, D-01 and historical evidence; ten decisions remain open; no separate-audit duplication or SDK execution |
+| 0.1.3 | 2026-11-01 | Record approved D-03 CI-gate/limit approach, required passing evidence, permanent regression protection and bounded visible attempts; no values approved; D-04 through D-12 open (nine); preserve D-01/D-02/history; separate audit reported complete, not incorporated; no SDK investigation/execution |
 
 [sdk-tree]: https://github.com/Azure/azure-cosmos-dotnet-v3/tree/52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8
 [java-checkpoint]: https://github.com/kushagraThapar/SuicideSquad/blob/5d92106027629ec6c5022a7cd5ef2085014d6973/docs/suicide-squad-design.md
