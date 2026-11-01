@@ -6,23 +6,25 @@
 
 | Field | Value |
 |---|---|
-| Document version | 0.1.0 |
-| Recorded | 2026-10-31 |
-| Status | DESIGN-ONLY CONTEXT TRANSFER; FINAL JAVA CHECKPOINT AND .NET ACTIVATION PENDING |
+| Document version | 0.2.0 |
+| Recorded | 2026-11-01 UTC; original transfer 2026-10-31 |
+| Status | .NET DESIGN-ONLY DISCOVERY ACTIVE; JAVA PAUSED AT ACCEPTED DESIGN/RESEARCH CHECKPOINT |
 | Canonical project home | [kushagraThapar/SuicideSquad](https://github.com/kushagraThapar/SuicideSquad) |
-| Future SDK research target | [Azure/azure-cosmos-dotnet-v3](https://github.com/Azure/azure-cosmos-dotnet-v3) |
-| .NET source baseline | Not selected or inspected in this handoff |
-| Initial canonical Java import | [Design v0.2.2 at a10d3042a61540b907edbe17b710c6294b997a7f](https://github.com/kushagraThapar/SuicideSquad/blob/a10d3042a61540b907edbe17b710c6294b997a7f/docs/suicide-squad-design.md) |
+| SDK research target | [Azure/azure-cosmos-dotnet-v3](https://github.com/Azure/azure-cosmos-dotnet-v3) |
+| .NET source baseline | [`52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8`](https://github.com/Azure/azure-cosmos-dotnet-v3/tree/52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8); initial read-only discovery, not semantic closure |
+| Accepted Java checkpoint | [Design v0.2.3 at 5d92106027629ec6c5022a7cd5ef2085014d6973](https://github.com/kushagraThapar/SuicideSquad/blob/5d92106027629ec6c5022a7cd5ef2085014d6973/docs/suicide-squad-design.md) |
+| Initial .NET records | [Design/baseline v0.1.0](design-baseline.md) and [whole-SDK domain-gap matrix v0.1.0](domain-gap-matrix.md) |
 | Implementation / SDK execution authorization | None |
 | Release execution, automation and production rollout | Deferred to a separate project |
 
 This document transfers context, not Java implementation facts or approval.
 The user chose a **versioned Java design/research checkpoint with explicit
 remaining gaps**, not a fully source-verified Java feature/invariant catalog,
-as the handoff point before prioritizing .NET. The initial Java import is
-persistent; the coordinator has **not** confirmed the final checkpoint or
-activated .NET-specific investigation. A corrected final checkpoint is pending
-the Java workstream's repository-layout cleanup.
+as the handoff point before prioritizing .NET. The coordinator has now confirmed
+the corrected Java v0.2.3 checkpoint and explicitly activated bounded,
+**design-only .NET discovery**. Java is paused with its unresolved backlog.
+This is a stable handoff record, not a claim that Java SDK behavior or the .NET
+design is complete. The original pending gate remains visible in v0.1.0 history.
 
 The eventual goal remains agents discovering and reproducing SDK bugs,
 implementing fixes, running comprehensive validation, receiving independent
@@ -32,19 +34,25 @@ merge, deployment or release authority.
 
 ## 1. Scope, acceptance and boundaries
 
-The accepted slice is a standalone .NET starting document that:
+The initial context transfer is persistent at commit
+`d9d02138e7fa72b32bfcc72dd63028d208004297`. The newly authorized slice adds
+a source-pinned baseline/inventory/gap draft that:
 
 - Preserves applicable requirements, unresolved decisions and recovery limits.
 - Separates reusable framework from .NET-specific contract revalidation.
-- Provides immutable existing references and explicit pending checkpoint fields.
+- Records the corrected Java checkpoint and active .NET / paused Java boundary.
+- Inspects .NET source/API/configuration/history and test/coverage/CI arrangements
+  read-only, with traceable observations and explicitly unverified candidates.
 - Leaves the Java design/research and root guidance untouched.
-- Gives ordered, design-only continuation steps behind the coordinator's gate.
+- Stops after publishing this bounded first pass, without claiming closure.
 
-Only this .NET-scoped document is introduced. There is no .NET source,
-changelog, test, CI, package or public-issue investigation in this contribution.
-The existing .NET checkout is a future read-only research input, not an output
-destination. No SDK code, test infrastructure, agent definitions, permissions,
-live resources or Agent merge settings are changed; no agents are launched.
+Only the .NET documentation lane is changed: this handoff and its linked
+baseline and matrix. The existing .NET checkout is a read-only input, not an
+output destination; pinned Git objects are read without changing its detached
+working revision. No SDK/reproducer/exporter code, build, test, coverage,
+mutation or benchmark is executed. No SDK code, test infrastructure, agent
+definitions, permissions, live resources or Agent merge settings are changed;
+no agents are launched and no merge, deployment or release is authorized.
 
 **Repository layout:** SuicideSquad retains project-authored design, discovery,
 catalog/provenance records and pinned upstream references, not vendored SDK
@@ -54,35 +62,38 @@ documentation area. The coordinator's layout correction supersedes the
 historical initial Java import's snapshot layout; Java cleanup belongs to that
 separate workstream.
 
-The whole .NET SDK feature/behavior surface is the intended design scope from
+The whole .NET SDK feature/behavior surface is the design scope from
 the beginning, not a retries/deadlines-only pilot. Exact package boundaries,
-supported versions and service combinations require .NET revalidation. Later
-activation permits design investigation only; implementing fixtures, executing
-SDK assessments, changing CI or enabling merges requires separate authorization.
+supported versions and service combinations still require .NET revalidation.
+The selected source baseline does not close D-01. The activation permits design
+investigation only; implementing fixtures, executing SDK assessments, changing
+CI or enabling merges requires separate authorization.
 
 **Status discipline:** confirmed direction, proposed controls, inherited Java
-observations and .NET-verified facts are different categories. This handoff
-contains no .NET-verified source/test facts. Written requirements are not
-implemented controls, and publication is not independent design approval.
+observations and pinned .NET source observations are different categories.
+The baseline records actual source/configuration and selected assertion text,
+not executed tests or approved atomic contracts. All invariant candidates
+remain proposed or unresolved. Written requirements are not implemented
+controls, and publication or activation is not independent design approval.
 
-## 2. Provenance and the pending Java checkpoint
+## 2. Provenance and the accepted Java checkpoint
 
 ### 2.1 Inputs and authority
 
 The supplied Java session design v0.2.1 was read, including scope, architecture,
 catalogs, metrics, tests, benchmarks, review, operations and continuation.
-After the coordinator supplied the canonical v0.2.2 import, its complete diff
-against that intake was inspected. The immutable repository version below
-supersedes the local design as the reference for that revision. The old v0.1
-attachment is stale and was not used.
+The historical v0.2.2 import was compared with that intake. The corrected
+v0.2.3 checkpoint and its recovery/source-access records now supersede both
+as current authority. The old v0.1 attachment is stale and was not used.
 
 | Input | Reference and limit |
 |---|---|
-| Canonical Java design | [v0.2.2, sections 2 and 4-19](https://github.com/kushagraThapar/SuicideSquad/blob/a10d3042a61540b907edbe17b710c6294b997a7f/docs/suicide-squad-design.md); initial import, not final stabilization |
+| Current canonical Java design | [v0.2.3, especially sections 16-17 and 19.4](https://github.com/kushagraThapar/SuicideSquad/blob/5d92106027629ec6c5022a7cd5ef2085014d6973/docs/suicide-squad-design.md); accepted design/research checkpoint with incomplete Java contract/test closure |
+| Current checkpoint provenance | [Research index](https://github.com/kushagraThapar/SuicideSquad/blob/5d92106027629ec6c5022a7cd5ef2085014d6973/docs/research/java-sdk/README.md), [checkpoint validation](https://github.com/kushagraThapar/SuicideSquad/blob/5d92106027629ec6c5022a7cd5ef2085014d6973/docs/research/java-sdk/checkpoint-validation.json) and [source-access boundary](https://github.com/kushagraThapar/SuicideSquad/blob/5d92106027629ec6c5022a7cd5ef2085014d6973/docs/research/java-sdk/source-access.json); project records and pinned source references, not vendored SDK payloads |
 | Historical Java import provenance | [Research index](https://github.com/kushagraThapar/SuicideSquad/blob/a10d3042a61540b907edbe17b710c6294b997a7f/docs/research/java-sdk/README.md) and [import manifest](https://github.com/kushagraThapar/SuicideSquad/blob/a10d3042a61540b907edbe17b710c6294b997a7f/docs/research/java-sdk/import-manifest.json); the old snapshot layout is superseded, not approved for .NET reuse |
-| Incomplete Java research | [Report status](https://github.com/kushagraThapar/SuicideSquad/blob/a10d3042a61540b907edbe17b710c6294b997a7f/docs/research/java-sdk/reports/README.md) and [import recovery checklist](https://github.com/kushagraThapar/SuicideSquad/blob/a10d3042a61540b907edbe17b710c6294b997a7f/docs/research/java-sdk/recovery/README.md); the checklist is not the later parent-authored recovery package |
-| Parent-authored recovery narrative | Supplied `recovery/README.md`, with the intake digest below; read as new discovery output, not a recovered agent report. Canonical final-checkpoint reference pending |
-| Recovery exports | `changelog-discovery-ledger.json` and `source-discovery-inventory.json`, summarized by that narrative; not copied, independently recomputed or admitted as .NET evidence here |
+| Incomplete Java research | [Report status](https://github.com/kushagraThapar/SuicideSquad/blob/5d92106027629ec6c5022a7cd5ef2085014d6973/docs/research/java-sdk/reports/README.md) and [current recovery wrapper](https://github.com/kushagraThapar/SuicideSquad/blob/5d92106027629ec6c5022a7cd5ef2085014d6973/docs/research/java-sdk/recovery/README.md); unavailable agents did not produce completed reports |
+| Parent-authored recovery narrative | [Original receipt under discovery-checkpoint/](https://github.com/kushagraThapar/SuicideSquad/blob/5d92106027629ec6c5022a7cd5ef2085014d6973/docs/research/java-sdk/recovery/discovery-checkpoint/README.md); its bytes match the supplied narrative's digest below. New parent discovery, not a recovered agent report |
+| Recovery exports | The [historical package manifest](https://github.com/kushagraThapar/SuicideSquad/blob/5d92106027629ec6c5022a7cd5ef2085014d6973/docs/research/java-sdk/recovery/discovery-checkpoint/package-manifest.json) and wrapper preserve the original receipts and their interpretation; no Java cache/export is copied or admitted as .NET evidence |
 | Cosmos concepts | `tvaron3/cosmosdb-design-docs@bcfbc786fa5296deebcccd11369efb583e63e48c`; applicable sections consulted, with qualifications in section 12 |
 
 Intake SHA-256 receipts identify exactly which revisions informed this transfer:
@@ -91,36 +102,38 @@ Intake SHA-256 receipts identify exactly which revisions informed this transfer:
 |---|---|
 | Original supplied Java design v0.2.1 | `53f53195f6da2c04b3511824056d0042d9e8111e90d9459a47254c54c60263f8` |
 | Canonical Java design v0.2.2 | `6dab296f3db25bf448bded9ed0079eaf4f76404c94521e700bccc7677716437f` |
+| Current canonical Java design v0.2.3 | `6fafb38eec4c84164157f8fdfe441717d4a8e216738699b1d44a359f40f7597f` |
 | Supplied parent recovery narrative | `01778dd74cf96b5857804a553a61011841a5a9c840de5013d658565097e06266` |
 
 These are document receipts, not source/test verification. Machine-local
-session paths are not long-term authority. When the coordinator supplies the
-final checkpoint, record its immutable design, recovery and handoff references
-here, retaining these intake receipts rather than silently rewriting history.
+session paths are not long-term authority. The original intake receipts remain
+historical; current immutable references do not silently rewrite that intake.
 
-### 2.2 Checkpoint receipt still required
+### 2.2 Confirmed checkpoint and activation receipt
 
 | Required coordinator record | Current state |
 |---|---|
-| Corrected final Java checkpoint commit and design version | Pending; `a10d3042...` is the historical initial import only |
-| Canonical parent-recovery location and provenance | Pending; not included in that initial import |
-| Java pause / .NET-first priority recorded in the Java handoff | Follow-up pending |
-| Explicit remaining Java gaps and accepted checkpoint boundary | Supplied as context below; final checkpoint confirmation pending |
-| Explicit .NET design-investigation activation | Not received |
+| Corrected final Java checkpoint commit and design version | Coordinator confirmed v0.2.3 at `5d92106027629ec6c5022a7cd5ef2085014d6973` and the exact remote head |
+| Canonical parent-recovery location and provenance | Four unchanged historical discovery receipts under `recovery/discovery-checkpoint/`, interpreted through the current wrapper |
+| Java pause / .NET-first priority recorded in the Java handoff | Recorded in Java section 19.4 and requirements R-12/R-13; Java implementation/contract backlog remains paused |
+| Explicit remaining Java gaps and accepted checkpoint boundary | Versioned design/research checkpoint accepted; DS-14 contract/test closure and DS-13 design/implementation approval are not complete |
+| Explicit .NET design-investigation activation | Received, limited to this read-only source-pinned baseline/inventory/gap draft |
 
-The initial import is [#2](https://github.com/kushagraThapar/SuicideSquad/pull/2).
-Feature-branch publication does not establish default-branch integration,
-design approval, inventory closure or .NET activation. The imported Java design
-still describes Java-first work; the user-directed transition changes the next
-research priority, not the truth of its historical observations. The parent
-owns recording that transition and the final Java checkpoint in the Java lane.
-The Java workstream is removing source snapshots from its current net diff
-while retaining `a10d3042...` in history. Recovery receipts remain historical
-discovery evidence, not justification to retain or re-vendor SDK source here.
+The corrected checkpoint is published in
+[#4](https://github.com/kushagraThapar/SuicideSquad/pull/4), open/unmerged at
+activation. Its corrected net change is 23 project-authored documentation,
+research and provenance files, with no vendored SDK source/build/CI payloads.
+The historical [#2](https://github.com/kushagraThapar/SuicideSquad/pull/2) is
+superseded and closed/unmerged; `a10d3042...` is historical only. Recovery
+receipts are discovery evidence, not instructions to restore source snapshots.
+
+The checkpoint satisfies the handoff gate, not independent design review,
+default-branch integration, Java semantic closure or SDK release readiness.
+Activation approves neither design nor either PR and grants no merge authority.
 
 ## 3. Reuse versus revalidate
 
-| Area | Carry forward | Must be established for .NET after activation |
+| Area | Carry forward | Must be independently established for .NET |
 |---|---|---|
 | Product scope | Whole-SDK feature/behavior scope; separate discovery, execution and autonomy milestones | Actual APIs, internal workflows, packages, lifecycle and supported combinations |
 | Evidence model | Atomic contracts, independent oracles, bidirectional traceability and distinct verification states | .NET symbols, assertions, runners, candidate artifacts and exact execution receipts |
@@ -187,9 +200,12 @@ Companion-package contracts genuinely in .NET scope need separately identified
 lanes and denominators, not silent inclusion or exclusion. Encryption discovery
 must go beyond policy/key metadata to key resolution, rotation/rewrap/caching,
 serialization/query/operation combinations, errors and privacy. Actual .NET
-package membership and contracts remain unverified. Connectors/frameworks are
-consumers or separately scoped products, not automatically part of the client
-denominator.
+package declarations are now observed in the baseline; supported membership,
+atomic contracts and denominators remain open. The matrix adds distinct .NET
+lanes for LINQ, preview distributed transactions/inference, the two encryption
+packages and FaultInjection rather than forcing everything into Java seeds.
+Connectors/frameworks are consumers or separately scoped products, not
+automatically part of the client denominator.
 
 ### 4.2 Closure is more than a feature list
 
@@ -359,7 +375,9 @@ The proposed layers remain deterministic unit/property checks, stateful
 client/transport faults, emulator integration, required live service validation,
 concurrency/stress/soak, and compatibility/performance. No particular .NET
 runner, mutation engine, concurrency tool, emulator capability or CI command
-has been verified or selected.
+has been execution-verified or selected for SuicideSquad. The linked baseline
+now records pinned runner/instrumentation/CI declarations and selected assertion
+text, not evaluated discovery, runtime behavior or an approved tooling choice.
 
 The later design must specify:
 
@@ -534,13 +552,13 @@ Its source revision is not a support-policy or GA-capability guarantee.
 | Selected CI/configuration observations and shared live accounts exist in Java inputs | Not proof of current required checks, successful execution/cleanup or equivalent .NET fixtures |
 | No SDK coverage/mutation scores measured, benchmarks admitted or SDK execution performed in the Java design exercise | Not evidence that existing SDK coverage or regression tests are zero. No SDK implementation, live operations or releases occurred |
 
-The final Java checkpoint must retain these gaps without completing every
+The accepted Java checkpoint retains these gaps without completing every
 Java contract first. Pausing Java preserves its backlog; it does not mark
 DS-14 or design approval complete.
 
 ### Consequential leads to carry as discovery prompts
 
-| Java lead | Future .NET question, not a .NET finding |
+| Java lead | .NET revalidation question, not an inherited .NET finding |
 |---|---|
 | Account consistency versus `ReadConsistencyStrategy` | Enumerate actual account/client/request/strategy precedence and supported transport/topology combinations; do not invent an equivalent API |
 | Gateway 449 changed in Java history while chapter 17 gives generic/older guidance | Verify current .NET orchestration and safe replay by mode/version; no blanket Direct retry-superset rule |
@@ -565,7 +583,7 @@ technical/governance decisions are not.
 
 | ID | .NET-scoped unresolved decision |
 |---|---|
-| D-01 | Immutable SDK baseline and supported branches, target frameworks/runtimes, OS/architecture, transports, account/service-capability and package matrix |
+| D-01 | Research source pin selected at `52ff1383...`; supported branches, target frameworks/runtimes, OS/architecture, transports, account/service-capability, package and evaluated-build matrix still open |
 | D-02 | Exact improvement/nonregression policy at saturation, docs-only/neutral changes, discovery-only debt, N/A and changing denominators |
 | D-03 | Threshold-setting procedure, staged ratchets, numerical performance tolerances and authorized assessment/CI/agent budgets |
 | D-04 | Runtime catalog/evidence layout, schemas and eventual SDK-side bindings; project records and pinned upstream references belong here, SDK source does not. This handoff path is chosen, not the catalog implementation |
@@ -585,20 +603,20 @@ and graduation samples require approval before their corresponding gates run.
 
 ## 11. Ordered design-only continuation
 
-1. **Wait for the coordinator.** Receive the corrected final Java checkpoint commit,
-   version, recovery/handoff paths, accepted remaining gaps and explicit .NET
-   activation. Update section 2 and the version log with immutable references.
-   The initial import, a merged PR or elapsed time alone is not activation.
-2. **After activation, reconcile scope and select a research baseline.** Read
-   current project guidance and the checkpoint, then inspect the .NET target
-   read-only to pin a source revision and propose the D-01 support/capability
-   matrix. Access source in the target SDK repository, not a SuicideSquad
-   snapshot. Baseline selection is not permission to execute SDK tests.
-3. **Establish .NET discovery provenance and gaps.** Reconcile full history,
-   APIs/options/internal workflows, companion boundaries and status decision
-   sites. Separate structural inventory, atomic contracts, test mapping,
-   execution and qualification; do not copy Java denominators.
-4. **Specify atomic contracts and interaction oracles.** Resolve conflicts
+1. **Checkpoint and activation receipt: recorded.** Section 2 identifies the
+   corrected Java checkpoint, preserved gaps and explicit design-only signal.
+   Java remains paused; publication is not design approval.
+2. **Research source pin and initial reconnaissance: recorded.** The
+   [baseline](design-baseline.md) freezes the .NET revision and distinguishes
+   source declarations, package/preprocessor surfaces, structural counts,
+   selected assertions and CI configuration from unmeasured behavior.
+   D-01 remains open; no SDK test execution is authorized.
+3. **First gap draft: recorded; closure remains open.** The
+   [whole-SDK matrix](domain-gap-matrix.md) retains all 31 shared navigation
+   lanes, adds .NET-specific lanes and marks every atomic candidate proposed.
+   Continue history/API/internal-workflow and assertion reconciliation only
+   within a subsequent bounded design slice; do not copy Java denominators.
+4. **Specify and independently validate atomic contracts and oracles.** Resolve conflicts
    against .NET public/service evidence, qualify conceptual guidance, and map
    all domains, status cells and critical/general database scenarios.
 5. **Resolve measurement and review design.** Settle D-02/D-03 policy, catalog
@@ -623,18 +641,21 @@ requires every impacted obligation and global safeguard.
 
 | Item | State |
 |---|---|
-| Context transfer | This versioned .NET document; independent review/default-branch integration not claimed |
-| Final Java checkpoint | Pending coordinator confirmation |
-| .NET-specific investigation | Not started; activation pending |
-| .NET source-backed contracts, test/CI facts and supported matrix | Unverified; not zero, unsupported or complete |
+| Context transfer | v0.1.0 persistent; this v0.2.0 records the corrected checkpoint and activation |
+| Final Java checkpoint | v0.2.3 accepted at `5d921060...`; Java paused with explicit incomplete closure |
+| .NET-specific investigation | Activated design-only; initial source-pinned baseline/inventory/gap draft recorded |
+| .NET source/API/configuration/test/CI reconnaissance | Selected source and assertion text observed at the pin; no live CI state or execution receipt |
+| .NET atomic contracts and supported matrix | Proposed/unresolved; source presence is not contract verification or capability approval |
 | .NET coverage, mutation, benchmark and performance results | Unmeasured / not run by this contribution |
 | .NET design approval / implementation authorization | Not granted |
 | Autonomous merging / releases | Not authorized; releases remain separate |
 
-**Stop here after publication and report the path, version and immutable
-reference to the coordinator. Do not start step 2 until the explicit signal.**
-On resumption, re-read this gate and current repository state; do not blindly
-replay external side effects or treat remembered progress as durable evidence.
+**Stop after publishing this first-pass draft and report its paths, versions
+and immutable reference to the coordinator.** Do not expand it into exhaustive
+closure, SDK execution or implementation without the appropriate next scope
+and authorization. On resumption, re-read this gate and current repository
+state; do not blindly replay external side effects or treat remembered
+progress as durable evidence.
 
 ## 12. Canonical concept references and qualifications
 
@@ -663,12 +684,17 @@ were modified by this handoff.
 The project worktree began clean at
 `117aeefc095e1fa08136bc1da66c6dfa50c64a90`. Applicable root instructions,
 contribution requirements and autonomous-development guidance were inspected.
-Only `docs/dotnet/design-handoff.md` belongs to this contribution; no root
-pointer or Java import is edited. Documentation verification and the publication
-commit/PR receipt belong in this contribution's PR, not an invented SDK test
-report. The available tool catalog did not expose an `ado` server; no live
-Azure DevOps pipeline or approval state was queried.
+The initial one-document contribution is at `d9d02138...`. This revision changes
+only `docs/dotnet/design-handoff.md`, `docs/dotnet/design-baseline.md` and
+`docs/dotnet/domain-gap-matrix.md`; no root pointer or Java import is edited.
+Documentation verification and the publication commit/PR receipt belong in
+[#3](https://github.com/kushagraThapar/SuicideSquad/pull/3), not an invented SDK
+test report. The available tool catalog did not expose an `ado` server; no live
+Azure DevOps pipeline or approval state was queried. Source inspection reads
+the target SDK's pinned Git objects, not vendored payloads or its different
+detached working revision.
 
 | Version | Date | Change |
 |---|---|---|
 | 0.1.0 | 2026-10-31 | Transfer the Java design framework, full-domain seeds, unresolved decisions and separately attributed recovery limits into a .NET-specific starting document; pin the historical initial Java import; record the non-vendoring correction; keep corrected final checkpoint and activation pending |
+| 0.2.0 | 2026-11-01 | Record the accepted corrected Java v0.2.3 checkpoint, preserved recovery receipts and .NET design-only activation; select the independent .NET source pin; link the initial baseline and whole-SDK gap draft without closing the twelve decisions or authorizing execution/merges |
