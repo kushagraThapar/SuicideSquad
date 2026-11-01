@@ -6,12 +6,13 @@
 
 | Field | Value |
 |---|---|
-| Document version | 0.1.0 |
+| Document version | 0.1.1 |
 | Recorded | 2026-11-01 UTC |
 | Status | INITIAL DESIGN/DISCOVERY DRAFT; NOT APPROVED; NO SDK EXECUTION |
 | Research repository | [Azure/azure-cosmos-dotnet-v3][sdk-tree] |
-| Immutable source baseline | `52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8` |
-| Source tree object | `2c89abbd9680af78d5072b523df277d8c46b755d` |
+| D-01 baseline policy | User-selected: default `main`, all repository SDK source, existing SDK CI-derived matrices, Gateway and Direct |
+| Historical main-derived intake pin | `52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8`; pin each future assessment independently |
+| Historical intake tree object | `2c89abbd9680af78d5072b523df277d8c46b755d` |
 | Accepted Java checkpoint | [v0.2.3 at 5d92106027629ec6c5022a7cd5ef2085014d6973][java-checkpoint]; Java paused |
 | Invariant / execution qualification | All candidates proposed or unresolved; no execution-verified or autonomy-qualified claim |
 
@@ -20,6 +21,8 @@ confirmed Java's design/research handoff gate. It establishes a reproducible
 source identity, selected source/API/configuration observations, literal
 inventory receipts and a whole-SDK gap draft. It is not a complete feature,
 public API, status-decision, invariant, assertion or supported-platform catalog.
+This revision records the subsequent user-selected D-01 policy without
+refreshing the intake evidence or starting another SDK/CI investigation.
 
 ## 1. Scope and observable acceptance
 
@@ -27,13 +30,24 @@ The accepted output is project-authored documentation in `docs/dotnet/`:
 an updated handoff, this baseline and the linked matrix. Acceptance means
 the pin is independently established, observations have immutable references,
 all shared feature lanes remain in scope, .NET-specific lanes are explicit,
-all twelve decisions remain open, and missing evidence is visible.
+the selected D-01 policy is distinguished from incomplete factual
+reconciliation, D-02 through D-12 remain open, and missing evidence is visible.
 
 The whole SDK is in scope from the start, not a retry/deadline pilot. This
 bounded pass samples implementation and assertion text across discovery
 lanes; it does not pretend that reading representative paths closes every
-lane. Companion packages and staged/preview surfaces are retained separately
-until their supported scope and lifecycle are resolved.
+lane. D-01 includes all SDK source across the repository, not just core.
+Companion packages and staged/preview source remain in scope with separate
+CI/artifact applicability and lifecycle gaps, not implicit exclusions.
+
+The [D-01 receipt](design-handoff.md#101-user-selected-d-01-baseline-policy)
+selects existing SDK CI to derive build/runtime/platform/account/
+service-capability baselines, with Gateway and Direct. Reuse and strengthen
+those pipelines/tests rather than invent a parallel verification platform.
+Effective matrix evaluation and assertion/scenario mapping remain incomplete;
+missing coverage is work to improve there, not a scope exclusion or proof that
+green current CI satisfies the assurance goals. This update does not perform
+that audit or authorize SDK test/pipeline changes, execution or CI triggers.
 
 Source is accessed in the target SDK repository at the pin, not copied into
 SuicideSquad. No SDK code, reproducer, exporter, build, test, coverage,
@@ -49,8 +63,12 @@ GitHub semantic-search index agreed on `52ff1383...` at intake. The commit
 is dated `2026-10-30T09:54:09-07:00`: "Query: Fixes hybrid search ranking by
 reverting ordinal ranks"
 ([Azure/azure-cosmos-dotnet-v3#6177](https://github.com/Azure/azure-cosmos-dotnet-v3/pull/6177)).
-The observed upstream head is frozen here; a later moving `main` does not
-silently update this baseline.
+That historical intake head remains frozen in these receipts; it is not a
+forever-fixed project baseline. D-01 selects default `main` for future code/
+feature/bug assessments. Each assessment must record the exact main/base/
+candidate/actual merge-candidate, CI/configuration and artifact identities,
+then keep them fixed for the run. A moving ref must not change an assessment
+mid-run or silently rewrite E-01 through E-28.
 
 The existing target checkout was detached at
 `dd07c97774fe093accdfd554e253c5ecfd88b7d6`, a different revision. Its HEAD and
@@ -65,8 +83,9 @@ the baseline identity and source evidence. No live Azure DevOps pipeline,
 required-check, service-connection or branch-governance state was inspected.
 The available tool catalog did not expose an `ado` server.
 
-The source pin is not a shipped NuGet identity or D-01 support approval.
-Root properties declare GA `3.63.0` and preview `3.64.0-preview.0`, while
+The historical pin is not a shipped NuGet identity or an evaluated CI matrix.
+D-01 selects the baseline policy, not proof of artifact/platform qualification.
+At this pin root properties declare GA `3.63.0` and preview `3.64.0-preview.0`, while
 history and saved API text include later hotfix/preview labels. Those records
 have different purposes. Do not select the largest filename as the current
 compiled API, or describe all source changes as already released.
@@ -89,6 +108,12 @@ runtime/OS/account matrix.
 | FaultInjection | Source project writes `TargetFramework` as `net6`, references core source by default and Direct/HybridRow conditionally. [E-24](#e-24) | Evaluated framework/build, injection fidelity, supported failure origins and package coupling |
 | Core unit and emulator projects | `net6.0`; MSTest `3.7.3`, Test SDK `17.12.0`; unit project references Coverlet MSBuild `2.8.1`. [E-18](#e-18) | Actual discovery, runner/configuration compatibility, exclusions, assertions and complete candidate production denominator |
 | Fuzz project | `net10.0` executable with SharpFuzz `2.3.0`, seed/config inputs and a core project reference. [E-24](#e-24) | Registration, instrumented assemblies, corpus/oracle quality and bounded execution policy |
+
+Per the user's context, Direct source migration is separate ongoing work
+intended to remove the external Direct DLL dependency, not a completed change
+or an implementation task here. The table preserves the intake revision's
+actual declarations. Follow actual CI/artifact wiring as that migration lands;
+do not infer completion from source presence or copy the source here.
 
 Existing public dependencies are baseline contracts to inventory, not
 implicitly remove. New customer-facing exposure of third-party implementation
@@ -201,6 +226,11 @@ not an unsupported claim that the `net8` path is broken. [E-02](#e-02)
 These are repository configuration observations, not live required checks or
 successful runs. Existing facilities are prior art to reuse and qualify, not
 a newly implemented SuicideSquad platform.
+Under the selected D-01 policy they are the baseline for future agent PR
+verification and improvements to tests/pipelines. The historical observations
+below do not enumerate the effective current matrix. Derive and evaluate that
+matrix from the SDK CI, not a replacement runtime/platform/account matrix.
+Missing coverage must become explicit improvement work in that CI.
 
 | Arrangement | Actual pinned evidence | Remaining gap |
 |---|---|---|
@@ -223,8 +253,10 @@ dependencies and live governance were not exhaustively audited.
 
 ## 8. Pinned evidence index
 
-Every upstream link below uses the same immutable SDK commit. `S` is selected
-source/configuration text observed, `A` is actual assertion text observed,
+E-01 through E-28 remain historical intake evidence from main, unchanged by
+the D-01 policy decision. Every upstream link below uses the same immutable
+intake commit. `S` is selected source/configuration text observed,
+`A` is actual assertion text observed,
 `H` is historical prose and `P` is path/fixture identity only. None promotes an
 invariant past `proposed` without independent contract/oracle work.
 
@@ -262,12 +294,17 @@ invariant past `proposed` without independent contract/oracle work.
 ## 9. Remaining design work and stop boundary
 
 The full [D-01 through D-12 queue](design-handoff.md#10-decision-queue-carried-forward)
-is retained. D-01 has a research pin, not a resolved support matrix. D-04 has
-documentation paths, not an approved runtime catalog/schema. All other
-technical/governance decisions remain open without invented approval.
+is retained. D-01's initial baseline policy is user-selected; effective CI
+matrix/artifact evaluation and assertion/scenario reconciliation are still
+incomplete facts to establish. D-02 through D-12 remain open. D-04 has
+documentation paths, not an approved runtime catalog/schema.
 
-The next bounded design slices should resolve supported package/runtime/
-transport/account cells, reconcile history/API/internal obligations in both
+The next bounded design slices should enumerate/evaluate the existing SDK CI's
+build/runtime/platform/account/service-capability cells for all repository SDK
+source and Gateway/Direct, bind artifacts, and map actual assertions/scenarios.
+Do not invent a separate matrix; identify gaps to improve in those pipelines
+and tests while retaining every whole-SDK obligation.
+Reconcile history/API/internal obligations in both
 directions, independently validate atomic contracts/oracles, and map actual
 assertions and fixtures. Then address quality-vector denominator/saturation
 policy, .NET tooling feasibility, independent Router governance and candidate
@@ -283,7 +320,8 @@ are in [handoff section 12](design-handoff.md#12-canonical-concept-references-an
 chapters 04, 05, 06, 07, 11, 12, 16 and 17 at `bcfbc786...`; .NET examples
 and generic retry summaries do not replace current SDK/service evidence.
 
-Stop after publishing this first pass. Do not claim exhaustive semantic
+Stop after publishing this bounded documentation update; no new SDK/CI audit
+or investigation campaign is included. Do not claim exhaustive semantic
 closure, measured coverage, an admitted historical benchmark, design approval,
 implemented controls, SDK readiness or autonomous merge eligibility.
 PR publication and the Java handoff gate authorize neither PR's merge.
@@ -291,6 +329,7 @@ PR publication and the Java handoff gate authorize neither PR's merge.
 | Version | Date | Change |
 |---|---|---|
 | 0.1.0 | 2026-11-01 | Initial independently pinned .NET source/API/configuration/history/test/coverage/CI discovery and provenance draft; no SDK execution or closure claim |
+| 0.1.1 | 2026-11-01 | Record user-selected D-01 main/whole-repository/CI-native/Gateway-and-Direct policy; preserve intake pin and E-01 through E-28 as history, ongoing Direct migration context and incomplete effective CI/artifact/assertion reconciliation; no new SDK investigation or execution |
 
 [sdk-tree]: https://github.com/Azure/azure-cosmos-dotnet-v3/tree/52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8
 [java-checkpoint]: https://github.com/kushagraThapar/SuicideSquad/blob/5d92106027629ec6c5022a7cd5ef2085014d6973/docs/suicide-squad-design.md

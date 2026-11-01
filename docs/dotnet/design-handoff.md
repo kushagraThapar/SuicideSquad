@@ -6,14 +6,15 @@
 
 | Field | Value |
 |---|---|
-| Document version | 0.2.0 |
+| Document version | 0.2.1 |
 | Recorded | 2026-11-01 UTC; original transfer 2026-10-31 |
 | Status | .NET DESIGN-ONLY DISCOVERY ACTIVE; JAVA PAUSED AT ACCEPTED DESIGN/RESEARCH CHECKPOINT |
 | Canonical project home | [kushagraThapar/SuicideSquad](https://github.com/kushagraThapar/SuicideSquad) |
 | SDK research target | [Azure/azure-cosmos-dotnet-v3](https://github.com/Azure/azure-cosmos-dotnet-v3) |
-| .NET source baseline | [`52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8`](https://github.com/Azure/azure-cosmos-dotnet-v3/tree/52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8); initial read-only discovery, not semantic closure |
+| D-01 source and verification policy | User-selected: default `main`, all SDK source across the repository, existing SDK CI-derived baselines, Gateway and Direct; [decision receipt](#101-user-selected-d-01-baseline-policy) |
+| Historical .NET intake pin | [`52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8`](https://github.com/Azure/azure-cosmos-dotnet-v3/tree/52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8); initial main-based discovery, not a forever-fixed project baseline or semantic closure |
 | Accepted Java checkpoint | [Design v0.2.3 at 5d92106027629ec6c5022a7cd5ef2085014d6973](https://github.com/kushagraThapar/SuicideSquad/blob/5d92106027629ec6c5022a7cd5ef2085014d6973/docs/suicide-squad-design.md) |
-| Initial .NET records | [Design/baseline v0.1.0](design-baseline.md) and [whole-SDK domain-gap matrix v0.1.0](domain-gap-matrix.md) |
+| Current .NET records | [Design/baseline v0.1.1](design-baseline.md) and [whole-SDK domain-gap matrix v0.1.1](domain-gap-matrix.md) |
 | Implementation / SDK execution authorization | None |
 | Release execution, automation and production rollout | Deferred to a separate project |
 
@@ -35,24 +36,22 @@ merge, deployment or release authority.
 ## 1. Scope, acceptance and boundaries
 
 The initial context transfer is persistent at commit
-`d9d02138e7fa72b32bfcc72dd63028d208004297`. The newly authorized slice adds
-a source-pinned baseline/inventory/gap draft that:
-
-- Preserves applicable requirements, unresolved decisions and recovery limits.
-- Separates reusable framework from .NET-specific contract revalidation.
-- Records the corrected Java checkpoint and active .NET / paused Java boundary.
-- Inspects .NET source/API/configuration/history and test/coverage/CI arrangements
-  read-only, with traceable observations and explicitly unverified candidates.
-- Leaves the Java design/research and root guidance untouched.
-- Stops after publishing this bounded first pass, without claiming closure.
+`d9d02138e7fa72b32bfcc72dd63028d208004297`, and the first source-pinned
+baseline/inventory/gap draft at
+`2c67e23092a1f1cbcd719a71c6db51114926a31c`. This bounded follow-up records
+the user's D-01 policy selection, not another SDK investigation campaign.
+Observable acceptance is consistent policy/progress wording in these three
+documents, unchanged historical evidence, explicit remaining CI/artifact/
+assertion gaps, and no implication that D-02 through D-12 were approved.
 
 Only the .NET documentation lane is changed: this handoff and its linked
-baseline and matrix. The existing .NET checkout is a read-only input, not an
-output destination; pinned Git objects are read without changing its detached
-working revision. No SDK/reproducer/exporter code, build, test, coverage,
-mutation or benchmark is executed. No SDK code, test infrastructure, agent
-definitions, permissions, live resources or Agent merge settings are changed;
-no agents are launched and no merge, deployment or release is authorized.
+baseline and matrix. The existing .NET checkout remains a read-only input,
+not an output destination. This update performs no new SDK source/test/pipeline
+inspection or execution and no exhaustive CI audit. No SDK/reproducer/exporter
+code, build, test, coverage, mutation or benchmark is executed. No SDK code,
+tests, pipelines, agent definitions, permissions, live resources or Agent merge
+settings are changed; no SDK CI is triggered, no agents/reviews are launched
+and no merge, deployment or release is authorized.
 
 **Repository layout:** SuicideSquad retains project-authored design, discovery,
 catalog/provenance records and pinned upstream references, not vendored SDK
@@ -63,11 +62,14 @@ historical initial Java import's snapshot layout; Java cleanup belongs to that
 separate workstream.
 
 The whole .NET SDK feature/behavior surface is the design scope from
-the beginning, not a retries/deadlines-only pilot. Exact package boundaries,
-supported versions and service combinations still require .NET revalidation.
-The selected source baseline does not close D-01. The activation permits design
-investigation only; implementing fixtures, executing SDK assessments, changing
-CI or enabling merges requires separate authorization.
+the beginning, not a retries/deadlines-only pilot. D-01 now selects all SDK
+source across `Azure/azure-cosmos-dotnet-v3`, both Gateway and Direct, and
+the existing SDK CI as the source of build/runtime/platform/account/
+service-capability baselines. Policy selection is complete; evaluating that
+effective matrix and mapping assertions/scenarios remain factual work for a
+later bounded slice. Missing CI coverage is a gap to improve, not an exclusion
+from scope. Implementing fixtures, changing SDK tests/pipelines, executing
+assessments or enabling merges still requires separate authorization.
 
 **Status discipline:** confirmed direction, proposed controls, inherited Java
 observations and pinned .NET source observations are different categories.
@@ -135,12 +137,12 @@ Activation approves neither design nor either PR and grants no merge authority.
 
 | Area | Carry forward | Must be independently established for .NET |
 |---|---|---|
-| Product scope | Whole-SDK feature/behavior scope; separate discovery, execution and autonomy milestones | Actual APIs, internal workflows, packages, lifecycle and supported combinations |
+| Product scope | Whole-SDK feature/behavior scope; D-01 includes all SDK source across the repository, not just core | Actual APIs, internal workflows, CI wiring, lifecycle and applicable build/artifact combinations without silently excluding source |
 | Evidence model | Atomic contracts, independent oracles, bidirectional traceability and distinct verification states | .NET symbols, assertions, runners, candidate artifacts and exact execution receipts |
 | Quality policy | Multidimensional evidence; critical gaps cannot be averaged away | Baselines, measurable denominators, tool limits and D-02/D-03 decisions |
 | Status and consistency | Full decision key, write ambiguity, session/topology distinctions | Actual producers/handlers, defaults, overrides, safe replay and final error mapping |
-| Scenarios | Constrained interactions, critical sequences and database non-guarantees | Applicable .NET runtime, transport, account and service-capability cells |
-| Test architecture | Reuse existing facilities; negative controls; deterministic plus real-service evidence | Actual build/test discovery, instrumentation, controllable clocks, fault fidelity and fixtures |
+| Scenarios | Constrained interactions, critical sequences and database non-guarantees | Effective runtime/platform/account/service-capability cells derived from the existing SDK CI, with both Gateway and Direct |
+| Test architecture | User-selected CI-native reuse and strengthening of SDK pipelines/tests, not a parallel verification platform; independent oracles/review retained | Effective build/test discovery and assertion mapping, instrumentation, controllable clocks, fault fidelity and fixture gaps in that CI |
 | Historical bugs | Public provenance, behavioral red/green proof, neighboring cases, contamination limits | A .NET-specific candidate corpus and admitted reproductions |
 | Review and merging | Router-led independent semantic judgment; separate restricted actuator; fail closed | Repository governance, bounded peer fanout, required roles, candidate-bound protocol and approval |
 | Safety and operations | Protected policy/oracles, least privilege, bounded cost, privacy, ownership and recovery | Concrete owners, enforcement, retention, access, capacity, cleanup and outage procedures |
@@ -196,13 +198,15 @@ unsupported.
 | F-30 | Source/binary/package/wire/token compatibility; supported .NET target frameworks, OS/architecture/TLS/dependencies and consumer integration |
 | F-31 | New/preview metadata and service features, including GSI/encryption metadata if present; capability/lifecycle and compatibility boundaries |
 
-Companion-package contracts genuinely in .NET scope need separately identified
-lanes and denominators, not silent inclusion or exclusion. Encryption discovery
+All SDK source across the repository is in D-01 scope, including companion
+packages and staged/preview projects. Their contracts need separately identified
+lanes and candidate-bound denominators, not silent exclusion. Encryption discovery
 must go beyond policy/key metadata to key resolution, rotation/rewrap/caching,
 serialization/query/operation combinations, errors and privacy. Actual .NET
-package declarations are now observed in the baseline; supported membership,
-atomic contracts and denominators remain open. The matrix adds distinct .NET
-lanes for LINQ, preview distributed transactions/inference, the two encryption
+package declarations are observed at the historical intake pin; effective CI/
+artifact applicability, atomic contracts and denominators remain incomplete.
+The matrix adds distinct .NET lanes for LINQ, preview distributed
+transactions/inference, the two encryption
 packages and FaultInjection rather than forcing everything into Java seeds.
 Connectors/frameworks are consumers or separately scoped products, not
 automatically part of the client denominator.
@@ -370,19 +374,24 @@ expiry; an unreachable fault path is a fixture gap, not an automatic exclusion.
 
 ## 6. Test, execution and evidence requirements to specialize
 
-Reuse .NET facilities only after establishing what actually exists and runs.
-The proposed layers remain deterministic unit/property checks, stateful
+The architecture is **CI-native**: reuse and strengthen the .NET SDK's existing
+pipelines and their tests so future agent-authored PRs can obtain correctness
+evidence through those pipelines, not a parallel verification platform.
+The assurance goals still span deterministic unit/property checks, stateful
 client/transport faults, emulator integration, required live service validation,
-concurrency/stress/soak, and compatibility/performance. No particular .NET
-runner, mutation engine, concurrency tool, emulator capability or CI command
-has been execution-verified or selected for SuicideSquad. The linked baseline
-now records pinned runner/instrumentation/CI declarations and selected assertion
-text, not evaluated discovery, runtime behavior or an approved tooling choice.
+concurrency/stress/soak, and compatibility/performance. D-01 selects the existing
+CI baseline, not a new runner/tool stack or approval of its current sufficiency.
+The linked baseline records historical declarations and selected assertion text,
+not evaluated discovery or execution. Later authorized work must map all
+features/scenarios/behaviors and the nine-dimensional vector to actual CI
+assertions and improve gaps there. Green current CI alone does not establish
+complete correctness or replace independent PR Review Router judgment.
 
 The later design must specify:
 
 - Exact setup/build/test discovery, logical and parameter-case identities,
-  configuration/platform matrix, dependencies and expected result counts.
+  effective configuration/platform/account/service-capability cells from the
+  existing SDK CI, both connectivity modes, dependencies and expected results.
   Zero discovered tests, empty parameter sources, skips, swallowed async
   failures and lost/crashed workers cannot look like success.
 - Candidate production assembly/source/symbol/package identity and digests.
@@ -578,12 +587,13 @@ by relabeling it. A counterpart may be absent or intentionally different.
 
 The D-IDs intentionally retain correspondence to Java design section 16.2.
 Recommendations remain recommendations. The repository destination, whole-SDK
-breadth and .NET-first-after-checkpoint direction are settled; the following
-technical/governance decisions are not.
+breadth and .NET-first-after-checkpoint direction are settled. **D-01's initial
+baseline policy is now user-selected; D-02 through D-12 remain open.**
+Factual CI/artifact/assertion reconciliation is not an unanswered policy choice.
 
-| ID | .NET-scoped unresolved decision |
+| ID | .NET-scoped decision and remaining work |
 |---|---|
-| D-01 | Research source pin selected at `52ff1383...`; supported branches, target frameworks/runtimes, OS/architecture, transports, account/service-capability, package and evaluated-build matrix still open |
+| D-01 | SELECTED: default `main`; all SDK source across the repository; existing SDK CI-derived build/runtime/platform/account/service-capability baselines; Gateway and Direct; strengthen established pipelines/tests. Effective matrix, artifacts and assertion/scenario mapping remain unverified; see the receipt below |
 | D-02 | Exact improvement/nonregression policy at saturation, docs-only/neutral changes, discovery-only debt, N/A and changing denominators |
 | D-03 | Threshold-setting procedure, staged ratchets, numerical performance tolerances and authorized assessment/CI/agent budgets |
 | D-04 | Runtime catalog/evidence layout, schemas and eventual SDK-side bindings; project records and pinned upstream references belong here, SDK source does not. This handoff path is chosen, not the catalog implementation |
@@ -596,6 +606,43 @@ technical/governance decisions are not.
 | D-11 | Historical corpus admission mix, shadow/qualification sample sizes, risk strata, duration, uncertainty and prospective escape criteria |
 | D-12 | Protected intentional contract changes, exceptions, obsolete obligations and historical behavior that is itself incorrect |
 
+### 10.1 User-selected D-01 baseline policy
+
+The user selected this initial policy, relayed by the coordinator on
+2026-11-01 UTC. It supersedes the earlier open D-01 wording, not historical
+source observations or the remaining eleven decisions.
+
+| Axis | Selected initial policy |
+|---|---|
+| Source | Use the default `main` branch of `Azure/azure-cosmos-dotnet-v3` to check code, features and bugs |
+| Repository/package scope | Include all .NET SDK source files across that repository, not only the core package; retain companion, staged and preview lanes |
+| Build, runtime and platform | Derive the baseline variants and runtime/platform matrix from the SDK's existing CI pipelines, not an independently invented matrix |
+| Account and service capabilities | Derive baseline account/service-capability cells from those same SDK CI pipelines; evaluate actual configuration and fixtures later |
+| Connectivity and dependencies | Include both Gateway and Direct configurations; follow the actual dependency/source and CI wiring at each assessed revision |
+| Verification architecture | Reuse and strengthen the established SDK pipelines and tests to cover every feature, scenario, area and behavior; do not build a parallel verification platform |
+
+`52ff1383...` and E-01 through E-28 remain historical intake evidence from
+`main`, not a forever-fixed project baseline. For each future assessment,
+resolve and record the exact `main`, base, candidate/actual merge-candidate,
+CI/configuration and artifact identities before evaluation. Keep those
+identities fixed within the run; do not follow a moving ref mid-run or
+silently rewrite the old evidence when `main` advances.
+
+Per the user's context, Direct source migration is separate ongoing work
+intended to replace the external Direct DLL dependency with in-repository
+source. It is not a completed replacement or a SuicideSquad implementation
+task. Preserve the observed dependency at each recorded revision and follow
+actual CI/artifact wiring as the migration lands; do not copy source here.
+
+Policy selection does not enumerate or evaluate the effective CI matrix.
+A later bounded slice must reconcile variants, runtimes/platforms, accounts/
+capabilities, Gateway/Direct paths, artifact identities and assertions/scenarios.
+Missing or skipped CI coverage is a gap to improve in the existing pipelines/
+tests, not an exclusion or proof that green current CI is sufficient.
+The nine-dimensional assurance goals, independent oracles and Router-led
+review remain unchanged. No SDK test/pipeline edits, execution, CI triggers,
+live resources or governance changes are authorized by this decision.
+
 Policy design and baseline-dependent measurements must remain separate.
 Designing an assessment does not invent its results; authorizing a bounded
 measurement does not authorize implementation or unattended merges. Thresholds
@@ -606,16 +653,20 @@ and graduation samples require approval before their corresponding gates run.
 1. **Checkpoint and activation receipt: recorded.** Section 2 identifies the
    corrected Java checkpoint, preserved gaps and explicit design-only signal.
    Java remains paused; publication is not design approval.
-2. **Research source pin and initial reconnaissance: recorded.** The
-   [baseline](design-baseline.md) freezes the .NET revision and distinguishes
-   source declarations, package/preprocessor surfaces, structural counts,
+2. **Historical intake and D-01 policy: recorded.** The
+   [baseline](design-baseline.md) preserves the initial main-derived pin and
+   distinguishes source declarations, package/preprocessor surfaces, structural counts,
    selected assertions and CI configuration from unmeasured behavior.
-   D-01 remains open; no SDK test execution is authorized.
+   D-01 now selects default main and CI-native baselines. A later bounded slice
+   must evaluate the effective existing CI matrix and artifact identities,
+   including Gateway/Direct and all repository SDK source; no audit or SDK
+   execution is authorized by this update.
 3. **First gap draft: recorded; closure remains open.** The
    [whole-SDK matrix](domain-gap-matrix.md) retains all 31 shared navigation
    lanes, adds .NET-specific lanes and marks every atomic candidate proposed.
-   Continue history/API/internal-workflow and assertion reconciliation only
-   within a subsequent bounded design slice; do not copy Java denominators.
+   Continue history/API/internal-workflow and assertion/scenario reconciliation
+   against existing CI only within a subsequent bounded design slice; record
+   pipeline/test improvement gaps, not Java denominators or a parallel platform.
 4. **Specify and independently validate atomic contracts and oracles.** Resolve conflicts
    against .NET public/service evidence, qualify conceptual guidance, and map
    all domains, status cells and critical/general database scenarios.
@@ -641,16 +692,18 @@ requires every impacted obligation and global safeguard.
 
 | Item | State |
 |---|---|
-| Context transfer | v0.1.0 persistent; this v0.2.0 records the corrected checkpoint and activation |
+| Context transfer | v0.1.0 persistent; v0.2.0 records the checkpoint/activation; v0.2.1 records the user-selected D-01 policy |
 | Final Java checkpoint | v0.2.3 accepted at `5d921060...`; Java paused with explicit incomplete closure |
 | .NET-specific investigation | Activated design-only; initial source-pinned baseline/inventory/gap draft recorded |
-| .NET source/API/configuration/test/CI reconnaissance | Selected source and assertion text observed at the pin; no live CI state or execution receipt |
-| .NET atomic contracts and supported matrix | Proposed/unresolved; source presence is not contract verification or capability approval |
+| D-01 baseline policy | Selected: default main, all repository SDK source, both connectivity modes, existing CI-derived matrices and pipeline/test improvements |
+| .NET source/API/configuration/test/CI reconnaissance | E-01 through E-28 remain historical intake evidence; effective current CI/artifact reconciliation incomplete; no new SDK audit or execution |
+| .NET atomic contracts and CI assertion/scenario mapping | Proposed/incomplete; selected baseline policy is not contract verification, CI sufficiency or capability qualification |
+| D-02 through D-12 | Open; D-01 selects none of their measurement, tooling, governance or qualification policies |
 | .NET coverage, mutation, benchmark and performance results | Unmeasured / not run by this contribution |
 | .NET design approval / implementation authorization | Not granted |
 | Autonomous merging / releases | Not authorized; releases remain separate |
 
-**Stop after publishing this first-pass draft and report its paths, versions
+**Stop after publishing this bounded D-01 update and report its paths, versions
 and immutable reference to the coordinator.** Do not expand it into exhaustive
 closure, SDK execution or implementation without the appropriate next scope
 and authorization. On resumption, re-read this gate and current repository
@@ -684,17 +737,20 @@ were modified by this handoff.
 The project worktree began clean at
 `117aeefc095e1fa08136bc1da66c6dfa50c64a90`. Applicable root instructions,
 contribution requirements and autonomous-development guidance were inspected.
-The initial one-document contribution is at `d9d02138...`. This revision changes
+The initial one-document contribution is at `d9d02138...`, and the initial
+three-document discovery at `2c67e23...`. This D-01 revision changes
 only `docs/dotnet/design-handoff.md`, `docs/dotnet/design-baseline.md` and
 `docs/dotnet/domain-gap-matrix.md`; no root pointer or Java import is edited.
 Documentation verification and the publication commit/PR receipt belong in
 [#3](https://github.com/kushagraThapar/SuicideSquad/pull/3), not an invented SDK
 test report. The available tool catalog did not expose an `ado` server; no live
-Azure DevOps pipeline or approval state was queried. Source inspection reads
-the target SDK's pinned Git objects, not vendored payloads or its different
-detached working revision.
+Azure DevOps pipeline or approval state was queried. The original source
+inspection read pinned Git objects, not vendored payloads or the SDK's different
+detached working revision. This follow-up preserves that evidence without new
+SDK investigation, execution or an exhaustive CI audit.
 
 | Version | Date | Change |
 |---|---|---|
 | 0.1.0 | 2026-10-31 | Transfer the Java design framework, full-domain seeds, unresolved decisions and separately attributed recovery limits into a .NET-specific starting document; pin the historical initial Java import; record the non-vendoring correction; keep corrected final checkpoint and activation pending |
 | 0.2.0 | 2026-11-01 | Record the accepted corrected Java v0.2.3 checkpoint, preserved recovery receipts and .NET design-only activation; select the independent .NET source pin; link the initial baseline and whole-SDK gap draft without closing the twelve decisions or authorizing execution/merges |
+| 0.2.1 | 2026-11-01 | Record the user-selected D-01 default-main, all-repository SDK source and CI-native baseline policy with Gateway/Direct; preserve historical intake evidence and incomplete factual reconciliation; D-02 through D-12 remain open; no SDK audit, execution or changes |

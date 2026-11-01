@@ -5,11 +5,12 @@
 
 | Field | Value |
 |---|---|
-| Document version | 0.1.0 |
+| Document version | 0.1.1 |
 | Recorded | 2026-11-01 UTC |
-| SDK source baseline | `Azure/azure-cosmos-dotnet-v3@52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8` |
+| D-01 baseline policy | User-selected: default `main`, all repository SDK source, existing SDK CI-derived matrices, Gateway and Direct |
+| Historical main-derived intake pin | `Azure/azure-cosmos-dotnet-v3@52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8`; not a forever-fixed project baseline |
 | Status | INITIAL GAP DRAFT; ALL ATOMIC CANDIDATES PROPOSED / UNVERIFIED |
-| Boundary | Active .NET design-only reconnaissance; Java paused at corrected v0.2.3 checkpoint |
+| Boundary | Design-only D-01 documentation update; historical reconnaissance retained; Java paused at corrected v0.2.3 checkpoint |
 
 ## 1. Reading this matrix
 
@@ -19,6 +20,20 @@ denominator**, a score, an approved catalog schema or a promise of availability.
 A lane may contain many atomic obligations; overlapping lanes do not create
 independent assurance credit. Missing counterparts are unresolved until
 source/service/lifecycle evidence supports an explicit disposition.
+
+The [user-selected D-01 policy](design-handoff.md#101-user-selected-d-01-baseline-policy)
+includes all SDK source across the repository, not just core, with Gateway
+and Direct. Derive build/runtime/platform/account/service-capability baselines
+from the established SDK CI; reuse and strengthen its pipelines/tests rather
+than build a parallel verification platform or invent a replacement matrix.
+Evaluate effective wiring/artifacts and map assertions/scenarios in a later
+bounded slice. Missing current CI coverage is an improvement gap, not an
+exclusion or proof that green CI already establishes correctness.
+
+All witnesses below remain historical E-01 through E-28 intake evidence.
+Future assessments resolve default main and record exact main/base/candidate/
+actual merge-candidate, CI/configuration and artifact identities, fixed
+within each run; the selected policy does not rebase these old witnesses.
 
 Evidence labels follow the [baseline index](design-baseline.md#8-pinned-evidence-index):
 `S` = selected source/configuration observed; `A` = actual assertion text
@@ -52,7 +67,7 @@ identified at the selected pin.
 | F-10 | Full status/substatus decisions, nested budgets, deadlines, cancellation and write ambiguity | S [E-06](design-baseline.md#e-06), [E-13](design-baseline.md#e-13); H [E-14](design-baseline.md#e-14) | Constants/producers/transformations/handlers and default paths by operation, origin, mode, commit ambiguity and budget; no HTTP-only table; N-I05 is one proposed cell |
 | F-11 | Regional selection/exclusion/discovery, writer topology and outage/recovery | P [GlobalEndpointManager][endpoint-manager]; S selected hub/status branches [E-04](design-baseline.md#e-04), [E-06](design-baseline.md#e-06) | Endpoint eligibility, no-region cases, account refresh, partition versus region health, single/multi-writer guarantees and recovery oracles |
 | F-12 | Availability/hedging/circuit breaking, winners/losers, probes and isolation | P [CrossRegionHedgingAvailabilityStrategy][hedging]; H [E-14](design-baseline.md#e-14) | Actual capability enablement and ownership, terminal races, failed/cancelled losing arms, cooldown and impact on unrelated partitions/clients |
-| F-13 | Direct transport, framing/TLS/pooling/timeouts/partial I/O and shutdown | S staged-source/default-package distinction [E-17](design-baseline.md#e-17) | Pinned shipped Direct/native implementation access, protocol and failure-origin contracts; 280 source paths do not close this lane |
+| F-13 | Direct transport, framing/TLS/pooling/timeouts/partial I/O and shutdown | S staged-source/default-package distinction [E-17](design-baseline.md#e-17) | Follow actual CI/artifact wiring as the separate ongoing Direct source migration lands; no completed DLL replacement claimed. Pinned implementation access, protocol and failure-origin contracts remain gaps; 280 paths do not close this lane |
 | F-14 | Gateway/HTTP protocols, proxy/factory/pooling/streaming/local health | P [CosmosHttpClientCore][http-client]; S policy options [E-03](design-baseline.md#e-03) | Actual protocol/runtime support, ownership, acquisition/request timeouts, local versus regional failures, malformed/partial responses and cancellation |
 | F-15 | Thin-client/capability detection, fallback, probes and account refresh | P [ThinClientStoreModel][thin-client]; H [E-14](design-baseline.md#e-14); S template reference [E-19](design-baseline.md#e-19) | Source-backed activation/default/fallback matrix, unsupported account behavior, subrange and diagnostics contracts; no Java flag/default transposition |
 | F-16 | SQL/query plans, partition scope, ordering/ties, aggregates/distinct/grouping and limits | P [CosmosQueryClientCore][query-client], [Query tree][query-tree]; S iterator declarations [E-07](design-baseline.md#e-07) | Native versus gateway planner, parameters/options, supported operators, independent fixed/concurrent-data oracles and continuation limitations |
@@ -122,20 +137,22 @@ The states `proposed`, `contract-verified`, `test-mapped`,
 
 | Gap | Work still required; no execution authorized |
 |---|---|
-| Applicability and lifecycle | Resolve D-01 support cells, GA/preview/internal/staged/package/TFM and account capabilities, source-to-shipped-artifact identity and justified lifecycle exclusions |
+| Applicability and lifecycle | D-01 policy selected; evaluate existing CI-derived build/runtime/platform/account/service-capability cells for all repository SDK source and Gateway/Direct, GA/preview/internal/staged/package applicability and source-to-artifact identity; do not invent a replacement matrix or exclude missing CI coverage |
 | Inventory and authority | Reconcile every history/API/option/internal workflow obligation both ways, split semantic changes into atomic records, resolve specification/source conflicts and independently approve oracles under D-05 |
 | Status and write safety | Use operation/resource, HTTP+substatus, origin, mode, transmission/possible commit, consistency/session, options/topology/capability and remaining budgets; unknown required cells block eligibility |
 | Scenarios and data | Retain all 28 critical seeds and twelve general database families from the handoff; specify constrained pairwise/critical sequences, concurrency schedules, data/representation extremes and reproducible minimization |
-| Test/fixture fidelity | Map actual assertions and selection to every affected obligation; distinguish mock/emulator/live/native evidence, check first-run flakes/quarantine and independent negative controls, and identify which clocks are controllable |
+| Test/fixture fidelity | Map established SDK CI assertions/scenarios and selection to every affected obligation; improve pipeline/test gaps there, not in a parallel verification platform; distinguish mock/emulator/live/native evidence, flakes/quarantine, negative controls and controlled clocks |
 | Measurement and ratchets | Preserve the full nine-dimensional vector and honest old/new denominators; settle saturation, N/A, discovery-only changes, thresholds and tolerances under D-02/D-03/D-09, without inventing scores |
 | Historical regressions | Use public provenance and sanitized reproductions; require a real assertion failure on the affected revision and pass on the fixed candidate plus neighbors/variants; no benchmark admitted here |
 | Independent review and governance | PR Review Router-led semantic judgment, risk/quorum/independence and bounded Java/.NET/Python/Go/Rust comparison, JS/TS/consumers when relevant; existing human approval rules remain; D-06/D-07/D-08 open |
-| Candidate-bound trusted evidence | Protect policy/oracles/selection; bind base/head/actual merge candidate, artifacts/configuration/cohorts, discovered/executed cases, raw outcomes and reviewer receipts; missing/stale/malformed evidence fails closed |
+| Candidate-bound trusted evidence | Protect policy/oracles/selection; bind exact main/base/head/actual merge candidate, CI/artifacts/configuration/cohorts, discovered/executed cases, raw outcomes and reviewer receipts for each frozen assessment; missing/stale/malformed evidence fails closed |
 | Privacy, ownership and budgets | Design secretless untrusted execution versus separately authorized live work, bounded retries/cost, shared-account namespace/fault/capacity ownership, cleanup/outage/stop/recovery and retention; D-10 open |
 | Qualification and contract changes | Resolve D-11 samples/strata/uncertainty and D-12 protected changes/exceptions; any-domain shadow experiments can produce useful BLOCKED findings but never create all-domain merge authority |
 
-All [twelve open decisions](design-handoff.md#10-decision-queue-carried-forward)
-are preserved. The proposed comparable-cohort component-wise nonregression
+D-01's initial baseline policy is selected; its effective matrix, artifact and
+assertion/scenario reconciliation remain incomplete.
+[D-02 through D-12](design-handoff.md#10-decision-queue-carried-forward)
+remain open. The proposed comparable-cohort component-wise nonregression
 policy is still unapproved. No row above may compensate for another domain's
 critical gap, and no new obligation disappears because it reduces a reported
 ratio.
@@ -146,16 +163,21 @@ Preview distributed-transaction scope must be established independently;
 it does not weaken those ordinary API non-guarantees. Virtual-time evidence
 would apply only to actually controlled clocks/timers/schedulers.
 
-Ordered continuation is support/artifact/applicability reconciliation,
-source-backed atomic/oracle closure and assertion mapping, then measurement/
-review/operations design decisions and independent design review. This first
-pass stops at publication. It grants no SDK modifications, test or benchmark
-execution, live-account operations, merge/policy changes, deployments or
-releases. The .NET design and both project PRs remain unapproved for merge.
+Ordered continuation is effective existing-CI/artifact/applicability
+reconciliation under D-01, source-backed atomic/oracle closure and CI assertion/
+scenario mapping, then measurement/review/operations decisions and independent
+design review. Keep the nine-dimensional assurance goals and independent
+Router-led review; green current CI alone is not proof of sufficient coverage
+or merge authority. This bounded documentation update stops at publication;
+it starts no new SDK/CI investigation and grants no SDK source/test/pipeline
+edits or execution, CI triggers, live accounts, agents/reviews, source vendoring,
+governance changes, merges, deployments or releases. The .NET design and both
+project PRs remain unapproved for merge.
 
 | Version | Date | Change |
 |---|---|---|
 | 0.1.0 | 2026-11-01 | Whole-SDK navigation/gap draft with independently pinned .NET witnesses, six additional lanes and eight explicitly unverified atomic candidates |
+| 0.1.1 | 2026-11-01 | Record selected D-01 main/all-repository/CI-native/Gateway-and-Direct policy and separate ongoing migration; preserve historical witnesses/candidates and incomplete effective CI/artifact/assertion gaps; D-02 through D-12 remain open |
 
 [auth-cache]: https://github.com/Azure/azure-cosmos-dotnet-v3/blob/52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8/Microsoft.Azure.Cosmos/src/Authorization/TokenCredentialCache.cs
 [database-api]: https://github.com/Azure/azure-cosmos-dotnet-v3/blob/52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8/Microsoft.Azure.Cosmos/src/Resource/Database/Database.cs
