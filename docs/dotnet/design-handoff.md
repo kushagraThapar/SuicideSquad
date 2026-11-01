@@ -6,7 +6,7 @@
 
 | Field | Value |
 |---|---|
-| Document version | 0.2.6 |
+| Document version | 0.2.7 |
 | Recorded | 2026-11-01 UTC; original transfer 2026-10-31 |
 | Status | SHARED .NET DOCUMENTATION UPDATE ONLY; SDK TESTING WORK SEPARATELY AUTHORIZED; JAVA PAUSED AT ACCEPTED DESIGN/RESEARCH CHECKPOINT |
 | Shared standards/process home | [kushagraThapar/SuicideSquad](https://github.com/kushagraThapar/SuicideSquad); SDK-specific authoritative records follow D-04's SDK-docs ownership |
@@ -17,9 +17,10 @@
 | D-04 ownership/layout approach | User-selected: shared rules/spec workflow/templates and cross-SDK process in SuicideSquad; SDK-specific specs, mappings, results and audits in each SDK's docs; exact paths/formats/wiring and migration pending; [decision receipt](#104-user-selected-d-04-ownership-and-layout-approach) |
 | D-05 inventory/contract/oracle approach | User-approved approach: whole-SDK reconciliation and explicit dispositions, atomic behavior contracts, versioned authority with independent oracles, preserved disputes and lifecycle states; factual closure pending, exact owners/schema/tools unselected; [decision receipt](#105-user-approved-d-05-approach) |
 | D-06 unattended-merge approach | User-approved DESIGN ONLY: eventually qualified ordinary SDK PRs, independent Router approval, exact-candidate unit plus emulator/live evidence and a separate restricted merge identity; no bypass, activation or permission change; [decision receipt](#106-user-approved-d-06-approach) |
+| D-07 review approach and Router scope | User-selected: two independent judgments plus independent test challenge, risk expertise and final-candidate reconciliation; add the personal Router's written scope with explicit adaptations, not runtime proof or activation; [receipt](#107-user-selected-d-07-approach-and-router-scope-addition) and [scope/provenance](#84-personal-router-scope-adapted-for-the-shared-design) |
 | Historical .NET intake pin | [`52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8`](https://github.com/Azure/azure-cosmos-dotnet-v3/tree/52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8); initial main-based discovery, not a forever-fixed project baseline or semantic closure |
 | Accepted Java checkpoint | [Design v0.2.3 at 5d92106027629ec6c5022a7cd5ef2085014d6973](https://github.com/kushagraThapar/SuicideSquad/blob/5d92106027629ec6c5022a7cd5ef2085014d6973/docs/suicide-squad-design.md) |
-| Current .NET bootstrap records | [Design/baseline v0.1.6](design-baseline.md) and [whole-SDK domain-gap matrix v0.1.6](domain-gap-matrix.md); preserve historical inputs pending controlled SDK-docs migration/indexing |
+| Current .NET bootstrap records | [Design/baseline v0.1.7](design-baseline.md) and [whole-SDK domain-gap matrix v0.1.7](domain-gap-matrix.md); preserve historical inputs pending controlled SDK-docs migration/indexing |
 | Implementation / SDK execution authorization | None for this documentation workstream; separately authorized spec-first SDK testing increment reported by coordinator in [section 11.1](#111-separate-sdk-testing-authorization-context) |
 | Release execution, automation and production rollout | Deferred to a separate project |
 
@@ -50,17 +51,25 @@ baseline/inventory/gap draft at
 `fecb6db64817175ef5752ce28b6f8c675196b348`, D-02/spec-first at
 `a4af4bcee8b4f931b1e127599ca6fdc719aa2dee`, the D-03 approach at
 `ccb094cb3292c5b3135dd57d49eb5b12017d633e`, D-04 ownership at
-`3b141f8c82a18d660069627c399ccfc9efc837c0`, and D-05 at
-`532e2401be02da06becbbc459dd58b78ae9b35d4`. This bounded follow-up records
-the approved D-06 DESIGN-ONLY approach on a fresh feature branch from
-SuicideSquad main `b45999c818c29169fefbe2902155d2fd65fd284f`, not the merged
-PR3 branch. Section 13.1 distinguishes historical source heads from the
-user-directed documentation squash merges. Observable acceptance is the
-exact selected approval label and prompt conditions, consistent current
-queue/progress wording, six open decisions D-07 through D-12, and preserved
-D-01 through D-05 receipts, evidence, pending D-04 details and factual/value
-gaps. No governance implementation, qualification or SDK work is included;
-earlier receipts keep their original counts and authorization limits.
+`3b141f8c82a18d660069627c399ccfc9efc837c0`, D-05 at
+`532e2401be02da06becbbc459dd58b78ae9b35d4`, and D-06 at
+`72e9f57918ed81a38bd750f4a6aca58173877d7b`. This bounded follow-up records
+the selected D-07 approach plus the user's personal-Router scope addition,
+not a PR review or activation. PR5 was open/unmerged at D-06 publication;
+it is now verified merged. The fresh D-07 feature branch starts from current
+SuicideSquad main `01803bacd42f9b66bc20e1af03dcb6bcc2a30dc7`, not the merged
+D-06 branch. Sections 13.1 and 13.3 preserve source-head/merge distinctions.
+
+Observable acceptance is the exact freeform D-07 quote without an invented
+approval-choice label, the minimum independent review/test-challenge approach,
+all thirteen supplied Router scope areas and portable source receipts with
+six explicit adaptation boundaries, consistent current queue/progress wording
+and five open decisions D-08 through D-12. Preserve exact D-01 through D-06
+historical receipts, evidence, pending D-04 details and factual/value gaps.
+The supplied Router intake is written/configured scope, not an audited runtime,
+review outcome, SDK fact or execution/qualification claim. No new personal
+source audit, governance implementation or SDK work is included; earlier
+receipts keep their original counts and authorization limits.
 
 Only the .NET documentation lane is changed: this handoff and its linked
 baseline and matrix. This workstream does not modify or execute the .NET
@@ -103,7 +112,7 @@ changes the goal, not maximizing percentages or test counts. Every PR needs
 applicable testing coverage/evidence. AI coding agents must produce a
 change-proportionate design document/specification before implementing any
 feature or bug fix; it is not a retrospective PR summary. The selected policies
-do not establish implemented gates or approve the six remaining decisions.
+do not establish implemented gates or approve the five remaining decisions.
 
 D-03 selects existing SDK CI gates and configured limits as the initial
 baseline, to be strengthened where the audit demonstrates missing behavioral
@@ -130,10 +139,19 @@ D-06 selects a future qualified ordinary-PR merge model, not permission to
 operate it. Independent Router approval, applicable unit plus emulator/live
 evidence for the exact actual merge candidate and a separate restricted merge
 identity are prerequisites. Current repo/org checks, reviews and CODEOWNERS
-remain binding; qualification initially stays non-merging. No exact identities,
-owners, permission schema, quorum, operational implementation or D-11 graduation
-scope/criteria are selected. Effective SDK/org policy access is still unresolved
+remain binding; qualification initially stays non-merging. D-06 itself selected
+no exact identities, owners, permission schema, operational implementation or
+D-11 graduation scope/criteria. Effective SDK/org policy access is still unresolved
 (section 10.6), not inferred from SuicideSquad's documentation merges.
+
+D-07 now selects the independent review approach and adds the personal Router's
+written scope through the shared mapping/provenance/adaptations in sections
+8.4-8.6. Two independent Router-led judgments plus a separate test challenger
+must explicitly pass for ordinary SDK implementation/test/CI changes, with
+applicable higher-risk expertise and final-candidate reconciliation. This is
+not runtime implementation, automatic adoption of personal routing values or
+selection of exact identities/tools/budgets. No routine human sign-off is added
+to the future target; existing review/posting/protection requirements remain.
 
 **Status discipline:** confirmed direction, proposed controls, inherited Java
 observations and pinned .NET source observations are different categories.
@@ -617,12 +635,34 @@ The existing local Router is not already an autonomous merge system. Its
 current human approval/posting boundary remains intact; D-06 design approval
 does not activate auto-merge or remove existing requirements. Qualification
 initially stays non-merging, with graduation scope/criteria still D-11.
-Repository-owned protocol,
-policy/prompt/model/tool provenance, required reviewers and fail-closed behavior
-need explicit design. Two independent Router-led judgments plus independent
-test challenge are the Java draft recommendation, not an approved .NET quorum;
-exact risk-tier requirements remain D-07. Model diversity does not establish
-statistical independence. No reviews or agents are run by this handoff.
+The [selected D-07 approach](#107-user-selected-d-07-approach-and-router-scope-addition)
+requires **two independent Router-led judgments plus a separate independent
+test challenger** for ordinary SDK implementation/test/CI changes. One judgment
+owns correctness/contracts, the other preservation/interactions; the challenger
+independently challenges the test protection and its evidence. All required
+roles must explicitly pass. Majority override, empty-findings approval and
+reviewer-shopping cannot qualify a candidate.
+
+Initial review contexts are separate from implementation and from each other
+until first reports are recorded. Verified versioned contracts, source and raw
+evidence may be shared; another agent's conclusion is not an independent
+judgment. Model diversity alone is not independence. Many nested specialists,
+two reports by one identity or a read-only test-plan artifact do not manufacture
+independent quorum, executed challenge evidence or GitHub approvals.
+
+Higher risk adds applicable security, concurrency/performance, domain and
+CI/shipped-artifact expertise. The author cannot downgrade its own tier;
+assurance specs/mappings/gates cannot hide behind docs-only handling.
+The current personal Router's specialist strategies are scope inputs, not a
+replacement for these minimum roles or a requirement to run every specialist
+or duplicate CI for every change. Section 8.4 maps that written scope into the
+shared design; sections 8.5-8.6 preserve provenance and adaptation limits.
+
+D-07 adds no routine human sign-off to the future qualified ordinary-PR target
+and selects no exact models/providers/apps/GitHub identities, budgets or tool
+implementation. Repository-owned protocol and policy/prompt/model/tool
+provenance still require protected integration and validation. No reviews or
+agents are run by this handoff, and no existing posting/review rule is removed.
 
 Cross-SDK review covers Java, .NET, Python, Go and Rust, with JS/TS and consumers
 when relevant. Each compatibility cell needs pinned source/contract/test
@@ -648,14 +688,19 @@ Required outcomes include `eligible`, `changes_required`, `blocked`,
 `needs_contract_decision` and `rejected`. Missing reviewer/results/context,
 malformed or stale receipts, wrong SHA/artifact, lost shard, weak test discovery,
 unresolved oracle or supported blocker, policy weakening and exhausted budgets
-cannot yield eligibility. The implementation agent cannot close its own
-blocker. Majority vote and an empty findings array are not approval evidence.
+cannot yield eligibility. The author cannot close its own supported blocker;
+fixes and refutations require independent verification. Dissent and earlier
+failures persist with their dispositions. Majority vote and an empty findings
+array are not approval evidence; optional suggestions remain nonblocking.
 Findings are fixed with evidence, independently refuted, or routed through
 protected contract change; blocking safety work cannot be deferred into approval.
 
-Rebase, new commits, conflicts, base/queue composition and policy/catalog
-changes invalidate affected evidence. Final judgment must bind the actual merge
-candidate through a race-safe process. Reconcile an ambiguous external response
+Fixes, rebase, new commits, conflicts, base/queue composition and policy/catalog
+changes invalidate affected evidence. Final reconciliation must bind the actual
+merge candidate and all required findings, roles and evidence through a race-safe
+process. Missing required reviewers/proof, unresolved affected contracts or
+stale/incompatible evidence block qualification, not just lower a report's
+confidence. Reconcile an ambiguous external response
 before retrying a merge or other side effect. Repository/org review rules,
 CODEOWNERS and qualifying identities remain prerequisites; internal receipts
 do not manufacture GitHub approval identities.
@@ -689,6 +734,92 @@ a source revert alone does not restore trust. No automatic revert, merge,
 permission change or release is authorized here. In the D-06 design, authorized
 policy owners can suspend the future capability; their exact identities remain
 unselected, as do the D-10 stop/budget/recovery implementation details.
+
+### 8.4 Personal Router scope adapted for the shared design
+
+The user explicitly requested the personal Router's current scope in the .NET
+review design. The coordinator supplied a direct-read intake of the written/
+configured protocol; this workstream distills that intake rather than auditing
+the personal setup again. The scope below is usable as shared process guidance
+without a contributor's personal-home installation. It is **not** proof that
+runtime dispatch, specialist installation, source access, CI or qualification
+works. No PR was reviewed and no agents were dispatched.
+
+The source protocol and the selected D-07 eligibility requirements are distinct.
+The former supplies review coverage, context and evidence practices; the latter
+requires independent roles and complete applicable proof even when a personal
+advisory strategy would produce a smaller or degraded report. Read the scope
+with the explicit discrepancies in section 8.6, not as wholesale adoption of
+personal heuristics, caps, overrides or storage/tool choices.
+
+| Area | Distilled written Router scope and .NET design application |
+|---|---|
+| 1. Thin orchestration and candidate intake | Router normalizes repository/PR, detects SDK/affected surfaces and explains risk; it routes, assembles context, merges and reconciles findings while specialists review code. The optional Squad wrapper is routing-only; Router remains the sole PR-review orchestrator. Build one coherent cached PR metadata/files/diff snapshot per candidate and refresh for a changed actual candidate, not a stale lifecycle-wide cache |
+| 2. Strategies and SDK-aware risk | Retain Triage/Standard/Deep strategies and routing for API, retry, auth, serialization, query, diagnostics, transport, dependencies and security-adjacent build/release/package surfaces. Distinguish source/tests/docs/build/generated/noise without silently skipping shipping generated/public contracts, manifests, migrations, baselines or security. Preserve strategy/scope, not every personal heuristic score, numerical cap, tier override or docs/test force rule as a qualification value |
+| 3. Specialist family and composition | The written family is Tier1 Fresh Eyes; Tier2 PR Deep, Engineering Quality, PR Test Model and Skeptic Lens, with conditional CI Artifact and Security; Tier3 adds cosmos-pr-reviewer when Cosmos-domain surfaces match, with Interactive Deep only when explicitly requested. Review Quality Gate follows merged findings. PR Deep may coordinate Past Review, Past PR Investigator, Review Context Builder, Fresh Eyes and Cross SDK; Cross SDK receives explicit peer scope and returns verified comparisons. All stay Router-coordinated. Domain ownership/scope filters avoid duplicate full-stack work; preserve specialist obligations without all specialists or duplicate CI on every change. This composition does not itself satisfy D-07 independence or create qualifying GitHub identities |
+| 4. Correctness, API and published surfaces | Examine prior behavior/history, callers/callees, related tests/specs, null/default consistency, async/cancellation/default compatibility, diagnostics/error preservation and customer-facing API/shipped-surface compatibility. Newly introduced third-party type leakage is a BLOCKER across all customer-reachable published artifacts, including optional companions/adapters. Compare base/head; do not silently remove legitimate preexisting public contracts |
+| 5. Engineering Quality | Retain rubric D1/D2/D3/D5 with cross-cutting D6 verification: observability/supportability/debuggability, API hygiene, complexity and allocation; actual changed-path, failure, boundary, concurrency, deterministic and red-before/green-after regression coverage; hot-path/lock/async/backpressure/payload/allocation costs and applicable comparable benchmark evidence. Agentic readiness has five explicit dimensions: streaming/async for LLM consumers; structured I/O contracts; documented idempotency/safe-retry contracts; machine-readable observability; tool-callable public APIs. Other selected assurances, such as deadlines, retain their own obligations; do not silently expand these five dimensions or select numeric scores/thresholds |
+| 6. PR Test Model and independent challenge | Its dedicated READ-ONLY artifact inventories practical existing file:test/assertion evidence for changed behaviors/paths, identifies conceptual Cosmos gaps and recommends a plan with name, class, location, risk caught and required-before-merge versus follow-up disposition. Keep package/source/unit/emulator/live/benchmark categories distinct. Applicable axes include split/merge, replica/region failover, session/cache lifecycle, status/substatus retry interactions, Gateway/Direct, cold/warm caches, single/cross-partition, malformed/wire/serializer bounds, timeout/cancellation/partial responses, concurrency and diagnostics propagation. Require meaningful applicability/rationale, not invented missing-test or new-test quotas. This agent does not generate tests or prove executed mutation/service challenges; written recommendations do not supply the broader D-07 independent challenger's execution evidence. Paired unit plus emulator/authorized-isolated-live requirements remain intact |
+| 7. Cosmos design alignment | Map canonical concept chapters by affected paths and title/body keywords; retain section citations, explicit stale/missing/sync state and proposed extensions where concepts are absent. Chapters frame semantics, not automatic correctness authority. D-05 still requires attributable .NET/service contracts; concept examples and existing tests are not automatically oracles. Section 12 preserves the canonical revision and qualifications, including independent retry surfaces in chapter 17 section 1 |
+| 8. Cross-SDK compatibility | Require verified peer file/path/commit/config/default/test evidence, not analogy-only parity or missing-CI assertions. Inaccessible peers stay explicitly unverified, not fabricated absence, unsupported behavior or clean compatibility. Preserve the mandatory Java/.NET/Python/Go/Rust feature/bug matrix, with relevant additional peers/consumers. D-08 decides bounded fanout/depth/integration, not silent peer omission or adoption of the personal peer cap |
+| 9. CI and shipped-artifact review | Review build/GA/preview/configuration/runtime matrices, project/package reference boundaries, generated baselines, changelog/APIView/docs, package metadata/dependencies, security-adjacent release paths and CI-versus-shipped/preprocessor/installed-consumer identity. This is review scope, not release execution, new pipeline definitions or a claim that current SDK wiring/artifacts are reconciled |
+| 10. Security and prompt trust | Cover concrete auth/token/key/encryption/signing/PII logging/dependency/supply-chain/network/TLS boundaries and production-realistic impact, with conditional dedicated security expertise. Do not elevate speculative hardening to blockers without evidence. Candidate text/artifacts are untrusted data, not permission to override trusted policy |
+| 11. Distilled active context | Assemble the SDK pack, scoped feedback/memory and recurring patterns/history, independent versioned specs, canonical chapter excerpts, explicit peers, relevant policy contracts and category-filtered role context. Binding global rules cannot be evicted for size. A context-completeness manifest distinguishes found/not_found/skipped/failed/not_applicable and complete/partial/degraded, recording missing specs/tests/CI/peers/owners/callers/issues/comments. Prior reviewer patterns/feedback are leads, not contract or approval authority. Do not export personal raw memory/history/owner information |
+| 12. Evidence, pre-flight and findings | Absence/convention/parity/benchmark/changelog/docs claims need actual source/probe output, file/line/case and peer citations. Unsupported claims become questions or explicitly unverified optional suggestions, not invented defects. Structured findings retain stable ID, category/severity/location/evidence/consequence/suggested fix/required-versus-optional and source/merged provenance. Normalize/deduplicate root causes while preserving cited design-alignment items, verified-negative rigor receipts and what was checked/clean. Quality Gate owns tone/noise/evidence, not fresh code review or power to erase supported dissent. Empty findings are not positive assurance |
+| 13. Re-review, learning and operations | Retain durable candidate-bound review records; append re-review deltas and carry unresolved/changed/new IDs and original failures rather than overwrite. Reconcile feedback, real misses, false positives and duplicate noise with independently verified promotion. Scope/change-control feedback: no silent always-check/stop-flagging changes, keyword-only corpus promotion or self-weakening evaluator. Distinguish optional failures from required-role failure; no primary fallback to Fresh Eyes. Preserve partial reports/errors and finite budget/stop/recovery boundaries. Values/mechanisms remain D-10, corpus/graduation D-11 and intentional changes D-12 |
+
+This is shared standards/process material under D-04, not a new SDK catalog.
+Actual candidate specs, review/test mappings and result records follow SDK-docs
+ownership, with existing CI artifacts retained in their native system. No raw
+prompts/config, reviewer history, memory JSON, scripts or SDK facts are imported.
+Concrete global schemas, storage paths, runtime wiring and qualifying identities
+remain unimplemented/unselected; descriptive source fields are not that decision.
+
+### 8.5 Portable Router intake source receipts
+
+These are **coordinator-supplied direct-read receipts**, not independently
+byte-verified by this documentation workstream. The coordinator reports
+`PR Review Router.agent.md` as 443 lines / 46,059 bytes, with the same digest
+across its reads. `router-design.md` calls itself v3.2 and is not perfectly
+consistent with the newer entrypoint. Portable filenames and the supplied
+locators below identify the intake; no personal path, owner identity or
+installation is a prerequisite for contributors.
+
+| Portable filename | Supplied locator / scope use | SHA-256 |
+|---|---|---|
+| `PR Review Router.agent.md` | Stages 0-10 and hard rules; written orchestration/review protocol | `1e6d6edab0463622843be838e941ea8e777845f5ee5b1a92e14e6579a3e8e792` |
+| `router-design.md` | v3.2 design/history; discrepancies retained in section 8.6 | `056ef7e75d3bd711e1e27b1aae10540108286324ce0dab7046013c176f47453c` |
+| `engineering-quality-rubric.md` | D1-D6 rubric; scope uses D1/D2/D3/D5 and cross-cutting D6 verification | `e5ac978e5dae133e7d414adf4fce2afec37ebdd594b6c0a46b1f5b86df07dbb3` |
+| `sdk-packs/dotnet.md` | SDK context/default/path hints, not verified .NET contract facts | `9905624ce811b1fa5b87d7eb8c7d760987c5582b34cdbc690beb61780f8a0185` |
+| `cross-sdk-peers.md` | Personal peer configuration; not authority to narrow the required matrix | `1e5ca2fc101a0625a901401494c80b22c3677eaa98c8206104d93e6dd214c23a` |
+| `PR Test Model Reviewer.agent.md` | Read-only test inventory/gap/recommended-plan artifact | `a7d1447ed1fcb3d5907ab643df4afed6cb1a133fc878184dc112f067a06053cd` |
+| `prompt-trust-boundaries.md` | Candidate content versus trusted policy boundary | `02c0708d952c4acc78cb3c83291eaec9e75158795280ca2bc4996a189c0659b2` |
+| `diff-filtering-policy.md` | Source/test/docs/build/generated/noise scope filtering | `e82abddf1ded7cca45e600fe8139594c0240cc7ac08d3a836140ecec0b1cfff6` |
+| `comment-quality-gate.md` | Finding quality, tone, evidence and noise | `3c144b775f3144abce65895989902947d3378c2c831704083b0c0f9497cdbb71` |
+| `reviewability-confidence-policy.md` | Reviewability/context/confidence and degraded-advisory limits | `69261183a95435b9e53f6f2a4b1d9db13edef13c31746722ef24ff47c6b630ba` |
+| `agent-operations-policy.md` | Bounded operations, partial reports and failure handling | `1d2724d7857b3df583c3041fca372baee64566e2d228ac7173f3adf7a1a39699` |
+| `security-routing-policy.md` | Conditional security scope/routing | `92d34d444fb2ff969dd1acdc27a7a174a05630712d7983513a1b2703598493e0` |
+| `reconciliation-workflow.md` | Re-review/feedback reconciliation and promotion boundaries | `10de21687f0c542b57705cdc61c77829593c16a756495920d3ec762c5c43d6dd` |
+
+Other resources named by those files, including industry guidance/map/schema,
+raw memory and helper internals, were references, not independently audited or
+imported inputs. Neither those references nor these digests prove runnable
+completeness, specialist availability or an executed review/test outcome.
+No fresh personal-source audit, SDK investigation or test run is performed here.
+
+### 8.6 Explicit source discrepancies and adaptation boundaries
+
+Preserve these differences rather than silently promoting personal advisory
+configuration into protected .NET eligibility:
+
+| Boundary | Supplied current/older source observation | Shared-design adaptation |
+|---|---|---|
+| A. Routing is not eligibility | Entrypoint labels, user `--tier` and all-doc/all-doc-plus-test force-Tier1 handling are personal advisory routing. The older v3.2 risk table even lists YAML as force-Tier1, while the newer entrypoint floors ordinary CI-only changes at Tier2 | Record the inconsistency; do not select weights/overrides or present the sources as consistent. Neither tier labels nor docs/test/CI classification can evade D-07 minimum independent roles/mandatory proof, especially assurance docs/test/CI/gates |
+| B. Peer configuration is narrower | The personal .NET peer map defaults to Java/Python, caps peers at 3 and allows peer override replacement | This is sourced configuration, not permission to narrow the mandatory Java/.NET/Python/Go/Rust feature/bug matrix. D-08 fanout/depth/integration remains open; no new cap or omission is selected or disguised as complete |
+| C. SDK-pack hints are not authority | The personal .NET pack says default branch `master`, focuses core paths and includes unverified generic test/performance/idempotency/diagnostic hints | Treat them as review leads needing current source/contract validation, not .NET facts/oracles. D-01 still selects default `main`, all repository source and companions, native CI and both transports; D-05 authority and paired-test requirements remain. Do not repeat individual API idempotency hints as universal guarantees |
+| D. Advisory degradation is not passing proof | Best-effort stale design context, partial/sub-agent failures, prose parse fallback, unknown-severity-to-minor and absence-claim downgrade may support a labeled advisory report | None creates complete required reviewers/proof, clean compatibility, qualification or approval. Downgrading an unverified defect claim as noise does not resolve separate missing mandatory assurance; that remains blocked |
+| E. Current human/file workflow is descriptive | The current human approval-to-POST gate, read-only model, human-verification feedback reconciliation and file sinks describe the personal workflow | This update neither removes nor activates/automates them. Do not impose permanent routine-human approval on the future qualified ordinary-PR target; posting approval is not semantic approval or merge permission. Runtime migration, qualifying identities and protected wiring are unimplemented; exact automated feedback/corpus ownership is unselected |
+| F. Scope adoption is not wholesale configuration adoption | Current threshold/cap/count/CLI/path examples and findings schema are personal protocol details that may be described or reused where suitable | Do not select every numerical heuristic, a global SDK-docs schema, provider/tool/budget, D-08 fanout, D-09 tooling, D-10 operations, D-11 graduation or D-12 exception mechanism. Concrete integration needs separate design/authorization; this update changes no personal agent/config or permission |
 
 ## 9. Java prior art and explicit remaining gaps
 
@@ -736,17 +867,19 @@ by relabeling it. A counterpart may be absent or intentionally different.
 The D-IDs intentionally retain correspondence to Java design section 16.2.
 Recommendations remain recommendations. Whole-SDK breadth and the
 .NET-first-after-checkpoint direction are settled. **D-01/D-02 and the
-D-03/D-04/D-05/D-06 approaches are selected; D-07 through D-12 remain open (six
+D-03/D-04/D-05/D-06/D-07 approaches are selected; D-08 through D-12 remain open (five
 decisions).** D-04 selects ownership, not exact paths/formats/integration or
 completed migration. Factual CI/gate/value/artifact/assertion reconciliation
 and inventory/contract/oracle/execution closure are not unanswered approach
 choices or completed work. D-06 approves a design model, not actual unattended
-merging, effective SDK/org policy verification or permission changes.
+merging, effective SDK/org policy verification or permission changes. D-07
+selects the review approach and Router scope, not runtime dispatch, qualifying
+identities, numerical routing values, implementation or activation.
 
-Sections 10.1 through 10.5 retain their published historical receipts, including
+Sections 10.1 through 10.6 retain their published historical receipts, including
 their historical open-count/cross-reference wording and authorization limits.
-The current queue, D-06 receipt in section 10.6, separate SDK context in
-section 11.1 and documentation merge receipts in section 13.1 supersede
+The current queue, D-07 receipt in section 10.7, separate SDK context in
+section 11.1 and documentation merge receipts in sections 13.1/13.3 supersede
 current-status readings of those older references; they do not imply later
 approvals already existed.
 
@@ -756,9 +889,9 @@ approvals already existed.
 | D-02 | APPROVED: preserve assurance for comparable existing obligations; complete applicable evidence for new/changed behavior; equality for unaffected/saturated dimensions is allowed but not an increase; report full-candidate counts/debt; no critical-regression offsets or unproven affected behavior. Every PR needs applicable testing evidence; agent-authored design/spec precedes feature/bug implementation; receipt below |
 | D-03 | APPROVED APPROACH: existing SDK CI gates/configured limits are the initial baseline; strengthen demonstrated behavioral gaps; new numerical tolerances require comparable evidence/rationale, not arbitrary coverage targets. Required evidence must pass, regression checks remain protection, runs/retries/repair are bounded with visible first failures and blocked/inconclusive exhaustion. Effective gates/values/benchmark/resource tolerances/run evidence still need reconciliation; additional agent/cost budgets and operations remain D-10; receipt below |
 | D-04 | SELECTED OWNERSHIP/LAYOUT APPROACH: shared agentic rules, spec workflow/templates and cross-SDK process in SuicideSquad; SDK-specific specs/mappings/results/history/audits in each SDK's docs; normal tests/pipelines stay in place. Prefer existing conventions/CI formats and minimal missing traceability, durable result identities with retained CI artifact references, not duplicate test databases/pipelines. Exact paths/formats/schema/wiring and controlled bootstrap migration/indexing remain pending; receipt below |
-| D-05 | APPROVED APPROACH: reconcile whole-SDK APIs/options/workflows/history/bugs/tests/CI with every obligation explicitly disposed; atomic behavior contracts and actual assertions; attributable versioned authority with appropriate independent oracles; preserve/resolve disputes without green-CI expectation changes; explicit versioned lifecycle states, unknown never excluded. Unresolved affected behavior is ineligible for autonomous qualification, not a bar to unrelated well-grounded improvements. Factual inventory/oracle/assertion/execution closure and exact owners/schema/tools remain pending; D-07 roles/quorum and D-12 changes/retirement remain open; receipt below |
-| D-06 | APPROVED DESIGN-ONLY APPROACH: eventually qualified ordinary SDK PRs may merge without routine human review only through independent Router approval, applicable unit plus emulator/live evidence bound to the exact actual merge candidate, and a separate restricted identity that cannot bypass protections or weaken its eligibility rules. Missing/stale evidence blocks merging; authorized policy owners can suspend; qualification starts non-merging, graduation D-11. Existing repo/org checks/reviews/CODEOWNERS remain binding pending explicitly authorized compatible changes; identities/apps/permission schemas/owners, D-07 roles/quorum, D-10 implementation and D-11 scope/criteria unselected; no activation, permission change or unattended merge authorized; receipt below |
-| D-07 | Reviewer independence, required roles/quorum by risk, independent test challenge and final-candidate reconciliation |
+| D-05 | APPROVED APPROACH: reconcile whole-SDK APIs/options/workflows/history/bugs/tests/CI with every obligation explicitly disposed; atomic behavior contracts and actual assertions; attributable versioned authority with appropriate independent oracles; preserve/resolve disputes without green-CI expectation changes; explicit versioned lifecycle states, unknown never excluded. Unresolved affected behavior is ineligible for autonomous qualification, not a bar to unrelated well-grounded improvements. Factual inventory/oracle/assertion/execution closure and exact owners/schema/tools remain pending; D-07 review approach now recorded, D-12 changes/retirement remain open; historical receipt below |
+| D-06 | APPROVED DESIGN-ONLY APPROACH: eventually qualified ordinary SDK PRs may merge without routine human review only through independent Router approval, applicable unit plus emulator/live evidence bound to the exact actual merge candidate, and a separate restricted identity that cannot bypass protections or weaken its eligibility rules. Missing/stale evidence blocks merging; authorized policy owners can suspend; qualification starts non-merging, graduation D-11. Existing repo/org checks/reviews/CODEOWNERS remain binding pending explicitly authorized compatible changes; identities/apps/permission schemas/owners, D-10 implementation and D-11 scope/criteria unselected; D-07 approach now recorded, no activation, permission change or unattended merge authorized; historical receipt below |
+| D-07 | SELECTED APPROACH PLUS USER-DIRECTED ROUTER SCOPE: two independent Router-led judgments for correctness/contracts and preservation/interactions plus a separate independent test challenger for ordinary SDK implementation/test/CI changes; all required roles explicitly pass, separate initial contexts, independent verification of fixes/refutations and retained dissent/failures. Higher-risk expertise and actual-merge-candidate reconciliation apply; no author tier downgrade, docs bypass, reviewer-shopping or missing-proof success. Adopt the supplied written personal-Router scope with provenance/discrepancies, not personal heuristic values, runtime proof, exact identities/tools/budgets or activation; receipt below |
 | D-08 | Full cross-SDK matrix depth and bounded Router peer fanout/integration without silent missing peers |
 | D-09 | Mutation/property/concurrency and coverage tooling fit to actual .NET runtime/build/test/package constraints |
 | D-10 | Evidence retention/access/provenance, cost/concurrency, live ownership/capacity/fault isolation, cleanup and outage/stop/recovery procedures |
@@ -998,12 +1131,60 @@ assignment; no files/report import, SDK execution or final delivery is claimed.
 The documentation merge receipts below do not retroactively grant authority
 to earlier decisions or authorize this new feature PR's merge.
 
+### 10.7 User-selected D-07 approach and Router scope addition
+
+The coordinator relayed the following freeform user response to the main-session
+D-07 proposal on 2026-11-01 UTC:
+
+> In addition to the above reviewers approach, let's also add how my personal PR reviewer router works currently. Let's copy the scope of our current PR reviewer router to this design of .NET SDK review
+
+This records the presented independent-review approach plus the explicitly
+requested Router-scope extension. The user answered freeform; there is no
+selected approval-choice label to reproduce or invent.
+
+The base approach requires two independent Router-led judgments
+(correctness/contracts and preservation/interactions), plus a separate
+independent test challenger for ordinary SDK implementation/test/CI changes.
+All required roles explicitly pass, with separate initial contexts until first
+reports, independent verification of fixes/refutations, preserved dissent and
+earlier failures, applicable higher-risk expertise and final actual-candidate
+reconciliation. Missing required roles/proof, unresolved affected contracts or
+stale/incompatible evidence block qualification. Majority overrides, empty
+findings, reviewer-shopping, author tier downgrades and assurance-docs bypass
+cannot substitute for that proof; optional suggestions remain nonblocking.
+
+Sections 8.1-8.2 specify those obligations. Sections 8.4-8.6 distill all thirteen
+supplied personal-Router scope areas, thirteen portable source digests and
+six observed adaptation boundaries. They describe the coordinator-read written/
+configured protocol, not an independently audited runtime or proof that dispatch/
+specialists work. This update does not repeat the audit, dispatch reviewers,
+review a PR, modify personal agents/config or import raw prompts/memory/history.
+The PR Test Model's read-only artifact is not executed independent challenge
+evidence; the paired unit plus emulator/authorized-isolated-live requirement
+remains intact.
+
+No routine human sign-off is added to the future qualified ordinary-PR target.
+No exact models/providers/apps/GitHub identities, budgets/tool implementations
+or activation are selected. Personal scores/caps/tier overrides, peer defaults,
+pack hints, advisory fallbacks and current human posting/feedback steps do not
+silently become protected eligibility or override D-01 through D-06.
+Existing repository/org review/protection requirements remain binding and
+unverified SDK policy is not assumed permissive.
+
+D-08 through D-12 remain open (five decisions); D-04 paths/formats/wiring/
+migration and factual inventory/oracle/CI/assertion/value gaps remain pending.
+Historical D-01 through D-06 receipts, E-01 through E-28, original pins/digests,
+lanes/candidates/scenarios/vector and Java freeze retain their qualifications.
+No SDK testing evidence, A-01 or evolving SDK result documentation is imported;
+no SDK execution, physical migration, protected-rule/permission change, merge,
+deployment or release is authorized. Initial qualification remains non-merging.
+
 ## 11. Ordered continuation and workstream boundaries
 
 1. **Checkpoint and activation receipt: recorded.** Section 2 identifies the
    corrected Java checkpoint, preserved gaps and explicit design-only signal.
    Java remains paused; publication is not design approval.
-2. **Historical intake and D-01 through D-06 selections: recorded.** The
+2. **Historical intake and D-01 through D-07 selections: recorded.** The
    [baseline](design-baseline.md) preserves the initial main-derived pin and
    distinguishes source declarations, package/preprocessor surfaces, structural counts,
    selected assertions and CI configuration from unmeasured behavior.
@@ -1017,8 +1198,12 @@ to earlier decisions or authorize this new feature PR's merge.
    versioned authority and explicit dispute/lifecycle handling, not closure.
    D-06 selects the qualified ordinary-PR future merge model and non-merging
    initial qualification, not activation, permission changes or actual SDK
-   governance verification. Roles/quorum, operational implementation and
-   graduation scope/criteria remain D-07/D-10/D-11.
+   governance verification. D-07 selects independent judgments/test challenge,
+   risk expertise and final-candidate reconciliation plus the personal
+   Router's written scope with explicit adaptations, not runtime proof or
+   every personal heuristic/override. Exact identities/tools, operational
+   implementation and graduation scope/criteria remain unclosed; D-08 through
+   D-12 remain open.
    The coordinator reports A-01 complete and delivered to its
    Library; the report is not imported and full findings are not reconciled here.
    Reported audit completion is not verified whole-SDK assurance; this update
@@ -1060,7 +1245,7 @@ to earlier decisions or authorize this new feature PR's merge.
 6. **Keep design review and task authority separate.**
    Preserve findings/dispositions, unverified gaps and residual risk. No
    implementation, measurement campaign, shadow execution or merge authority
-   follows merely from completing the document or selecting D-06. The separately
+   follows merely from completing the document or selecting D-07. The separately
    authorized SDK increment below need not be reclassified as unauthorized;
    this workstream receives none of its execution scope.
 
@@ -1098,7 +1283,7 @@ documentation records and performs no SDK edits/execution, CI triggers,
 live-account actions, agents/reviews or physical migration. Do not duplicate
 the SDK work or infer that later authorization existed at older receipts.
 
-For this update, the coordinator reports interim unit results from a first
+At D-06 publication, the coordinator reported interim unit results from a first
 increment and an outstanding integration/publication prerequisite. That status
 is evolving and is not imported or independently verified here. It is not a
 final SDK delivery, completed integration/live proof or autonomous qualification;
@@ -1108,7 +1293,7 @@ the separate workstream retains its spec-first paired-test scope.
 
 | Item | State |
 |---|---|
-| Context transfer | v0.1.0 persistent; v0.2.0 checkpoint/activation; v0.2.1 D-01; v0.2.2 D-02/spec-first; v0.2.3 D-03; v0.2.4 D-04; v0.2.5 D-05; v0.2.6 D-06 design-only approach, manual documentation merge receipts and portable SDK-policy access gap |
+| Context transfer | v0.1.0 persistent; v0.2.0 checkpoint/activation; v0.2.1 D-01; v0.2.2 D-02/spec-first; v0.2.3 D-03; v0.2.4 D-04; v0.2.5 D-05; v0.2.6 D-06; v0.2.7 D-07 independent-review approach plus written personal-Router scope/provenance/adaptations, no runtime audit or activation |
 | Final Java checkpoint | v0.2.3 accepted at `5d921060...`; Java paused with explicit incomplete closure |
 | .NET-specific investigation | Historical design-only intake recorded; no new investigation by this update; separate SDK increment scoped above |
 | D-01 baseline policy | Selected: default main, all repository SDK source, both connectivity modes, existing CI-derived matrices and pipeline/test improvements |
@@ -1117,22 +1302,24 @@ the separate workstream retains its spec-first paired-test scope.
 | D-04 ownership/layout approach | Selected: shared rules/templates/spec workflow/process in SuicideSquad, SDK-specific specs/mappings/results/audits in SDK docs; exact paths/formats/integration and physical migration pending |
 | D-05 inventory/contract/oracle approach | Approved approach: whole-SDK reconciliation/dispositions, atomic contracts, attributable versioned authority and independent oracles, preserved disputes/lifecycle states; factual closure and exact owners/schema/tools pending |
 | D-06 unattended-merge approach | Approved DESIGN ONLY: future qualified ordinary SDK PRs, independent Router approval, exact-candidate unit plus emulator/live evidence and separate restricted identity; no bypass/weakening, required evidence fail-closed, policy-owner suspension and initially non-merging qualification; no activation/permission change/SDK merge |
+| D-07 independent review and Router scope | Selected: two independent judgments plus independent test challenge, explicit required-role passes, initial separation, risk expertise and final-candidate reconciliation; complete supplied written Router scope with thirteen source receipts and six adaptation boundaries, not runtime/installation/execution proof |
 | .NET source/API/configuration/test/CI reconnaissance | E-01 through E-28 remain historical intake evidence; effective current CI/artifact reconciliation incomplete; no new SDK audit or execution |
 | .NET atomic contracts and CI assertion/scenario mapping | Proposed/incomplete; selected baseline policy is not contract verification, CI sufficiency or capability qualification |
 | Bootstrap migration/indexing | .NET baseline/gap inputs and A-01 are SDK-specific; eventual authority follows SDK-docs ownership; published inputs/Java freeze preserved, no physical migration |
 | Separate SDK/CI reconciliation audit | A-01 reported complete/delivered to coordinator Library, unimported into either repo; full findings unreconciled; only relayed docs-filter concern recorded; not verified whole-SDK assurance |
-| D-07 through D-12 | Six open decisions; exact identities/owners/permissions, roles/quorum, operational implementation and graduation scope/criteria unselected; D-04 implementation details and factual/value gaps remain pending |
+| D-08 through D-12 | Five open decisions; exact identities/owners/permissions, numerical values, operational/tool implementation and graduation scope/criteria unclosed; D-04 details and factual/value gaps remain pending |
 | .NET coverage, mutation, benchmark and performance results | Unmeasured / not run by this contribution |
 | .NET overall design approval / this workstream's SDK execution | Not granted by approach selection; this workstream remains documentation-only |
-| Separate SDK testing implementation | Spec-first paired unit/emulator-or-authorized-isolated-live increment, including existing assessed tests; interim unit results and pending integration/publication prerequisite coordinator-reported only, no final delivery or imported/independently verified execution evidence |
+| Separate SDK testing implementation | Spec-first paired unit/emulator-or-authorized-isolated-live increment, including existing assessed tests; D-06-era interim status is historical coordinator-reported context only, no refreshed/imported/independently verified result or final delivery |
 | Effective SDK/org merge policies | Coordinator-reported policy read blocked by HTTP 403 Azure-org SAML SSO before branch/rules retrieval; not verified and not inferred from SuicideSquad documentation-merge rules |
 | Earlier project documentation merges | User-directed PR4 then PR3 squash merges recorded in section 13.1; source-head and merge receipts preserved; not SDK governance implementation or qualification |
+| D-06 publication and integration | PR5 source head `72e9f579...` was open/unmerged at publication; now verified MERGED at `01803bac...`, separately recorded in section 13.3; fresh D-07 branch, no new merge authority |
 | Autonomous merging / releases | Not authorized; releases remain separate |
 
-**Stop after publishing this bounded D-06 approach update and report its paths,
+**Stop after publishing this bounded D-07 approach/scope update and report its paths,
 versions and immutable reference to the coordinator.** Do not expand it into exhaustive
 closure, SDK execution or duplication of the separately authorized implementation.
-Do not activate its merge model or append to merged PR3. On resumption,
+Do not activate its merge model, dispatch reviewers or append to merged PR3/PR5. On resumption,
 re-read this gate and current repository
 state; do not blindly replay external side effects or treat remembered
 progress as durable evidence.
@@ -1167,13 +1354,17 @@ contribution requirements and autonomous-development guidance were inspected.
 The initial one-document contribution is at `d9d02138...`, and the initial
 three-document discovery at `2c67e23...`. D-01 was published at `fecb6db...`,
 and D-02/spec-first at `a4af4bc...`; D-03 at `ccb094c...`;
-D-04 at `3b141f8...`, D-05 at `532e240...`. This D-06 approach revision changes
+D-04 at `3b141f8...`, D-05 at `532e240...`, D-06 at `72e9f579...`.
+This D-07 approach/scope revision changes
 only `docs/dotnet/design-handoff.md`, `docs/dotnet/design-baseline.md` and
 `docs/dotnet/domain-gap-matrix.md`; no root pointer or Java import is edited.
 The D-06 worktree was clean when a fresh feature branch was created from
 SuicideSquad main `b45999c818c29169fefbe2902155d2fd65fd284f`, containing the
-separately user-directed documentation merges below. The merged PR3 branch
-is not extended. Documentation verification and the new publication commit/PR
+separately user-directed documentation merges below. For D-07, PR5's actual
+merged state was reconciled and a clean fresh feature branch created from main
+`01803bacd42f9b66bc20e1af03dcb6bcc2a30dc7`, without extending the merged
+PR3/PR5 branches. The coordinator was informed of the newer integration state.
+Documentation verification and the new publication commit/PR
 receipt belong in the fresh feature PR/handoff, not an invented SDK
 test report. The available tool catalog did not expose an `ado` server; no live
 Azure DevOps pipeline or approval state was queried. The original source
@@ -1221,3 +1412,22 @@ unchanged. The D-06 update grants no merge authority for its new feature PR.
 | 0.2.4 | 2026-11-01 | Record selected D-04 ownership: shared agentic/spec process here, SDK-specific specs/mappings/results/audits in SDK docs, native CI formats/artifacts and durable result identities; exact paths/formats/wiring/migration pending; preserve bootstrap/Java history and D-01/D-02/D-03; A-01 unimported, relayed docs-filter concern only; D-05 through D-12 open (eight) |
 | 0.2.5 | 2026-11-01 | Record approved D-05 reconciliation/atomic-contract/versioned-oracle/dispute/lifecycle approach, not factual closure or exact owners/schema/tools; D-06 through D-12 open (seven); preserve D-01 through D-04 receipts, pending details and qualified evidence; distinguish separately authorized spec-first paired SDK testing from this docs-only workstream without importing drafts/plan/audit or claiming tests/fixes |
 | 0.2.6 | 2026-11-01 | Record approved D-06 DESIGN-ONLY qualified ordinary-PR future merge approach, independent exact-candidate Router/test proof and separate restricted identity without bypass/activation/permission change; initially non-merging qualification, six decisions D-07 through D-12 open; preserve D-01 through D-05/evidence and source-head/manual documentation merge receipts; portable reported SDK-policy SSO access gap, separate evolving SDK work unimported |
+| 0.2.7 | 2026-11-01 | Record D-07 independent judgments/test challenge/risk/final-candidate approach and exact freeform Router-scope addition; distill all thirteen supplied scope areas and portable digests with six adaptation boundaries, not runtime proof/personal heuristic adoption; D-08 through D-12 open (five), prior receipts/evidence preserved; observed PR5 integration separate from source/publication, no reviewers/activation/SDK execution or result import |
+
+### 13.3 D-06 integration and fresh D-07 branch receipt
+
+The D-06 publication receipt identified source head
+`72e9f57918ed81a38bd750f4a6aca58173877d7b` in then-open/unmerged
+[#5](https://github.com/kushagraThapar/SuicideSquad/pull/5). Before starting
+this update, live GitHub state instead showed PR5 MERGED at
+2026-11-01T21:02:58Z, with merge commit/current main
+`01803bacd42f9b66bc20e1af03dcb6bcc2a30dc7`. The source-head and integration
+receipts are different identities; the historical publication state is not
+rewritten as if merged then.
+
+The three .NET records and applicable root guidance had unchanged blobs
+between that source head and the observed main. This workstream began clean,
+created a fresh D-07 feature branch from that main and did not extend the
+merged D-06 branch. It performed no merge or permission/protection change and
+does not infer SDK governance, qualification or authority for the new PR from
+an observed project documentation merge.
