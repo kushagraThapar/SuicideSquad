@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "state": "incomplete_recovery_required",
+  "design_checklist_id": "DS-14",
+  "design": "../../../suicide-squad-design.md",
+  "sdk_repository": "Azure/azure-sdk-for-java",
+  "sdk_commit": "42702a3a1421498ee457ff9cbe56713d0877d39f",
+  "original_research_runs": {
+    "expected_domain_reports": 4,
+    "persisted_completed_domain_reports": 0,
+    "availability": "unavailable",
+    "reports_pending_arrival": false
+  },
+  "surviving_input_buckets": [
+    {
+      "source_group": "source/changelog",
+      "kind": "public_surface_snapshots_and_historical_fetch_helper",
+      "completion": "inputs_only"
+    },
+    {
+      "source_group": "source/client",
+      "kind": "client_configuration_observability_and_encryption_discovery_inputs",
+      "completion": "inputs_only"
+    },
+    {
+      "source_group": "source/contracts",
+      "kind": "failure_consistency_transport_and_status_contract_inputs",
+      "completion": "inputs_only"
+    },
+    {
+      "source_group": "source/data",
+      "kind": "data_query_write_and_background_workflow_inputs",
+      "completion": "inputs_only"
+    }
+  ],
+  "required_outputs": {
+    "changelog_semantic_ledger": "not_persisted",
+    "current_api_configuration_reconciliation": "incomplete",
+    "whole_sdk_domain_completeness_matrix": "not_persisted",
+    "java_specific_atomic_contract_verification": "incomplete",
+    "test_and_fixture_mapping": "not_established"
+  },
+  "measurements": {
+    "feature_inventory_completeness": null,
+    "execution_verified_invariants": null,
+    "line_coverage": null,
+    "branch_coverage": null,
+    "mutation_coverage": null,
+    "status_decision_coverage": null,
+    "scenario_coverage": null
+  },
+  "later_parent_authored_recovery": {
+    "state": "deferred_until_separate_completed_handoff",
+    "imported": false,
+    "is_recovered_original_agent_report": false
+  },
+  "authorization": {
+    "project_phase": "design_only",
+    "design_approved": false,
+    "sdk_implementation": false,
+    "sdk_test_execution": false,
+    "ci_or_permission_changes": false,
+    "autonomous_merging": false,
+    "deployments_or_releases": false
+  },
+  "resume": "../recovery/README.md"
+}

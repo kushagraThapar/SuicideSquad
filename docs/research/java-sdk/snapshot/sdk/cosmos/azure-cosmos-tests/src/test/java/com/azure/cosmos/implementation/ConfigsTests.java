@@ -1,0 +1,495 @@
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License.
+
+package com.azure.cosmos.implementation;
+
+import com.azure.cosmos.implementation.clienttelemetry.MetricCategory;
+import com.azure.cosmos.implementation.clienttelemetry.TagName;
+import com.azure.cosmos.implementation.directconnectivity.Protocol;
+import io.netty.buffer.ByteBufAllocator;
+import io.netty.handler.ssl.SslContext;
+import io.netty.util.ReferenceCountUtil;
+import org.apache.commons.lang3.reflect.FieldUtils;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import javax.net.ssl.SSLEngine;
+import java.net.URI;
+import java.time.Duration;
+import java.util.EnumSet;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+public class ConfigsTests {
+
+    @DataProvider(name = "sslValidationSettings")
+    public Object[][] sslValidationSettings() {
+        return new Object[][] {
+            { false, false, false }, { false, false, true },
+            { false, true, false }, { false, true, true },
+            { true, false, false }, { true, false, true },
+            { true, true, false }, { true, true, true }
+        };
+    }
+
+    @Test(groups = { "unit" }, dataProvider = "sslValidationSettings")
+    public void sslContextPreservesHostnameValidationSettings(
+        boolean serverCertValidationDisabled, boolean hostnameValidationDisabled, boolean http2Enabled)
+        throws IllegalAccessException {
+
+        Object original = FieldUtils.readStaticField(Configs.class, "cachedIsHostnameValidationDisabled", true);
+        SslContext sslContext = null;
+        SSLEngine engine = null;
+        try {
+            FieldUtils.writeStaticField(Configs.class, "cachedIsHostnameValidationDisabled",
+                hostnameValidationDisabled, true);
+            sslContext = new Configs().getSslContext(serverCertValidationDisabled, http2Enabled);
+            engine = sslContext.newEngine(ByteBufAllocator.DEFAULT, "localhost", 443);
+
+            assertThat(engine.getSSLParameters().getEndpointIdentificationAlgorithm())
+                .isEqualTo(serverCertValidationDisabled || hostnameValidationDisabled ? null : "HTTPS");
+        } finally {
+            ReferenceCountUtil.release(engine);
+            ReferenceCountUtil.release(sslContext);
+            FieldUtils.writeStaticField(Configs.class, "cachedIsHostnameValidationDisabled", original, true);
+        }
+    }
+
+    @Test(groups = { "unit" })
+    public void maxHttpHeaderSize() {
+        Configs config = new Configs();
+        assertThat(config.getMaxHttpHeaderSize()).isEqualTo(32 * 1024);
+    }
+
+    @Test(groups = { "unit" })
+    public void maxHttpBodyLength() {
+        Configs config = new Configs();
+        assertThat(config.getMaxHttpBodyLength()).isEqualTo(6 * 1024 * 1024);
+    }
+
+    @Test(groups = { "unit" })
+    public void getProtocol() {
+        Configs config = new Configs();
+        assertThat(config.getProtocol()).isEqualTo(Protocol.valueOf(System.getProperty("azure.cosmos.directModeProtocol", "TCP").toUpperCase()));
+    }
+
+    @Test(groups = { "unit" })
+    public void getDirectHttpsMaxConnectionLimit() {
+        Configs config = new Configs();
+        assertThat(config.getDirectHttpsMaxConnectionLimit()).isEqualTo(Runtime.getRuntime().availableProcessors() * 500);
+    }
+
+    @Test(groups = { "unit" })
+    public void getMetricsConfig() {
+        System.clearProperty("COSMOS.METRICS_CONFIG");
+        CosmosMicrometerMetricsConfig metricsConfig = Configs.getMetricsConfig();
+        assertThat(metricsConfig.getMetricCategories()).isEqualTo(MetricCategory.DEFAULT_CATEGORIES);
+        assertThat(metricsConfig.getTagNames()).isEqualTo(TagName.DEFAULT_TAGS);
+        assertThat(metricsConfig.getPercentiles()).contains(0.95, 0.99);
+        assertThat(metricsConfig.getEnableHistograms()).isTrue();
+        assertThat(metricsConfig.getApplyDiagnosticThresholdsForTransportLevelMeters()).isFalse();
+        assertThat(metricsConfig.getSampleRate()).isEqualTo(1.0);
+
+        System.setProperty(
+            "COSMOS.METRICS_CONFIG",
+           "{\"metricCategories\":\"[OperationSummary, RequestSummary]\","
+               + "\"tagNames\":\"[Container, Operation]\","
+               + "\"sampleRate\":0.5,"
+               + "\"percentiles\":[0.90,0.99],"
+               + "\"enableHistograms\":false,"
+               + "\"applyDiagnosticThresholdsForTransportLevelMeters\":true}");
+        try {
+            metricsConfig = Configs.getMetricsConfig();
+            assertThat(metricsConfig.getMetricCategories()).isEqualTo(EnumSet.of(MetricCategory.OperationSummary, MetricCategory.RequestSummary));
+            assertThat(metricsConfig.getTagNames()).isEqualTo(EnumSet.of(TagName.Container, TagName.Operation));
+            assertThat(metricsConfig.getPercentiles()).contains(0.90, 0.99);
+            assertThat(metricsConfig.getEnableHistograms()).isFalse();
+            assertThat(metricsConfig.getApplyDiagnosticThresholdsForTransportLevelMeters()).isTrue();
+            assertThat(metricsConfig.getSampleRate()).isEqualTo(0.5);
+        } finally {
+            System.clearProperty("COSMOS.METRICS_CONFIG");
+        }
+    }
+
+    @Test(groups = { "emulator" })
+    public void httpConnectionWithoutTLSAllowed() {
+        Configs config = new Configs();
+        assertThat(config.isHttpConnectionWithoutTLSAllowed()).isFalse();
+
+        System.clearProperty("COSMOS.HTTP_CONNECTION_WITHOUT_TLS_ALLOWED");
+        System.setProperty("COSMOS.HTTP_CONNECTION_WITHOUT_TLS_ALLOWED", "true");
+        try {
+            assertThat(config.isHttpConnectionWithoutTLSAllowed()).isTrue();
+        } finally {
+            System.clearProperty("COSMOS.HTTP_CONNECTION_WITHOUT_TLS_ALLOWED");
+        }
+    }
+
+    @Test(groups = { "emulator" })
+    public void emulatorCertValidationDisabled() {
+        Configs config = new Configs();
+        assertThat(config.isEmulatorServerCertValidationDisabled()).isFalse();
+
+        System.clearProperty("COSMOS.EMULATOR_SERVER_CERTIFICATE_VALIDATION_DISABLED");
+        System.setProperty("COSMOS.EMULATOR_SERVER_CERTIFICATE_VALIDATION_DISABLED", "true");
+        try {
+            assertThat(config.isEmulatorServerCertValidationDisabled()).isTrue();
+        } finally {
+            System.clearProperty("COSMOS.EMULATOR_SERVER_CERTIFICATE_VALIDATION_DISABLED");
+        }
+    }
+
+    @Test(groups = { "emulator" })
+    public void emulatorHost() {
+        Configs config = new Configs();
+        assertThat(config.getEmulatorHost()).isEmpty();
+
+        System.clearProperty("COSMOS.EMULATOR_HOST");
+        System.setProperty("COSMOS.EMULATOR_HOST", "randomHost");
+        try {
+            assertThat(config.getEmulatorHost()).isEqualTo("randomHost");
+        } finally {
+            System.clearProperty("COSMOS.EMULATOR_HOST");
+        }
+    }
+
+    @Test(groups = { "emulator" })
+    public void http2Enabled() {
+        assertThat(Configs.isHttp2Enabled()).isFalse();
+
+        System.clearProperty("COSMOS.HTTP2_ENABLED");
+        System.setProperty("COSMOS.HTTP2_ENABLED", "true");
+        try {
+            assertThat(Configs.isHttp2Enabled()).isTrue();
+        } finally {
+            System.clearProperty("COSMOS.HTTP2_ENABLED");
+        }
+    }
+
+    @Test(groups = { "unit" })
+    public void http2MaxConnectionPoolSize() {
+        assertThat(Configs.getHttp2MaxConnectionPoolSize()).isEqualTo(1000);
+
+        System.clearProperty("COSMOS.HTTP2_MAX_CONNECTION_POOL_SIZE");
+        System.setProperty("COSMOS.HTTP2_MAX_CONNECTION_POOL_SIZE", "10");
+        try {
+            assertThat(Configs.getHttp2MaxConnectionPoolSize()).isEqualTo(10);
+        } finally {
+            System.clearProperty("COSMOS.HTTP2_MAX_CONNECTION_POOL_SIZE");
+        }
+    }
+
+    @Test(groups = { "unit" })
+    public void http2MinConnectionPoolSize() {
+        assertThat(Configs.getHttp2MinConnectionPoolSize()).isEqualTo(
+            Math.max(8, Runtime.getRuntime().availableProcessors())
+        );
+
+        System.clearProperty("COSMOS.HTTP2_MIN_CONNECTION_POOL_SIZE");
+        System.setProperty("COSMOS.HTTP2_MIN_CONNECTION_POOL_SIZE", "10");
+        try {
+            assertThat(Configs.getHttp2MinConnectionPoolSize()).isEqualTo(10);
+        } finally {
+            System.clearProperty("COSMOS.HTTP2_MIN_CONNECTION_POOL_SIZE");
+        }
+    }
+
+    @Test(groups = { "unit" })
+    public void http2MaxConcurrentStreams() {
+        assertThat(Configs.getHttp2MaxConcurrentStreams()).isEqualTo(30);
+
+        System.clearProperty("COSMOS.HTTP2_MAX_CONCURRENT_STREAMS");
+        System.setProperty("COSMOS.HTTP2_MAX_CONCURRENT_STREAMS", "10");
+        try {
+            assertThat(Configs.getHttp2MaxConcurrentStreams()).isEqualTo(10);
+        } finally {
+            System.clearProperty("COSMOS.HTTP2_MAX_CONCURRENT_STREAMS");
+        }
+    }
+
+    @Test(groups = { "unit" })
+    public void http2MaxFrameSizeInBytes() {
+        final String propName = "COSMOS.HTTP2_MAX_FRAME_SIZE_IN_KB";
+        final int defaultBytes = 64 * 1024;
+        final int minBytes = 64 * 1024;
+        final int maxBytes = 16_383 * 1024;
+
+        System.clearProperty(propName);
+
+        // Default (64 KB)
+        assertThat(Configs.getHttp2MaxFrameSizeInBytes()).isEqualTo(defaultBytes);
+
+        // Valid value at lower bound
+        System.setProperty(propName, "64");
+        try {
+            assertThat(Configs.getHttp2MaxFrameSizeInBytes()).isEqualTo(minBytes);
+        } finally {
+            System.clearProperty(propName);
+        }
+
+        // Valid value at upper bound (16383 KB)
+        System.setProperty(propName, "16383");
+        try {
+            assertThat(Configs.getHttp2MaxFrameSizeInBytes()).isEqualTo(maxBytes);
+        } finally {
+            System.clearProperty(propName);
+        }
+
+        // Valid value within range (1 MB)
+        System.setProperty(propName, "1024");
+        try {
+            assertThat(Configs.getHttp2MaxFrameSizeInBytes()).isEqualTo(1024 * 1024);
+        } finally {
+            System.clearProperty(propName);
+        }
+
+        // Below lower bound -> clamped up to 64 KB
+        System.setProperty(propName, "32");
+        try {
+            assertThat(Configs.getHttp2MaxFrameSizeInBytes()).isEqualTo(minBytes);
+        } finally {
+            System.clearProperty(propName);
+        }
+
+        // Above upper bound -> clamped down to 16383 KB
+        System.setProperty(propName, String.valueOf(32 * 1024));
+        try {
+            assertThat(Configs.getHttp2MaxFrameSizeInBytes()).isEqualTo(maxBytes);
+        } finally {
+            System.clearProperty(propName);
+        }
+
+        // Unparseable -> falls back to default
+        System.setProperty(propName, "not-a-number");
+        try {
+            assertThat(Configs.getHttp2MaxFrameSizeInBytes()).isEqualTo(defaultBytes);
+        } finally {
+            System.clearProperty(propName);
+        }
+    }
+
+    @Test(groups = { "unit" })
+    public void thinClientEnabledExplicitlyDefaultTest() {
+        System.clearProperty("COSMOS.THINCLIENT_ENABLED");
+        try {
+            // Not set -> null, so the probe may run and gates routing.
+            assertThat(Configs.isThinClientEnabled()).isNull();
+        } finally {
+            System.clearProperty("COSMOS.THINCLIENT_ENABLED");
+        }
+    }
+
+    @Test(groups = { "unit" })
+    public void thinClientEnabledExplicitlyOverrideTest() {
+        // Explicitly enabled (true) -> hard opt-in, probe not required.
+        System.setProperty("COSMOS.THINCLIENT_ENABLED", "true");
+        try {
+            assertThat(Configs.isThinClientEnabled()).isTrue();
+        } finally {
+            System.clearProperty("COSMOS.THINCLIENT_ENABLED");
+        }
+        // Explicitly disabled (false) -> hard opt-out, thin-client off and no probe.
+        System.setProperty("COSMOS.THINCLIENT_ENABLED", "false");
+        try {
+            assertThat(Configs.isThinClientEnabled()).isFalse();
+        } finally {
+            System.clearProperty("COSMOS.THINCLIENT_ENABLED");
+        }
+    }
+
+    @Test(groups = { "unit" })
+    public void thinClientEnabledInvalidValueTreatedAsUnset() {
+        // Only "true"/"false" (case-insensitive) are honored. Any other value must NOT silently
+        // collapse to a hard opt-out (which Boolean.parseBoolean would do); it is treated as unset
+        // (null -> probe-gated) so a typo/legacy truthy string does not disable thin-client for the
+        // client lifetime.
+        for (String invalid : new String[] {"yes", "1", "on", "TRUEISH", "enabled", "  "}) {
+            System.setProperty("COSMOS.THINCLIENT_ENABLED", invalid);
+            try {
+                assertThat(Configs.isThinClientEnabled())
+                    .as("value '%s' should be treated as unset (null)", invalid)
+                    .isNull();
+            } finally {
+                System.clearProperty("COSMOS.THINCLIENT_ENABLED");
+            }
+        }
+
+        // Case-insensitivity of the honored tokens.
+        System.setProperty("COSMOS.THINCLIENT_ENABLED", "TrUe");
+        try {
+            assertThat(Configs.isThinClientEnabled()).isTrue();
+        } finally {
+            System.clearProperty("COSMOS.THINCLIENT_ENABLED");
+        }
+        System.setProperty("COSMOS.THINCLIENT_ENABLED", "FALSE");
+        try {
+            assertThat(Configs.isThinClientEnabled()).isFalse();
+        } finally {
+            System.clearProperty("COSMOS.THINCLIENT_ENABLED");
+        }
+    }
+
+    @Test(groups = { "unit" })
+    public void thinClientConnectionTimeoutDefaultTest() {
+        // Default thin client connection timeout should be 5000 milliseconds
+        System.clearProperty("COSMOS.THINCLIENT_CONNECTION_TIMEOUT_IN_MS");
+        try {
+            assertThat(Configs.getThinClientConnectionTimeoutInMs()).isEqualTo(5_000);
+        } finally {
+            System.clearProperty("COSMOS.THINCLIENT_CONNECTION_TIMEOUT_IN_MS");
+        }
+    }
+
+    @Test(groups = { "unit" })
+    public void thinClientConnectionTimeoutOverrideTest() {
+        System.clearProperty("COSMOS.THINCLIENT_CONNECTION_TIMEOUT_IN_MS");
+        System.setProperty("COSMOS.THINCLIENT_CONNECTION_TIMEOUT_IN_MS", "3000");
+        try {
+            assertThat(Configs.getThinClientConnectionTimeoutInMs()).isEqualTo(3_000);
+        } finally {
+            System.clearProperty("COSMOS.THINCLIENT_CONNECTION_TIMEOUT_IN_MS");
+        }
+    }
+
+    @Test(groups = { "unit" })
+    public void thinClientConnectionTimeoutRejectsInvalidValues() {
+        // Zero should fall back to default (5000ms)
+        System.setProperty("COSMOS.THINCLIENT_CONNECTION_TIMEOUT_IN_MS", "0");
+        try {
+            assertThat(Configs.getThinClientConnectionTimeoutInMs()).isEqualTo(5_000);
+        } finally {
+            System.clearProperty("COSMOS.THINCLIENT_CONNECTION_TIMEOUT_IN_MS");
+        }
+
+        // Negative should fall back to default (5000ms)
+        System.setProperty("COSMOS.THINCLIENT_CONNECTION_TIMEOUT_IN_MS", "-1");
+        try {
+            assertThat(Configs.getThinClientConnectionTimeoutInMs()).isEqualTo(5_000);
+        } finally {
+            System.clearProperty("COSMOS.THINCLIENT_CONNECTION_TIMEOUT_IN_MS");
+        }
+
+        // Below 500ms should fall back to default (5000ms)
+        System.setProperty("COSMOS.THINCLIENT_CONNECTION_TIMEOUT_IN_MS", "499");
+        try {
+            assertThat(Configs.getThinClientConnectionTimeoutInMs()).isEqualTo(5_000);
+        } finally {
+            System.clearProperty("COSMOS.THINCLIENT_CONNECTION_TIMEOUT_IN_MS");
+        }
+
+        // Exactly 500ms should be accepted
+        System.setProperty("COSMOS.THINCLIENT_CONNECTION_TIMEOUT_IN_MS", "500");
+        try {
+            assertThat(Configs.getThinClientConnectionTimeoutInMs()).isEqualTo(500);
+        } finally {
+            System.clearProperty("COSMOS.THINCLIENT_CONNECTION_TIMEOUT_IN_MS");
+        }
+    }
+
+    @Test(groups = { "unit" })
+    public void httpRequestThinClientFlagDefaultFalse() throws Exception {
+        // HttpRequest should default to isThinClientRequest=false
+        com.azure.cosmos.implementation.http.HttpRequest httpRequest =
+            new com.azure.cosmos.implementation.http.HttpRequest(
+                io.netty.handler.codec.http.HttpMethod.GET,
+                new java.net.URI("https://test.documents.azure.com:443/"),
+                443,
+                new com.azure.cosmos.implementation.http.HttpHeaders());
+        assertThat(httpRequest.isThinClientRequest()).isFalse();
+    }
+
+    @Test(groups = { "unit" })
+    public void httpRequestThinClientFlagSetTrue() throws Exception {
+        // ThinClientStoreModel sets isThinClientRequest=true via withThinClientRequest()
+        com.azure.cosmos.implementation.http.HttpRequest httpRequest =
+            new com.azure.cosmos.implementation.http.HttpRequest(
+                io.netty.handler.codec.http.HttpMethod.POST,
+                new java.net.URI("https://test.documents.azure.com:10250/"),
+                10250,
+                new com.azure.cosmos.implementation.http.HttpHeaders())
+                .withThinClientRequest(true);
+        assertThat(httpRequest.isThinClientRequest()).isTrue();
+    }
+
+    @Test(groups = { "emulator" })
+    public void thinClientEndpointTest() {
+        Configs config = new Configs();
+        assertThat(config.getThinclientEndpoint()).isEqualTo(URI.create(""));
+
+        System.clearProperty("COSMOS.THINCLIENT_ENDPOINT");
+        System.setProperty("COSMOS.THINCLIENT_ENDPOINT", "testThinClientEndpoint");
+        try {
+            assertThat(config.getThinclientEndpoint()).isEqualTo(URI.create("testThinClientEndpoint"));
+        } finally {
+            System.clearProperty("COSMOS.THINCLIENT_ENDPOINT");
+        }
+    }
+
+    @Test(groups = { "unit" })
+    public void connectionAcquireTimeoutDefaultTest() {
+        // Default connection acquire timeout should be 45000 milliseconds
+        System.clearProperty("COSMOS.CONNECTION_ACQUIRE_TIMEOUT_IN_MS");
+        try {
+            assertThat(Configs.getConnectionAcquireTimeout()).isEqualTo(Duration.ofMillis(45_000));
+        } finally {
+            System.clearProperty("COSMOS.CONNECTION_ACQUIRE_TIMEOUT_IN_MS");
+        }
+    }
+
+    @Test(groups = { "unit" })
+    public void connectionAcquireTimeoutOverrideTest() {
+        System.clearProperty("COSMOS.CONNECTION_ACQUIRE_TIMEOUT_IN_MS");
+        System.setProperty("COSMOS.CONNECTION_ACQUIRE_TIMEOUT_IN_MS", "30000");
+        try {
+            assertThat(Configs.getConnectionAcquireTimeout()).isEqualTo(Duration.ofMillis(30_000));
+        } finally {
+            System.clearProperty("COSMOS.CONNECTION_ACQUIRE_TIMEOUT_IN_MS");
+        }
+    }
+
+    @Test(groups = { "unit" })
+    public void connectionAcquireTimeoutRejectsInvalidValues() {
+        // Zero should fall back to default (45000ms)
+        System.setProperty("COSMOS.CONNECTION_ACQUIRE_TIMEOUT_IN_MS", "0");
+        try {
+            assertThat(Configs.getConnectionAcquireTimeout()).isEqualTo(Duration.ofMillis(45_000));
+        } finally {
+            System.clearProperty("COSMOS.CONNECTION_ACQUIRE_TIMEOUT_IN_MS");
+        }
+
+        // Negative should fall back to default (45000ms)
+        System.setProperty("COSMOS.CONNECTION_ACQUIRE_TIMEOUT_IN_MS", "-1");
+        try {
+            assertThat(Configs.getConnectionAcquireTimeout()).isEqualTo(Duration.ofMillis(45_000));
+        } finally {
+            System.clearProperty("COSMOS.CONNECTION_ACQUIRE_TIMEOUT_IN_MS");
+        }
+
+        // Below 500ms should fall back to default (45000ms)
+        System.setProperty("COSMOS.CONNECTION_ACQUIRE_TIMEOUT_IN_MS", "499");
+        try {
+            assertThat(Configs.getConnectionAcquireTimeout()).isEqualTo(Duration.ofMillis(45_000));
+        } finally {
+            System.clearProperty("COSMOS.CONNECTION_ACQUIRE_TIMEOUT_IN_MS");
+        }
+
+        // Exactly 500ms should be accepted
+        System.setProperty("COSMOS.CONNECTION_ACQUIRE_TIMEOUT_IN_MS", "500");
+        try {
+            assertThat(Configs.getConnectionAcquireTimeout()).isEqualTo(Duration.ofMillis(500));
+        } finally {
+            System.clearProperty("COSMOS.CONNECTION_ACQUIRE_TIMEOUT_IN_MS");
+        }
+    }
+
+    @Test(groups = { "unit" })
+    public void connectionAcquireTimeoutRejectsNonNumericValue() {
+        // Non-numeric value should fall back to default (45s)
+        System.setProperty("COSMOS.CONNECTION_ACQUIRE_TIMEOUT_IN_SECONDS", "abc");
+        try {
+            assertThat(Configs.getConnectionAcquireTimeout()).isEqualTo(Duration.ofSeconds(45));
+        } finally {
+            System.clearProperty("COSMOS.CONNECTION_ACQUIRE_TIMEOUT_IN_SECONDS");
+        }
+    }
+}

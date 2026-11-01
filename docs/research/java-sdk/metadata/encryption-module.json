@@ -1,0 +1,16 @@
+{
+  "name": "azure-cosmos-encryption",
+  "path": "sdk/cosmos/azure-cosmos-encryption",
+  "sha": "f23c99a7b7f487b542e308ee814e576930a0ab67",
+  "size": 0,
+  "url": "https://api.github.com/repos/Azure/azure-sdk-for-java/contents/sdk/cosmos/azure-cosmos-encryption?ref=42702a3a1421498ee457ff9cbe56713d0877d39f",
+  "html_url": "https://github.com/Azure/azure-sdk-for-java/tree/42702a3a1421498ee457ff9cbe56713d0877d39f/sdk/cosmos/azure-cosmos-encryption",
+  "git_url": "https://api.github.com/repos/Azure/azure-sdk-for-java/git/trees/f23c99a7b7f487b542e308ee814e576930a0ab67",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/Azure/azure-sdk-for-java/contents/sdk/cosmos/azure-cosmos-encryption?ref=42702a3a1421498ee457ff9cbe56713d0877d39f",
+    "git": "https://api.github.com/repos/Azure/azure-sdk-for-java/git/trees/f23c99a7b7f487b542e308ee814e576930a0ab67",
+    "html": "https://github.com/Azure/azure-sdk-for-java/tree/42702a3a1421498ee457ff9cbe56713d0877d39f/sdk/cosmos/azure-cosmos-encryption"
+  }
+}

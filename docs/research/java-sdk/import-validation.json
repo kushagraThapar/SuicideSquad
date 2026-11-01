@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "scope": "Bounded documentation/provenance/publication validation only; not SDK validation or a security audit",
+  "validated_at": "2026-11-01T04:29:33.034257+00:00",
+  "result": "passed",
+  "checks": {
+    "research_payload_hashes_verified": 693,
+    "byte_identical_public_upstream_payloads": 684,
+    "explicitly_redacted_public_ci_payloads": 1,
+    "portable_historical_helpers_syntax_only": 1,
+    "source_paths_accounted_for": 917,
+    "identical_cache_copies_deduplicated": 224,
+    "unverified_cache_paths_excluded": 2,
+    "public_tree_manifests_verified": 4,
+    "original_design_source_unchanged": true,
+    "stable_design_table_ids_preserved": 219,
+    "unmodified_requirement_decision_and_seed_rows_preserved": true,
+    "authored_markdown_documents": 5,
+    "authored_relative_links_and_anchors_verified": 70,
+    "authored_external_links_structurally_checked": 36,
+    "all_repository_json_parsed": true,
+    "publication_scope_and_sensitive_pattern_checks": "passed_with_only_declared_redacted_placeholder",
+    "sdk_execution_or_imported_script_execution": false
+  },
+  "upstream_document_link_context": {
+    "relative_path_targets": 0,
+    "targets_outside_selected_archive": 0,
+    "handling": "Upstream documents retain original bytes; consult the pinned upstream repository context for their links"
+  },
+  "remaining_research_state": "DS-14 incomplete; no original completed domain reports or semantic ledger; later parent-authored recovery package deferred",
+  "not_performed": [
+    "SDK builds, tests, coverage, benchmarks or historical reproductions",
+    "Execution of imported helper, source or CI snapshots",
+    "Live pipeline or required-check inspection",
+    "Design approval, permission/merge-policy changes, merging, deployments or releases",
+    "Online validation of every third-party documentation URL"
+  ]
+}
