@@ -5,15 +5,16 @@
 
 | Field | Value |
 |---|---|
-| Document version | 0.1.4 |
+| Document version | 0.1.5 |
 | Recorded | 2026-11-01 UTC |
 | D-01 baseline policy | User-selected: default `main`, all repository SDK source, existing SDK CI-derived matrices, Gateway and Direct |
 | D-02 assurance/workflow policy | User-approved: behavioral preservation, complete applicable new/changed evidence, every-PR testing coverage and design/spec before feature/bug implementation |
 | D-03 CI-gate/limit approach | User-approved approach: existing CI gates/configured limits as the initial baseline, strengthen demonstrated gaps, comparable evidence/rationale for new numerical tolerances; effective values/run evidence unreconciled |
 | D-04 ownership/layout approach | User-selected: shared agentic rules/spec workflow/templates in SuicideSquad; SDK-specific specs/mappings/results/audits in SDK docs; exact paths/formats/wiring and physical migration pending |
+| D-05 inventory/contract/oracle approach | User-approved approach: whole-SDK reconciliation/dispositions, atomic contracts, attributable versioned authority and independent oracles, preserved disputes/lifecycle states; factual closure and exact owners/schema/tools pending |
 | Historical main-derived intake pin | `Azure/azure-cosmos-dotnet-v3@52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8`; not a forever-fixed project baseline |
 | Status | INITIAL GAP DRAFT; ALL ATOMIC CANDIDATES PROPOSED / UNVERIFIED |
-| Boundary | Design-only D-04 ownership/layout update; SDK-specific bootstrap inputs retained pending controlled migration/indexing; Java paused; A-01 unimported, relayed docs-filter concern only; no duplicate SDK investigation |
+| Boundary | Documentation-only D-05 update; SDK testing separately authorized, not executed/duplicated here; SDK-specific bootstrap inputs retained pending controlled migration/indexing; Java paused; A-01 unimported, relayed docs-filter concern only |
 
 ## 1. Reading this matrix
 
@@ -90,6 +91,37 @@ in SDK docs, not an expanding catalog here. Preserve published inputs and the
 Java freeze pending controlled migration/indexing. Exact paths/formats/schema,
 integration and physical migration remain pending; no SDK edits or report
 import occur in this task.
+
+The [approved D-05 approach](design-handoff.md#105-user-approved-d-05-approach)
+reconciles whole-SDK APIs/options, internal workflows, changelogs, historical
+bugs, existing tests and CI, with every obligation explicitly disposed.
+Atomic contracts identify preconditions, applicable configurations, allowed/
+forbidden outcomes, interacting features, positive/negative/boundary scenarios
+and actual assertions. Expected results need attributable versioned contracts/
+specifications supported by appropriate independent reference models, golden
+vectors, properties or verified service fixtures. Code and existing tests are
+evidence, not automatically correctness authority.
+
+Preserve and explicitly resolve code/test/documentation/service disagreements,
+not expectation changes merely for green CI. Unresolved affected behavior
+stays ineligible for autonomous qualification without blocking unrelated
+well-grounded inventory/test improvements within authorized scope. Retain
+supported/preview/deprecated/removed/unsupported/unresolved lifecycle states
+and versioned rationale; unknown never silently becomes unsupported or an
+exclusion. This approves an approach, not factual inventory/oracle/assertion/
+execution closure or exact oracle owners/schema/tools. It adds no routine human
+sign-off; reviewer roles/quorum remain D-07 and intentional changes/retirement D-12.
+
+The coordinator separately reports a user-authorized spec-first coherent SDK
+testing increment after two proposed SDK-docs drafts were delivered: paired
+unit (mocking where required) and emulator or specifically authorized
+isolated-live coverage, including existing assessed tests. The exact request
+and limits are in [handoff section 11.1](design-handoff.md#111-separate-sdk-testing-authorization-context).
+No arbitrary production account was identified/authorized, and no merge/release/
+permission authority was granted. This documentation workstream does not
+duplicate that implementation, inspect/import its drafts/plan/audit or claim
+completed tests/fixes. D-05 approval alone grants none of that execution scope;
+older receipts retain their historical limits.
 
 All witnesses below remain historical E-01 through E-28 intake evidence.
 Future assessments resolve default main and record exact main/base/candidate/
@@ -187,7 +219,7 @@ not proof that the service behavior, all callers, all enum/account combinations
 or any executed candidate are correct. Other domains still need atomic
 candidate expansion; eight examples are not whole-SDK invariant closure.
 
-## 4. Cross-cutting gaps and design-only continuation
+## 4. Cross-cutting gaps and workstream boundaries
 
 The workflow requires
 `change intent -> pre-implementation design/spec and test plan -> implementation
@@ -202,10 +234,12 @@ The states `proposed`, `contract-verified`, `test-mapped`,
 `execution-verified` and `autonomy-qualified` must not collapse into one
 "covered" label.
 
-| Gap | Work still required; no execution authorized |
+| Gap | Work still required; no execution in this documentation assignment |
 |---|---|
 | Applicability and lifecycle | D-01 policy selected; evaluate existing CI-derived build/runtime/platform/account/service-capability cells for all repository SDK source and Gateway/Direct, GA/preview/internal/staged/package applicability and source-to-artifact identity; do not invent a replacement matrix or exclude missing CI coverage |
-| Inventory and authority | Reconcile every history/API/option/internal workflow obligation both ways, split semantic changes into atomic records, resolve specification/source conflicts and independently approve oracles under D-05 |
+| Inventory and authority | Apply approved D-05: reconcile whole-SDK APIs/options/internal workflows/changelogs/historical bugs/tests/CI both ways, with an explicit disposition for every discovered obligation; 37 lanes are navigation, not completeness or a closed denominator |
+| Atomic contracts and oracles | Identify preconditions/configurations, allowed/forbidden outcomes, interacting features, positive/negative/boundary scenarios and actual assertions; attributable versioned contracts/specifications with appropriate independent models/vectors/properties/verified service fixtures, not automatic authority from current code/tests; exact owners/schema/tools and factual closure pending |
+| Disputes and lifecycle | Preserve and explicitly resolve competing code/test/documentation/service claims with versioned rationale, not changed expectations for green CI; unresolved affected behavior is ineligible for autonomous qualification, not a bar to unrelated well-grounded improvements; preserve supported/preview/deprecated/removed/unsupported/unresolved, unknown never excluded; D-07 roles/quorum and D-12 changes/retirement remain open |
 | Spec-first change plan | Before agent implementation, record intended behavior/bug reproduction and correction, affected/interacting invariants, preservation/intended changes, failure/edge scenarios and meaningful existing/new CI assertions in SDK docs, referencing versioned shared rules/templates in SuicideSquad; exact paths/formats/wiring pending, no approval mechanism selected |
 | Ownership, results and integration | D-04 selected: SDK-specific mappings/results/history/audits in SDK docs, shared standards/process here, normal tests/pipelines in place; native CI formats plus minimal missing metadata, durable result/configuration identities and retained raw-artifact references; no second test database/duplicated pipeline; controlled bootstrap/A-01 migration/indexing pending |
 | Assurance docs and CI filters | Coordinator-relayed A-01 concern and historical E-19 identify Markdown/docs path filters; specs/policy/test mappings under docs must not silently gain a blanket docs-only bypass; future existing-CI wiring work, not permission to change filters now |
@@ -219,11 +253,14 @@ The states `proposed`, `contract-verified`, `test-mapped`,
 | Privacy, ownership and budgets | Bound runs/retries/agent repair with visible first failures and per-attempt evidence; exhaustion is blocked/inconclusive, not passing. Additional agent/cost budgets, secretless untrusted execution versus separately authorized live work, shared-account namespace/fault/capacity ownership, cleanup/outage/stop/recovery and retention remain D-10 |
 | Qualification and contract changes | Resolve D-11 samples/strata/uncertainty and D-12 protected changes/exceptions; any-domain shadow experiments can produce useful BLOCKED findings but never create all-domain merge authority |
 
-D-01/D-02 and the D-03/D-04 approaches are selected; effective matrix/gate/value/
+D-01/D-02 and the D-03/D-04/D-05 approaches are selected; effective matrix/gate/value/
 artifact, benchmark/resource tolerance, run and assertion/scenario
 reconciliation remain incomplete.
-[D-05 through D-12](design-handoff.md#10-decision-queue-carried-forward)
-remain open (eight decisions). D-04 ownership is selected, not exact
+[D-06 through D-12](design-handoff.md#10-decision-queue-carried-forward)
+remain open (seven decisions); D-06 is under discussion, not selected.
+D-05 selects the approach, not factual inventory/contract/oracle/assertion/
+execution closure or exact oracle owners/schema/tools.
+D-04 ownership is selected, not exact
 paths/formats/schema, SDK integration or completed physical migration.
 Approved policy is not an implemented gate or proof that current CI suffices.
 No row may compensate for another domain's
@@ -236,10 +273,12 @@ it does not weaken those ordinary API non-guarantees. Virtual-time evidence
 would apply only to actually controlled clocks/timers/schedulers.
 
 Ordered continuation is effective existing-CI/artifact/applicability
-reconciliation under D-01, source-backed atomic/oracle closure and CI assertion/
+reconciliation under D-01, D-05's source-backed atomic/oracle and CI assertion/
 scenario mapping, then factual gate/value reconciliation under D-03,
 remaining review/operations decisions and independent
-design review. For later authorized changes, a design/spec and test plan must
+design review. These are not artificial prerequisites to unrelated well-grounded
+inventory/test improvements within authorized scopes. For authorized changes,
+including the separate SDK increment, a design/spec and test plan must
 precede agent implementation and applicable proof; actual SDK specs/mappings/
 results belong in SDK docs under D-04 with versioned shared-rule references.
 Controlled bootstrap migration/indexing and assurance-docs CI wiring are
@@ -251,14 +290,16 @@ integration concern is recorded; its SDK investigation is not duplicated.
 Reported audit completion is not verified whole-SDK
 assurance. Keep the nine-dimensional assurance goals and independent Router-led
 review; green current CI alone is not proof of sufficient coverage or merge
-authority. This bounded D-04 documentation update stops at publication;
+authority. This bounded D-05 documentation update stops at publication;
 it does not import A-01, physically migrate records or select tooling, concrete
 schemas, reviewers, human sign-off, enforcement or merge authority.
 It starts no new SDK/CI investigation and
-grants no SDK source/test/pipeline
+grants this workstream no SDK source/test/pipeline
 edits or execution, CI triggers, live accounts, agents/reviews, source vendoring,
 governance changes, merges, deployments or releases. The .NET design and both
-project PRs remain unapproved for merge.
+project PRs gain no overall design or merge approval from this policy selection.
+The separately authorized SDK testing work remains distinct; this record
+imports none of its drafts/plan/audit and asserts no completed tests/fixes.
 
 | Version | Date | Change |
 |---|---|---|
@@ -267,6 +308,7 @@ project PRs remain unapproved for merge.
 | 0.1.2 | 2026-11-01 | Record approved D-02 behavioral assurance, every-PR applicable testing and specs before implementation; preserve all dimensions, D-01 and historical candidates/evidence; D-03 through D-12 remain open; separate audit not duplicated |
 | 0.1.3 | 2026-11-01 | Record approved D-03 existing-CI gate/limit approach without numerical value approval; required passing evidence, permanent regression protection and bounded visible attempts; D-04 through D-12 open (nine); preserve D-01/D-02/history; audit reported complete, not imported |
 | 0.1.4 | 2026-11-01 | Record selected D-04 shared-process/SDK-docs ownership, durable result identities/native artifacts and versioned references; controlled bootstrap/A-01 migration/indexing and exact paths/formats/wiring pending; relayed docs-filter concern, no import; preserve all candidates/evidence and D-01/D-02/D-03; D-05 through D-12 open (eight) |
+| 0.1.5 | 2026-11-01 | Record approved D-05 reconciliation/atomic-contract/versioned-oracle/dispute/lifecycle approach, not factual closure or exact owners/schema/tools; D-06 through D-12 open (seven); preserve all lanes/candidates/evidence and D-01 through D-04; distinguish separate spec-first paired SDK testing authorization from this docs-only assignment, without implementation duplication or drafts/plan/audit/result import |
 
 [auth-cache]: https://github.com/Azure/azure-cosmos-dotnet-v3/blob/52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8/Microsoft.Azure.Cosmos/src/Authorization/TokenCredentialCache.cs
 [database-api]: https://github.com/Azure/azure-cosmos-dotnet-v3/blob/52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8/Microsoft.Azure.Cosmos/src/Resource/Database/Database.cs

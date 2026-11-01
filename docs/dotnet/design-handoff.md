@@ -6,35 +6,39 @@
 
 | Field | Value |
 |---|---|
-| Document version | 0.2.4 |
+| Document version | 0.2.5 |
 | Recorded | 2026-11-01 UTC; original transfer 2026-10-31 |
-| Status | .NET DESIGN-ONLY DISCOVERY ACTIVE; JAVA PAUSED AT ACCEPTED DESIGN/RESEARCH CHECKPOINT |
+| Status | SHARED .NET DOCUMENTATION UPDATE ONLY; SDK TESTING WORK SEPARATELY AUTHORIZED; JAVA PAUSED AT ACCEPTED DESIGN/RESEARCH CHECKPOINT |
 | Shared standards/process home | [kushagraThapar/SuicideSquad](https://github.com/kushagraThapar/SuicideSquad); SDK-specific authoritative records follow D-04's SDK-docs ownership |
 | SDK research target | [Azure/azure-cosmos-dotnet-v3](https://github.com/Azure/azure-cosmos-dotnet-v3) |
 | D-01 source and verification policy | User-selected: default `main`, all SDK source across the repository, existing SDK CI-derived baselines, Gateway and Direct; [decision receipt](#101-user-selected-d-01-baseline-policy) |
 | D-02 behavioral assurance and spec-first policy | User-approved: preserve comparable existing obligations, prove new/changed behavior, applicable testing evidence for every PR and design/spec before feature/bug implementation; [decision receipt](#102-user-approved-d-02-and-spec-first-requirement) |
 | D-03 CI-gate and limit approach | User-approved approach: start with existing SDK CI gates/configured limits, strengthen demonstrated behavioral gaps and require comparable evidence/rationale for new numerical tolerances; values remain unreconciled; [decision receipt](#103-user-approved-d-03-approach) |
 | D-04 ownership/layout approach | User-selected: shared rules/spec workflow/templates and cross-SDK process in SuicideSquad; SDK-specific specs, mappings, results and audits in each SDK's docs; exact paths/formats/wiring and migration pending; [decision receipt](#104-user-selected-d-04-ownership-and-layout-approach) |
+| D-05 inventory/contract/oracle approach | User-approved approach: whole-SDK reconciliation and explicit dispositions, atomic behavior contracts, versioned authority with independent oracles, preserved disputes and lifecycle states; factual closure pending, exact owners/schema/tools unselected; [decision receipt](#105-user-approved-d-05-approach) |
 | Historical .NET intake pin | [`52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8`](https://github.com/Azure/azure-cosmos-dotnet-v3/tree/52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8); initial main-based discovery, not a forever-fixed project baseline or semantic closure |
 | Accepted Java checkpoint | [Design v0.2.3 at 5d92106027629ec6c5022a7cd5ef2085014d6973](https://github.com/kushagraThapar/SuicideSquad/blob/5d92106027629ec6c5022a7cd5ef2085014d6973/docs/suicide-squad-design.md) |
-| Current .NET bootstrap records | [Design/baseline v0.1.4](design-baseline.md) and [whole-SDK domain-gap matrix v0.1.4](domain-gap-matrix.md); preserve historical inputs pending controlled SDK-docs migration/indexing |
-| Implementation / SDK execution authorization | None |
+| Current .NET bootstrap records | [Design/baseline v0.1.5](design-baseline.md) and [whole-SDK domain-gap matrix v0.1.5](domain-gap-matrix.md); preserve historical inputs pending controlled SDK-docs migration/indexing |
+| Implementation / SDK execution authorization | None for this documentation workstream; separately authorized spec-first SDK testing increment reported by coordinator in [section 11.1](#111-separate-sdk-testing-authorization-context) |
 | Release execution, automation and production rollout | Deferred to a separate project |
 
 This document transfers context, not Java implementation facts or approval.
 The user chose a **versioned Java design/research checkpoint with explicit
 remaining gaps**, not a fully source-verified Java feature/invariant catalog,
-as the handoff point before prioritizing .NET. The coordinator has now confirmed
-the corrected Java v0.2.3 checkpoint and explicitly activated bounded,
-**design-only .NET discovery**. Java is paused with its unresolved backlog.
+as the handoff point before prioritizing .NET. The coordinator confirmed
+the corrected Java v0.2.3 checkpoint and initially activated bounded,
+**design-only .NET discovery**. A separate SDK testing increment has since
+been authorized; this workstream remains documentation-only (section 11.1).
+Java is paused with its unresolved backlog.
 This is a stable handoff record, not a claim that Java SDK behavior or the .NET
 design is complete. The original pending gate remains visible in v0.1.0 history.
 
 The eventual goal remains agents discovering and reproducing SDK bugs,
 implementing fixes, running comprehensive validation, receiving independent
 PR Review Router-led review, iterating, and merging eligible candidates without
-routine human intervention. That goal grants no current execution, unattended
-merge, deployment or release authority.
+routine human intervention. That goal or policy approval alone grants no
+execution, unattended merge, deployment or release authority. The separate
+SDK task's authorization is not general autonomy or authority for this workstream.
 
 ## 1. Scope, acceptance and boundaries
 
@@ -43,18 +47,21 @@ The initial context transfer is persistent at commit
 baseline/inventory/gap draft at
 `2c67e23092a1f1cbcd719a71c6db51114926a31c`; D-01 was recorded at
 `fecb6db64817175ef5752ce28b6f8c675196b348`, D-02/spec-first at
-`a4af4bcee8b4f931b1e127599ca6fdc719aa2dee`, and the D-03 approach at
-`ccb094cb3292c5b3135dd57d49eb5b12017d633e`. This bounded follow-up records
-the user's selected D-04 ownership/layout approach, not physical migration,
-audit import or another SDK investigation campaign. Observable acceptance is
-consistent ownership, decision and progress wording in these three documents,
-unchanged D-01/D-02/D-03 and historical evidence, pending exact paths/formats/
-integration and controlled migration, and D-05 through D-12 open (eight decisions).
+`a4af4bcee8b4f931b1e127599ca6fdc719aa2dee`, the D-03 approach at
+`ccb094cb3292c5b3135dd57d49eb5b12017d633e`, and D-04 ownership at
+`3b141f8c82a18d660069627c399ccfc9efc837c0`. This bounded follow-up records
+the approved D-05 approach and separately reported SDK testing authorization,
+not factual closure, physical migration, audit/plan import or another SDK
+investigation/implementation campaign. Observable acceptance is the exact
+D-05 approval receipt and consistent current decision/progress wording in
+these three documents, preserved D-01/D-02/D-03/D-04 receipts and historical
+evidence, pending D-04 details and factual/value gaps, and D-06 through D-12
+open (seven decisions). Earlier receipts keep their original authorization limits.
 
 Only the .NET documentation lane is changed: this handoff and its linked
-baseline and matrix. The existing .NET checkout remains a read-only input,
-not an output destination. This update performs no new SDK source/test/pipeline
-inspection or execution and no exhaustive CI audit. No SDK/reproducer/exporter
+baseline and matrix. This workstream does not modify or execute the .NET
+checkout, nor duplicate the separate SDK task. This update performs no new SDK
+source/test/pipeline inspection or execution and no exhaustive CI audit. No SDK/reproducer/exporter
 code, build, test, coverage, mutation or benchmark is executed. No SDK code,
 tests, pipelines, agent definitions, permissions, live resources or Agent merge
 settings are changed; no SDK CI is triggered, no agents/reviews are launched
@@ -83,15 +90,16 @@ the existing SDK CI as the source of build/runtime/platform/account/
 service-capability baselines. Policy selection is complete; evaluating that
 effective matrix and mapping assertions/scenarios remain factual work for a
 later bounded slice. Missing CI coverage is a gap to improve, not an exclusion
-from scope. Implementing fixtures, changing SDK tests/pipelines, executing
-assessments or enabling merges still requires separate authorization.
+from scope. SDK work requires its own scoped authorization, such as the separate
+testing increment recorded in section 11.1; it is not authorized by D-01
+or this documentation update. Merge authority remains separate and ungranted.
 
 D-02 makes behavior preservation and prevention of unintended cross-feature
 changes the goal, not maximizing percentages or test counts. Every PR needs
 applicable testing coverage/evidence. AI coding agents must produce a
 change-proportionate design document/specification before implementing any
 feature or bug fix; it is not a retrospective PR summary. The selected policies
-do not establish implemented gates or approve the eight remaining decisions.
+do not establish implemented gates or approve the seven remaining decisions.
 
 D-03 selects existing SDK CI gates and configured limits as the initial
 baseline, to be strengthened where the audit demonstrates missing behavioral
@@ -105,6 +113,14 @@ must preserve reproducibility, result/configuration identities and appropriately
 retained references to large/raw artifacts in the existing CI artifact system,
 not an empty list of moving links. Shared rules and SDK records/results need
 versioned references; concrete retention/access details remain D-10 work.
+
+D-05 approves the reconciliation/contract/oracle approach in section 10.5,
+not a completed inventory, authoritative outcome for any disputed contract,
+assertion sufficiency or executed proof. Unknown lifecycle states remain
+unresolved, not exclusions. Unresolved affected behavior is ineligible for
+autonomous qualification; unrelated well-grounded inventory/test improvements
+may proceed within their separately authorized scope. No routine human sign-off,
+exact oracle owners/schema/tools, D-06 governance or D-07 quorum is selected.
 
 **Status discipline:** confirmed direction, proposed controls, inherited Java
 observations and pinned .NET source observations are different categories.
@@ -250,31 +266,42 @@ automatically part of the client denominator.
 
 ### 4.2 Closure is more than a feature list
 
-At an immutable .NET baseline, reconcile the entire changelog history, including
+Under the [approved D-05 approach](#105-user-approved-d-05-approach), at an
+immutable .NET baseline reconcile the entire changelog history, including
 beta/hotfix and Other Changes, with current public APIs/options/configuration,
-internal workflows, capabilities, protocol paths and companion history.
+internal workflows, capabilities, protocol paths, companion history, historical
+bugs, existing tests and CI. The 37 lanes are navigation, not a completeness claim.
 Preserve nested changes and repeated entries with their source spans. One
 changelog bullet can create several semantic obligations.
 
 Each semantic obligation needs a stable record, source/version/span, lifecycle,
 classification, affected behavior and atomic invariant, or an explicit
-unresolved/lifecycle-exclusion disposition. Reconcile both directions:
+disposition. Preserve supported, preview, deprecated, removed,
+unsupported and unresolved lifecycle states with versioned rationale; unknown
+never silently becomes unsupported or an exclusion. Reconcile both directions:
 history to current contracts and current source to history/specification or
 an explicit history gap. Dependency and documentation changes can expose
 compatibility or behavioral obligations. Neither file enumeration nor lexical
 family classification proves semantic closure.
 
 Each atomic invariant must identify preconditions/configuration, event sequence,
-allowed and forbidden observable outcomes, safety versus bounded liveness,
-an independent oracle, contract authority, scenarios, actual assertions and
-exact execution evidence. Cover positive, negative, boundary and applicable
+allowed and forbidden observable outcomes, interacting features, safety versus
+bounded liveness, an independent oracle, contract authority, scenarios, actual
+assertions and exact execution evidence. Cover positive, negative, boundary and applicable
 concurrency cases. An implementation observation can itself be a bug; resolve
-conflicting source, specification, issue and service claims explicitly rather
-than training the oracle to agree with the candidate.
+conflicting code, tests, documentation/specification, issue and service claims
+explicitly. Preserve each claim's version/provenance and the resolution rationale,
+rather than changing expectations merely to obtain green CI.
 
-Use approved reference/mathematical models, golden vectors, metamorphic
-properties or verified service fixtures where suitable. Hardcoded expectations
-that merely restate the implementation are not independent correctness evidence.
+Ground expected results in attributable versioned contracts/specifications,
+supported by appropriate independent reference/mathematical models, golden
+vectors, properties or verified service fixtures. The current implementation
+and existing tests are evidence, not automatically correctness authority.
+Hardcoded expectations that merely restate the implementation are not independent
+correctness evidence. Unresolved affected behavior remains ineligible for
+autonomous qualification, without blocking unrelated well-grounded inventory/
+test improvements in authorized scopes. Exact oracle owners/schema/tools remain
+unselected; factual closure is not established by this approach.
 Cross-cutting obligations include request/option propagation, mutable-state
 isolation, version-scoped token algebra, one logical terminal result and
 diagnostic lifecycle, explicit failures and bounded resource ownership.
@@ -678,10 +705,17 @@ by relabeling it. A counterpart may be absent or intentionally different.
 The D-IDs intentionally retain correspondence to Java design section 16.2.
 Recommendations remain recommendations. Whole-SDK breadth and the
 .NET-first-after-checkpoint direction are settled. **D-01/D-02 and the
-D-03/D-04 approaches are selected; D-05 through D-12 remain open (eight
+D-03/D-04/D-05 approaches are selected; D-06 through D-12 remain open (seven
 decisions).** D-04 selects ownership, not exact paths/formats/integration or
 completed migration. Factual CI/gate/value/artifact/assertion reconciliation
-is not an unanswered approach choice.
+and inventory/contract/oracle/execution closure are not unanswered approach
+choices or completed work. D-06 is being discussed, not selected.
+
+Sections 10.1 through 10.4 retain their v0.2.4 published receipts, including
+their historical open-count/cross-reference wording and authorization limits.
+The current queue in this section, D-05 receipt in section 10.5 and separately reported
+authorization in section 11.1 supersede current-status readings of those
+older references; they do not imply later approvals already existed.
 
 | ID | .NET-scoped decision and remaining work |
 |---|---|
@@ -689,7 +723,7 @@ is not an unanswered approach choice.
 | D-02 | APPROVED: preserve assurance for comparable existing obligations; complete applicable evidence for new/changed behavior; equality for unaffected/saturated dimensions is allowed but not an increase; report full-candidate counts/debt; no critical-regression offsets or unproven affected behavior. Every PR needs applicable testing evidence; agent-authored design/spec precedes feature/bug implementation; receipt below |
 | D-03 | APPROVED APPROACH: existing SDK CI gates/configured limits are the initial baseline; strengthen demonstrated behavioral gaps; new numerical tolerances require comparable evidence/rationale, not arbitrary coverage targets. Required evidence must pass, regression checks remain protection, runs/retries/repair are bounded with visible first failures and blocked/inconclusive exhaustion. Effective gates/values/benchmark/resource tolerances/run evidence still need reconciliation; additional agent/cost budgets and operations remain D-10; receipt below |
 | D-04 | SELECTED OWNERSHIP/LAYOUT APPROACH: shared agentic rules, spec workflow/templates and cross-SDK process in SuicideSquad; SDK-specific specs/mappings/results/history/audits in each SDK's docs; normal tests/pipelines stay in place. Prefer existing conventions/CI formats and minimal missing traceability, durable result identities with retained CI artifact references, not duplicate test databases/pipelines. Exact paths/formats/schema/wiring and controlled bootstrap migration/indexing remain pending; receipt below |
-| D-05 | Source/changelog/API/internal-workflow closure, atomic oracle authority, disputed contracts and explicit lifecycle exclusions |
+| D-05 | APPROVED APPROACH: reconcile whole-SDK APIs/options/workflows/history/bugs/tests/CI with every obligation explicitly disposed; atomic behavior contracts and actual assertions; attributable versioned authority with appropriate independent oracles; preserve/resolve disputes without green-CI expectation changes; explicit versioned lifecycle states, unknown never excluded. Unresolved affected behavior is ineligible for autonomous qualification, not a bar to unrelated well-grounded improvements. Factual inventory/oracle/assertion/execution closure and exact owners/schema/tools remain pending; D-07 roles/quorum and D-12 changes/retirement remain open; receipt below |
 | D-06 | Org/repository unattended-merge governance, protected-policy owners and compatibility with current human approval rules |
 | D-07 | Reviewer independence, required roles/quorum by risk, independent test challenge and final-candidate reconciliation |
 | D-08 | Full cross-SDK matrix depth and bounded Router peer fanout/integration without silent missing peers |
@@ -858,12 +892,46 @@ its implementation details nor tooling, reviewers/quorum, new human sign-off,
 policy enforcement or merge authority. No overall design approval, physical
 migration, audit import, SDK execution or verified whole-SDK assurance follows.
 
-## 11. Ordered design-only continuation
+### 10.5 User-approved D-05 approach
+
+The user approved the coordinator's immediately preceding D-05 proposal,
+relayed on 2026-11-01 UTC, verbatim:
+"On the other hand, I like the D5 approach, let's make progress now with d6."
+This selects D-05's approach; it does not select D-06.
+
+| Aspect | Approved approach |
+|---|---|
+| Whole-SDK reconciliation | Reconcile APIs/options/configuration, internal workflows, full changelog history, historical bugs, existing tests and CI; give every discovered obligation an explicit disposition. The 37 navigation lanes are not a completeness claim or closed denominator |
+| Atomic behavior contracts | Identify preconditions, applicable configurations, allowed/forbidden outcomes, interacting features, positive/negative/boundary scenarios and actual assertions; a feature label, executed line or test name is not behavioral proof |
+| Expected results and authority | Ground expected results in attributable versioned contracts/specifications supported by appropriate independent reference models, golden vectors, properties or verified service fixtures. Current implementation and existing tests are evidence, not automatically correctness authority |
+| Disagreements and eligibility | Preserve and explicitly resolve disagreements among code/tests/documentation/service claims with provenance and rationale; agents cannot obtain green CI simply by changing expectations. Unresolved affected behavior remains ineligible for autonomous qualification without blocking unrelated well-grounded inventory/test improvements within authorized scope |
+| Lifecycle and applicability | Preserve supported/preview/deprecated/removed/unsupported/unresolved states and versioned rationale; unknown never silently becomes unsupported or an exclusion |
+
+This is approach approval, not factual inventory, contract/oracle, assertion or
+execution closure. E-01 through E-28, all 37 lanes and eight atomic candidates
+retain their original evidence depth and proposed/unverified qualifications;
+no candidate is promoted by this decision. Disputed expectations do not
+self-resolve because code and a test agree.
+
+The approach adds no routine human sign-off and selects no exact oracle
+owners, schema or tools. Actual reviewer roles/quorum remain D-07; intentional
+changes/retirement remain subject to protected D-12 handling. Existing independent
+Router-led review and approval requirements remain; no governance, approval
+identity, merge/release authority or implemented enforcement is selected.
+
+D-01/D-02/D-03/D-04 and their factual/value gaps remain intact, including
+D-04's pending paths/formats/integration and controlled migration. D-06 through
+D-12 remain open (seven decisions). The separately authorized SDK testing
+increment in section 11.1 is distinct from this policy approval and docs-only
+assignment. This update imports neither its drafts/plan nor A-01 and claims no
+completed SDK tests/fixes, executed assurance or overall design approval.
+
+## 11. Ordered continuation and workstream boundaries
 
 1. **Checkpoint and activation receipt: recorded.** Section 2 identifies the
    corrected Java checkpoint, preserved gaps and explicit design-only signal.
    Java remains paused; publication is not design approval.
-2. **Historical intake and D-01 through D-04 selections: recorded.** The
+2. **Historical intake and D-01 through D-05 selections: recorded.** The
    [baseline](design-baseline.md) preserves the initial main-derived pin and
    distinguishes source declarations, package/preprocessor surfaces, structural counts,
    selected assertions and CI configuration from unmeasured behavior.
@@ -873,7 +941,9 @@ migration, audit import, SDK execution or verified whole-SDK assurance follows.
    behavioral assurance and specs before implementation, not numeric targets.
    D-03 selects the CI-native gate/limit approach, not effective values or run
    approval. D-04 selects shared-versus-SDK ownership, not paths/formats/wiring
-   or migration. The coordinator reports A-01 complete and delivered to its
+   or migration. D-05 selects reconciliation, atomic contracts, independent
+   versioned authority and explicit dispute/lifecycle handling, not closure.
+   The coordinator reports A-01 complete and delivered to its
    Library; the report is not imported and full findings are not reconciled here.
    Reported audit completion is not verified whole-SDK assurance; this update
    does not duplicate/import it or authorize SDK execution.
@@ -881,19 +951,24 @@ migration, audit import, SDK execution or verified whole-SDK assurance follows.
    [whole-SDK matrix](domain-gap-matrix.md) retains all 31 shared navigation
    lanes, adds .NET-specific lanes and marks every atomic candidate proposed.
    Continue history/API/internal-workflow and assertion/scenario reconciliation
-   against existing CI only within a subsequent bounded design slice; record
+   against existing CI only within an explicitly bounded authorized slice; record
    pipeline/test improvement gaps, not Java denominators or a parallel platform.
    SDK-specific baseline/gap inputs and A-01 need controlled SDK-docs migration/
    indexing when separately authorized; retain published history and versioned
    references, not an expanding catalog here. Exact paths/formats/integration
    and retention/access remain pending.
 4. **Specify before implementing; validate contracts and oracles.** For each
-   later authorized feature/bug change, agents first document intended behavior,
+   authorized feature/bug change, including the separate SDK increment below,
+   agents first document intended behavior,
    affected/interacting invariants, preservation/intentional changes, failure
    scenarios and the CI assertion plan in SDK docs, referencing versioned
    shared standards/templates. Then implement and obtain applicable
    proof; a retrospective summary cannot replace the spec. Resolve conflicts
-   against .NET public/service evidence without self-authorizing contract changes.
+   using attributable versioned contracts/specifications and appropriate
+   independent oracles, without self-authorizing contract changes. Preserve
+   disagreements and unresolved lifecycle states; do not rewrite expectations
+   for green CI or qualify unresolved affected behavior. Unrelated well-grounded
+   inventory/test improvements need not wait for whole-SDK factual closure.
 5. **Reconcile gates/values and resolve remaining design.** Apply approved
    D-02 and the D-03 approach; reconcile actual gates, configured values,
    tolerances and run evidence without inventing approvals. Resolve catalog
@@ -904,10 +979,12 @@ migration, audit import, SDK execution or verified whole-SDK assurance follows.
    this ordered list does not make them artificial implementation dependencies.
    Reconcile docs-path filters so assurance specs/policy/mappings do not gain
    a blanket bypass; no CI changes or run are authorized by this update.
-6. **Obtain design review and explicit authorization for any next phase.**
+6. **Keep design review and task authority separate.**
    Preserve findings/dispositions, unverified gaps and residual risk. No
    implementation, measurement campaign, shadow execution or merge authority
-   follows merely from completing the document.
+   follows merely from completing the document or selecting D-05. The separately
+   authorized SDK increment below need not be reclassified as unauthorized;
+   this workstream receives none of its execution scope.
 
 The later graduation model remains design -> whole-SDK measured baseline ->
 whole-SDK shadow decisions -> qualified narrow merge scopes -> separately
@@ -917,30 +994,56 @@ after design approval and authorized trustworthy baseline/receipt paths.
 Experiment breadth never grants all-domain autonomy, and positive eligibility
 requires every impacted obligation and global safeguard.
 
+### 11.1 Separate SDK testing authorization context
+
+Separately from D-05 approval, the coordinator reports that the user authorized
+the existing SDK workstream to proceed after delivery of its two proposed
+SDK-docs drafts. Relevant user request, verbatim:
+"let's start the work on the .NET SDK repository to improve those gaps through extensive testing now"
+and
+"For a gap, we should aim for both a unit test (mocking if it demands), and an emulator or a live test that covers the gap. For the existing tests as well, we should have a unit test with mocking if required, and a live test that runs against emulator or prod account."
+
+That workstream was resumed for a spec-first coherent implementation increment
+with paired unit (mocking where required) and emulator or specifically
+authorized isolated-live coverage, including existing assessed tests. The
+request is not permission to select an arbitrary production account: no such
+account was identified/authorized. No merge, release or permission authority
+was granted. Applicable evidence must still be obtained and honestly reported;
+authorization is not a completed test/fix or assurance result.
+
+This is coordinator-reported scope/status context, not independent inspection
+or import of those drafts, their plan or the audit. SDK implementation remains
+with that separate workstream; this assignment changes only the three shared
+documentation records and performs no SDK edits/execution, CI triggers,
+live-account actions, agents/reviews or physical migration. Do not duplicate
+the SDK work or infer that later authorization existed at older receipts.
+
 ### Current progress and stop condition
 
 | Item | State |
 |---|---|
-| Context transfer | v0.1.0 persistent; v0.2.0 checkpoint/activation; v0.2.1 D-01; v0.2.2 D-02/spec-first; v0.2.3 D-03; v0.2.4 selected D-04 ownership/layout |
+| Context transfer | v0.1.0 persistent; v0.2.0 checkpoint/activation; v0.2.1 D-01; v0.2.2 D-02/spec-first; v0.2.3 D-03; v0.2.4 D-04 ownership/layout; v0.2.5 approved D-05 approach and separate SDK authorization context |
 | Final Java checkpoint | v0.2.3 accepted at `5d921060...`; Java paused with explicit incomplete closure |
-| .NET-specific investigation | Activated design-only; initial source-pinned baseline/inventory/gap draft recorded |
+| .NET-specific investigation | Historical design-only intake recorded; no new investigation by this update; separate SDK increment scoped above |
 | D-01 baseline policy | Selected: default main, all repository SDK source, both connectivity modes, existing CI-derived matrices and pipeline/test improvements |
 | D-02 behavioral assurance/spec-first policy | Approved: preserve comparable existing obligations, prove new/changed behavior, applicable testing evidence for every PR and agent-written specs before feature/bug implementation |
 | D-03 CI-gate/limit approach | Approved approach: reuse existing CI gates/configured limits, strengthen demonstrated gaps, evidence/rationale for new tolerances, required passing evidence, permanent regression protection and bounded attempts; effective gates/values/run evidence unreconciled |
 | D-04 ownership/layout approach | Selected: shared rules/templates/spec workflow/process in SuicideSquad, SDK-specific specs/mappings/results/audits in SDK docs; exact paths/formats/integration and physical migration pending |
+| D-05 inventory/contract/oracle approach | Approved approach: whole-SDK reconciliation/dispositions, atomic contracts, attributable versioned authority and independent oracles, preserved disputes/lifecycle states; factual closure and exact owners/schema/tools pending |
 | .NET source/API/configuration/test/CI reconnaissance | E-01 through E-28 remain historical intake evidence; effective current CI/artifact reconciliation incomplete; no new SDK audit or execution |
 | .NET atomic contracts and CI assertion/scenario mapping | Proposed/incomplete; selected baseline policy is not contract verification, CI sufficiency or capability qualification |
 | Bootstrap migration/indexing | .NET baseline/gap inputs and A-01 are SDK-specific; eventual authority follows SDK-docs ownership; published inputs/Java freeze preserved, no physical migration |
 | Separate SDK/CI reconciliation audit | A-01 reported complete/delivered to coordinator Library, unimported into either repo; full findings unreconciled; only relayed docs-filter concern recorded; not verified whole-SDK assurance |
-| D-05 through D-12 | Eight open decisions; D-04 implementation details remain pending; tooling, governance, quorum, additional budgets/operations and qualification remain open |
+| D-06 through D-12 | Seven open decisions; D-06 under discussion, not selected; D-04 implementation details and factual/value gaps remain pending |
 | .NET coverage, mutation, benchmark and performance results | Unmeasured / not run by this contribution |
-| .NET design approval / implementation authorization | Not granted |
+| .NET overall design approval / this workstream's SDK execution | Not granted by approach selection; this workstream remains documentation-only |
+| Separate SDK testing implementation | Coordinator-reported authorization for a spec-first paired unit/emulator-or-authorized-isolated-live increment, including existing assessed tests; no completed test/fix or execution result claimed here |
 | Autonomous merging / releases | Not authorized; releases remain separate |
 
-**Stop after publishing this bounded D-04 ownership/layout update and report its paths,
+**Stop after publishing this bounded D-05 approach update and report its paths,
 versions and immutable reference to the coordinator.** Do not expand it into exhaustive
-closure, SDK execution or implementation without the appropriate next scope
-and authorization. On resumption, re-read this gate and current repository
+closure, SDK execution or duplication of the separately authorized implementation.
+D-06 is not selected. On resumption, re-read this gate and current repository
 state; do not blindly replay external side effects or treat remembered
 progress as durable evidence.
 
@@ -973,8 +1076,8 @@ The project worktree began clean at
 contribution requirements and autonomous-development guidance were inspected.
 The initial one-document contribution is at `d9d02138...`, and the initial
 three-document discovery at `2c67e23...`. D-01 was published at `fecb6db...`,
-and D-02/spec-first at `a4af4bc...`; D-03 at `ccb094c...`.
-This D-04 ownership/layout revision changes
+and D-02/spec-first at `a4af4bc...`; D-03 at `ccb094c...`;
+D-04 at `3b141f8...`. This D-05 approach revision changes
 only `docs/dotnet/design-handoff.md`, `docs/dotnet/design-baseline.md` and
 `docs/dotnet/domain-gap-matrix.md`; no root pointer or Java import is edited.
 Documentation verification and the publication commit/PR receipt belong in
@@ -988,7 +1091,10 @@ Library delivery and digest are coordinator-reported context; its report is
 not imported and full findings are not reconciled, and only the relayed docs-filter
 integration concern is recorded. No historical input or Java freeze is moved,
 deleted or rewritten; no verified whole-SDK assurance or physical migration
-is claimed.
+is claimed. Separate SDK testing authorization is coordinator-reported context
+only; no SDK drafts/plan/audit are imported and no completed tests/fixes are
+asserted. Older receipts retain their original scope rather than receiving
+retroactive authorization.
 
 | Version | Date | Change |
 |---|---|---|
@@ -998,3 +1104,4 @@ is claimed.
 | 0.2.2 | 2026-11-01 | Record user-approved D-02 behavioral assurance, every-PR testing evidence and change-proportionate specs before feature/bug implementation; preserve D-01/history and all quality dimensions; D-03 through D-12 remain open; separate audit not duplicated or claimed complete |
 | 0.2.3 | 2026-11-01 | Record approved D-03 CI-gate/limit approach without inventing or approving values; preserve D-01/D-02, spec-first and evidence history; D-04 through D-12 remain open (nine); separate audit reported complete but report/findings not incorporated; no SDK investigation or execution |
 | 0.2.4 | 2026-11-01 | Record selected D-04 ownership: shared agentic/spec process here, SDK-specific specs/mappings/results/audits in SDK docs, native CI formats/artifacts and durable result identities; exact paths/formats/wiring/migration pending; preserve bootstrap/Java history and D-01/D-02/D-03; A-01 unimported, relayed docs-filter concern only; D-05 through D-12 open (eight) |
+| 0.2.5 | 2026-11-01 | Record approved D-05 reconciliation/atomic-contract/versioned-oracle/dispute/lifecycle approach, not factual closure or exact owners/schema/tools; D-06 through D-12 open (seven); preserve D-01 through D-04 receipts, pending details and qualified evidence; distinguish separately authorized spec-first paired SDK testing from this docs-only workstream without importing drafts/plan/audit or claiming tests/fixes |
