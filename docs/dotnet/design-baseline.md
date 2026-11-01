@@ -6,11 +6,12 @@
 
 | Field | Value |
 |---|---|
-| Document version | 0.1.1 |
+| Document version | 0.1.2 |
 | Recorded | 2026-11-01 UTC |
 | Status | INITIAL DESIGN/DISCOVERY DRAFT; NOT APPROVED; NO SDK EXECUTION |
 | Research repository | [Azure/azure-cosmos-dotnet-v3][sdk-tree] |
 | D-01 baseline policy | User-selected: default `main`, all repository SDK source, existing SDK CI-derived matrices, Gateway and Direct |
+| D-02 assurance/workflow policy | User-approved: preserve comparable obligations, prove new/changed behavior, applicable testing evidence for every PR and design/spec before feature/bug implementation |
 | Historical main-derived intake pin | `52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8`; pin each future assessment independently |
 | Historical intake tree object | `2c89abbd9680af78d5072b523df277d8c46b755d` |
 | Accepted Java checkpoint | [v0.2.3 at 5d92106027629ec6c5022a7cd5ef2085014d6973][java-checkpoint]; Java paused |
@@ -21,8 +22,9 @@ confirmed Java's design/research handoff gate. It establishes a reproducible
 source identity, selected source/API/configuration observations, literal
 inventory receipts and a whole-SDK gap draft. It is not a complete feature,
 public API, status-decision, invariant, assertion or supported-platform catalog.
-This revision records the subsequent user-selected D-01 policy without
-refreshing the intake evidence or starting another SDK/CI investigation.
+Subsequent revisions record user-selected D-01 and approved D-02/spec-first
+policy without refreshing the intake evidence or starting another SDK/CI
+investigation.
 
 ## 1. Scope and observable acceptance
 
@@ -30,8 +32,9 @@ The accepted output is project-authored documentation in `docs/dotnet/`:
 an updated handoff, this baseline and the linked matrix. Acceptance means
 the pin is independently established, observations have immutable references,
 all shared feature lanes remain in scope, .NET-specific lanes are explicit,
-the selected D-01 policy is distinguished from incomplete factual
-reconciliation, D-02 through D-12 remain open, and missing evidence is visible.
+selected D-01/D-02 policies are distinguished from incomplete factual
+reconciliation, D-03 through D-12 remain open (ten decisions), and missing
+evidence is visible.
 
 The whole SDK is in scope from the start, not a retry/deadline pilot. This
 bounded pass samples implementation and assertion text across discovery
@@ -48,6 +51,26 @@ Effective matrix evaluation and assertion/scenario mapping remain incomplete;
 missing coverage is work to improve there, not a scope exclusion or proof that
 green current CI satisfies the assurance goals. This update does not perform
 that audit or authorize SDK test/pipeline changes, execution or CI triggers.
+
+The [D-02/spec-first receipt](design-handoff.md#102-user-approved-d-02-and-spec-first-requirement)
+sets behavior preservation, including interacting features, above maximizing
+percentages or test counts. Preserve assurance for comparable existing
+obligations and require complete applicable evidence for new/changed behavior.
+Unaffected/saturated dimensions may remain equal, not a claimed numerical
+increase. Report full candidate counts and discovered debt honestly; discovery
+is not numerical improvement. No gains offset critical regressions or qualify
+unproven affected behavior; retirement/intentional changes still need D-12.
+
+Every PR needs applicable testing coverage/evidence; existing sufficient tests
+can supply it, without artificial new-test quotas or a documentation-only/
+no-test waiver. Before feature/bug implementation, agents must produce a
+change-proportionate design/spec covering intended behavior/contract (bug
+reproduction and expected correction), affected/interacting features/invariants,
+preservation and intended changes, failure/edge scenarios and a test plan mapped
+to meaningful existing/new assertions in the established SDK CI. It is not a
+retrospective summary, a substitute for test evidence or contract-change
+authority. Storage/schema, thresholds, tolerances, tooling and quorum remain
+unselected; the full quality vector remains diagnostic/supporting evidence.
 
 Source is accessed in the target SDK repository at the pin, not copied into
 SuicideSquad. No SDK code, reproducer, exporter, build, test, coverage,
@@ -231,6 +254,10 @@ verification and improvements to tests/pipelines. The historical observations
 below do not enumerate the effective current matrix. Derive and evaluate that
 matrix from the SDK CI, not a replacement runtime/platform/account matrix.
 Missing coverage must become explicit improvement work in that CI.
+Under approved D-02, these arrangements must eventually supply meaningful
+behavioral and cross-feature evidence linked to the pre-implementation spec
+and test plan. Coverage metrics diagnose gaps; green percentages or test counts
+alone do not prove correctness.
 
 | Arrangement | Actual pinned evidence | Remaining gap |
 |---|---|---|
@@ -245,16 +272,18 @@ Missing coverage must become explicit improvement work in that CI.
 | Performance and fuzz | Core template declares a GateBenchmark/BaselineValidation invocation; fuzz project has SharpFuzz and seed/config inputs. [E-20](#e-20), [E-24](#e-24) | No performance or fuzz result. No fuzz invocation literal was found in the main PR entry/templates searched; this is not a complete CI-registration audit |
 | API checks and negative control | Reflection baseline selection and an assertion that deliberately different JSON fails were read. Builder tests assert strategy round-tripping. [E-02](#e-02), [E-25](#e-25) | Assertion-text witnesses only; independent oracle approval, production-case mapping, mutation challenge and execution remain absent from this project |
 
-No numeric threshold, nonregression policy, mutation tool, performance tolerance
-or autonomy sample size is approved by this inspection. The selected coverage
-command does not establish an enforced threshold elsewhere. GitHub Actions,
+The historical inspection did not select policy. The user has since approved
+D-02 behavioral nonregression/spec-first requirements, not numeric thresholds,
+mutation tools, performance tolerances, quorum or autonomy sample sizes.
+The selected coverage command does not establish an enforced threshold
+elsewhere. GitHub Actions,
 remaining templates, all exclusions, actual service capabilities, native
 dependencies and live governance were not exhaustively audited.
 
 ## 8. Pinned evidence index
 
 E-01 through E-28 remain historical intake evidence from main, unchanged by
-the D-01 policy decision. Every upstream link below uses the same immutable
+the D-01/D-02 policy decisions. Every upstream link below uses the same immutable
 intake commit. `S` is selected source/configuration text observed,
 `A` is actual assertion text observed,
 `H` is historical prose and `P` is path/fixture identity only. None promotes an
@@ -294,20 +323,23 @@ invariant past `proposed` without independent contract/oracle work.
 ## 9. Remaining design work and stop boundary
 
 The full [D-01 through D-12 queue](design-handoff.md#10-decision-queue-carried-forward)
-is retained. D-01's initial baseline policy is user-selected; effective CI
+is retained. D-01 and D-02 are selected; effective CI
 matrix/artifact evaluation and assertion/scenario reconciliation are still
-incomplete facts to establish. D-02 through D-12 remain open. D-04 has
-documentation paths, not an approved runtime catalog/schema.
+incomplete facts to establish. D-03 through D-12 remain open (ten decisions).
+D-04 has documentation paths, not an approved runtime catalog/schema.
 
 The next bounded design slices should enumerate/evaluate the existing SDK CI's
 build/runtime/platform/account/service-capability cells for all repository SDK
 source and Gateway/Direct, bind artifacts, and map actual assertions/scenarios.
 Do not invent a separate matrix; identify gaps to improve in those pipelines
-and tests while retaining every whole-SDK obligation.
+and tests while retaining every whole-SDK obligation. The coordinator assigned
+a read-only SDK/CI reconciliation audit to a separate SDK workstream; this
+update does not duplicate it, incorporate its report or claim completion.
 Reconcile history/API/internal obligations in both
 directions, independently validate atomic contracts/oracles, and map actual
-assertions and fixtures. Then address quality-vector denominator/saturation
-policy, .NET tooling feasibility, independent Router governance and candidate
+assertions and fixtures. Apply approved D-02 to honest comparable/full-candidate
+evidence and spec-before-implementation order. Then resolve numeric thresholds/
+tolerances, .NET tooling feasibility, independent Router governance and candidate
 receipts, cross-SDK breadth, privacy/cost/cleanup and benchmark/shadow
 qualification. No such plan authorizes an execution campaign.
 
@@ -330,6 +362,7 @@ PR publication and the Java handoff gate authorize neither PR's merge.
 |---|---|---|
 | 0.1.0 | 2026-11-01 | Initial independently pinned .NET source/API/configuration/history/test/coverage/CI discovery and provenance draft; no SDK execution or closure claim |
 | 0.1.1 | 2026-11-01 | Record user-selected D-01 main/whole-repository/CI-native/Gateway-and-Direct policy; preserve intake pin and E-01 through E-28 as history, ongoing Direct migration context and incomplete effective CI/artifact/assertion reconciliation; no new SDK investigation or execution |
+| 0.1.2 | 2026-11-01 | Record approved D-02 behavioral preservation, every-PR testing evidence and pre-implementation specs; retain all quality dimensions, D-01 and historical evidence; ten decisions remain open; no separate-audit duplication or SDK execution |
 
 [sdk-tree]: https://github.com/Azure/azure-cosmos-dotnet-v3/tree/52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8
 [java-checkpoint]: https://github.com/kushagraThapar/SuicideSquad/blob/5d92106027629ec6c5022a7cd5ef2085014d6973/docs/suicide-squad-design.md
