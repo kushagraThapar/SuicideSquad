@@ -1,143 +1,138 @@
-# Java SDK research input archive
+# Java SDK design/research checkpoint
 
 [Project documentation](../../README.md) |
 [Design and progress](../../suicide-squad-design.md) |
-[Missing-report status](reports/README.md) |
-[Resume checklist](recovery/README.md)
+[Report status](reports/README.md) |
+[Recovery package context](recovery/README.md)
 
-**Research inputs only.** This is a selected public-source archive, not a forked
-SDK, a buildable checkout, a completed inventory, or evidence that tests passed.
-Do not build the snapshots, run imported scripts, provision resources, or enable
-agent permissions as part of this documentation import.
+**SDK source does not belong in this repository.** Suicide Squad holds the
+contracts, scenarios, benchmark definitions, orchestration/review design,
+research findings and provenance needed to make agents trustworthy. Agents
+inspect and later change SDK code in the target SDK repository, through code
+intelligence or a separate checkout at an exact revision. Copying that SDK into
+Suicide Squad is not required for autonomous investigation, development or review.
 
-## Baselines and authority
+**Java is paused at the user-selected stable design/research checkpoint; .NET
+is the next SDK priority.** The stopping point has explicit gaps, not full Java
+catalog closure. No SDK implementation, test execution, permissions, merging,
+deployments or release work is authorized here.
 
-| Input | Pinned revision |
+## Source references, not source copies
+
+| Reference | Pinned revision |
 |---|---|
-| SDK source | [Azure/azure-sdk-for-java@42702a3a1421498ee457ff9cbe56713d0877d39f](https://github.com/Azure/azure-sdk-for-java/commit/42702a3a1421498ee457ff9cbe56713d0877d39f) |
+| SDK repository | [Azure/azure-sdk-for-java](https://github.com/Azure/azure-sdk-for-java) |
+| Java source baseline | [42702a3a1421498ee457ff9cbe56713d0877d39f](https://github.com/Azure/azure-sdk-for-java/tree/42702a3a1421498ee457ff9cbe56713d0877d39f/sdk/cosmos) |
+| Core changelog | [Pinned upstream input](https://github.com/Azure/azure-sdk-for-java/blob/42702a3a1421498ee457ff9cbe56713d0877d39f/sdk/cosmos/azure-cosmos/CHANGELOG.md) |
 | Cosmos concept grounding | [tvaron3/cosmosdb-design-docs@bcfbc786fa5296deebcccd11369efb583e63e48c](https://github.com/tvaron3/cosmosdb-design-docs/commit/bcfbc786fa5296deebcccd11369efb583e63e48c) |
-| Original project-authored design | Version 0.2.1; SHA-256 `53f53195f6da2c04b3511824056d0042d9e8111e90d9459a47254c54c60263f8` |
-| Portable canonical design | [Version 0.2.2](../../suicide-squad-design.md); import/portability edits only, no implementation approval |
+| Current Java design | [Version 0.2.3](../../suicide-squad-design.md), paused backlog and .NET-first sequencing |
 
-The concept repository was synced before consultation. Its
+[`source-access.json`](source-access.json) specifies the ownership/access
+boundary and how to resolve pinned source identities. For each historical
+upstream record in the [original manifest](import-manifest.json), use
+`upstream.repository`, `upstream.commit`, `upstream.path` and
+`upstream.git_blob_sha`. Its immutable source URL is:
+
+```text
+https://github.com/{repository}/blob/{commit}/{path}
+```
+
+The manifest's `snapshot/` paths describe an earlier archive commit, **not
+current local files**. Its imported-payload hashes also describe historical
+bytes; for public source use the upstream blob identity, particularly for the
+explicitly redacted historical CI input. Do not copy SDK code back into this
+project to satisfy an old cache path.
+
+The concept repository was consulted at the pinned revision. Its
 [Session Tokens: Scope and Non-Goals](https://github.com/tvaron3/cosmosdb-design-docs/blob/bcfbc786fa5296deebcccd11369efb583e63e48c/16-session-tokens.md#scope-and-non-goals)
 and
 [Status Codes and SDK Retries: Overview](https://github.com/tvaron3/cosmosdb-design-docs/blob/bcfbc786fa5296deebcccd11369efb583e63e48c/17-status-codes-and-sdk-retries.md#1-overview)
-remain grounding references, not automatic Java-specific test oracles. No
-internal service source or concept-document copy is included in this archive.
+remain domain grounding, not automatic Java- or .NET-specific oracles. No
+internal service source or concept-document copy is included.
 
-## Preserved material and layout
+## What this repository retains
 
-| Location | Contents and limits |
+| Location | Purpose and limit |
 |---|---|
-| [Core changelog](snapshot/sdk/cosmos/azure-cosmos/CHANGELOG.md) | Full pinned changelog input; no semantic ledger was completed |
-| `snapshot/sdk/cosmos/` | Selected core production/test, test-support, documentation and Maven configuration files, preserving upstream paths |
-| `snapshot/eng/` | Selected public CI configuration, retained as data, not active project pipelines; one public emulator-default key literal is redacted |
-| [Tree/module metadata](metadata/) | Four non-truncated recursive trees, module discovery and the historical download receipt |
-| [Import manifest](import-manifest.json) | Every retained payload, all original cache paths, hashes, upstream provenance, transformations and exclusions |
-| [Bounded import validation](import-validation.json) | File/hash, source-stability, document-link and publication-boundary results; no SDK execution or research-completeness claim |
-| [Report status](reports/status.json) | Missing reports/ledger/domain matrix and explicitly unknown measurements |
-| [Recovery guidance](recovery/README.md) | Resume checklist and preserved historical fetch helper; not executed |
-| [Upstream license](snapshot/LICENSE.txt) | Microsoft MIT license for the retained upstream material |
+| [Canonical design](../../suicide-squad-design.md) | Java-lane design, reusable evidence/governance model, transition and paused backlog |
+| [Source access](source-access.json) | Pinned source identities and target-repository workspace ownership |
+| [Tree/module metadata](metadata/) | Structural discovery and the historical download receipt, not SDK source or API closure |
+| [Original import manifest](import-manifest.json) | Historical cache identities, hashes, deduplication and exclusions at the initial commit |
+| [Original import validation](import-validation.json) | Historical results for that initial archive; not current source-file presence |
+| [Recovery context](recovery/README.md) | Outer provenance note explaining the four unchanged historical receipts |
+| [Discovery package](recovery/discovery-checkpoint/README.md) | Parent-authored report, two discovery exports and offline exporter, all byte-identical to the handoff |
+| [Checkpoint provenance](recovery/discovery-checkpoint/package-manifest.json) | Exact package digests, original history and current checkpoint/status |
+| [Current checkpoint validation](checkpoint-validation.json) | Source-reference, document-link, receipt and publication-boundary checks |
+| [Report status](reports/status.json) | Missing semantic/domain/test closure and unknown measurements |
+| [Upstream attribution](UPSTREAM-LICENSE.txt) | Microsoft MIT license for retained derived changelog/research material |
 
-Tree manifests enumerate files that were not downloaded. They do not prove
-API/contract inspection or complete source capture. Encryption discovery metadata
-is preserved, but companion encryption contracts and release-history
-reconciliation remain incomplete. The saved download receipt contains 265 file
-records, including an explicit `verified: false` record; it is historical input,
-not the authority for this import's verification.
+SDK Java files, test source, Maven files, SDK documentation copies and SDK
+pipeline snapshots are absent from the current tree. The obsolete downloader
+that wrote SDK snapshots into this project is also removed. Project-authored
+research tooling is not SDK implementation and was not executed during promotion.
 
-Snapshot documents are immutable upstream text. Their original relative links
-may point to files outside this selected archive; read them in the pinned
-upstream repository context recorded by the manifest. Project-authored index,
-design and recovery links resolve within this repository. Validation distinguishes
-those two link populations rather than changing upstream bytes or claiming the
-archive is a full checkout.
+## Discovery results and limits
 
-## Import accounting
+The four-file parent-authored handoff totals **1,313,021 bytes**. It preserves
+145 core release headings and 721 top-level changelog bullets. Of those bullets,
+705 have lexical family hints; **all 721 remain semantically unverified**.
+The 183 exported-package Java file records are file enumeration, not resolved
+APIs, contracts, assertions or behavioral coverage.
 
-The frozen intake is the original research `source/` subtree only. A later
-parent-authored `recovery/` subtree is unfinished and deliberately deferred to a
-separate completed handoff. No adjacent session folder was migrated.
+The receipt describes 903 matching and two mismatching copies out of 905
+Java/XML/Markdown copies in four original cache buckets. The original intake's
+917-path population additionally included top-level changelog, metadata, CI and
+a helper. These are different denominators, not competing coverage results.
+`cache_path` values identify old inputs; they do not require local duplicates.
 
-| Accounting item | Count |
-|---|---:|
-| Captured original research paths | 917 |
-| Captured original bytes | 12,476,287 |
-| Original paths retained, including the portable helper | 915 |
-| Redundant identical cache copies deduplicated | 224 |
-| Unverified cached paths excluded | 2 |
-| Unique retained input payloads | 691 |
-| Verified public additions: replacement blob and upstream license | 2 |
-| Final research payload files, excluding authored index/status/manifest documents | 693 |
+The report's source-local leads retain their qualifications. In particular,
+the partial-trace 408/21013 discrepancy is an unresolved oracle question, not
+a verified production defect or a passing test oracle. Companion encryption
+history, atomic semantic mappings, resolved API/internal-path reconciliation,
+the whole-SDK domain matrix and test/fixture closure remain incomplete.
 
-The exact resulting byte counts and per-file digests are in
-[`import-manifest.json`](import-manifest.json). Deduplication preserves every
-original path in each payload's `origins` array. Copies were collapsed only
-when their retained bytes matched; no completed report or project-authored
-analysis was discarded as a duplicate.
+The original four agents still have no completed persisted reports. This
+package is new parent-authored recovery from original inputs, not recovered
+agent output. No new whole-Java or .NET-specific investigation was performed by
+this promotion.
 
-## Provenance and verification
+## Original history and layout correction
 
-The module tree IDs were rechecked through the public pinned GitHub directory.
-All four cached recursive trees matched the public trees and reported
-`truncated: false`. Retained SDK blobs match those trees; the three original CI
-inputs were also compared byte-for-byte with public commit-scoped raw files.
-One public development-fixture key literal was then redacted from the archival
-CI payload; its original and imported hashes are explicitly distinct. The
-upstream license was retrieved at the same commit and checked against its
-contents-API blob ID.
+The first import at immutable commit
+`a10d3042a61540b907edbe17b710c6294b997a7f` archived research inputs. The user
+clarified that a link to the SDK repository suffices; that vendoring decision
+is corrected in the current tree without rewriting the earlier history.
 
-Each manifest payload records its repository-relative path, size, SHA-256,
-Git blob SHA-1, original source-relative paths and, for upstream material,
-repository, commit, upstream path and expected original blob ID. Imported hashes
-cover the actual retained bytes; declared transformations must not be mistaken
-for byte-identical upstream snapshots. The Git blob algorithm is:
-`SHA1("blob " + decimal_byte_length + NUL + content)` for a Git blob. The manifest
-also records the original design digest and the intentionally updated canonical
-design digest. It is an import ledger, **not** the missing changelog semantic
-ledger or a runtime invariant/evidence schema.
+The initial capture accounted for 917 paths / 12,476,287 bytes, collapsed 224
+identical copies, and excluded two unverified `RxGatewayStoreModel.java` cache
+copies. Their Git blob was `82bc1d4fc10d9cd0450b9a9bb35f8cab799f690a`;
+the intended pinned public blob is
+`a25ba5c25d8b43f4edba7e9dec3006c1a839596d`. Original digests and the
+`verified: false` download receipt remain provenance, not contract evidence.
 
-Authenticated source reads encountered Azure organization SAML enforcement.
-The requested CLI reauthentication could not replace an environment-supplied
-token; public commit-scoped, credential-free reads supplied verification instead.
-No token, authentication state or authorization URL is preserved here. No `ado`
-server tools were exposed for this task; no live Azure DevOps pipeline history,
-required checks or permissions were inspected or changed.
+All **685 archived `snapshot/` paths, including 671 Java source/test files**, are
+removed from the current tree; the MIT license is retained separately as
+attribution. The original manifest/validation remain unchanged
+historical receipts and retain the original 0.2.2 design digest. The new
+checkpoint manifest describes the current design and source-link-only layout.
+Original imported bytes can be inspected at the old commit if genuinely needed;
+the untouched parent capture is required for the two excluded mismatching byte
+sequences. No parent files or old commits were modified.
 
-## Exclusions, transformations and recovery
+The unchanged recovery report contains pre-correction snapshot-replacement
+statements, and its exporter expects the old local cache layout. Read those as
+historical descriptions, not instructions to recreate SDK copies here. See the
+[outer recovery note](recovery/README.md) before using any receipt.
 
-| Category | Handling and recovery |
-|---|---|
-| Identical cached source copies | Retain one verified payload and every original path in the manifest; copy it to those paths to reconstruct the old cache layout |
-| Two cached `RxGatewayStoreModel.java` copies | Exclude unverified bytes; retain original paths, lengths and digests, the saved `verified: false` receipt, and the verified pinned public replacement |
-| One public emulator-default key literal in archival CI | Replace with `REDACTED_PUBLIC_EMULATOR_DEFAULT_KEY`; retain the original input digest and public pinned path for provenance, without publishing the literal here |
-| Machine-specific helper paths | Use `gh` from `PATH` and repository-relative metadata/snapshot paths; retain the original helper's digest and describe the edits |
-| Machine-local integration references in the design | Retain integration names, provenance limitations and pending versioning work, without private filesystem locations |
-| New parent-authored recovery subtree | Not inspected or imported; receive a separately completed, provenance-bearing package later |
-| Credentials, private payloads, chat transcripts, unrelated/temporary files and local agent configuration | Outside the import boundary; not uploaded, synthesized or recovered from adjacent folders |
+## Attribution and publication boundary
 
-The excluded Java cache bytes were 70,078 bytes in each of two paths, with
-SHA-256 `17c9f6b52ca273312baf3f15aea158cf79a0ca9e78daaf4b719b9366207ad76b`
-and Git blob `82bc1d4fc10d9cd0450b9a9bb35f8cab799f690a`. Their expected
-public blob is `a25ba5c25d8b43f4edba7e9dec3006c1a839596d` (70,082 bytes), now
-retained at
-[`snapshot/sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/RxGatewayStoreModel.java`](snapshot/sdk/cosmos/azure-cosmos/src/main/java/com/azure/cosmos/implementation/RxGatewayStoreModel.java).
-The original designated inputs remain untouched outside the repository. Their
-exact excluded bytes cannot be reconstructed from upstream; use the original
-capture and recorded digests if inspecting that discrepancy later.
+Retained derived public-SDK material remains subject to Microsoft's
+[MIT license](UPSTREAM-LICENSE.txt), alongside the
+[project license](../../../LICENSE). Source notices remain in the upstream
+repository; retain license/provenance when using those sources.
 
-## Licensing and publication boundary
-
-Upstream files remain copyright Microsoft and retain their original notices.
-They are redistributed under the pinned
-[Microsoft MIT license](snapshot/LICENSE.txt); this repository's
-[project license](../../../LICENSE) does not erase upstream attribution.
-Preserve both the notices and provenance when moving these snapshots.
-
-Only the designated project design, classified public SDK inputs, a portable
-project-authored helper and the minimal public license/replacement additions are
-published. Public example identifiers, HTTP header constants and environment
-variable references are source text, not live credentials. The public emulator
-fixture key is redacted even though it is not a live-account secret. No imported Java,
-Maven, TestNG, CI or historical helper code was executed.
+No credentials, private payloads, customer diagnostics, chat transcripts,
+unrelated session files or local agent configuration are published. No imported
+exporter or SDK code was executed, and no CI/permission/merge policy was changed.
+No live Azure DevOps history or required-check state was inspected. The current
+checkpoint is design/research evidence, not implementation or merge authority.

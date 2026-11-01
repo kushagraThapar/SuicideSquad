@@ -2,6 +2,11 @@
   "schema_version": 1,
   "state": "incomplete_recovery_required",
   "design_checklist_id": "DS-14",
+  "java_workstream": "paused_at_versioned_design_research_checkpoint",
+  "next_sdk_priority": ".NET",
+  "stable_boundary": "explicit_remaining_gaps_not_full_source_verified_java_catalog",
+  "sdk_source_vendored": false,
+  "source_access": "../source-access.json",
   "design": "../../../suicide-squad-design.md",
   "sdk_repository": "Azure/azure-sdk-for-java",
   "sdk_commit": "42702a3a1421498ee457ff9cbe56713d0877d39f",
@@ -50,8 +55,20 @@
     "scenario_coverage": null
   },
   "later_parent_authored_recovery": {
-    "state": "deferred_until_separate_completed_handoff",
-    "imported": false,
+    "state": "persisted_as_separate_original_intake_discovery_receipts",
+    "imported": true,
+    "path": "../recovery/discovery-checkpoint/README.md",
+    "provenance": "../recovery/discovery-checkpoint/package-manifest.json",
+    "original_handoff_files": 4,
+    "original_handoff_bytes": 1313021,
+    "core_release_headings": 145,
+    "core_top_level_bullets": 721,
+    "lexical_family_hinted_bullets": 705,
+    "semantically_unverified_bullets": 721,
+    "exported_package_java_files": 183,
+    "resolved_api_or_contract_closure": false,
+    "original_intake_mismatching_cached_copies": 2,
+    "exporter_executed_during_promotion": false,
     "is_recovered_original_agent_report": false
   },
   "authorization": {
@@ -63,5 +80,7 @@
     "autonomous_merging": false,
     "deployments_or_releases": false
   },
-  "resume": "../recovery/README.md"
+  "paused_java_backlog": "../../../suicide-squad-design.md#194-stable-checkpoint-and-net-first-transition",
+  "original_recovery_guide": "../recovery/README.md",
+  "resume_condition": "explicit_java_reactivation_not_requested_by_this_checkpoint"
 }

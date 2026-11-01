@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "purpose": "Source access/provenance for agents; SDK code belongs in target-repository workspaces, not this project",
+  "repository_contains_vendored_sdk_source": false,
+  "sdk": {
+    "repository": "Azure/azure-sdk-for-java",
+    "commit": "42702a3a1421498ee457ff9cbe56713d0877d39f"
+  },
+  "source_records": {
+    "manifest": "import-manifest.json",
+    "historical_manifest_commit": "a10d3042a61540b907edbe17b710c6294b997a7f",
+    "manifest_sha256": "0be532910a9d84472985bc418d599c36101414768785cd48e04a230bcdf3102e",
+    "selection": "files entries with an upstream object",
+    "records": 685,
+    "source_identity": "upstream.repository + upstream.commit + upstream.path",
+    "expected_public_git_blob": "upstream.git_blob_sha",
+    "immutable_source_url": "https://github.com/{upstream.repository}/blob/{upstream.commit}/{upstream.path}",
+    "historical_payload_path_semantics": "snapshot paths describe the original archive commit, not files promised to exist in the current tree",
+    "hash_caveat": "Payload sha256/git_blob_sha are original imported bytes; use upstream.git_blob_sha for public source, especially the explicitly redacted CI input"
+  },
+  "ownership": {
+    "suicide_squad": [
+      "Invariant/scenario/behavior catalogs and benchmark definitions",
+      "Agent orchestration, independent review/evidence contracts and governance design",
+      "Discovery findings, decision/status records and commit-pinned source provenance"
+    ],
+    "target_sdk_repository": [
+      "SDK implementation and regression tests",
+      "Build files, CI bindings and candidate artifacts",
+      "Candidate-specific execution and source inspection"
+    ],
+    "agent_access": "Read through code intelligence or a separate pinned target-repository checkout; later authorized implementation/test work occurs there"
+  },
+  "historical_archive": {
+    "commit": "a10d3042a61540b907edbe17b710c6294b997a7f",
+    "retained_in_git_history": true,
+    "snapshot_payloads_removed_from_current_tree": 685,
+    "java_source_and_test_files_removed": 671,
+    "obsolete_import_downloader_removed": "recovery/fetch_surface.py",
+    "recovery": "Inspect the historical commit if original imported bytes are genuinely needed; do not restore SDK copies into the project by default"
+  },
+  "attribution": {
+    "path": "UPSTREAM-LICENSE.txt",
+    "sha256": "18cc155157d07d5ac0b227e5f58ae9f815ccd817487fd10c6e4f4f0ec4411ce1",
+    "purpose": "Microsoft MIT attribution for retained derived changelog/research material"
+  },
+  "workstream": {
+    "java": "paused_at_design_research_checkpoint",
+    "next_sdk_priority": ".NET",
+    "new_sdk_investigation_or_execution_authorized_by_this_file": false
+  }
+}

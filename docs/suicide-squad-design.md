@@ -8,13 +8,14 @@
 
 | Field | Value |
 |---|---|
-| Document version | 0.2.2 |
+| Document version | 0.2.3 |
 | Created / last revised | 2026-10-31 / 2026-10-31 |
-| Status | DESIGN DRAFT - NOT APPROVED FOR IMPLEMENTATION |
+| Status | DESIGN/RESEARCH CHECKPOINT - JAVA PAUSED; DESIGN NOT APPROVED |
 | Initial product | Full Azure Cosmos DB Java SDK for NoSQL feature surface: `azure-cosmos`, test/fault support, and the companion encryption-library contracts |
+| Current SDK priority | .NET first; Java research paused at the user-selected versioned design/research checkpoint with explicit remaining gaps |
 | Canonical project repository | [kushagraThapar/SuicideSquad](https://github.com/kushagraThapar/SuicideSquad) |
 | SDK repository under study | [Azure/azure-sdk-for-java](https://github.com/Azure/azure-sdk-for-java) |
-| Immediate objective | Finalize this design, inventory existing evidence, and identify gaps before changing SDK code, tests, CI, or agent permissions |
+| Immediate objective | Persist the Java checkpoint and its unresolved backlog, then transfer context to the .NET design workstream; no further Java investigation or SDK implementation now |
 | Long-term objective | Agents reproduce bugs, implement changes, review independently, iterate, and merge eligible PRs without routine human PR review |
 | Explicit exclusion | Release execution, release automation, and production rollout are a separate project |
 
@@ -24,6 +25,13 @@
 > This repository copy supersedes the session draft as the reference for this
 > revision. Publication on a review branch is not default-branch integration,
 > design approval, implementation authorization, or merge-policy approval.
+>
+> **Priority change, 2026-10-31:** the user selected .NET as the first SDK
+> workstream and a versioned design/research checkpoint, not a fully verified
+> catalog, as the stable stopping point for Java. The Java-specific scope,
+> requirements and catalogs below are preserved for that paused lane. They are
+> not a .NET specification; only the reusable design process transfers without
+> fresh SDK-specific contract, baseline and tooling verification.
 
 ## Contents
 
@@ -67,6 +75,9 @@ its demonstrated competence rather than imply universal correctness.
 
 ### 1.2 Confirmed direction
 
+R-01 and R-10 retain the original Java-lane requirements. R-12 supersedes the
+workstream sequence, not those requirements if Java is later resumed.
+
 | ID | Requirement |
 |---|---|
 | R-01 | Start with the Java SDK and extend the tests and fault-injection infrastructure already present. |
@@ -80,6 +91,8 @@ its demonstrated competence rather than imply universal correctness.
 | R-09 | Keep this document useful for a long-running project: stable IDs, explicit decisions, acceptance criteria, dependencies, and progress evidence. |
 | R-10 | The initial pilot covers the entire Java SDK feature/behavior surface, not only retry decisions or deadlines. Reconcile the full changelog and current APIs/implementation with the invariant catalog before declaring inventory completeness. Initial PR experiments may involve any SDK domain. |
 | R-11 | Use `kushagraThapar/SuicideSquad` as the canonical repository for this project's design documents, inventories, evidence and future project files. Do not leave authoritative project work only in a chat/session directory. |
+| R-12 | Prioritize the .NET SDK next. Stop Java at a versioned design/research checkpoint with explicit remaining gaps; do not require a fully source-verified Java catalog before the transition or start Java implementation. |
+| R-13 | Do not vendor SDK source into Suicide Squad. Keep implementation, regression tests and SDK build/CI files in their target repositories; give agents pinned source access and keep project contracts, orchestration, findings and provenance here. |
 
 ### 1.3 Success
 
@@ -210,8 +223,29 @@ runs, or historical reproductions were executed for this draft.
   blob; their bytes are excluded and their digests recorded, with a verified
   public replacement retained. One public emulator-default key literal is also
   redacted from the archival CI copy, with original and imported hashes kept
-  distinct. New parent-authored recovery outputs are deferred
-  to a separate completed handoff, not represented as recovered agent reports.
+  distinct. At that initial import, new parent-authored recovery outputs were
+  deferred to a separate completed handoff, not represented as recovered agent
+  reports.
+- Follow-up checkpoint for version 0.2.3 adds the
+  [completed parent-authored discovery package](research/java-sdk/recovery/discovery-checkpoint/README.md)
+  separately from the original intake. It preserves 145 release headings, 721
+  top-level changelog bullets and 183 exported-package Java file records. Of
+  the bullets, 705 have lexical family hints; all 721 remain semantically
+  unverified. These are discovery receipts and source-local leads, not atomic
+  contract closure, test evidence or recovered original-agent reports.
+  Their original-cache counts retain the two mismatches. The earlier archive
+  included a verified public replacement, but SDK snapshots are no longer
+  present in the current repository layout.
+- The user clarified that a link to the SDK repository suffices. The current
+  layout removes vendored SDK source, test/build/CI snapshots and the obsolete
+  archive downloader, while retaining research findings, original cache
+  identities and immutable upstream commit/path/blob references. The initial
+  import remains in git history; it does not define the current project tree.
+- The selected stopping point is now a versioned Java design/research checkpoint
+  with remaining gaps. Java is paused; .NET is the next SDK priority. The
+  [checkpoint/backlog](#194-stable-checkpoint-and-net-first-transition) and
+  [separate package provenance](research/java-sdk/recovery/discovery-checkpoint/package-manifest.json)
+  record this sequencing without approving the design or changing governance.
 
 All version 0.2 feature research uses the pinned upstream source, not the
 divergent local Java checkout. Continue reconciling local-versus-upstream
@@ -369,6 +403,27 @@ do not mechanically convert them into Java retry rules. Canonical chapters also
 contain qualified or unverified statements. Those are research tasks, not test
 oracles. No blanket "Direct retries are always a superset of Gateway" rule is
 adopted without Java-specific verification.
+
+### 4.6 Repository and execution boundary
+
+Agents need access to the code they investigate and change, not a second copy
+committed into the assurance project.
+
+| Surface | Owns |
+|---|---|
+| Suicide Squad | Versioned contract/invariant/scenario catalogs, benchmark definitions, orchestration and independent review design, findings, decisions and evidence/source references |
+| Target SDK repository and isolated candidate workspace | SDK implementation, regression tests, build files, SDK-side CI bindings and exact source/candidate revisions |
+| Trusted execution/artifact storage, when authorized | Candidate-bound test/coverage/mutation/compatibility results and receipts referenced by the project, without mirroring the SDK tree here |
+
+Use code intelligence or a separate pinned target-repository checkout to inspect
+source. Later authorized agents modify and test that SDK workspace, not a
+vendored `snapshot/` under this project. The project records repository,
+commit/path/blob identities and findings so the evidence remains traceable.
+Code access is not permission to execute SDK code, weaken review gates or merge.
+
+This boundary applies to the next .NET workstream too. SDK-specific contracts,
+tooling and source baselines must be established there independently; copying
+Java source or mechanically translating Java defaults is not a context transfer.
 
 ## 5. Feature and behavior inventory
 
@@ -1525,6 +1580,8 @@ pilot or postponing experimentation until the entire project is complete.
 | DEC-07 | Releases are separate; no release work now | Confirmed |
 | DEC-08 | Initial pilot/experiments cover the full Java SDK, not a retry/deadline-only slice; full changelog and current-source reconciliation are required | Confirmed by user on 2026-10-31 |
 | DEC-09 | `https://github.com/kushagraThapar/SuicideSquad` is the canonical home for all SuicideSquad project documents and files | Confirmed by user on 2026-10-31; repository configured in the app |
+| DEC-10 | .NET is the next first SDK workstream; Java pauses after a versioned design/research checkpoint with explicit gaps, not full source/contract closure | Confirmed by user on 2026-10-31; supersedes the original Java-first sequencing only |
+| DEC-11 | Suicide Squad references SDK source in the target repository instead of vendoring it; project-owned assurance/orchestration artifacts stay here | Confirmed by user on 2026-10-31; corrects the initial source-archive import layout |
 
 ### 16.2 Decisions required before implementation
 
@@ -1560,7 +1617,7 @@ written but not approved; `pending` means no completion evidence yet.
 
 | ID | Deliverable | State | Acceptance evidence / next requirement |
 |---|---|---|---|
-| DS-00 | Named project and written design reference | done | This document, version 0.2.2; implementation still not approved |
+| DS-00 | Named project and written design reference | done | This document, version 0.2.3; Java paused and implementation still not approved |
 | DS-01 | Initial source/configuration reconnaissance | done, limited | Version 0.2 pins upstream source/changelog/manifests; original local CI observations and live-check limitations remain labeled |
 | DS-02 | Whole-SDK feature/behavior inventory | draft | Sections 5.3-5.4 require full changelog/API/internal-path reconciliation and explicit unmapped-entry review |
 | DS-03 | Atomic invariant specifications | draft | Section 6 families; Java-specific contract verification and per-record oracles required |
@@ -1574,15 +1631,16 @@ written but not approved; `pending` means no completion evidence yet.
 | DS-11 | Graduation/evaluation plan | draft | Section 15; numeric sample/exit criteria not selected |
 | DS-12 | Design review and adversarial walkthrough | pending | Required perspectives, evidence-backed findings, accepted dispositions and residual risks |
 | DS-13 | Design approval and implementation authorization | pending | D-01 through D-12 resolved or explicitly deferred without blocking scope; approval recorded |
-| DS-14 | Changelog/API evidence ledger and whole-SDK domain matrix | incomplete - recovery required | Four original background agents are unavailable; no completed reports/semantic ledger were saved. See [report status](research/java-sdk/reports/README.md) and [resume checklist](research/java-sdk/recovery/README.md). |
-| DS-15 | Canonical repository promotion | imported - review/integration pending | Design and safe fixed-intake inputs are repository artifacts with [provenance](research/java-sdk/import-manifest.json). Publication uses a feature-branch PR; default-branch integration and later recovery packages are not claimed. |
+| DS-14 | Changelog/API evidence ledger and whole-SDK domain matrix | incomplete - Java paused | Original-agent reports remain unavailable. [Parent discovery receipts](research/java-sdk/recovery/discovery-checkpoint/README.md) preserve 721 semantically unverified bullets and file/status declarations, not the missing atomic semantic ledger, API contracts, domain matrix or test closure. |
+| DS-15 | Canonical repository promotion | checkpoint prepared - review/integration pending | The source-link-only layout and separate recovery follow-up have [distinct provenance](research/java-sdk/recovery/discovery-checkpoint/package-manifest.json). The old source-archive PR was closed; replacement publication does not imply default-branch integration, design approval or merging. |
+| DS-16 | Stable Java design/research checkpoint and .NET handoff boundary | done - Java paused | Version 0.2.3 plus the four-file parent-authored discovery package and [explicit backlog](#194-stable-checkpoint-and-net-first-transition); the selected checkpoint does not require DS-14 closure or authorize implementation. |
 
 Required design-review perspectives: Java SDK/domain, test engineering,
 distributed-system failure semantics, API/compatibility, CI/EngSys,
 security/permissions, agent-review governance and operability. These are
 review obligations, not a request to spawn agents now.
 
-### 17.2 Future implementation roadmap - not started or authorized
+### 17.2 Future Java implementation roadmap - paused, not started or authorized
 
 | Milestone | Work | Prerequisites | Exit criteria |
 |---|---|---|---|
@@ -1657,11 +1715,13 @@ The documentation layout is:
 | [Documentation index](README.md) | Entry point for the project design and research |
 | `docs/suicide-squad-design.md` | Design decisions, scope and progress ledger |
 | [Research index](research/java-sdk/README.md) | Input provenance, licensing, import counts and limitations |
-| `docs/research/java-sdk/snapshot/` | Selected verified public upstream files, retaining upstream-relative paths |
+| [Source access](research/java-sdk/source-access.json) | Pinned upstream repository/commit/path/blob references; SDK source stays in its target repository |
 | `docs/research/java-sdk/metadata/` | Original module/tree manifests and historical download receipt |
-| [Import manifest](research/java-sdk/import-manifest.json) | Payload hashes, upstream commit/path/blob IDs, original paths, deduplication and exclusions |
+| [Historical import manifest](research/java-sdk/import-manifest.json) | Original hashes, paths, deduplication and exclusions; historical snapshot paths are not current local files |
 | [Report status](research/java-sdk/reports/README.md) | Missing domain reports, semantic ledger and domain matrix; not completion evidence |
-| [Recovery checklist](research/java-sdk/recovery/README.md) | Resume steps and the preserved, portable historical fetch helper |
+| [Recovery context](research/java-sdk/recovery/README.md) | Outer historical-receipt/layout note and paused-Java backlog; no snapshot downloader in the current tree |
+| [Parent discovery package](research/java-sdk/recovery/discovery-checkpoint/README.md) | Separate original-intake receipts and bounded source-local leads; not semantic closure |
+| [Checkpoint provenance](research/java-sdk/recovery/discovery-checkpoint/package-manifest.json) | Exact four-file handoff digests, frozen import reference and current checkpoint/status |
 
 This fixes the documentation-import layout, not the runtime registry/evidence
 schema or SDK-side execution bindings in D-04. Root instructions and autonomous
@@ -1682,17 +1742,26 @@ Versions 0.1 and 0.2 were session-only drafts. The user authorized repository
 promotion on 2026-10-31. Promotion imports design/research only; it does not
 authorize SDK implementation, autonomous merging or release work.
 
-Preserve provenance and licensing for downloaded public SDK research inputs.
-Classify cached source snapshots as research, not a forked SDK implementation.
-Do not upload credentials, private support payloads, chat transcripts or unrelated
-session files. Record any intentionally excluded temporary/generated cache and
-how the underlying evidence can be recovered.
+Preserve provenance and licensing for public SDK research without copying the
+SDK tree into this project. Temporary source access belongs in code intelligence
+or a separate target-repository workspace. Do not upload credentials, private
+support payloads, chat transcripts or unrelated session files. Keep immutable
+upstream references and explicit historical cache/exclusion records instead.
 
 The first import is limited to the captured design and the original research
-`source/` subtree. A new parent-authored `recovery/` subtree was created after
-intake and is deliberately deferred until a separate completed handoff. Neither
-the old unavailable agent runs nor that unfinished package count as reports.
-Record later research additions in their own provenance-bearing contribution.
+`source/` subtree and remains preserved at immutable commit
+`a10d3042a61540b907edbe17b710c6294b997a7f`. Its manifest and validation are
+historical receipts for that revision, including the then-current 0.2.2 design
+digest; they are not silently rewritten when this document evolves.
+
+The later parent-authored recovery package is now preserved byte-for-byte in
+`docs/research/java-sdk/recovery/discovery-checkpoint/`. Its separate provenance
+records the handoff and original-intake semantics. Neither those discovery
+outputs nor the unavailable agent runs count as completed domain/semantic
+reports. Their snapshot-replacement statements and exporter paths describe the
+old intake, not the current source-link-only layout. The outer recovery guide
+explains that boundary; the original archive guide/downloader remain available
+at the historical import commit, not as instructions to vendor source again.
 
 ### 19.2 Updating progress
 
@@ -1714,26 +1783,63 @@ correct historical behavior, but it may not silently redefine the oracle.
 
 ### 19.3 Resume procedure
 
-1. Read the header, decisions and design checklist before acting.
+1. Read the header, decisions and design checklist before acting. Java is paused
+   and .NET is next; do not treat this procedure as a request to resume Java.
 2. Read the canonical project repository and confirm whether the project remains
    in design-only mode.
 3. Read the [input manifest](research/java-sdk/import-manifest.json),
    [incomplete report status](research/java-sdk/reports/status.json), and
    [recovery checklist](research/java-sdk/recovery/README.md). Do not wait for
    unavailable agents or relabel cached files as completed reports.
-4. Reconcile the current upstream baseline before trusting old code observations;
+4. If Java is explicitly reactivated later, reconcile the current upstream baseline before trusting old code observations;
    preserve this pinned capture rather than silently updating its snapshots.
-5. Pick the next unresolved design obligation and update its evidence. Import a
-   later completed recovery package separately and label its actual authorship.
+5. On a later Java reactivation, pick an unresolved design obligation from the
+   preserved backlog and update its evidence. Do not regenerate the original
+   discovery receipts after source replacements or relabel their authorship.
 6. Resolve blocking design decisions and review findings.
 7. Start implementation only after DS-13 explicitly records authorization.
 
-Recommended next design session: finish the whole-SDK changelog/API/behavior
-reconciliation, resolve D-02 and the remaining support/capability part of D-01,
-then verify atomic invariants across all domain lanes. Retry/deadline/status
-records are one lane, not the gate for selecting initial PR experiments.
+The next workstream is .NET context transfer and SDK-specific design scoping
+after this checkpoint is persistent. The separate
+[.NET design context handoff v0.1.0](https://github.com/kushagraThapar/SuicideSquad/blob/d9d02138e7fa72b32bfcc72dd63028d208004297/docs/dotnet/design-handoff.md)
+is pinned to its own immutable commit, not a nonexistent default-branch file.
+It preserves the corrected-Java-checkpoint gate and does not establish .NET
+SDK investigation or implementation completion. No .NET source contracts or runtime/tooling
+equivalences are established here. If Java is resumed later, the whole-SDK scope
+remains intact; retry/deadline/status records remain one lane rather than the
+admission boundary for experiments.
 
-### 19.4 Change log
+### 19.4 Stable checkpoint and .NET-first transition
+
+The user explicitly selected **a versioned design/research checkpoint with
+remaining gaps**, not a fully source-verified Java catalog, as the stable
+milestone before shifting to .NET. Persisting that checkpoint completes this
+Java documentation workstream; it does not complete DS-14, approve DS-13,
+qualify autonomy or enable releases.
+
+The separate recovery package is new parent-authored discovery from original
+inputs. Its four files remain byte-identical to the handoff. `cache_path`
+values identify old cache copies, not current repository paths; resolve their
+identities through the historical import manifest and source-access record.
+The documented exporter command requires the original input layout and was not
+executed during promotion. No SDK source files are required in Suicide Squad.
+
+| Paused Java backlog | Still required before the corresponding closure |
+|---|---|
+| Core changelog semantics | Split all 721 bullets into atomic obligations, verify lifecycle/source/contracts and map or justify exclusions; 705 lexical hints are not verified coverage |
+| Companion encryption | Recover release history and verify full companion/core contracts, not only discovered metadata |
+| Resolved API and internal workflows | Go beyond the 183 exported-package files to methods/options/visibility/qualified exports, defaults, lifecycle and interactions |
+| Disputed retry oracles | Reconcile Java/version-specific 449 guidance and the partial-trace 408/21013 changelog/source discrepancy; neither is a verified production bug or passing oracle |
+| Test/domain closure | Complete the whole-SDK domain matrix, assertion/fixture mappings, execution and honest multidimensional denominators when separately authorized |
+| Design/governance decisions | D-01 through D-12 and DS-12/DS-13 remain unresolved or pending as recorded; current human/Router boundaries remain intact |
+
+Java research is paused after this checkpoint. Do not perform further Java
+inventory investigation just to hand off to .NET. Transfer reusable design
+structure, traceability, evidence-integrity and approval boundaries; establish
+.NET-specific scope, source baseline, invariants, test tooling and contracts in
+the .NET workstream instead of mechanically translating Java defaults.
+
+### 19.5 Change log
 
 | Version | Date | Change |
 |---|---|---|
@@ -1741,6 +1847,7 @@ records are one lane, not the gate for selecting initial PR experiments.
 | 0.2 | 2026-10-31 | User-directed whole-SDK pilot; pinned upstream source and full changelog; parallel feature/behavior inventories; companion encryption discovery and explicit inventory/qualification separation |
 | 0.2.1 | 2026-10-31 | Canonical project repository confirmed; design/research promotion authorized; unavailable background runs and incomplete inventory explicitly recorded |
 | 0.2.2 | 2026-10-31 | Portable repository import; documentation layout and relative input/report/recovery links; verified deduplicated provenance, licensing, two excluded cache mismatches and one redacted public fixture-key literal; DS-14 remains incomplete and default-branch integration remains pending |
+| 0.2.3 | 2026-10-31 | Separate parent-authored discovery receipts; user-selected paused Java checkpoint and .NET-first transition; corrected source-access boundary removes vendored SDK snapshots while preserving pinned provenance/history; DS-14 remains incomplete and no implementation or release work is authorized |
 
 ## 20. References
 
@@ -1805,8 +1912,11 @@ deliverable; a local prompt file is not sufficient merge authority.
 ### 20.4 Imported project research
 
 - [Import scope, attribution and provenance](research/java-sdk/README.md).
-- [Complete core changelog input](research/java-sdk/snapshot/sdk/cosmos/azure-cosmos/CHANGELOG.md);
+- [Complete core changelog input](https://github.com/Azure/azure-sdk-for-java/blob/42702a3a1421498ee457ff9cbe56713d0877d39f/sdk/cosmos/azure-cosmos/CHANGELOG.md);
   this is not the missing semantic ledger.
 - [Payload/origin/hash manifest](research/java-sdk/import-manifest.json).
 - [Report and ledger recovery status](research/java-sdk/reports/README.md).
 - [Recovery and later-handoff checklist](research/java-sdk/recovery/README.md).
+- [Parent-authored original-intake discovery checkpoint](research/java-sdk/recovery/discovery-checkpoint/README.md).
+- [Follow-up package provenance](research/java-sdk/recovery/discovery-checkpoint/package-manifest.json).
+- [SDK source-access boundary](research/java-sdk/source-access.json).
