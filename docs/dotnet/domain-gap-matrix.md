@@ -5,8 +5,8 @@
 
 | Field | Value |
 |---|---|
-| Document version | 0.1.10 |
-| Recorded | 2026-11-01 UTC |
+| Document version | 0.1.11 |
+| Recorded | 2026-11-02 UTC |
 | D-01 baseline policy | User-selected: default `main`, all repository SDK source, existing SDK CI-derived matrices, Gateway and Direct |
 | D-02 assurance/workflow policy | User-approved: behavioral preservation, complete applicable new/changed evidence, every-PR testing coverage and design/spec before feature/bug implementation |
 | D-03 CI-gate/limit approach | User-approved approach: existing CI gates/configured limits as the initial baseline, strengthen demonstrated gaps, comparable evidence/rationale for new numerical tolerances; effective values/run evidence unreconciled |
@@ -17,9 +17,10 @@
 | D-08 cross-SDK approach | User-approved DESIGN ONLY: six core SDKs always visible (.NET primary, Java, Python, Go, Rust, JS/TS), behavior/risk-dependent comparisons and bounded full-manifest Router integration; no factual peer results or qualification |
 | D-09 verification-technique approach | User-approved DESIGN ONLY: extend native MSTest/test/coverage/CI with behavior/risk-selected techniques and evidence-based admission; exact versions/adapters/compatibility pending, no installation/spike/execution/activation |
 | D-10 operating-envelope approach | User-approved DESIGN ONLY: autonomy within valid preauthorized profiles; retained evidence, trust/access boundaries, whole-run finite budgets, resource admission/isolation, ownership/cleanup, stops and reconciled recovery; concrete profiles/stores/resources/identities/permissions/enforcement pending, no capability activated |
+| D-11 benchmark/shadow/graduation approach | User-approved DESIGN ONLY on 2026-11-02 UTC: contract-backed corpus admission, representative risk mix, separated evaluation, independent non-merging shadow judgments, correctness-versus-eligibility measurement, predeclared sampling/uncertainty and scoped graduation with escape/change reassessment; concrete profiles/corpus/owners/scopes pending, no campaign/graduation/activation |
 | Historical main-derived intake pin | `Azure/azure-cosmos-dotnet-v3@52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8`; not a forever-fixed project baseline |
 | Status | INITIAL GAP DRAFT; ALL ATOMIC CANDIDATES PROPOSED / UNVERIFIED |
-| Boundary | Documentation-only D-10 update continuing verified open/unmerged PR8, not a merged branch; no SDK/peer research/review, installation/spike/test/CI/live operations, resources/accounts or resource/access/CI/merge activation; personal setup unchanged, SDK work/A-01 unimported, bootstrap migration pending, policies unverified and Java paused |
+| Boundary | Documentation-only D-11 update on a fresh branch after observed PR8 merge; no new SDK/peer/issue research, corpus admission/replay, shadow/evaluation campaign, review, execution, graduation or capability activation; personal setup unchanged, SDK work/A-01 unimported, bootstrap migration pending, policies unverified and Java paused |
 
 ## 1. Reading this matrix
 
@@ -264,6 +265,43 @@ fixture adequacy, new service guarantees or example-derived numerical limits.
 The D-08/D-09 summaries retain their then-current selection wording; current
 D-09/D-10 approaches are selected without closing concrete tool/operational fit.
 
+The [approved D-11 receipt](design-handoff.md#1011-user-approved-d-11-approach)
+and [seven-area scope](design-handoff.md#810-d-11-benchmark-shadow-evaluation-and-scoped-graduation)
+retain contract-backed admission/provenance/red-before-green-after/control
+requirements and unresolved dispositions; public issues/closed PRs/build
+failures are not verified bugs or behavioral proof. The risk mix spans whole-SDK
+features/configurations and eligible-correct/incomplete-proof cases, exposing
+missing domains rather than labeling an easy subset representative. Separate
+development/held-out/independently authored/prospective material with exposure/
+contamination accounting; preserve earlier misses and do not call exposed
+cases fresh evidence. Non-merging real-PR shadows require D-07 independent
+Router judgments/test challenge and independently verified contract/test-backed
+references, not CI greenness, old merges or majority; disputed labels stay open.
+
+Correctness differs from eligibility: correct code missing required service
+proof should be blocked, not automatically a false positive. Measure unsafe
+acceptance/missed regressions/unsupported blocking/missing-proof handling with
+first-pass versus repaired-final and explicit family/candidate/attempt
+denominators. Predeclare justified strata/independent samples/actual exposure/
+duration/uncertainty/stopping within D-10 and freeze criteria before qualification
+outcomes; separate calibration, no extra samples from duplicates/retries or
+low-risk offsets for critical/high-risk gaps. Zero misses is not zero risk and
+no numerical target/statistical method/confidence percentage is chosen.
+
+Retain staged whole-SDK baseline/shadow to narrow qualified scopes and
+separately qualified expansion with all impacted/global proof; unknown
+interactions block affected eligibility, not silent omission. Critical escape
+or evaluator/evidence compromise invalidates affected qualification: suspend,
+preserve the miss, add permanent regressions and independently requalify.
+Material policy/model/oracle/tool/fixture changes require impact-based
+reassessment, not automatic reuse. Concrete profiles/corpus/owners/actual
+scopes remain pending; no permanent routine-human PR gate or removal of
+repo/org requirements follows. D-12 stays open and governs retirement/
+intentional changes. [Contract-scope grounding](design-handoff.md#811-d-11-contract-scope-grounding-and-evidence-limits)
+is only the chapter 16 session-token-versus-ETag example, not blanket .NET/
+service oracle approval. Prior policy/grounding/counts remain intact.
+No case mining/admission/replay, review, campaign, graduation or activation occurs.
+
 The coordinator reports an effective SDK/org policy read blocked by GitHub
 HTTP 403 Azure-org SAML SSO enforcement before branch/rules retrieval;
 actual policies/approval identities remain unverified, not permissive by
@@ -296,6 +334,16 @@ Before D-10 edits, PR8 remains verified OPEN/unmerged at D-09 source
 preserves the original open publication/versions separately from the advancing
 feature head. Continue that existing unmerged PR, not a merged branch; no
 integration, merge authority or changed merge setting is claimed.
+
+At D-11 intake, PR8 is independently verified MERGED at
+2026-11-02T00:36:34Z, combined source
+`90368a6ac0fa0434fcf972cd66109ebcf57cda54`, merge/current main
+`7b73d4d3c9b6db091aa16accd79f7d373d0e5234`. The
+[later integration receipt](design-handoff.md#137-d-09d-10-integration-and-fresh-d-11-branch-receipt)
+keeps D-09 source/open publication and D-10 continuation/open publication
+distinct. The fresh D-11 branch starts from that main, not merged PR8's branch.
+The coordinator observed but did not perform that merge; this workstream
+performed none and infers no future/SDK merge authority.
 
 The coordinator separately reports a user-authorized spec-first coherent SDK
 testing increment after two proposed SDK-docs drafts were delivered: paired
@@ -444,13 +492,14 @@ The states `proposed`, `contract-verified`, `test-mapped`,
 | Candidate-bound trusted evidence | Protect policy/oracles/selection; bind exact main/base/head/actual merge candidate, CI/artifacts/configuration/cohorts, discovered/executed cases, raw outcomes and reviewer receipts for each frozen assessment; missing/stale/malformed evidence fails closed |
 | Operating envelope, trust and recovery | Apply D-10 handoff section 8.8: valid preauthorized profile and existing suitable facilities; retained candidate-bound/every-attempt evidence, secretless untrusted execution with separately admitted credentialed isolation, whole-run budgets/cleanup reserve, authorized resource capacity/fault isolation, run/attempt ownership and stopped/fenced-worker reuse, bounded cleanup/quarantine, independent stops/distinct test/cleanup outcomes and reconciled governed recovery. No sensitive public originals, arbitrary defaults, dropped required proof, foreign-resource deletion, blind side-effect replay or blanket revert/merge/release authority; unknown required operations block affected autonomous qualification, not unrelated authorized improvement |
 | Concrete operational admission and enforcement | Validate effective policies and measured workloads before selecting retention/spend/token/time/concurrency/capacity/lease values, approved stores/fixture inventories, identities/permissions or enforcement wiring. No implemented safety, operational qualification, resource/account provisioning, access/CI/merge activation or removal of current repo/org requirements is claimed; D-04 exact layout/wiring/migration remains pending |
-| Qualification and contract changes | D-06 qualification initially non-merging; D-11 graduation scope/criteria/samples/strata/uncertainty and D-12 protected changes/exceptions remain open; any-domain shadow findings never create all-domain merge authority; policy-owner suspension model selected, exact owners/stops/recovery implementation not selected |
+| Benchmark and shadow qualification | Apply D-11 handoff section 8.10: contract-backed admission and retained dispositions, representative whole-SDK risks plus eligible-correct/incomplete-proof cases, exposure-separated development/evaluation, non-merging independent Router/test-challenger decisions and verified reference judgments, correctness-versus-eligibility with explicit first/final and family/candidate/attempt denominators, justified predeclared sampling/exposure/uncertainty/stopping frozen before outcomes with separate calibration, scoped graduation and critical-escape/material-change reassessment; concrete profiles/corpus/owners/scopes and factual qualification pending, no campaign/graduation/activation |
+| Qualification and contract changes | D-06 qualification initially non-merging; D-11 approach selected, not actual qualification or all-domain autonomy. All impacted/global proof is required, critical escape or evaluator/evidence compromise invalidates affected qualification, preserve/regress/independently requalify and reassess material changes; exact owners/identities/scopes pending, existing repo/org rules remain, no permanent routine-human PR gate. D-12 protected changes/exceptions/retirement remain open, not supplied by D-11 |
 
-D-01 through D-10 approaches are selected; effective matrix/gate/value/
+D-01 through D-11 approaches are selected; effective matrix/gate/value/
 artifact, benchmark/resource tolerance, run and assertion/scenario
 reconciliation remain incomplete.
-[D-11 through D-12](design-handoff.md#10-decision-queue-carried-forward)
-remain open (two decisions). D-06 selects the design model, not governance
+[D-12](design-handoff.md#10-decision-queue-carried-forward)
+remains open (one decision). D-06 selects the design model, not governance
 implementation, actual permission changes, activation or qualified SDK scopes.
 D-07 selects independent roles/risk/final-candidate review plus the supplied
 written Router scope, not an installed/running implementation or personal
@@ -465,6 +514,10 @@ D-10 selects the preauthorized operating-envelope approach, not concrete
 profiles/values/stores/resources/identities/permissions, implemented enforcement
 or operational qualification. D-09 policy/grounding/admission and historical
 three-open snapshot remain intact; no earlier receipt is retroactively changed.
+D-11 selects benchmark/shadow/scoped-graduation and escape/change reassessment,
+not concrete numerical profiles/corpus/owners/qualified scopes, a campaign,
+graduation or merge activation. D-10 policy/grounding/two-open history,
+original admission/graduation model and all earlier receipts remain intact.
 D-05 selects the approach, not factual inventory/contract/oracle/assertion/
 execution closure or exact oracle owners/schema/tools.
 D-04 ownership is selected, not exact
@@ -483,8 +536,9 @@ Ordered continuation is effective existing-CI/artifact/applicability
 reconciliation under D-01, D-05's source-backed atomic/oracle and CI assertion/
 scenario mapping, then factual gate/value reconciliation under D-03,
 D-08 factual peer evidence/integration, actual D-09 tool compatibility/admission,
-concrete D-10 operational profiles/admission/enforcement and independent
-design review. These are not artificial prerequisites to unrelated well-grounded
+concrete D-10 operational profiles/admission/enforcement, D-11 qualification
+profiles/corpus/reference judgments/owners/scopes and independent design review.
+These are not artificial prerequisites to unrelated well-grounded
 inventory/test improvements within authorized scopes. For authorized changes,
 including the separate SDK increment, a design/spec and test plan must
 precede agent implementation and applicable proof; actual SDK specs/mappings/
@@ -498,13 +552,14 @@ integration concern is recorded; its SDK investigation is not duplicated.
 Reported audit completion is not verified whole-SDK
 assurance. Keep the nine-dimensional assurance goals and independent Router-led
 review; green current CI alone is not proof of sufficient coverage or merge
-authority. This bounded D-10 documentation update stops at publication;
+authority. This bounded D-11 documentation update stops at publication;
 it does not import A-01, physically migrate records or adopt tool versions/adapters, concrete
 schemas, exact reviewer identities, human sign-off, enforcement or merge authority.
 No personal-source audit or SDK/peer review/research is performed; no personal agents/maps/config
 or current posting/feedback gates are modified.
 No tool installation/spike, execution, retargeting, resource/access/CI/merge
-activation or D-11 work is included.
+activation or D-12 work is included. No new issue research, corpus admission/
+replay, shadow/evaluation campaign or graduation is included.
 It starts no new SDK/CI investigation and
 grants this workstream no SDK source/test/pipeline
 edits or execution, CI triggers, live accounts, agents/reviews, source vendoring,
@@ -527,6 +582,7 @@ imports none of its drafts/plan/audit and asserts no completed tests/fixes.
 | 0.1.8 | 2026-11-01 | Record D-08 DESIGN-ONLY always-visible six-SDK scope including JS/TS, behavior/risk/evidence/cell requirements and bounded Router integration with scoped fail-closed impact; four D-09 through D-12 decisions open, earlier receipts/intake/lanes/candidates/evidence preserved; observed PR6 integration separate from source/publication, no peer research/review/execution or qualification |
 | 0.1.9 | 2026-11-01 | Record approved D-09 DESIGN-ONLY native-CI technique/candidate/admission approach linked to complete handoff scope/receipt/attributed grounding; exact versions/adapters/fit unclosed, no installation/spike/execution/activation; three D-10 through D-12 decisions open, D-01 through D-08 receipts/intake/policy/history and lanes/candidates/evidence preserved; PR7 source/open publication/later merge distinct, no D-10 work |
 | 0.1.10 | 2026-11-01 | Record approved D-10 DESIGN-ONLY preauthorized operating envelope, linked exact receipt/attributed capacity/fault grounding and explicit operational-admission gaps; concrete profiles/values/stores/resources/identities/permissions/enforcement pending, no activation or implemented safety/qualification; D-11 through D-12 open (two), prior receipts/policy/history and frozen lanes/candidates/evidence preserved; verified open PR8 continuation distinct from D-09 source/publication, no D-11 work |
+| 0.1.11 | 2026-11-02 | Record approved D-11 DESIGN-ONLY seven-area benchmark/shadow/scoped-graduation approach and escape/change reassessment, linked exact dated receipt/contract-scope grounding and qualification gaps; concrete profiles/corpus/owners/actual scopes pending, no campaign/graduation/activation; D-12 open (one), all earlier receipts/policy/grounding/counts and frozen lanes/candidates/evidence preserved; PR8 later integration distinct from source/publication/continuation, fresh D-11 branch, no D-12 work |
 
 [auth-cache]: https://github.com/Azure/azure-cosmos-dotnet-v3/blob/52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8/Microsoft.Azure.Cosmos/src/Authorization/TokenCredentialCache.cs
 [database-api]: https://github.com/Azure/azure-cosmos-dotnet-v3/blob/52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8/Microsoft.Azure.Cosmos/src/Resource/Database/Database.cs
