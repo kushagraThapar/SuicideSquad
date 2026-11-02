@@ -5,7 +5,7 @@
 
 | Field | Value |
 |---|---|
-| Document version | 0.1.8 |
+| Document version | 0.1.10 |
 | Recorded | 2026-11-01 UTC |
 | D-01 baseline policy | User-selected: default `main`, all repository SDK source, existing SDK CI-derived matrices, Gateway and Direct |
 | D-02 assurance/workflow policy | User-approved: behavioral preservation, complete applicable new/changed evidence, every-PR testing coverage and design/spec before feature/bug implementation |
@@ -15,9 +15,11 @@
 | D-06 unattended-merge approach | User-approved DESIGN ONLY: future qualified ordinary SDK PRs, independent Router approval, exact-candidate unit plus emulator/live proof and separate restricted merge identity; no bypass/activation/permission change; initial qualification non-merging |
 | D-07 review approach and Router scope | User-selected: two independent judgments plus independent test challenge, explicit required-role passes, risk expertise and final-candidate reconciliation; supplied written Router scope with provenance/adaptations, not runtime proof or activation |
 | D-08 cross-SDK approach | User-approved DESIGN ONLY: six core SDKs always visible (.NET primary, Java, Python, Go, Rust, JS/TS), behavior/risk-dependent comparisons and bounded full-manifest Router integration; no factual peer results or qualification |
+| D-09 verification-technique approach | User-approved DESIGN ONLY: extend native MSTest/test/coverage/CI with behavior/risk-selected techniques and evidence-based admission; exact versions/adapters/compatibility pending, no installation/spike/execution/activation |
+| D-10 operating-envelope approach | User-approved DESIGN ONLY: autonomy within valid preauthorized profiles; retained evidence, trust/access boundaries, whole-run finite budgets, resource admission/isolation, ownership/cleanup, stops and reconciled recovery; concrete profiles/stores/resources/identities/permissions/enforcement pending, no capability activated |
 | Historical main-derived intake pin | `Azure/azure-cosmos-dotnet-v3@52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8`; not a forever-fixed project baseline |
 | Status | INITIAL GAP DRAFT; ALL ATOMIC CANDIDATES PROPOSED / UNVERIFIED |
-| Boundary | Documentation-only D-08 update on a fresh branch after observed PR6 merge; no SDK/peer research/review/execution, personal setup audit/config change or activation; SDK work/A-01 unimported, bootstrap migration pending, policies unverified and Java paused |
+| Boundary | Documentation-only D-10 update continuing verified open/unmerged PR8, not a merged branch; no SDK/peer research/review, installation/spike/test/CI/live operations, resources/accounts or resource/access/CI/merge activation; personal setup unchanged, SDK work/A-01 unimported, bootstrap migration pending, policies unverified and Java paused |
 
 ## 1. Reading this matrix
 
@@ -67,7 +69,8 @@ success. Added regression checks become permanent protection, not checks to
 weaken for green CI. Bound runs, retries and agent repair, preserve first
 failures and per-attempt evidence, and treat exhaustion as blocked/inconclusive,
 not passing. Effective gates/values, benchmark/resource tolerances and actual
-run evidence remain unreconciled; additional budgets/operations remain D-10.
+run evidence remain unreconciled; D-10 selects the operating-envelope approach,
+not concrete budgets/operations or enforcement.
 Legitimate contract/test changes remain protected under D-12.
 
 The [selected D-04 approach](design-handoff.md#104-user-selected-d-04-ownership-and-layout-approach)
@@ -86,7 +89,7 @@ reproducibility, result/configuration identities and appropriately retained
 artifact references; large/raw CI artifacts stay in the existing CI artifact
 system. SDK-docs records must not be empty lists of moving links. Shared
 rules/templates and SDK records/results need versioned references.
-Retention/access remains D-10;
+Concrete retention/access implementation remains pending under D-10;
 this update creates no numerical results or executed evidence.
 
 This matrix's SDK-specific gap inputs, the baseline and A-01 eventually belong
@@ -192,6 +195,75 @@ qualification, not unrelated work globally. Peer findings grant no peer
 change/execution/provisioning/publication authority. Exact mappings/applicability,
 actual cells and D-04 formats remain unverified/unselected; no completion claim.
 
+The [approved D-09 receipt](design-handoff.md#109-user-approved-d-09-approach)
+and [technique/admission scope](design-handoff.md#61-d-09-verification-techniques-and-admission)
+select native MSTest/test/coverage/CI extensions by applicable behavior and
+preservation risk, not a parallel platform. Keep the existing coverage path
+initially; Stryker.NET is the first mutation candidate, FsCheck a suitable
+property/model integration candidate, Coyote selective after compatibility
+proof and explicit synchronization/time/hooks, and existing SharpFuzz a path
+to qualify/extend. Candidates and historical declarations are not adopted
+versions/adapters, supported matrices, exclusions or qualification.
+
+Tool admission must prove baseline/relevant-defect detection/replay, effective
+runner/runtime/configuration/symbol/dependency/loaded-artifact identities and
+expected/discovered/executed terminal cases, with full compiled denominators,
+distinct mutation outcomes and retained counterexamples/schedules/corpus.
+Keep oracles independently grounded under D-05 and dependencies/instrumentation
+test-only; no rewritten test assemblies/testing types in customer artifacts/
+APIs. Unsupported/incomplete/exhausted evidence stays an explicit gap. Bounded
+schedule exploration is not formal verification or uncontrolled service proof;
+injection evidence names its layer. Paired/API/package/performance/D-07/D-08
+obligations remain. The handoff's [reported public-doc/access limits](design-handoff.md#62-d-09-grounding-and-unresolved-tool-fit)
+do not close maintenance, licensing or actual fit. No installation, spike,
+retargeting, execution, A-01/result import or D-10 selection follows.
+
+The [approved D-10 receipt](design-handoff.md#1010-user-approved-d-10-approach)
+and [seven-area operating envelope](design-handoff.md#88-d-10-preauthorized-operating-envelope)
+select autonomy within a valid preauthorized profile, not unlimited automation
+or routine per-run human approval. Reuse suitable existing CI/artifact/resource
+facilities. Retain candidate-bound policies/tools/configurations/tested
+artifacts/fixtures/results/every-attempt evidence, safe replay inputs and
+compact SDK-owned indexes; bulky/sensitive originals use approved storage.
+Lost/expired/corrupt required proof becomes unavailable, not passing/retired.
+Untrusted PR execution stays secretless; credentialed service tests require
+separately admitted isolated least-privilege lanes, not merely another job.
+Separate implementation/evaluation-review/merge authority and keep credentials,
+private support data, sensitive telemetry and raw personal inputs out of
+public records.
+
+Finite versioned budgets cover the whole coordinated run, descendants/retries
+and reserved cleanup capacity across time, repair, agents, CI concurrency,
+live operations/RU and storage. Exhaustion stops new work, never required
+tests/reviewers/SDK comparisons; delayed cost telemetry alone is not hard
+enforcement. Admit only authorized synthetic fixtures with verified capability/
+topology/capacity, emulator only where faithful. Namespace uniqueness is not
+throughput/fault isolation; account/region experiments require dedicated scope
+without shared-run interference. No production/customer target or implicit
+provisioning/permission is authorized.
+
+Inventory run/attempt ownership and leases; stop/fence the prior worker before
+reuse, not expiry alone. Bound cleanup after all terminal outcomes to
+authorized run-owned resources; quarantine uncertainty, never delete
+preexisting/foreign resources. Preserve independent per-scope/emergency stops,
+product/infrastructure/inconclusive and test/cleanup outcomes; no retry-to-green
+or weakened checks. Reconcile candidate/configuration/artifacts/evidence/
+ownership and uncertain effects before resume, append attempts and revalidate
+affected proof on change. Compromised/suspended trust requires independently
+verified governed recovery, not just restart; no blanket revert/merge/release.
+
+Unknown required grants/limits/isolation/safety/proof block affected autonomous
+qualification, not unrelated separately authorized SDK improvement. Concrete
+retention/spend/token/time/concurrency/capacity/lease values, stores/inventories,
+identities/permissions and enforcement remain pending validation, as do D-04
+layout/wiring/migration. D-11 graduation and D-12 changes/retirement remain
+distinct; no implemented safety/qualification or capability activation follows.
+The handoff's [attributed canonical grounding](design-handoff.md#89-d-10-capacity-and-fault-scope-grounding)
+uses chapters 11/09 at `bcfbc786...` for capacity/fault-scope framing, not
+fixture adequacy, new service guarantees or example-derived numerical limits.
+The D-08/D-09 summaries retain their then-current selection wording; current
+D-09/D-10 approaches are selected without closing concrete tool/operational fit.
+
 The coordinator reports an effective SDK/org policy read blocked by GitHub
 HTTP 403 Azure-org SAML SSO enforcement before branch/rules retrieval;
 actual policies/approval identities remain unverified, not permissive by
@@ -205,11 +277,25 @@ after PR5 merged, without extending either merged branch. The
 [integration receipt](design-handoff.md#133-d-06-integration-and-fresh-d-07-branch-receipt)
 preserves source head `72e9f57918ed81a38bd750f4a6aca58173877d7b` separately
 from its observed merge and earlier open/unmerged publication state.
-D-08 starts from verified main `cb16ba73dca445f4a8520360ae7a07abd4168cd1`
+D-08 started from verified main `cb16ba73dca445f4a8520360ae7a07abd4168cd1`
 after PR6 merged; the [new integration receipt](design-handoff.md#134-d-07-integration-and-fresh-d-08-branch-receipt)
 preserves source head `1fef335ecb72e15e75518cffc2d39814c2e6bd13` and its
-earlier open publication separately from the later merge. No merged branch
-is extended and no SDK policy read/workaround or merge is performed here.
+earlier open publication separately from the later merge.
+D-09 starts from verified main `c1c929b5ab437aa3be8c67449a147b81c6ce604e`
+after PR7 merged; the [D-08 integration receipt](design-handoff.md#135-d-08-integration-and-fresh-d-09-branch-receipt)
+keeps source head `12c7cc3af87208d46a81b3f066262bcfdd3ceab2`, open
+publication and later observed merge distinct. The coordinator observed but
+did not perform that merge; this workstream likewise performed none and infers
+no further merge authority. No merged branch is extended or SDK policy
+read/workaround performed here.
+
+Before D-10 edits, PR8 remains verified OPEN/unmerged at D-09 source
+`d05b94e439ad9542d322da96b9821927b4cdf999` and main remains
+`c1c929b5ab437aa3be8c67449a147b81c6ce604e`. The
+[D-09 publication/continuation receipt](design-handoff.md#136-d-09-publication-and-open-pr-d-10-continuation-receipt)
+preserves the original open publication/versions separately from the advancing
+feature head. Continue that existing unmerged PR, not a merged branch; no
+integration, merge authority or changed merge setting is claimed.
 
 The coordinator separately reports a user-authorized spec-first coherent SDK
 testing increment after two proposed SDK-docs drafts were delivered: paired
@@ -349,26 +435,36 @@ The states `proposed`, `contract-verified`, `test-mapped`,
 | Status and write safety | Use operation/resource, HTTP+substatus, origin, mode, transmission/possible commit, consistency/session, options/topology/capability and remaining budgets; unknown required cells block eligibility |
 | Scenarios and data | Retain all 28 critical seeds and twelve general database families from the handoff; specify constrained pairwise/critical sequences, concurrency schedules, data/representation extremes and reproducible minimization |
 | Test/fixture fidelity | Every PR needs applicable testing evidence; sufficient existing tests can prove obligations without artificial new-test quotas or a documentation-only/no-test waiver. Applicable existing checks and spec-required evidence must pass; required missing/skipped/inconclusive evidence is not success. Map assertions/scenarios and improve gaps in existing CI; retain fixture fidelity/negative controls/controlled clocks |
-| Measurement and ratchets | Apply D-02 to comparable old obligations and complete new/changed evidence; equality for unaffected/saturated dimensions is not an increase; report full candidate counts/debt without offsets and retain all nine diagnostic dimensions. D-03 approach reuses existing CI gates/limits, strengthens demonstrated gaps and requires comparable evidence/rationale for new numerical tolerances; effective gates/values/run evidence unreconciled, tooling still D-09 |
+| Measurement and ratchets | Apply D-02 to comparable old obligations and complete new/changed evidence; equality for unaffected/saturated dimensions is not an increase; report full candidate counts/debt without offsets and retain all nine diagnostic dimensions. D-03 approach reuses existing CI gates/limits, strengthens demonstrated gaps and requires comparable evidence/rationale for new numerical tolerances; effective gates/values/run evidence unreconciled; D-09 technique/admission approach selected, exact tool fit unclosed |
+| Verification techniques and tool admission | Apply handoff section 6.1: native MSTest/CI, full tested-assembly/compiled denominators including never-loaded and Direct/companion/native/configuration boundaries; initially existing coverage path, Stryker first mutation candidate with separate outcomes, independently grounded FsCheck properties/seeds/shrinking, controlled/replayable concurrency before compatible Coyote, qualify existing SharpFuzz entrypoints/oracles/corpus/replay. Prove unmodified baseline/relevant-defect detection/replay and actual runner/artifact/case identities; retain details in existing SDK/CI records, no shipped rewritten test assemblies/testing types, hidden gaps or helper-to-backend proof. Exact versions/adapters/runtime fit and maintenance/licensing unresolved; no installation/spike/execution/qualification |
 | Historical regressions | Use public provenance and sanitized reproductions; require a real assertion failure on the affected revision and pass on the fixed candidate plus neighbors/variants; retain added regression checks as permanent protection, not weakened for green CI; no benchmark admitted here |
 | Independent review and governance | D-06/D-07 designs selected: future qualified ordinary SDK PRs need independent correctness/contracts and preservation/interactions judgments plus independent test challenge, applicable risk expertise, explicit passes and actual-candidate reconciliation; no reviewer-shopping/docs bypass/missing-proof success or self-closed blocker; separate restricted merge identity cannot bypass/weakly redefine eligibility, existing repo/org checks/reviews/CODEOWNERS remain binding and SDK policy/qualifying identities unverified; D-08 integration approach selected, actual wiring and D-10 budgets unclosed, no activation |
 | Router scope and adaptation | Preserve handoff sections 8.4-8.6 as exact D-07 written scope/intake/provenance history, not runtime dispatch proof; current D-08 section 8.7 extends the matrix to .NET/Java/Python/Go/Rust/JS/TS always visible plus affected consumers. Read-only Test Model output is not executed challenge, personal tiers/caps/stale pack hints/advisory fallbacks cannot create eligibility, no JS/TS personal registration is claimed, and Quality Gate cannot erase supported dissent |
 | Cross-SDK evidence and impact | Apply D-08 behavior/preservation-neighbor and risk-dependent depth with pinned actual repositories/revisions/configurations/contracts/source/assertions, separate written/inspected/executed and source/released/loaded-artifact evidence, justified cell applicability/dispositions/ownership and a full explicit Router peer manifest; no personal cap/override, peer-majority oracle or fabricated results. Missing required proof blocks affected qualification, not unrelated work; verified absence does not veto .NET-first features; paired .NET evidence remains required |
 | Candidate-bound trusted evidence | Protect policy/oracles/selection; bind exact main/base/head/actual merge candidate, CI/artifacts/configuration/cohorts, discovered/executed cases, raw outcomes and reviewer receipts for each frozen assessment; missing/stale/malformed evidence fails closed |
-| Privacy, ownership and budgets | Bound runs/retries/agent repair with visible first failures and per-attempt evidence; exhaustion is blocked/inconclusive, not passing. Additional agent/cost budgets, secretless untrusted execution versus separately authorized live work, shared-account namespace/fault/capacity ownership, cleanup/outage/stop/recovery and retention remain D-10 |
+| Operating envelope, trust and recovery | Apply D-10 handoff section 8.8: valid preauthorized profile and existing suitable facilities; retained candidate-bound/every-attempt evidence, secretless untrusted execution with separately admitted credentialed isolation, whole-run budgets/cleanup reserve, authorized resource capacity/fault isolation, run/attempt ownership and stopped/fenced-worker reuse, bounded cleanup/quarantine, independent stops/distinct test/cleanup outcomes and reconciled governed recovery. No sensitive public originals, arbitrary defaults, dropped required proof, foreign-resource deletion, blind side-effect replay or blanket revert/merge/release authority; unknown required operations block affected autonomous qualification, not unrelated authorized improvement |
+| Concrete operational admission and enforcement | Validate effective policies and measured workloads before selecting retention/spend/token/time/concurrency/capacity/lease values, approved stores/fixture inventories, identities/permissions or enforcement wiring. No implemented safety, operational qualification, resource/account provisioning, access/CI/merge activation or removal of current repo/org requirements is claimed; D-04 exact layout/wiring/migration remains pending |
 | Qualification and contract changes | D-06 qualification initially non-merging; D-11 graduation scope/criteria/samples/strata/uncertainty and D-12 protected changes/exceptions remain open; any-domain shadow findings never create all-domain merge authority; policy-owner suspension model selected, exact owners/stops/recovery implementation not selected |
 
-D-01/D-02 and the D-03/D-04/D-05/D-06/D-07/D-08 approaches are selected; effective matrix/gate/value/
+D-01 through D-10 approaches are selected; effective matrix/gate/value/
 artifact, benchmark/resource tolerance, run and assertion/scenario
 reconciliation remain incomplete.
-[D-09 through D-12](design-handoff.md#10-decision-queue-carried-forward)
-remain open (four decisions). D-06 selects the design model, not governance
+[D-11 through D-12](design-handoff.md#10-decision-queue-carried-forward)
+remain open (two decisions). D-06 selects the design model, not governance
 implementation, actual permission changes, activation or qualified SDK scopes.
 D-07 selects independent roles/risk/final-candidate review plus the supplied
 written Router scope, not an installed/running implementation or personal
 heuristic values.
 D-08 selects the six-SDK comparison/integration approach, not actual peer
 mapping/cell completion, individual contract approval or runtime qualification.
+D-09 selects techniques/candidate evaluation/admission, not exact tools/
+versions/adapters or actual compatibility/integration/qualification. D-08
+policy and its historical four-open snapshot remain intact; candidate mention
+is not adoption or an exclusion.
+D-10 selects the preauthorized operating-envelope approach, not concrete
+profiles/values/stores/resources/identities/permissions, implemented enforcement
+or operational qualification. D-09 policy/grounding/admission and historical
+three-open snapshot remain intact; no earlier receipt is retroactively changed.
 D-05 selects the approach, not factual inventory/contract/oracle/assertion/
 execution closure or exact oracle owners/schema/tools.
 D-04 ownership is selected, not exact
@@ -386,7 +482,8 @@ would apply only to actually controlled clocks/timers/schedulers.
 Ordered continuation is effective existing-CI/artifact/applicability
 reconciliation under D-01, D-05's source-backed atomic/oracle and CI assertion/
 scenario mapping, then factual gate/value reconciliation under D-03,
-D-08 factual peer evidence/integration, remaining tooling/operations decisions and independent
+D-08 factual peer evidence/integration, actual D-09 tool compatibility/admission,
+concrete D-10 operational profiles/admission/enforcement and independent
 design review. These are not artificial prerequisites to unrelated well-grounded
 inventory/test improvements within authorized scopes. For authorized changes,
 including the separate SDK increment, a design/spec and test plan must
@@ -401,11 +498,13 @@ integration concern is recorded; its SDK investigation is not duplicated.
 Reported audit completion is not verified whole-SDK
 assurance. Keep the nine-dimensional assurance goals and independent Router-led
 review; green current CI alone is not proof of sufficient coverage or merge
-authority. This bounded D-08 documentation update stops at publication;
-it does not import A-01, physically migrate records or select tooling, concrete
+authority. This bounded D-10 documentation update stops at publication;
+it does not import A-01, physically migrate records or adopt tool versions/adapters, concrete
 schemas, exact reviewer identities, human sign-off, enforcement or merge authority.
 No personal-source audit or SDK/peer review/research is performed; no personal agents/maps/config
 or current posting/feedback gates are modified.
+No tool installation/spike, execution, retargeting, resource/access/CI/merge
+activation or D-11 work is included.
 It starts no new SDK/CI investigation and
 grants this workstream no SDK source/test/pipeline
 edits or execution, CI triggers, live accounts, agents/reviews, source vendoring,
@@ -426,6 +525,8 @@ imports none of its drafts/plan/audit and asserts no completed tests/fixes.
 | 0.1.6 | 2026-11-01 | Record D-06 DESIGN-ONLY qualified ordinary-PR future merge approach with independent exact-candidate proof/separate restricted identity/no bypass, fail-closed evidence and initially non-merging qualification; six decisions D-07 through D-12 open; preserve D-01 through D-05/lanes/candidates/evidence, manual documentation merge receipts and separate SDK work; portable reported SDK-policy SSO gap, no activation or qualification claims |
 | 0.1.7 | 2026-11-01 | Record D-07 independent-role/risk/final-candidate approach plus user-requested written personal-Router scope through the shared handoff mapping/digests/adaptations; five D-08 through D-12 decisions open; preserve lanes/candidates/evidence and earlier receipts, separate PR5 source/publication/integration; no runtime audit/review/activation/SDK execution or result import |
 | 0.1.8 | 2026-11-01 | Record D-08 DESIGN-ONLY always-visible six-SDK scope including JS/TS, behavior/risk/evidence/cell requirements and bounded Router integration with scoped fail-closed impact; four D-09 through D-12 decisions open, earlier receipts/intake/lanes/candidates/evidence preserved; observed PR6 integration separate from source/publication, no peer research/review/execution or qualification |
+| 0.1.9 | 2026-11-01 | Record approved D-09 DESIGN-ONLY native-CI technique/candidate/admission approach linked to complete handoff scope/receipt/attributed grounding; exact versions/adapters/fit unclosed, no installation/spike/execution/activation; three D-10 through D-12 decisions open, D-01 through D-08 receipts/intake/policy/history and lanes/candidates/evidence preserved; PR7 source/open publication/later merge distinct, no D-10 work |
+| 0.1.10 | 2026-11-01 | Record approved D-10 DESIGN-ONLY preauthorized operating envelope, linked exact receipt/attributed capacity/fault grounding and explicit operational-admission gaps; concrete profiles/values/stores/resources/identities/permissions/enforcement pending, no activation or implemented safety/qualification; D-11 through D-12 open (two), prior receipts/policy/history and frozen lanes/candidates/evidence preserved; verified open PR8 continuation distinct from D-09 source/publication, no D-11 work |
 
 [auth-cache]: https://github.com/Azure/azure-cosmos-dotnet-v3/blob/52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8/Microsoft.Azure.Cosmos/src/Authorization/TokenCredentialCache.cs
 [database-api]: https://github.com/Azure/azure-cosmos-dotnet-v3/blob/52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8/Microsoft.Azure.Cosmos/src/Resource/Database/Database.cs
