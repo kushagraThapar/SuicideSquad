@@ -1,0 +1,37 @@
+{
+  "formatVersion": 1,
+  "status": "inactive-historical-snapshots",
+  "sourceRepository": "Azure/azure-cosmos-dotnet-v3",
+  "recorded": "2026-11-09",
+  "limits": [
+    "Two user-specified source README versions preserved byte-for-byte, not merged.",
+    "Historical scope, contracts and run receipts are not new execution evidence.",
+    "Practical current test-running guidance remains in the SDK; archive commands are not current instructions.",
+    "No emulator, Rust or SDK code, executable binary or CI configuration imported from these layers.",
+    "Historical relative links remain original; resolve against sourceUrl."
+  ],
+  "files": [
+    {
+      "status": "historical-readme",
+      "sourcePath": "Microsoft.Azure.Cosmos/tests/Microsoft.Azure.Cosmos.InMemoryEmulatorTests/README.md",
+      "destinationPath": "docs/dotnet/history/in-memory-emulator/lower/Microsoft.Azure.Cosmos/tests/Microsoft.Azure.Cosmos.InMemoryEmulatorTests/README.md",
+      "sourceRevision": "b578be79bf8c83a3fecf7dd0af1709f3d5fc628a",
+      "sourceUrl": "https://github.com/Azure/azure-cosmos-dotnet-v3/blob/b578be79bf8c83a3fecf7dd0af1709f3d5fc628a/Microsoft.Azure.Cosmos/tests/Microsoft.Azure.Cosmos.InMemoryEmulatorTests/README.md",
+      "gitBlob": "d90a918f8ab1716640c31bc4e47223d1c6fdaccb",
+      "sha256": "d9124baf0131e3175d248e658ebf697059c7c7469d0ed96d37ca27e513e704a4",
+      "bytes": 9329,
+      "layer": "lower"
+    },
+    {
+      "status": "historical-readme",
+      "sourcePath": "Microsoft.Azure.Cosmos/tests/Microsoft.Azure.Cosmos.InMemoryEmulatorTests/README.md",
+      "destinationPath": "docs/dotnet/history/in-memory-emulator/upper/Microsoft.Azure.Cosmos/tests/Microsoft.Azure.Cosmos.InMemoryEmulatorTests/README.md",
+      "sourceRevision": "8f0ce99d3392551508e114293d55595c3b16eb40",
+      "sourceUrl": "https://github.com/Azure/azure-cosmos-dotnet-v3/blob/8f0ce99d3392551508e114293d55595c3b16eb40/Microsoft.Azure.Cosmos/tests/Microsoft.Azure.Cosmos.InMemoryEmulatorTests/README.md",
+      "gitBlob": "b6777710e4f19a5e3dfd5a879d5a2b44ec45fb59",
+      "sha256": "2fcca77a464bd239886a124bf3567d8ca8578783ab03dc08c12a604cd77e3f8d",
+      "bytes": 23366,
+      "layer": "upper"
+    }
+  ]
+}

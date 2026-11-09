@@ -53,6 +53,15 @@ pending checklist; its recorded freeze is not its later publication time.
 
 ## M-01 dependency blocker: preservation is not validator migration
 
+**Later user-selected disposition (2026-11-09):** preserve the complete #6185
+package as an inactive historical snapshot and close its SDK PR. The
+[complete package and byte manifest](../dotnet/history/pr-6185/README.md) now
+preserve the scripts, fixtures, records, YAML and guide addition without claiming
+a runnable relocation. The following blocker remains accurate for a hypothetical
+validator migration, but no such migration or retained active SDK validator is
+required by the selected snapshot disposition. SDK PR closure is handled
+separately by the coordinator, not performed by this preservation contribution.
+
 At source head `cd33034ca645b2e487d428c96a37161002e27966`, the SDK's
 [`scripts/Validate-Assurance.ps1`](https://github.com/Azure/azure-cosmos-dotnet-v3/blob/cd33034ca645b2e487d428c96a37161002e27966/scripts/Validate-Assurance.ps1)
 defaults `RepositoryRoot` to the SDK checkout and `RecordsDirectory` to
@@ -81,6 +90,10 @@ choose or implement that follow-up design, move executable scripts/fixtures,
 or authorize their deletion. Protected invocation/admission remains pending.
 
 ## Source context and verification
+
+Additional inactive snapshots preserve
+[both in-memory emulator README source layers](../dotnet/history/in-memory-emulator/README.md)
+before SDK trimming; practical run guidance remains in the SDK.
 
 Imported Markdown retains substantive source text and source status; relative
 links to SDK code/CI now use immutable source-head URLs, while preserved
