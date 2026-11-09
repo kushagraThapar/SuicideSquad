@@ -27,6 +27,15 @@ See the [source-access boundary](research/java-sdk/source-access.json).
 | [Checkpoint provenance](research/java-sdk/recovery/discovery-checkpoint/package-manifest.json) | Separate handoff, prior historical import and corrected source-link-only layout |
 | [Paused-Java backlog](suicide-squad-design.md#194-stable-checkpoint-and-net-first-transition) | Resume Java only when explicitly reactivated; no new Java investigation is required to hand off |
 | [.NET design context handoff](https://github.com/kushagraThapar/SuicideSquad/blob/d9d02138e7fa72b32bfcc72dd63028d208004297/docs/dotnet/design-handoff.md) | Immutable separate contribution; not a claim that the file is on the default branch or that SDK investigation has begun |
+| [.NET specifications and preservation ledger](assurance/README.md) | Preserved project contracts, matrix/plan layers, M-01 records and retry/HTTP2 specs from five pinned SDK PR heads; validator relocation remains a flagged dependency |
+
+**Current ownership (2026-11-09 user direction):** versioned project contracts,
+invariants, documentation and development specs belong only in SuicideSquad;
+SDK repositories retain tests and agent-facing test-running instructions.
+This supersedes the older D-04 SDK-docs layout described in the historical
+.NET design records, without rewriting their receipts or granting execution,
+deletion or merge permission. See the [M-01 dependency blocker](assurance/README.md#m-01-dependency-blocker-preservation-is-not-validator-migration)
+before trimming SDK records consumed by its validator.
 
 The imported design is the reference for this revision; session canvases should
 link to it rather than fork it. A feature-branch PR is not default-branch

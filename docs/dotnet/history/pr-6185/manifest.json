@@ -1,0 +1,148 @@
+{
+  "formatVersion": 1,
+  "status": "inactive-historical-snapshot",
+  "sourceRepository": "Azure/azure-cosmos-dotnet-v3",
+  "sourcePr": 6185,
+  "sourceHead": "cd33034ca645b2e487d428c96a37161002e27966",
+  "sourceBase": "52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8",
+  "recorded": "2026-11-09",
+  "limits": [
+    "Original file bytes and paths retained; not installed, executed or activated.",
+    "Path-bound SDK validator, records, hashes and fixtures are not relocated runnable tooling.",
+    "YAML is archived source only; no pipeline, workflow, registration or protected CI activation.",
+    "The complete modified guide is retained for exact source bytes; guide-addition.patch isolates the relevant 28 added lines.",
+    "Historical relative links remain original; resolve against sourceUrl, not the current SuicideSquad layout.",
+    "Closure of the SDK PR is a separate coordinator action; this snapshot performs no SDK edits or closure."
+  ],
+  "files": [
+    {
+      "status": "A",
+      "sourcePath": "azure-pipelines-assurance.yml",
+      "destinationPath": "docs/dotnet/history/pr-6185/azure-pipelines-assurance.yml",
+      "sourceRevision": "cd33034ca645b2e487d428c96a37161002e27966",
+      "sourceUrl": "https://github.com/Azure/azure-cosmos-dotnet-v3/blob/cd33034ca645b2e487d428c96a37161002e27966/azure-pipelines-assurance.yml",
+      "gitBlob": "55c463320fc892dc2ffdd210d63b79dfc9800c0d",
+      "sha256": "3c3397a544ca8a63b5919bedebbf1c8e4d69915780463aefee9b7b5226afc0d0",
+      "bytes": 211
+    },
+    {
+      "status": "A",
+      "sourcePath": "docs/assurance/README.md",
+      "destinationPath": "docs/dotnet/history/pr-6185/docs/assurance/README.md",
+      "sourceRevision": "cd33034ca645b2e487d428c96a37161002e27966",
+      "sourceUrl": "https://github.com/Azure/azure-cosmos-dotnet-v3/blob/cd33034ca645b2e487d428c96a37161002e27966/docs/assurance/README.md",
+      "gitBlob": "7ab6069037377c6141028c53e4fa118cabada9e4",
+      "sha256": "efbcde81f73a145bcba9f72737057b1855ac3907f2c0ffe5cd549022a9bb8f1d",
+      "bytes": 11682
+    },
+    {
+      "status": "A",
+      "sourcePath": "docs/assurance/examples/i-01-64324.json",
+      "destinationPath": "docs/dotnet/history/pr-6185/docs/assurance/examples/i-01-64324.json",
+      "sourceRevision": "cd33034ca645b2e487d428c96a37161002e27966",
+      "sourceUrl": "https://github.com/Azure/azure-cosmos-dotnet-v3/blob/cd33034ca645b2e487d428c96a37161002e27966/docs/assurance/examples/i-01-64324.json",
+      "gitBlob": "29f2ca8a21ff4c2d1c6a42933508f85ab18115eb",
+      "sha256": "c0601b16dc39985c3aa2adb24a3959775fa81200953469024b6c69e9b7404770",
+      "bytes": 26695
+    },
+    {
+      "status": "A",
+      "sourcePath": "docs/assurance/specs/m-01-assurance-foundation.json",
+      "destinationPath": "docs/dotnet/history/pr-6185/docs/assurance/specs/m-01-assurance-foundation.json",
+      "sourceRevision": "cd33034ca645b2e487d428c96a37161002e27966",
+      "sourceUrl": "https://github.com/Azure/azure-cosmos-dotnet-v3/blob/cd33034ca645b2e487d428c96a37161002e27966/docs/assurance/specs/m-01-assurance-foundation.json",
+      "gitBlob": "ecaaf87c47b63644a90a7f178685d747f084f123",
+      "sha256": "7b7db6fa84ce0553e4bbc8ff5f8c5546c6c04d2c8bc5906856ae1cccfe0a8c2e",
+      "bytes": 29524
+    },
+    {
+      "status": "A",
+      "sourcePath": "docs/assurance/specs/m-01-assurance-foundation.md",
+      "destinationPath": "docs/dotnet/history/pr-6185/docs/assurance/specs/m-01-assurance-foundation.md",
+      "sourceRevision": "cd33034ca645b2e487d428c96a37161002e27966",
+      "sourceUrl": "https://github.com/Azure/azure-cosmos-dotnet-v3/blob/cd33034ca645b2e487d428c96a37161002e27966/docs/assurance/specs/m-01-assurance-foundation.md",
+      "gitBlob": "234caaf932272afd90cdbab3f4f0014ce0f6231f",
+      "sha256": "a57cc64c75105d7a6630e45984a9e5ae95ec7e13ccf047648c1b15360516be77",
+      "bytes": 10909
+    },
+    {
+      "status": "A",
+      "sourcePath": "docs/assurance/specs/m-01-review-feedback.md",
+      "destinationPath": "docs/dotnet/history/pr-6185/docs/assurance/specs/m-01-review-feedback.md",
+      "sourceRevision": "cd33034ca645b2e487d428c96a37161002e27966",
+      "sourceUrl": "https://github.com/Azure/azure-cosmos-dotnet-v3/blob/cd33034ca645b2e487d428c96a37161002e27966/docs/assurance/specs/m-01-review-feedback.md",
+      "gitBlob": "37a89dbb1839846168ce936a20c8e2fa9c7e0564",
+      "sha256": "a779dea45d068011256a769dfd64adb08635c86b7dc4503c0998be6bf2af242e",
+      "bytes": 6683
+    },
+    {
+      "status": "M",
+      "sourcePath": "docs/builds-and-pipelines.md",
+      "destinationPath": "docs/dotnet/history/pr-6185/docs/builds-and-pipelines.md",
+      "sourceRevision": "cd33034ca645b2e487d428c96a37161002e27966",
+      "sourceUrl": "https://github.com/Azure/azure-cosmos-dotnet-v3/blob/cd33034ca645b2e487d428c96a37161002e27966/docs/builds-and-pipelines.md",
+      "gitBlob": "09434279316bcb68a54cd03f0ad9d322460a8caf",
+      "sha256": "779e04f1ea15e4852595399360da452cd743d5c663dbd42263284e7845f604af",
+      "bytes": 33406
+    },
+    {
+      "status": "A",
+      "sourcePath": "scripts/Validate-Assurance.ps1",
+      "destinationPath": "docs/dotnet/history/pr-6185/scripts/Validate-Assurance.ps1",
+      "sourceRevision": "cd33034ca645b2e487d428c96a37161002e27966",
+      "sourceUrl": "https://github.com/Azure/azure-cosmos-dotnet-v3/blob/cd33034ca645b2e487d428c96a37161002e27966/scripts/Validate-Assurance.ps1",
+      "gitBlob": "fea88f1e1e3f755739e1baff4387c75c95aae3e5",
+      "sha256": "576f2ef667ec7f0a2a2d34526e65e671788d6bb9cbb77346f562b4bf0def5e5f",
+      "bytes": 49629
+    },
+    {
+      "status": "A",
+      "sourcePath": "scripts/tests/Validate-Assurance.Tests.ps1",
+      "destinationPath": "docs/dotnet/history/pr-6185/scripts/tests/Validate-Assurance.Tests.ps1",
+      "sourceRevision": "cd33034ca645b2e487d428c96a37161002e27966",
+      "sourceUrl": "https://github.com/Azure/azure-cosmos-dotnet-v3/blob/cd33034ca645b2e487d428c96a37161002e27966/scripts/tests/Validate-Assurance.Tests.ps1",
+      "gitBlob": "01f6b60dc5a6d79ac3fcd4fad0899cd4505b7ac0",
+      "sha256": "7ad1b447aeff432d3c7d1b9316f7d92941d2f7f216f76f4851a3326f5865525d",
+      "bytes": 38954
+    },
+    {
+      "status": "A",
+      "sourcePath": "scripts/tests/assurance/expected.json",
+      "destinationPath": "docs/dotnet/history/pr-6185/scripts/tests/assurance/expected.json",
+      "sourceRevision": "cd33034ca645b2e487d428c96a37161002e27966",
+      "sourceUrl": "https://github.com/Azure/azure-cosmos-dotnet-v3/blob/cd33034ca645b2e487d428c96a37161002e27966/scripts/tests/assurance/expected.json",
+      "gitBlob": "37bfd3a112dc9d8c963cc3ec3684a34ace8d8f75",
+      "sha256": "8ec694d875de398f1616bbc93a0d03599b6923f3ff07cd655f88a23ee6b56314",
+      "bytes": 1623
+    },
+    {
+      "status": "A",
+      "sourcePath": "scripts/tests/assurance/results.trx",
+      "destinationPath": "docs/dotnet/history/pr-6185/scripts/tests/assurance/results.trx",
+      "sourceRevision": "cd33034ca645b2e487d428c96a37161002e27966",
+      "sourceUrl": "https://github.com/Azure/azure-cosmos-dotnet-v3/blob/cd33034ca645b2e487d428c96a37161002e27966/scripts/tests/assurance/results.trx",
+      "gitBlob": "c25d455e0e40b661ddb3988172c4f96729d925cc",
+      "sha256": "e1d444cd64be24c99ab9e05085f9c61b799613efebe5fc251cd911bdbdeb2377",
+      "bytes": 1580
+    },
+    {
+      "status": "A",
+      "sourcePath": "templates/assurance-validation.yml",
+      "destinationPath": "docs/dotnet/history/pr-6185/templates/assurance-validation.yml",
+      "sourceRevision": "cd33034ca645b2e487d428c96a37161002e27966",
+      "sourceUrl": "https://github.com/Azure/azure-cosmos-dotnet-v3/blob/cd33034ca645b2e487d428c96a37161002e27966/templates/assurance-validation.yml",
+      "gitBlob": "2bb89c5191548b394962a0a4da57be18561e7cd9",
+      "sha256": "7d4b3cf444a651c6246fb6cea372399bc4ee0c9e0d19a2a44c2540ca8f77472a",
+      "bytes": 1464
+    }
+  ],
+  "guideAddition": {
+    "destinationPath": "docs/dotnet/history/pr-6185/guide-addition.patch",
+    "sha256": "0c6f6d698c95263a4d91bcadceb85c8c27c784f5f381735d8395d1257dfef273",
+    "bytes": 3746,
+    "sourceBase": "52ff1383daf7a1a0e8f2d77da0ce819c8ea2f2c8",
+    "sourceHead": "cd33034ca645b2e487d428c96a37161002e27966",
+    "sourcePath": "docs/builds-and-pipelines.md",
+    "representation": "git diff --no-ext-diff --no-renames --binary --full-index"
+  }
+}
