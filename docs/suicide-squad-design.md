@@ -8,8 +8,8 @@
 
 | Field | Value |
 |---|---|
-| Document version | 0.2.3 |
-| Created / last revised | 2026-10-31 / 2026-10-31 |
+| Document version | 0.2.4 |
+| Created / last revised | 2026-10-31 / 2026-11-12 |
 | Status | DESIGN/RESEARCH CHECKPOINT - JAVA PAUSED; DESIGN NOT APPROVED |
 | Initial product | Full Azure Cosmos DB Java SDK for NoSQL feature surface: `azure-cosmos`, test/fault support, and the companion encryption-library contracts |
 | Current SDK priority | .NET first; Java research paused at the user-selected versioned design/research checkpoint with explicit remaining gaps |
@@ -1256,6 +1256,20 @@ integration policy changes it. Proposed differences for autonomous mode:
 
 No agent definitions or review settings are changed by this draft.
 
+**Future goal: automated-merge risk assessment.** The Router should dispatch a
+squad skill to assess each PR and explicitly distinguish an **AI-only
+approval/merge candidate** (low risk enough under approved criteria) from
+**human review required** in addition to agent review. Record the evidence and
+driving risk factors, such as contract/compatibility impact, security or
+protected-policy changes, verification gaps, blast radius and rollback risk.
+Missing or uncertain evidence defaults to human review, never AI-only approval;
+missing required evidence still blocks eligibility under Section 12.7.
+The implementation agent cannot assess its own PR into the AI-only category.
+This assessment informs, but does not replace, the Router's eligibility verdict
+or grant merge authority: Section 12.8, the approved autonomy scope, repository/org
+rules and D-06 governance still apply. Risk-classification criteria and required
+review roles remain a D-07 decision; this goal changes no current human gate.
+
 The existing PR Test Model Reviewer remains read-only. If executable independent
 challenge tests are required, use a separately authorized, isolated test-authoring
 step under Router coordination and trusted execution. Do not silently turn a
@@ -1370,6 +1384,7 @@ regression:
   red-before/green-after proof and historical benchmark results
 review:
   required reviewer identities/roles, receipts, findings/dispositions, context gaps
+  automated-merge risk assessment, driving factors/evidence, human-review requirement
 provenance:
   trusted pipeline identity, evidence hashes, prompt/policy/model versions
 ```
@@ -1593,7 +1608,7 @@ pilot or postponing experimentation until the entire project is complete.
 | D-04 | Which in-repository layout and schema format hold design/registry/evidence definitions? | Repository and documentation layout resolved in Section 19.1: `docs/suicide-squad-design.md` and `docs/research/java-sdk/`; keep shared Cosmos concepts in canonical concept docs and eventual SDK-side execution bindings close to SDK tests | Runtime registry/evidence schema and SDK integration remain open; the import manifest is not their implementation |
 | D-05 | What completes the whole-SDK feature/status/scenario inventory and verifies disputed contracts? | Close full-changelog/current-API/internal-path mappings and lifecycle gaps at the pinned baseline; family-level hints and disputed semantics are not approved atomic contracts | Catalog approval |
 | D-06 | How can org/repo rules permit agentic merging, and who owns protected policy? | Preserve current human gates until governance explicitly approves an unattended mode | Any autonomous merge |
-| D-07 | How many independent Router runs and which roles are mandatory by risk? | Two independent Router-led judgments for behavior changes, independent test challenge, required-role completeness | Review contract |
+| D-07 | Which criteria distinguish AI-only approval/merge candidates from PRs requiring human review, and how many independent Router runs and which roles are mandatory by risk? | Evidence-backed risk classification with human review for missing/uncertain evidence; two independent Router-led judgments for behavior changes, independent test challenge, required-role completeness; align eligible risk classes with G-3 qualification | Review and risk-assessment contract |
 | D-08 | How is cross-SDK matrix coverage reconciled with current Router peer limits? | Explicit bounded batches covering Java/.NET/Python/Go/Rust; verified sources and visible unknowns | Review integration |
 | D-09 | Which mutation/property/concurrency tools fit current Java/TestNG/multi-module constraints? | Spike PIT and existing Reactor/test tooling; add only justified dependencies | Tool selection |
 | D-10 | What are evidence retention, access, cost, cleanup and outage policies? | Immutable candidate-bound evidence with scoped access and bounded execution | Operational readiness |
@@ -1848,6 +1863,7 @@ the .NET workstream instead of mechanically translating Java defaults.
 | 0.2.1 | 2026-10-31 | Canonical project repository confirmed; design/research promotion authorized; unavailable background runs and incomplete inventory explicitly recorded |
 | 0.2.2 | 2026-10-31 | Portable repository import; documentation layout and relative input/report/recovery links; verified deduplicated provenance, licensing, two excluded cache mismatches and one redacted public fixture-key literal; DS-14 remains incomplete and default-branch integration remains pending |
 | 0.2.3 | 2026-10-31 | Separate parent-authored discovery receipts; user-selected paused Java checkpoint and .NET-first transition; corrected source-access boundary removes vendored SDK snapshots while preserving pinned provenance/history; DS-14 remains incomplete and no implementation or release work is authorized |
+| 0.2.4 | 2026-11-12 | Record future Router-dispatched squad skill for evidence-backed automated-merge risk assessment: AI-only candidate versus human review required; extend evidence bundle and D-07 criteria without changing current approval or merge authority |
 
 ## 20. References
 
